@@ -1,5 +1,8 @@
 #include "dominios.hpp"
 #include <iostream>
+#include <stdexcept>
+
+
 // Implementação dos métodos da classe Email
 
 
@@ -10,13 +13,13 @@
 
 // Implementação do métodos da classe Estado
 
-void Estado :: validar(string valor){
+void Estado::validar(string valor){
     if (valor != "A FAZER" &&
         valor != "FAZENDO" &&
         valor != "FEITO"){
             throw std::invalid_argument("DIGITE UM ESTADO VÁLIDO! ");
         }
-};
+}
 
 void Estado::setValor(string valor){
     validar(valor);
@@ -39,19 +42,16 @@ void Estado::setValor(string valor){
 
 
 
-void Limite :: validar(int n){ //n = limite desejado
-    if(n > 25 && n < 1){
-        throw std::length_error("LIMITE INVÁLIDO!\n"); //Erro se o limite for fora dos limites de 1 < n < 25
+void Limite::validar(int valor){ //valor = limite desejado
+    if(valor > 25 || valor < 1){ // a logica tava errada nao? ele tem que ser ou menoor que 1 ou maior q 25 pra ta errado
+        throw std::length_error("LIMITE INVÁLIDO!"); //Erro se o limite for fora dos limites de 1 < valor < 25
     }
 }
 
-void Limite :: setValor(int n){
-    validar(n);
-    valor = n;
+void Limite::setValor(int valor){
+    validar(valor);
+    this->valor = valor;
 }
-
-
-
 
 
 ///////////////////////////////////////////////
@@ -59,22 +59,17 @@ void Limite :: setValor(int n){
 // Implementação dos métodos da classe Nome
 
 
-
-
-void Nome :: validar(string valor){
-    if(size(valor) > 15){
-        throw std :: length_error("NOME EXCEDE 15 CARACTÉRES!");
+void Nome::validar(string valor){
+    if(valor.size() > 15 || valor.empty()){ // antes tava size(valor) -> isso retorna o tamanho de um vetor
+        throw std::length_error("NOME EXCEDE 15 CARACTERES!");
     }
     
 }
 
-void Nome :: setValor(string valor){
-
-}
-
-
-
-
+void Nome::setValor(string valor){
+    validar(valor);
+    this->valor = valor;
+}  
 
 
 ////////////////////////////////////////////////
@@ -82,7 +77,16 @@ void Nome :: setValor(string valor){
 
 // Implementação dos métodos da classe Papel
 
+void Papel::validar (string valor){
+    if (valor != "GESTOR" && valor != "DESENVOLVEDOR"){
+        throw std::invalid_argument("PAPEL INVALIDO: DEVE SER GESTOR OU DESENVOLVEDOR!");
+    }
+}
 
+void Papel::setValor(string valor){
+    validar(valor);
+    this->valor = valor;
+}
 
 
 
@@ -94,23 +98,16 @@ void Nome :: setValor(string valor){
 
 // Implementação dos métodos da classe Prioridade
 
-
-
-
-void Prioridade :: validar(string p){
-    if(p != "ALTA" && p != "MEDIA" && p!= "BAIXA"){
-        throw std :: invalid_argument("PRIORIDADE INVÁLIDA!");  
+void Prioridade::validar(string valor){
+    if(valor != "ALTA" && valor != "MEDIA" && valor!= "BAIXA"){
+        throw std:: invalid_argument("PRIORIDADE INVÁLIDA!");  
     }
 }
 
-void Prioridade :: setValor(string p){
-    validar(p);
-    valor = p;
+void Prioridade::setValor(string valor){
+    validar(valor);
+    this->valor = valor;
 }
-
-
-
-
 
 ////////////////////////////////////////////////
 
@@ -128,7 +125,15 @@ void Prioridade :: setValor(string p){
 
 // Implementação dos métodos da classe Tamanho
 
+void Tamanho::validar(string valor){
+    if (valor != "GRANDE" && valor != "MEDIO" && valor != "PEQUENO")
+        throw std::invalid_argument("O TAMANHO É INVÁLIDO!");
+}
 
+void Tamanho::setValor(string valor){
+    validar(valor);
+    this->valor = valor;
+}
 
 
 
