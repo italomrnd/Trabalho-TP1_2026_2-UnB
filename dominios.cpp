@@ -46,6 +46,7 @@ void Limite::validar(int valor){ //valor = limite desejado
     if(valor > 25 || valor < 1){ // a logica tava errada nao? ele tem que ser ou menoor que 1 ou maior q 25 pra ta errado
         throw std::length_error("LIMITE INVÁLIDO!"); //Erro se o limite for fora dos limites de 1 < valor < 25
     }
+    
 }
 
 void Limite::setValor(int valor){
@@ -63,7 +64,23 @@ void Nome::validar(string valor){
     if(valor.size() > 15 || valor.empty()){ // antes tava size(valor) -> isso retorna o tamanho de um vetor
         throw std::length_error("NOME EXCEDE 15 CARACTERES!");
     }
-    
+    if(valor.front() == ' ' || valor.back() == ' ') {
+        throw std::invalid_argument("NOME NÃO PODE COMEÇAR OU TERMINAR COM ESPAÇO!");
+    }
+
+    for(size_t i = 0; i < valor.size(); i++){
+        char c = valor[i];
+
+        if(!std::isalpha(static_cast<unsigned char>(c)) && c != ' '){
+            throw std::invalid_argument("NOME CONTÉM CARACTÉRES iNVÁLiDOS!");
+        }
+
+        if(c == ' '){
+            if(!std::isalpha(static_cast<unsigned char>(valor[i + 1]))){
+                throw std::invalid_argument("ESPAÇO DEVE SER SEGUIDO POR LETRA!");
+            }
+        }
+    }
 }
 
 void Nome::setValor(string valor){
