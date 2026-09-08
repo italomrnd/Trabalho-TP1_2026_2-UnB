@@ -146,7 +146,7 @@ void Limite::setValor(int valor){
 
 void Nome::validar(string valor){
     if(valor.size() > 15 || valor.empty()){ // antes tava size(valor) -> isso retorna o tamanho de um vetor
-        throw std::length_error("NOME EXCEDE 15 CARACTERES!");
+        throw std::invalid_argument("NOME EXCEDE 15 CARACTERES!");
     }
     if(valor.front() == ' ' || valor.back() == ' ') {
         throw std::invalid_argument("NOME NÃO PODE COMEÇAR OU TERMINAR COM ESPAÇO!");
@@ -266,23 +266,124 @@ void Tamanho::setValor(string valor){
 ////////////////////////////////////////////////
 
 // Implementação dos métodos da classe Texto
+bool isPontuacaoAceita(char c){
+    return c == '.' || c == ',' || c == ';'
+        || c == ':' || c == '?' || c == '!';
+}
+void Texto :: validar(string valor){
+    if(valor.size() > 30 || valor.empty()){
+        throw std :: invalid_argument("NOME DE TAMANHO INVALIDO!");
+    } 
+    char c = valor.front(); // Variável char que ajudará com as validações subsequentes
 
+    if(!isupper(c)){
+        throw std :: invalid_argument("TEXTO DEVE COMECAR COM LETRA MAIUSCULA!");
+    }
 
+    c = valor.back();
 
+    if(c != '.'){
+        throw std :: invalid_argument("TEXTO DEVE TERMINAR COM PONTO FINAL!");
+    }
 
+    for(size_t i = 0; i < valor.size(); i++){
+        c = valor[i];
+        if(!isalpha(c) && !isspace(c) && !isdigit(c) && !isPontuacaoAceita(c)){
+            throw std :: invalid_argument("TEXTO CONTEM CARACTERES INVALIDOS!");
+        }
+
+        if(isPontuacaoAceita(c) &&  isPontuacaoAceita(valor[i+1])){
+            throw std :: invalid_argument("PONTUACAO NAO PODE SER SEGUIDA DE PONTUACAO!");
+        }
+    }
+}
+
+void Texto :: setValor(string valor){
+    validar(valor);
+    this->valor = valor;
+}
 
 
 /////////////////////////////////////////////////
 
 // Implementação dos métodos da classe Timestamp
 
+int qntd_dias_no_mes(string mes, int ano){
+    if(mes == "JAN" || mes == "MAR" || mes == "MAI" || mes == "JUL" 
+        || mes == "AGO" || mes == "OUT" || mes == "DEZ"){
+            return 31;
+        }
+    
+    if(mes == "ABR" || mes == "JUN" || mes == "SET" || mes == "NOV"){
+        return 30;
+    }
+    if(mes == "FEV"){
+        if((ano % 4  == 0 && ano % 100 != 0) || ano % 400 == 0) return 29;
 
+        else return 28;
+    }
+    return 0;
+}
 
+bool mes_valido(string mes){
+    return mes == "JAN" || mes == "MAR" || mes == "MAI" || mes == "JUL" 
+        || mes == "AGO" || mes == "OUT" || mes == "DEZ" || mes == "ABR" || 
+        mes == "JUN" || mes == "SET" || mes == "NOV" || mes == "FEV";
+}
 
+void Timestamp :: validar(string valor){
+    
+    if(valor.size() != 17){
+        throw std::invalid_argument("TAMANHO INVALIDO!");
+    }
 
+    if(valor[2] != '-' || valor[6] != '-' || valor[11] != '-'|| valor[14] != ':'){
+        throw std::invalid_argument("O FORMATO ADEQUADO DEVE SER DIA-MES-ANO-HORA:MINUTO!");
+    }
 
+    string str_dia, str_mes, str_ano, str_hora, str_minutos;
+    int dia, ano, hora, minutos;
 
+    str_dia = valor.substr(0, 2);
 
+    str_mes = valor.substr(3, 3);
+    
+    str_ano = valor.substr(7, 4);
+
+    str_hora = valor.substr(12, 2);
+
+    str_minutos = valor.substr(15, 2);
+
+    try {
+        dia = std::stoi(str_dia);
+        ano = std::stoi(str_ano);
+        hora = std::stoi(str_hora);
+        minutos = std::stoi(str_minutos);
+    } catch (const std::invalid_argument& e) {
+        // Se o stoi tentar converter uma letra, ele cai aqui
+        throw std::invalid_argument("DIA, ANO OU HORARIO CONTEM CARACTERES NAO NUMERICOS!");
+    }
+    
+    if(ano < 2000 || ano > 2099){
+        throw std::invalid_argument("ANO INVALIDO!");
+    }
+    if(!mes_valido(str_mes)){
+        throw std::invalid_argument("MES INVALIDO!");
+    }
+
+    if(dia < 1 || dia > qntd_dias_no_mes(str_mes, ano)){
+        throw std::invalid_argument("QUANTIDADE DE DIAS INVALIDA PARA O MES DADO!");
+    }
+
+    if(hora < 0 || hora > 23 || minutos < 0 || minutos > 59){
+        throw std::invalid_argument("HORARIO INFORMADO INVALIDO!");
+    }    
+}
+
+void Timestamp::setValor(string valor){
+    validar(valor);
+    this->valor = valor;
+}
 
 /////////////////////////////////////////////////
 
