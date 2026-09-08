@@ -151,6 +151,12 @@ void Nome::validar(string valor){
     }
 }
 
+void Nome::setValor(string valor){
+    validar(valor);
+    this->valor = valor;
+}  
+
+
 ////////////////////////////////////////////////
 
 
