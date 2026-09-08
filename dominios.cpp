@@ -86,7 +86,7 @@ void Estado::validar(string valor){
     if (valor != "A FAZER" &&
         valor != "FAZENDO" &&
         valor != "FEITO"){
-            throw std::invalid_argument("DIGITE UM ESTADO VÁLIDO! ");
+            throw std::invalid_argument("DIGITE UM ESTADO VALIDO! ");
         }
 }
 
@@ -127,9 +127,9 @@ void Identificador::setValor(string valor){
 
 
 
-void Limite::validar(int valor){ //valor = limite desejado
-    if(valor > 25 || valor < 1){ // a logica tava errada nao? ele tem que ser ou menoor que 1 ou maior q 25 pra ta errado
-        throw std::invalid_argument("LIMITE INVÁLIDO!"); //Erro se o limite for fora dos limites de 1 < valor < 25
+void Limite::validar(int valor){ //
+    if(valor > 25 || valor < 1){ // 
+        throw std::invalid_argument("LIMITE INVALIDO!"); 
     }
 }
 
@@ -156,12 +156,12 @@ void Nome::validar(string valor){
         char c = valor[i];
 
         if(!std::isalpha(static_cast<unsigned char>(c)) && c != ' '){
-            throw std::invalid_argument("NOME CONTÉM CARACTÉRES iNVÁLiDOS!");
+            throw std::invalid_argument("NOME CONTEM CARACTERES INVALiDOS!");
         }
 
         if(c == ' '){
             if(!std::isalpha(static_cast<unsigned char>(valor[i + 1]))){
-                throw std::invalid_argument("ESPAÇO DEVE SER SEGUIDO POR LETRA!");
+                throw std::invalid_argument("ESPACO DEVE SER SEGUIDO POR LETRA!");
             }
         }
     }
@@ -198,7 +198,7 @@ void Papel::setValor(string valor){
 
 void Prioridade::validar(string valor){
     if(valor != "ALTA" && valor != "MEDIA" && valor!= "BAIXA"){
-        throw std:: invalid_argument("PRIORIDADE INVÁLIDA!");  
+        throw std:: invalid_argument("PRIORIDADE INVALIDA!");  
     }
 }
 
@@ -266,15 +266,15 @@ void Tamanho::setValor(string valor){
 ////////////////////////////////////////////////
 
 // Implementação dos métodos da classe Texto
-bool isPontuacaoAceita(char c){
+bool Texto::ehPontuacaoAceita(char c){
     return c == '.' || c == ',' || c == ';'
         || c == ':' || c == '?' || c == '!';
 }
-void Texto :: validar(string valor){
+void Texto::validar(string valor){
     if(valor.size() > 30 || valor.empty()){
         throw std :: invalid_argument("NOME DE TAMANHO INVALIDO!");
     } 
-    char c = valor.front(); // Variável char que ajudará com as validações subsequentes
+    char c = valor.front(); 
 
     if(!isupper(c)){
         throw std :: invalid_argument("TEXTO DEVE COMECAR COM LETRA MAIUSCULA!");
@@ -288,17 +288,17 @@ void Texto :: validar(string valor){
 
     for(size_t i = 0; i < valor.size(); i++){
         c = valor[i];
-        if(!isalpha(c) && !isspace(c) && !isdigit(c) && !isPontuacaoAceita(c)){
+        if(!isalpha(c) && !isspace(c) && !isdigit(c) && !ehPontuacaoAceita(c)){
             throw std :: invalid_argument("TEXTO CONTEM CARACTERES INVALIDOS!");
         }
 
-        if(isPontuacaoAceita(c) &&  isPontuacaoAceita(valor[i+1])){
+        if(ehPontuacaoAceita(c) && (i + 1 < valor.size()) && ehPontuacaoAceita(valor[i+1])){
             throw std :: invalid_argument("PONTUACAO NAO PODE SER SEGUIDA DE PONTUACAO!");
         }
     }
 }
 
-void Texto :: setValor(string valor){
+void Texto::setValor(string valor){
     validar(valor);
     this->valor = valor;
 }
@@ -308,7 +308,16 @@ void Texto :: setValor(string valor){
 
 // Implementação dos métodos da classe Timestamp
 
-int qntd_dias_no_mes(string mes, int ano){
+bool Timestamp::ehDigito(string str){
+    for (size_t i = 0; i < str.size(); i++){
+        char c = str[i]; 
+        if (!isdigit(c))
+            return false;
+    }
+    return true;
+}
+
+int Timestamp::quantidadeDiasNoMes(string mes, int ano){
     if(mes == "JAN" || mes == "MAR" || mes == "MAI" || mes == "JUL" 
         || mes == "AGO" || mes == "OUT" || mes == "DEZ"){
             return 31;
@@ -325,13 +334,14 @@ int qntd_dias_no_mes(string mes, int ano){
     return 0;
 }
 
-bool mes_valido(string mes){
+
+bool Timestamp::ehMesValido(string mes){
     return mes == "JAN" || mes == "MAR" || mes == "MAI" || mes == "JUL" 
         || mes == "AGO" || mes == "OUT" || mes == "DEZ" || mes == "ABR" || 
         mes == "JUN" || mes == "SET" || mes == "NOV" || mes == "FEV";
 }
 
-void Timestamp :: validar(string valor){
+void Timestamp::validar(string valor){
     
     if(valor.size() != 17){
         throw std::invalid_argument("TAMANHO INVALIDO!");
@@ -341,37 +351,30 @@ void Timestamp :: validar(string valor){
         throw std::invalid_argument("O FORMATO ADEQUADO DEVE SER DIA-MES-ANO-HORA:MINUTO!");
     }
 
-    string str_dia, str_mes, str_ano, str_hora, str_minutos;
-    int dia, ano, hora, minutos;
+    string str_dia = valor.substr(0, 2);
+    string str_mes = valor.substr(3, 3);
+    string str_ano = valor.substr(7, 4);
+    string str_hora = valor.substr(12, 2);
+    string str_minutos = valor.substr(15, 2);
 
-    str_dia = valor.substr(0, 2);
-
-    str_mes = valor.substr(3, 3);
-    
-    str_ano = valor.substr(7, 4);
-
-    str_hora = valor.substr(12, 2);
-
-    str_minutos = valor.substr(15, 2);
-
-    try {
-        dia = std::stoi(str_dia);
-        ano = std::stoi(str_ano);
-        hora = std::stoi(str_hora);
-        minutos = std::stoi(str_minutos);
-    } catch (const std::invalid_argument& e) {
-        // Se o stoi tentar converter uma letra, ele cai aqui
+    if(!ehDigito(str_dia) || !ehDigito(str_ano) || !ehDigito(str_hora) || !ehDigito(str_minutos)){
         throw std::invalid_argument("DIA, ANO OU HORARIO CONTEM CARACTERES NAO NUMERICOS!");
     }
+
+
+    int dia = std::stoi(str_dia);
+    int ano = std::stoi(str_ano);
+    int hora = std::stoi(str_hora);
+    int minutos = std::stoi(str_minutos);
     
     if(ano < 2000 || ano > 2099){
         throw std::invalid_argument("ANO INVALIDO!");
     }
-    if(!mes_valido(str_mes)){
+    if(!ehMesValido(str_mes)){
         throw std::invalid_argument("MES INVALIDO!");
     }
 
-    if(dia < 1 || dia > qntd_dias_no_mes(str_mes, ano)){
+    if(dia < 1 || dia > quantidadeDiasNoMes(str_mes, ano)){
         throw std::invalid_argument("QUANTIDADE DE DIAS INVALIDA PARA O MES DADO!");
     }
 

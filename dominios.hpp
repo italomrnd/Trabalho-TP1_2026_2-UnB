@@ -117,6 +117,7 @@ class Texto{
     private:
         string valor;
         void validar(string);
+        static bool ehPontuacaoAceita(char);
 
     public:
         string getValor() const{
@@ -129,7 +130,9 @@ class Timestamp{
     private:
         string valor;
         void validar(string);
-
+        static int quantidadeDiasNoMes(string, int);
+        static bool ehMesValido(string);
+        static bool ehDigito(string);
     public:
         string getValor() const{
             return valor;
