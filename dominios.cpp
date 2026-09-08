@@ -100,9 +100,25 @@ void Estado::setValor(string valor){
 // Implementação dos métodos da classe Identificador
 
 
+void Identificador::validar(string valor){
+    if (valor.size() != 6)
+        throw std::invalid_argument("O IDENTIFICADOR PRECISA TER 6 CARACTERES!");
 
+    for (size_t i = 0; i < 3; i++){
+        if (!isalpha(valor[i]))
+            throw std::invalid_argument("OS TRES PRIMEIROS CARACTERES PRECISAM SER LETRAS!");
+    }
 
+    for (size_t i = 3; i < valor.size(); i++){
+        if (!isdigit(valor[i]))
+            throw std::invalid_argument("OS TRES ULTIMOS CARACTERES PRECISAM SER NUMEROS!");
+    }
+}
 
+void Identificador::setValor(string valor){
+    validar(valor);
+    this->valor = valor;
+}
 
 
 ///////////////////////////////////////////////
@@ -196,10 +212,37 @@ void Prioridade::setValor(string valor){
 
 // Implementação dos métodos da classe Senha
 
+/*5 caracteres
+Caractere pode ser letra (a-z ou A-Z) ou dígito (0-9); existe pelo menos uma letra e um dígito. */
+
+void Senha::validar(string valor){
+    if (valor.size() != 5)
+        throw std::invalid_argument("A SENHA PRECISA TER 5 CARACTERES!");
+        
+    bool temLetra = false;
+    bool temDigito = false;
+
+    for (size_t i = 0; i < valor.size(); i++){
+        char c = valor[i];
+
+        if (!isalnum(c))
+            throw std::invalid_argument("A SENHA PRECISA SER UM CARACTERE ALFANUMERICO!");
+        if (isalpha(c))
+            temLetra = true;
+        if (isdigit(c))
+            temDigito = true;
+    }
+
+    if (!temDigito || !temLetra )
+        throw std::invalid_argument("A SENHA PRECISA TER PELO MENOS UMA LETRA E UM DIGITO!");
+}
 
 
 
-
+void Senha::setValor(string valor){
+    validar(valor);
+    this->valor = valor;
+}
 
 
 
