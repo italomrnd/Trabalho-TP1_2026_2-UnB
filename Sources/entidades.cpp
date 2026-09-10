@@ -81,12 +81,55 @@ Timestamp Projeto::getTermino()const{
 
     ///// Implementação dos métodos da entidade Cartão de atividade
 
+void CartaodeAtividade::setIdentificador(const Identificador& identificador){
+    this->identificador = identificador;
+}
 
+void CartaodeAtividade::setNome(const Nome& nome){
+    this->nome = nome;
+}
 
+void CartaodeAtividade::setDescricao(const Texto& descricao){
+    this->descricao = descricao;
+}
+
+void CartaodeAtividade::setPrioridade(const Prioridade& prioridade){
+    this->prioridade = prioridade;
+}
+
+void CartaodeAtividade::setEstado(const Estado& estado){
+    this->estado = estado;
+}
+
+void CartaodeAtividade::setTamanho(const Tamanho& tamanho){
+    this->tamanho = tamanho;
+}
+
+void CartaodeAtividade::setInicio(const Timestamp& inicio){
+    this->inicio = inicio;
+}
+
+void CartaodeAtividade::setEntrada(const Timestamp& entrada){
+    this->entrada = entrada;
+}
+
+void CartaodeAtividade::setTermino(const Timestamp& termino){
+    this->termino = termino;
+}
 
     ///// Implementação dos métodos da entidade Quadro
 
+void Quadro::setIdentificador(const Identificador& identificador){
+    this->identificador = identificador;
+}
 
+void Quadro::setNome(const Nome& nome){
+    this->nome = nome;
+}
+
+void Quadro::setLimite(const Limite& limite){
+    this->limite = limite;
+}
 
 Identificador Quadro::getIdentificador()const{
     return identificador;
