@@ -117,6 +117,41 @@ void CartaodeAtividade::setTermino(const Timestamp& termino){
     this->termino = termino;
 }
 
+Identificador CartaodeAtividade::getIdentificador() const{
+    return identificador;
+}
+
+Nome CartaodeAtividade::getNome()const{
+    return nome;
+}
+
+Texto CartaodeAtividade::getDescricao()const{
+    return descricao;
+}
+
+Prioridade CartaodeAtividade::getPrioridade()const{
+    return prioridade;
+}
+
+Estado CartaodeAtividade::getEstado()const{
+    return estado;
+}
+
+Tamanho CartaodeAtividade::getTamanho()const{
+    return tamanho;
+}
+
+Timestamp CartaodeAtividade::getEntrada()const{
+    return entrada;
+}
+
+Timestamp CartaodeAtividade::getInicio()const{
+    return inicio;
+}
+
+Timestamp CartaodeAtividade::getTermino()const{
+    return termino;
+}
     ///// Implementação dos métodos da entidade Quadro
 
 void Quadro::setIdentificador(const Identificador& identificador){
