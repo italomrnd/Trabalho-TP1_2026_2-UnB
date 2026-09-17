@@ -1,3 +1,4 @@
+
 #include "entidades.hpp"
 
     ///// Declaração dos métodos das entidades
@@ -177,4 +178,5 @@ Nome Quadro::getNome()const{
 Limite Quadro::getLimite()const{
     return limite;
 }
+
 

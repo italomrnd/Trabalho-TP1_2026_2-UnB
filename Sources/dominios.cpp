@@ -5,7 +5,7 @@
 
 // Implementação dos métodos da classe Email
 
-void Email::validar(string valor){
+void Email::validar(const string& valor){
     // Verificacao inicial de tamanho 
     if (valor.empty() || valor.size() > 320)
         throw std::invalid_argument("O TAMANHO DO EMAIL EH INVALIDO!");
@@ -82,7 +82,7 @@ void Email::validar(string valor){
 
 // Implementação do métodos da classe Estado
 
-void Estado::validar(string valor){
+void Estado::validar(const string& valor){
     if (valor != "A FAZER" &&
         valor != "FAZENDO" &&
         valor != "FEITO"){
@@ -90,7 +90,7 @@ void Estado::validar(string valor){
         }
 }
 
-void Estado::setValor(string valor){
+void Estado::setValor(const string& valor){
     validar(valor);
     this->valor = valor;
 }
@@ -100,7 +100,7 @@ void Estado::setValor(string valor){
 // Implementação dos métodos da classe Identificador
 
 
-void Identificador::validar(string valor){
+void Identificador::validar(const string& valor){
     if (valor.size() != 6)
         throw std::invalid_argument("O IDENTIFICADOR PRECISA TER 6 CARACTERES!");
 
@@ -115,7 +115,7 @@ void Identificador::validar(string valor){
     }
 }
 
-void Identificador::setValor(string valor){
+void Identificador::setValor(const string& valor){
     validar(valor);
     this->valor = valor;
 }
@@ -144,7 +144,7 @@ void Limite::setValor(int valor){
 // Implementação dos métodos da classe Nome
 
 
-void Nome::validar(string valor){
+void Nome::validar(const string& valor){
     if(valor.size() > 15 || valor.empty()){ // antes tava size(valor) -> isso retorna o tamanho de um vetor
         throw std::invalid_argument("NOME EXCEDE 15 CARACTERES!");
     }
@@ -167,7 +167,7 @@ void Nome::validar(string valor){
     }
 }
 
-void Nome::setValor(string valor){
+void Nome::setValor(const string& valor){
     validar(valor);
     this->valor = valor;
 }  
@@ -178,13 +178,13 @@ void Nome::setValor(string valor){
 
 // Implementação dos métodos da classe Papel
 
-void Papel::validar (string valor){
+void Papel::validar(const string& valor){
     if (valor != "GESTOR" && valor != "DESENVOLVEDOR"){
         throw std::invalid_argument("PAPEL INVALIDO: DEVE SER GESTOR OU DESENVOLVEDOR!");
     }
 }
 
-void Papel::setValor(string valor){
+void Papel::setValor(const string& valor){
     validar(valor);
     this->valor = valor;
 }
@@ -196,13 +196,13 @@ void Papel::setValor(string valor){
 
 // Implementação dos métodos da classe Prioridade
 
-void Prioridade::validar(string valor){
+void Prioridade::validar(const string& valor){
     if(valor != "ALTA" && valor != "MEDIA" && valor!= "BAIXA"){
         throw std:: invalid_argument("PRIORIDADE INVALIDA!");  
     }
 }
 
-void Prioridade::setValor(string valor){
+void Prioridade::setValor(const string& valor){
     validar(valor);
     this->valor = valor;
 }
@@ -215,7 +215,7 @@ void Prioridade::setValor(string valor){
 /*5 caracteres
 Caractere pode ser letra (a-z ou A-Z) ou dígito (0-9); existe pelo menos uma letra e um dígito. */
 
-void Senha::validar(string valor){
+void Senha::validar(const string& valor){
     if (valor.size() != 5)
         throw std::invalid_argument("A SENHA PRECISA TER 5 CARACTERES!");
         
@@ -239,7 +239,7 @@ void Senha::validar(string valor){
 
 
 
-void Senha::setValor(string valor){
+void Senha::setValor(const string& valor){
     validar(valor);
     this->valor = valor;
 }
@@ -250,12 +250,12 @@ void Senha::setValor(string valor){
 
 // Implementação dos métodos da classe Tamanho
 
-void Tamanho::validar(string valor){
+void Tamanho::validar(const string& valor){
     if (valor != "GRANDE" && valor != "MEDIO" && valor != "PEQUENO")
         throw std::invalid_argument("O TAMANHO EH INVALIDO!");
 }
 
-void Tamanho::setValor(string valor){
+void Tamanho::setValor(const string& valor){
     validar(valor);
     this->valor = valor;
 }
@@ -270,7 +270,7 @@ bool Texto::ehPontuacaoAceita(char c){
     return c == '.' || c == ',' || c == ';'
         || c == ':' || c == '?' || c == '!';
 }
-void Texto::validar(string valor){
+void Texto::validar(const string& valor){
     if(valor.size() > 30 || valor.empty()){
         throw std :: invalid_argument("NOME DE TAMANHO INVALIDO!");
     } 
@@ -298,7 +298,7 @@ void Texto::validar(string valor){
     }
 }
 
-void Texto::setValor(string valor){
+void Texto::setValor(const string& valor){
     validar(valor);
     this->valor = valor;
 }
@@ -308,7 +308,7 @@ void Texto::setValor(string valor){
 
 // Implementação dos métodos da classe Timestamp
 
-bool Timestamp::ehDigito(string str){
+bool Timestamp::ehDigito(const string& str){
     for (size_t i = 0; i < str.size(); i++){
         char c = str[i]; 
         if (!isdigit(c))
@@ -317,7 +317,7 @@ bool Timestamp::ehDigito(string str){
     return true;
 }
 
-int Timestamp::quantidadeDiasNoMes(string mes, int ano){
+int Timestamp::quantidadeDiasNoMes(const string& mes, int ano){
     if(mes == "JAN" || mes == "MAR" || mes == "MAI" || mes == "JUL" 
         || mes == "AGO" || mes == "OUT" || mes == "DEZ"){
             return 31;
@@ -335,13 +335,13 @@ int Timestamp::quantidadeDiasNoMes(string mes, int ano){
 }
 
 
-bool Timestamp::ehMesValido(string mes){
+bool Timestamp::ehMesValido(const string& mes){
     return mes == "JAN" || mes == "MAR" || mes == "MAI" || mes == "JUL" 
         || mes == "AGO" || mes == "OUT" || mes == "DEZ" || mes == "ABR" || 
         mes == "JUN" || mes == "SET" || mes == "NOV" || mes == "FEV";
 }
 
-void Timestamp::validar(string valor){
+void Timestamp::validar(const string& valor){
     
     if(valor.size() != 17){
         throw std::invalid_argument("TAMANHO INVALIDO!");
@@ -383,7 +383,7 @@ void Timestamp::validar(string valor){
     }    
 }
 
-void Timestamp::setValor(string valor){
+void Timestamp::setValor(const string& valor){
     validar(valor);
     this->valor = valor;
 }
