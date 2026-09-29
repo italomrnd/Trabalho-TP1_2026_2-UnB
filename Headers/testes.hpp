@@ -87,6 +87,46 @@ class TULimite{
         int run();
 };
 
+class TUNome{
+    private:
+        const string VALOR_VALIDO = "Jonas Ribeiro";
+        const string VALOR_INVALIDO = " Jonas Ribeiro ";
+
+        Nome* nome;
+        int estado;
+
+        void setUp();
+        void tearDown();
+        void testarCenarioValido();
+        void testarCenarioInvalido();
+
+    public:
+        const static int SUCESSO = 0;
+        const static int FALHA = -1;
+
+        int run();
+};
+
+class TUPapel{
+    private:
+        const string VALOR_VALIDO = "DESENVOLVEDOR";
+        const string VALOR_INVALIDO = "DIRETOR";
+
+        Papel* papel;
+        int estado;
+
+        void setUp();
+        void tearDown();
+        void testarCenarioValido();
+        void testarCenarioInvalido();
+
+    public:
+        const static int SUCESSO = 0;
+        const static int FALHA = -1;
+
+        int run();
+};
+
 class TUPrioridade{
     private:
         const string VALOR_VALIDO = "MEDIA";
