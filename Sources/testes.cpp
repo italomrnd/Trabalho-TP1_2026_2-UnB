@@ -452,17 +452,8 @@ int TUTimestamp::run(){
 }
 
 
-
-
-
-
-
-
-
-
 // Implementacao dos metodos de testes de entidades
 
-//Nome:
 
 void TUPessoa::setUp(){
     pessoa = new Pessoa();
