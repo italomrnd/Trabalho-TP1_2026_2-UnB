@@ -256,7 +256,7 @@ class TUProjeto{
     private:
         const string IDENTIFICADOR_VALIDO = "OOO111";
         const string NOME_VALIDO = "Jonas Ribeiro";
-        const string TEXTO_VALIDO = "O rato roeu a roupa do rei de Roma";
+        const string TEXTO_VALIDO = "O rato roeu a roupa do rei de Roma.";
         const string INICIO_VALIDO = "14-ABR-2007-14:00";
         const string TERMINO_VALIDO = "02-FEB-2008-14:00";
         
@@ -277,7 +277,7 @@ class TUCartaoDeAtividade{
     private:
         const string IDENTIFICADOR_VALIDO = "OOO111";
         const string NOME_VALIDO = "Jonas Ribeiro";
-        const string DESCRICAO_VALIDA = "Essa eh uma atividade valida";
+        const string DESCRICAO_VALIDA = "Essa eh uma atividade valida.";
         const string PRIORIDADE_VALIDA = "ALTA";
         const string TAMANHO_VALIDO = "GRANDE";
         const string ENTRADA_VALIDA = "24-JUN-2007-12:10";
