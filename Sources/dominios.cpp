@@ -34,7 +34,7 @@ void Email::validar(const string& valor){
     for (size_t i = 0; i < parte_local.size(); i++){
         char c = parte_local[i];
 
-        if (!isalnum(c) && c != '.' && c != '-')
+        if (!islower(c) && !isalnum(c) && c != '.' && c != '-')
             throw std::invalid_argument("CARACTERE INVALIDO!");
 
         // Checa se o ponto/hifen é seguido por caractere valido (ex.: não é '..' ou '--')
@@ -64,7 +64,7 @@ void Email::validar(const string& valor){
 
     for (size_t i = 0; i < parte_dominio.size(); i++){
         char c = parte_dominio[i];
-        if (!isalnum(c) && c != '.' && c != '-')
+        if (!islower(c) && !isalnum(c) && c != '.' && c != '-')
             throw std::invalid_argument("CARACTERE INVALIDO NO DOMINIO!");
 
         if ((c == '.' || c == '-') && i + 1 < parte_dominio.size()){

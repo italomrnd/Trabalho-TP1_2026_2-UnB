@@ -1,0 +1,4 @@
+var searchData=
+[
+  ['valor_0',['valor',['../classEmail.html#abdbcd2680b361c3f3e925281d04e4ad1',1,'Email::valor'],['../classEstado.html#a0a62c4c3f3f515172853bdeecbea1f02',1,'Estado::valor'],['../classIdentificador.html#a8b0e0c4c4a9a7066e1c33ac61dc14cf3',1,'Identificador::valor'],['../classLimite.html#ae15cf079b3b993ba75726faefe09424d',1,'Limite::valor'],['../classNome.html#a0d5c56e6c345e98243eeef9d02cf166b',1,'Nome::valor'],['../classPapel.html#a5e87ad0b6685c8e9e7e2851da450985d',1,'Papel::valor'],['../classPrioridade.html#aa47a4e98a2deac0eeb7e15aecead6376',1,'Prioridade::valor'],['../classSenha.html#a841e155ed90605b1fe3d3dc377aaf6ba',1,'Senha::valor'],['../classTamanho.html#ae3af8f98bd4d9b57c5eba11089bc9de4',1,'Tamanho::valor'],['../classTexto.html#a5392e83b885443a03205ebe64dc26278',1,'Texto::valor'],['../classTimestamp.html#a0c8bc4129551163d2a0d8e2f9dba7ac3',1,'Timestamp::valor']]]
+];

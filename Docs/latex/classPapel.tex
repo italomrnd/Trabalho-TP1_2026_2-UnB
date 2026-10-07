@@ -1,0 +1,105 @@
+\doxysection{Papel Class Reference}
+\hypertarget{classPapel}{}\label{classPapel}\index{Papel@{Papel}}
+
+
+Define se a função (papel) de um usuário no sistema.  
+
+
+
+
+{\ttfamily \#include $<$dominios.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classPapel_abffd94741e81d0e634f4eb3fe8f82b47}{get\+Valor}} () const
+\begin{DoxyCompactList}\small\item\em Obtém o papel de uma pessoa no sistema de software. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPapel_aef923d6b82bcada0d1a2ace7f513d208}{set\+Valor}} (const string \&)
+\begin{DoxyCompactList}\small\item\em Define o papel de uma pessoa como "{}\+GESTOR"{} ou "{}\+DESENVOLVEDOR"{}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classPapel_afbb5ebe3b7d9585de13bcb90d7a1de4d}{validar}} (const string \&)
+\begin{DoxyCompactList}\small\item\em Verifica se a string corresponde a um papel válido, isto é, "{}\+GESTOR"{} ou "{}\+DESENVOLVEDOR"{}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classPapel_a5e87ad0b6685c8e9e7e2851da450985d}{valor}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Define se a função (papel) de um usuário no sistema. 
+
+
+\begin{DoxyItemize}
+\item Pode ser definido somente como "{}\+GESTOR"{} ou "{}\+DESENVOLVEDOR"{}. 
+\end{DoxyItemize}
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classPapel_abffd94741e81d0e634f4eb3fe8f82b47}\label{classPapel_abffd94741e81d0e634f4eb3fe8f82b47} 
+\index{Papel@{Papel}!getValor@{getValor}}
+\index{getValor@{getValor}!Papel@{Papel}}
+\doxysubsubsection{\texorpdfstring{getValor()}{getValor()}}
+{\footnotesize\ttfamily string Papel\+::get\+Valor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtém o papel de uma pessoa no sistema de software. 
+
+\begin{DoxyReturn}{Returns}
+string O papel atual do usuário. 
+\end{DoxyReturn}
+\Hypertarget{classPapel_aef923d6b82bcada0d1a2ace7f513d208}\label{classPapel_aef923d6b82bcada0d1a2ace7f513d208} 
+\index{Papel@{Papel}!setValor@{setValor}}
+\index{setValor@{setValor}!Papel@{Papel}}
+\doxysubsubsection{\texorpdfstring{setValor()}{setValor()}}
+{\footnotesize\ttfamily void Papel\+::set\+Valor (\begin{DoxyParamCaption}\item[{const string \&}]{valor }\end{DoxyParamCaption})}
+
+
+
+Define o papel de uma pessoa como "{}\+GESTOR"{} ou "{}\+DESENVOLVEDOR"{}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em valor} & A string a ser definida como papel de uma pessoa. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::invalid\+\_\+argument Se a string não é "{}\+GESTOR"{} ou "{}\+DESENVOLVEDOR"{}. 
+\end{DoxyReturn}
+\Hypertarget{classPapel_afbb5ebe3b7d9585de13bcb90d7a1de4d}\label{classPapel_afbb5ebe3b7d9585de13bcb90d7a1de4d} 
+\index{Papel@{Papel}!validar@{validar}}
+\index{validar@{validar}!Papel@{Papel}}
+\doxysubsubsection{\texorpdfstring{validar()}{validar()}}
+{\footnotesize\ttfamily void Papel\+::validar (\begin{DoxyParamCaption}\item[{const string \&}]{valor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Verifica se a string corresponde a um papel válido, isto é, "{}\+GESTOR"{} ou "{}\+DESENVOLVEDOR"{}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em valor} & A string que carrega o papel a ser verificado. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & Se a string não é "{}\+GESTOR"{} ou "{}\+DESENVOLVEDOR"{}. \\
+\hline
+\end{DoxyExceptions}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classPapel_a5e87ad0b6685c8e9e7e2851da450985d}\label{classPapel_a5e87ad0b6685c8e9e7e2851da450985d} 
+\index{Papel@{Papel}!valor@{valor}}
+\index{valor@{valor}!Papel@{Papel}}
+\doxysubsubsection{\texorpdfstring{valor}{valor}}
+{\footnotesize\ttfamily string Papel\+::valor\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/italomrnd/\+Un\+B/\+Ciclo\+Básico\+CIC/\+TP1\+\_\+26\+\_\+2/\+Trabalho26\+\_\+2/\+Headers/\mbox{\hyperlink{dominios_8hpp}{dominios.\+hpp}}\item 
+/home/italomrnd/\+Un\+B/\+Ciclo\+Básico\+CIC/\+TP1\+\_\+26\+\_\+2/\+Trabalho26\+\_\+2/\+Sources/\mbox{\hyperlink{dominios_8cpp}{dominios.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,109 @@
+\doxysection{Estado Class Reference}
+\hypertarget{classEstado}{}\label{classEstado}\index{Estado@{Estado}}
+
+
+Classe que define a condição de uma tarefa a ser representada no sistema. Define o status de uma tarefa no sistema. O valor só pode ser definido como\+:  
+
+
+
+
+{\ttfamily \#include $<$dominios.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classEstado_aa016fd4399e0a3ed9744b7caa4dc544a}{get\+Valor}} () const
+\begin{DoxyCompactList}\small\item\em Obtém o estado atual da tarefa. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEstado_a5ad8cb81d990292bf6693f8ceb8f3a13}{set\+Valor}} (const string \&)
+\begin{DoxyCompactList}\small\item\em Define o estado da tarefa após validação. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classEstado_a6564da1ce9db82ab790e2aec1c9c45c2}{validar}} (const string \&)
+\begin{DoxyCompactList}\small\item\em Verifica se a string pertence a um dos estados permitidos. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classEstado_a0a62c4c3f3f515172853bdeecbea1f02}{valor}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Classe que define a condição de uma tarefa a ser representada no sistema. Define o status de uma tarefa no sistema. O valor só pode ser definido como\+: 
+
+
+\begin{DoxyItemize}
+\item A FAZER
+\item FAZENDO
+\item FEITO Qualquer outra definição diferente destas é considerada inválida. 
+\end{DoxyItemize}
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classEstado_aa016fd4399e0a3ed9744b7caa4dc544a}\label{classEstado_aa016fd4399e0a3ed9744b7caa4dc544a} 
+\index{Estado@{Estado}!getValor@{getValor}}
+\index{getValor@{getValor}!Estado@{Estado}}
+\doxysubsubsection{\texorpdfstring{getValor()}{getValor()}}
+{\footnotesize\ttfamily string Estado\+::get\+Valor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtém o estado atual da tarefa. 
+
+\begin{DoxyReturn}{Returns}
+string O estado armazenado. 
+\end{DoxyReturn}
+\Hypertarget{classEstado_a5ad8cb81d990292bf6693f8ceb8f3a13}\label{classEstado_a5ad8cb81d990292bf6693f8ceb8f3a13} 
+\index{Estado@{Estado}!setValor@{setValor}}
+\index{setValor@{setValor}!Estado@{Estado}}
+\doxysubsubsection{\texorpdfstring{setValor()}{setValor()}}
+{\footnotesize\ttfamily void Estado\+::set\+Valor (\begin{DoxyParamCaption}\item[{const string \&}]{valor }\end{DoxyParamCaption})}
+
+
+
+Define o estado da tarefa após validação. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em valor} & A string a ser definida como o estado da tarefa \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & Se o estado fornecido não é "{}\+A FAZER"{}, "{}\+FEITO"{} ou "{}\+FAZENDO"{}. \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{classEstado_a6564da1ce9db82ab790e2aec1c9c45c2}\label{classEstado_a6564da1ce9db82ab790e2aec1c9c45c2} 
+\index{Estado@{Estado}!validar@{validar}}
+\index{validar@{validar}!Estado@{Estado}}
+\doxysubsubsection{\texorpdfstring{validar()}{validar()}}
+{\footnotesize\ttfamily void Estado\+::validar (\begin{DoxyParamCaption}\item[{const string \&}]{valor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Verifica se a string pertence a um dos estados permitidos. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em valor} & String contendo o estado a ser verificado. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & Se a string passada não representa nenhum dos estados permitidos ("{}\+A FAZER, "{}FAZENDO"{}, "{}FEITO"{}). \\
+\hline
+\end{DoxyExceptions}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classEstado_a0a62c4c3f3f515172853bdeecbea1f02}\label{classEstado_a0a62c4c3f3f515172853bdeecbea1f02} 
+\index{Estado@{Estado}!valor@{valor}}
+\index{valor@{valor}!Estado@{Estado}}
+\doxysubsubsection{\texorpdfstring{valor}{valor}}
+{\footnotesize\ttfamily string Estado\+::valor\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/italomrnd/\+Un\+B/\+Ciclo\+Básico\+CIC/\+TP1\+\_\+26\+\_\+2/\+Trabalho26\+\_\+2/\+Headers/\mbox{\hyperlink{dominios_8hpp}{dominios.\+hpp}}\item 
+/home/italomrnd/\+Un\+B/\+Ciclo\+Básico\+CIC/\+TP1\+\_\+26\+\_\+2/\+Trabalho26\+\_\+2/\+Sources/\mbox{\hyperlink{dominios_8cpp}{dominios.\+cpp}}\end{DoxyCompactItemize}

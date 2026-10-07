@@ -1,0 +1,109 @@
+\doxysection{Tamanho Class Reference}
+\hypertarget{classTamanho}{}\label{classTamanho}\index{Tamanho@{Tamanho}}
+
+
+Define o "{}tamanho"{} de uma tarefa (o esforço necessário para realizá-\/la) de um cartão de atividade. Pode ser definido como\+:  
+
+
+
+
+{\ttfamily \#include $<$dominios.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classTamanho_a7f647e75b726bd4dc7aac45a8017d0d1}{get\+Valor}} () const
+\begin{DoxyCompactList}\small\item\em Obtém o tamanho de um cartão de atividade. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTamanho_a28be3ebbc37045aeac43bf35f37927a7}{set\+Valor}} (const string \&)
+\begin{DoxyCompactList}\small\item\em Define o tamanho de um cartão de atividade. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classTamanho_a894dafcb0a6f72015b916d93c8282494}{validar}} (const string \&)
+\begin{DoxyCompactList}\small\item\em Verifica se a string a ser definida como tamanho é "{}\+GRANDE"{}, "{}\+MEDIO"{} ou "{}\+PEQUENO"{}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classTamanho_ae3af8f98bd4d9b57c5eba11089bc9de4}{valor}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Define o "{}tamanho"{} de uma tarefa (o esforço necessário para realizá-\/la) de um cartão de atividade. Pode ser definido como\+: 
+
+
+\begin{DoxyItemize}
+\item GRANDE;
+\item MEDIO;
+\item PEQUENO. 
+\end{DoxyItemize}
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classTamanho_a7f647e75b726bd4dc7aac45a8017d0d1}\label{classTamanho_a7f647e75b726bd4dc7aac45a8017d0d1} 
+\index{Tamanho@{Tamanho}!getValor@{getValor}}
+\index{getValor@{getValor}!Tamanho@{Tamanho}}
+\doxysubsubsection{\texorpdfstring{getValor()}{getValor()}}
+{\footnotesize\ttfamily string Tamanho\+::get\+Valor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtém o tamanho de um cartão de atividade. 
+
+\begin{DoxyReturn}{Returns}
+string O tamanho atual de um cartão de atividade. 
+\end{DoxyReturn}
+\Hypertarget{classTamanho_a28be3ebbc37045aeac43bf35f37927a7}\label{classTamanho_a28be3ebbc37045aeac43bf35f37927a7} 
+\index{Tamanho@{Tamanho}!setValor@{setValor}}
+\index{setValor@{setValor}!Tamanho@{Tamanho}}
+\doxysubsubsection{\texorpdfstring{setValor()}{setValor()}}
+{\footnotesize\ttfamily void Tamanho\+::set\+Valor (\begin{DoxyParamCaption}\item[{const string \&}]{valor }\end{DoxyParamCaption})}
+
+
+
+Define o tamanho de um cartão de atividade. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em valor} & A string a ser definida como o tamanho de um cartão de atividade. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & Se a string não é "{}\+GRANDE"{}, "{}\+MEDIO"{} ou "{}\+PEQUENO"{}. \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{classTamanho_a894dafcb0a6f72015b916d93c8282494}\label{classTamanho_a894dafcb0a6f72015b916d93c8282494} 
+\index{Tamanho@{Tamanho}!validar@{validar}}
+\index{validar@{validar}!Tamanho@{Tamanho}}
+\doxysubsubsection{\texorpdfstring{validar()}{validar()}}
+{\footnotesize\ttfamily void Tamanho\+::validar (\begin{DoxyParamCaption}\item[{const string \&}]{valor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Verifica se a string a ser definida como tamanho é "{}\+GRANDE"{}, "{}\+MEDIO"{} ou "{}\+PEQUENO"{}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em valor} & A string que carrega o tamanho a ser verificado. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & Se a string não é "{}\+GRANDE"{}, "{}\+MEDIO"{} ou "{}\+PEQUENO"{}. \\
+\hline
+\end{DoxyExceptions}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classTamanho_ae3af8f98bd4d9b57c5eba11089bc9de4}\label{classTamanho_ae3af8f98bd4d9b57c5eba11089bc9de4} 
+\index{Tamanho@{Tamanho}!valor@{valor}}
+\index{valor@{valor}!Tamanho@{Tamanho}}
+\doxysubsubsection{\texorpdfstring{valor}{valor}}
+{\footnotesize\ttfamily string Tamanho\+::valor\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/italomrnd/\+Un\+B/\+Ciclo\+Básico\+CIC/\+TP1\+\_\+26\+\_\+2/\+Trabalho26\+\_\+2/\+Headers/\mbox{\hyperlink{dominios_8hpp}{dominios.\+hpp}}\item 
+/home/italomrnd/\+Un\+B/\+Ciclo\+Básico\+CIC/\+TP1\+\_\+26\+\_\+2/\+Trabalho26\+\_\+2/\+Sources/\mbox{\hyperlink{dominios_8cpp}{dominios.\+cpp}}\end{DoxyCompactItemize}

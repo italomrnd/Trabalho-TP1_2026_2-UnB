@@ -1,0 +1,107 @@
+\doxysection{Limite Class Reference}
+\hypertarget{classLimite}{}\label{classLimite}\index{Limite@{Limite}}
+
+
+Define o número máximo de atividades em um quadro de atividades.  
+
+
+
+
+{\ttfamily \#include $<$dominios.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classLimite_ae3513251940018c33b8a072f91343f00}{get\+Valor}} () const
+\begin{DoxyCompactList}\small\item\em Obtém o limite de um quadro de atividades como retorno da função. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classLimite_afd821e232fe87e1e2ef933cc18d501e0}{set\+Valor}} (int)
+\begin{DoxyCompactList}\small\item\em Define o limite de atividades em um quadro de atividades. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classLimite_af13062890778d46f3c332794b45f6fdd}{validar}} (int)
+\begin{DoxyCompactList}\small\item\em Verifica se é válido o limite númerico de um quadro de atividades. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classLimite_ae15cf079b3b993ba75726faefe09424d}{valor}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Define o número máximo de atividades em um quadro de atividades. 
+
+
+\begin{DoxyItemize}
+\item É um inteiro entre 1 e 25. 
+\end{DoxyItemize}
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classLimite_ae3513251940018c33b8a072f91343f00}\label{classLimite_ae3513251940018c33b8a072f91343f00} 
+\index{Limite@{Limite}!getValor@{getValor}}
+\index{getValor@{getValor}!Limite@{Limite}}
+\doxysubsubsection{\texorpdfstring{getValor()}{getValor()}}
+{\footnotesize\ttfamily int Limite\+::get\+Valor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtém o limite de um quadro de atividades como retorno da função. 
+
+\begin{DoxyReturn}{Returns}
+int O valor númerico do limite. 
+\end{DoxyReturn}
+\Hypertarget{classLimite_afd821e232fe87e1e2ef933cc18d501e0}\label{classLimite_afd821e232fe87e1e2ef933cc18d501e0} 
+\index{Limite@{Limite}!setValor@{setValor}}
+\index{setValor@{setValor}!Limite@{Limite}}
+\doxysubsubsection{\texorpdfstring{setValor()}{setValor()}}
+{\footnotesize\ttfamily void Limite\+::set\+Valor (\begin{DoxyParamCaption}\item[{int}]{valor }\end{DoxyParamCaption})}
+
+
+
+Define o limite de atividades em um quadro de atividades. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em valor} & Um inteiro constante que representa o limite de atividades. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & Se o limite não é um inteiro válido e que respeite às regras de formatação. \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{classLimite_af13062890778d46f3c332794b45f6fdd}\label{classLimite_af13062890778d46f3c332794b45f6fdd} 
+\index{Limite@{Limite}!validar@{validar}}
+\index{validar@{validar}!Limite@{Limite}}
+\doxysubsubsection{\texorpdfstring{validar()}{validar()}}
+{\footnotesize\ttfamily void Limite\+::validar (\begin{DoxyParamCaption}\item[{int}]{valor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Verifica se é válido o limite númerico de um quadro de atividades. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em valor} & Inteiro que representa o limite de atividades a ser verificado. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & Se o valor não é um inteiro entre 1 e 25. \\
+\hline
+\end{DoxyExceptions}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classLimite_ae15cf079b3b993ba75726faefe09424d}\label{classLimite_ae15cf079b3b993ba75726faefe09424d} 
+\index{Limite@{Limite}!valor@{valor}}
+\index{valor@{valor}!Limite@{Limite}}
+\doxysubsubsection{\texorpdfstring{valor}{valor}}
+{\footnotesize\ttfamily int Limite\+::valor\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/italomrnd/\+Un\+B/\+Ciclo\+Básico\+CIC/\+TP1\+\_\+26\+\_\+2/\+Trabalho26\+\_\+2/\+Headers/\mbox{\hyperlink{dominios_8hpp}{dominios.\+hpp}}\item 
+/home/italomrnd/\+Un\+B/\+Ciclo\+Básico\+CIC/\+TP1\+\_\+26\+\_\+2/\+Trabalho26\+\_\+2/\+Sources/\mbox{\hyperlink{dominios_8cpp}{dominios.\+cpp}}\end{DoxyCompactItemize}

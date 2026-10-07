@@ -1,0 +1,9 @@
+<map id="Quadro" name="Quadro">
+<area shape="rect" id="Node000001" title=" " alt="" coords="138,93,207,119"/>
+<area shape="rect" id="Node000002" href="$classIdentificador.html" title="Classe que define um código de identificação para entidades do sistema." alt="" coords="5,5,108,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="67,42,84,67,110,84,139,95,137,100,108,89,80,71,63,45"/>
+<area shape="rect" id="Node000003" href="$classNome.html" title="Palavra que designa um usuário (Pessoa), um cartão de atividade, um quadro ou um projeto." alt="" coords="142,5,203,31"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="175,45,175,93,170,93,170,45"/>
+<area shape="rect" id="Node000004" href="$classLimite.html" title="Define o número máximo de atividades em um quadro de atividades." alt="" coords="228,5,291,31"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="245,44,221,71,192,95,188,91,217,67,241,40"/>
+</map>

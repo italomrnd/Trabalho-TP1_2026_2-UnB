@@ -1,0 +1,11 @@
+<map id="Pessoa" name="Pessoa">
+<area shape="rect" id="Node000001" title=" " alt="" coords="127,93,195,119"/>
+<area shape="rect" id="Node000002" href="$classEmail.html" title="Classe que representa o endereço de correio eletrônico de um usuário do sistema." alt="" coords="5,5,64,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="54,39,83,67,129,91,126,96,80,72,50,43"/>
+<area shape="rect" id="Node000003" href="$classNome.html" title="Palavra que designa um usuário (Pessoa), um cartão de atividade, um quadro ou um projeto." alt="" coords="88,5,149,31"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="127,43,137,68,153,91,149,94,132,71,122,45"/>
+<area shape="rect" id="Node000004" href="$classSenha.html" title="Classe que representa uma sequência de caracteres alfanuméricos usada para proteger e liberar o acess..." alt="" coords="174,5,237,31"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="195,44,170,94,165,92,191,42"/>
+<area shape="rect" id="Node000005" href="$classPapel.html" title="Define se a função (papel) de um usuário no sistema." alt="" coords="261,5,318,31"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="271,42,236,72,191,96,189,91,233,67,268,38"/>
+</map>

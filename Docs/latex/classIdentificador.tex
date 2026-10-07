@@ -1,0 +1,109 @@
+\doxysection{Identificador Class Reference}
+\hypertarget{classIdentificador}{}\label{classIdentificador}\index{Identificador@{Identificador}}
+
+
+Classe que define um código de identificação para entidades do sistema.  
+
+
+
+
+{\ttfamily \#include $<$dominios.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classIdentificador_ab28ad5dfba8ce4aa0e380211775ef53a}{get\+Valor}} () const
+\begin{DoxyCompactList}\small\item\em Obtém o identificador de um cartão de atividade, quadro ou projeto. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classIdentificador_a2734bc9b4ae93eb874718de4489f7a1c}{set\+Valor}} (const string \&)
+\begin{DoxyCompactList}\small\item\em Define o identificador de um cartão de atividade, quadro ou projeto. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classIdentificador_ac91aca5853c84d4e8ff168bd9cdc70c6}{validar}} (const string \&)
+\begin{DoxyCompactList}\small\item\em Verifica se a string é um identificador que segue as regras de formatação. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classIdentificador_a8b0e0c4c4a9a7066e1c33ac61dc14cf3}{valor}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Classe que define um código de identificação para entidades do sistema. 
+
+Define códigos de identificação única para entidades como \doxylink{classQuadro}{Quadro}, \doxylink{classProjeto}{Projeto} e Cartão de Atividade. Regras de formatação\+:
+\begin{DoxyItemize}
+\item Possui 6 caracteres;
+\item Os três primeiros caracteres são letras (a-\/z ou A-\/Z)
+\item Os três últimos caracteres são dígitos (0-\/9). 
+\end{DoxyItemize}
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classIdentificador_ab28ad5dfba8ce4aa0e380211775ef53a}\label{classIdentificador_ab28ad5dfba8ce4aa0e380211775ef53a} 
+\index{Identificador@{Identificador}!getValor@{getValor}}
+\index{getValor@{getValor}!Identificador@{Identificador}}
+\doxysubsubsection{\texorpdfstring{getValor()}{getValor()}}
+{\footnotesize\ttfamily string Identificador\+::get\+Valor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtém o identificador de um cartão de atividade, quadro ou projeto. 
+
+\begin{DoxyReturn}{Returns}
+string O identificador esperado. 
+\end{DoxyReturn}
+\Hypertarget{classIdentificador_a2734bc9b4ae93eb874718de4489f7a1c}\label{classIdentificador_a2734bc9b4ae93eb874718de4489f7a1c} 
+\index{Identificador@{Identificador}!setValor@{setValor}}
+\index{setValor@{setValor}!Identificador@{Identificador}}
+\doxysubsubsection{\texorpdfstring{setValor()}{setValor()}}
+{\footnotesize\ttfamily void Identificador\+::set\+Valor (\begin{DoxyParamCaption}\item[{const string \&}]{valor }\end{DoxyParamCaption})}
+
+
+
+Define o identificador de um cartão de atividade, quadro ou projeto. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em valor} & String a ser definida como identificador. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & Se o identificador não segue às regras de formatação. \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{classIdentificador_ac91aca5853c84d4e8ff168bd9cdc70c6}\label{classIdentificador_ac91aca5853c84d4e8ff168bd9cdc70c6} 
+\index{Identificador@{Identificador}!validar@{validar}}
+\index{validar@{validar}!Identificador@{Identificador}}
+\doxysubsubsection{\texorpdfstring{validar()}{validar()}}
+{\footnotesize\ttfamily void Identificador\+::validar (\begin{DoxyParamCaption}\item[{const string \&}]{valor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Verifica se a string é um identificador que segue as regras de formatação. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em valor} & String que carrega um identificador a ser validado. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & Se o identificador checado não é válido. \\
+\hline
+\end{DoxyExceptions}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classIdentificador_a8b0e0c4c4a9a7066e1c33ac61dc14cf3}\label{classIdentificador_a8b0e0c4c4a9a7066e1c33ac61dc14cf3} 
+\index{Identificador@{Identificador}!valor@{valor}}
+\index{valor@{valor}!Identificador@{Identificador}}
+\doxysubsubsection{\texorpdfstring{valor}{valor}}
+{\footnotesize\ttfamily string Identificador\+::valor\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/italomrnd/\+Un\+B/\+Ciclo\+Básico\+CIC/\+TP1\+\_\+26\+\_\+2/\+Trabalho26\+\_\+2/\+Headers/\mbox{\hyperlink{dominios_8hpp}{dominios.\+hpp}}\item 
+/home/italomrnd/\+Un\+B/\+Ciclo\+Básico\+CIC/\+TP1\+\_\+26\+\_\+2/\+Trabalho26\+\_\+2/\+Sources/\mbox{\hyperlink{dominios_8cpp}{dominios.\+cpp}}\end{DoxyCompactItemize}

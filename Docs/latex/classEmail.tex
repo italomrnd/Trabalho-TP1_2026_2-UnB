@@ -1,0 +1,120 @@
+\doxysection{Email Class Reference}
+\hypertarget{classEmail}{}\label{classEmail}\index{Email@{Email}}
+
+
+Classe que representa o endereço de correio eletrônico de um usuário do sistema.  
+
+
+
+
+{\ttfamily \#include $<$dominios.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classEmail_a573b7a1f21085bbb13cf6ec4dd802ecc}{get\+Valor}} () const
+\begin{DoxyCompactList}\small\item\em Obtém o e-\/mail armazenado na varíavel valor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEmail_aa06b935d5f855fb91ecad210eb3bc47f}{set\+Valor}} (const string \&)
+\begin{DoxyCompactList}\small\item\em Define o endereço de e-\/mail após ser validado;. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classEmail_a8ac9bcfd96aea01d418c59feb0d16017}{validar}} (const string \&)
+\begin{DoxyCompactList}\small\item\em Verifica se a string atende às regras de formato do e-\/mail. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classEmail_abdbcd2680b361c3f3e925281d04e4ad1}{valor}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Classe que representa o endereço de correio eletrônico de um usuário do sistema. 
+
+Formato válido\+: parte-\/local@dominio
+
+Regras para a parte local (máx. 64 caracteres)\+:
+\begin{DoxyItemize}
+\item Só aceita caracteres minúsculos;
+\item Contém apenas letras (a-\/z), dígitos (0-\/9), ponto(.) ou hífen(-\/);
+\item Não pode iniciar nem terminar com ponto(.) ou hífen(-\/);
+\item Todo ponto ou hífen deve ser seguido imediatamente por número ou letra, ou seja, não é permitido dois hífens ou pontos seguidos.
+\end{DoxyItemize}
+
+Regras para o domínio (máx. 255 caracteres)\+:
+\begin{DoxyItemize}
+\item Só aceita caracteres minúsculos;
+\item Composto por uma ou mais partes separadas por ponto (.);
+\item Cada parte possui apenas letras (a-\/z) ou dígitos (0-\/9);
+\item Nenhuma parte pode iniciar ou terminar com hífen (-\/). 
+\end{DoxyItemize}
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classEmail_a573b7a1f21085bbb13cf6ec4dd802ecc}\label{classEmail_a573b7a1f21085bbb13cf6ec4dd802ecc} 
+\index{Email@{Email}!getValor@{getValor}}
+\index{getValor@{getValor}!Email@{Email}}
+\doxysubsubsection{\texorpdfstring{getValor()}{getValor()}}
+{\footnotesize\ttfamily string Email\+::get\+Valor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtém o e-\/mail armazenado na varíavel valor. 
+
+\begin{DoxyReturn}{Returns}
+string Endereço de e-\/mail atual. 
+\end{DoxyReturn}
+\Hypertarget{classEmail_aa06b935d5f855fb91ecad210eb3bc47f}\label{classEmail_aa06b935d5f855fb91ecad210eb3bc47f} 
+\index{Email@{Email}!setValor@{setValor}}
+\index{setValor@{setValor}!Email@{Email}}
+\doxysubsubsection{\texorpdfstring{setValor()}{setValor()}}
+{\footnotesize\ttfamily void Email\+::set\+Valor (\begin{DoxyParamCaption}\item[{const string \&}]{ }\end{DoxyParamCaption})}
+
+
+
+Define o endereço de e-\/mail após ser validado;. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em valor} & String com o endereço de e-\/mail. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & Se o endereço de e-\/mail fornecido for inválido. \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{classEmail_a8ac9bcfd96aea01d418c59feb0d16017}\label{classEmail_a8ac9bcfd96aea01d418c59feb0d16017} 
+\index{Email@{Email}!validar@{validar}}
+\index{validar@{validar}!Email@{Email}}
+\doxysubsubsection{\texorpdfstring{validar()}{validar()}}
+{\footnotesize\ttfamily void Email\+::validar (\begin{DoxyParamCaption}\item[{const string \&}]{valor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Verifica se a string atende às regras de formato do e-\/mail. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em valor} & String contendo o e-\/mail a ser validado. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & Se a parte local ou domínio violarem os limites de tamanho, caracteres permitidos ou regras de posicionamento de pontos ou hífens. \\
+\hline
+\end{DoxyExceptions}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classEmail_abdbcd2680b361c3f3e925281d04e4ad1}\label{classEmail_abdbcd2680b361c3f3e925281d04e4ad1} 
+\index{Email@{Email}!valor@{valor}}
+\index{valor@{valor}!Email@{Email}}
+\doxysubsubsection{\texorpdfstring{valor}{valor}}
+{\footnotesize\ttfamily string Email\+::valor\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/italomrnd/\+Un\+B/\+Ciclo\+Básico\+CIC/\+TP1\+\_\+26\+\_\+2/\+Trabalho26\+\_\+2/\+Headers/\mbox{\hyperlink{dominios_8hpp}{dominios.\+hpp}}\item 
+/home/italomrnd/\+Un\+B/\+Ciclo\+Básico\+CIC/\+TP1\+\_\+26\+\_\+2/\+Trabalho26\+\_\+2/\+Sources/\mbox{\hyperlink{dominios_8cpp}{dominios.\+cpp}}\end{DoxyCompactItemize}

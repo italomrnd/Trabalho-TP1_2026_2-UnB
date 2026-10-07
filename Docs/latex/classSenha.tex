@@ -1,0 +1,109 @@
+\doxysection{Senha Class Reference}
+\hypertarget{classSenha}{}\label{classSenha}\index{Senha@{Senha}}
+
+
+Classe que representa uma sequência de caracteres alfanuméricos usada para proteger e liberar o acesso de um usuário do sistema.  
+
+
+
+
+{\ttfamily \#include $<$dominios.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classSenha_ae0b4d9dfac80da4dc9c4965a9648e6b5}{get\+Valor}} () const
+\begin{DoxyCompactList}\small\item\em Obtém a senha de uma pessoa do sistema. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSenha_a004b67b8e8c8dbfac70e08fece395ed6}{set\+Valor}} (const string \&)
+\begin{DoxyCompactList}\small\item\em Define a senha de uma pessoa do sistema. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classSenha_a31345814fe8ec2ce1e3d38b67d4e40bc}{validar}} (const string \&)
+\begin{DoxyCompactList}\small\item\em Verifica se a string que representa uma senha segue as regras de formatação. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classSenha_a841e155ed90605b1fe3d3dc377aaf6ba}{valor}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Classe que representa uma sequência de caracteres alfanuméricos usada para proteger e liberar o acesso de um usuário do sistema. 
+
+
+\begin{DoxyItemize}
+\item Possui exatamente 5 caracteres;
+\item Caractere por ser letra (a-\/z ou A-\/Z) ou dígito (0-\/9);
+\item Existe pelo menos uma letra e um dígito; 
+\end{DoxyItemize}
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classSenha_ae0b4d9dfac80da4dc9c4965a9648e6b5}\label{classSenha_ae0b4d9dfac80da4dc9c4965a9648e6b5} 
+\index{Senha@{Senha}!getValor@{getValor}}
+\index{getValor@{getValor}!Senha@{Senha}}
+\doxysubsubsection{\texorpdfstring{getValor()}{getValor()}}
+{\footnotesize\ttfamily string Senha\+::get\+Valor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtém a senha de uma pessoa do sistema. 
+
+\begin{DoxyReturn}{Returns}
+string A senha atual de uma pessoa. 
+\end{DoxyReturn}
+\Hypertarget{classSenha_a004b67b8e8c8dbfac70e08fece395ed6}\label{classSenha_a004b67b8e8c8dbfac70e08fece395ed6} 
+\index{Senha@{Senha}!setValor@{setValor}}
+\index{setValor@{setValor}!Senha@{Senha}}
+\doxysubsubsection{\texorpdfstring{setValor()}{setValor()}}
+{\footnotesize\ttfamily void Senha\+::set\+Valor (\begin{DoxyParamCaption}\item[{const string \&}]{valor }\end{DoxyParamCaption})}
+
+
+
+Define a senha de uma pessoa do sistema. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em valor} & A senha a ser definida. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & Se a senha não é válida, isto é, não segue as regras de formatação. \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{classSenha_a31345814fe8ec2ce1e3d38b67d4e40bc}\label{classSenha_a31345814fe8ec2ce1e3d38b67d4e40bc} 
+\index{Senha@{Senha}!validar@{validar}}
+\index{validar@{validar}!Senha@{Senha}}
+\doxysubsubsection{\texorpdfstring{validar()}{validar()}}
+{\footnotesize\ttfamily void Senha\+::validar (\begin{DoxyParamCaption}\item[{const string \&}]{valor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Verifica se a string que representa uma senha segue as regras de formatação. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em valor} & A string que carrega a senha a ser verificada. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & Se a string não é uma senha válida, isto é, não segue as regras de formatação. \\
+\hline
+\end{DoxyExceptions}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classSenha_a841e155ed90605b1fe3d3dc377aaf6ba}\label{classSenha_a841e155ed90605b1fe3d3dc377aaf6ba} 
+\index{Senha@{Senha}!valor@{valor}}
+\index{valor@{valor}!Senha@{Senha}}
+\doxysubsubsection{\texorpdfstring{valor}{valor}}
+{\footnotesize\ttfamily string Senha\+::valor\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/italomrnd/\+Un\+B/\+Ciclo\+Básico\+CIC/\+TP1\+\_\+26\+\_\+2/\+Trabalho26\+\_\+2/\+Headers/\mbox{\hyperlink{dominios_8hpp}{dominios.\+hpp}}\item 
+/home/italomrnd/\+Un\+B/\+Ciclo\+Básico\+CIC/\+TP1\+\_\+26\+\_\+2/\+Trabalho26\+\_\+2/\+Sources/\mbox{\hyperlink{dominios_8cpp}{dominios.\+cpp}}\end{DoxyCompactItemize}

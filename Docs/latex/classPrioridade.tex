@@ -1,0 +1,107 @@
+\doxysection{Prioridade Class Reference}
+\hypertarget{classPrioridade}{}\label{classPrioridade}\index{Prioridade@{Prioridade}}
+
+
+Define a urgência de um cartão de atividade no sistema.  
+
+
+
+
+{\ttfamily \#include $<$dominios.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classPrioridade_af24b6a849bc2a2abf880bb65859ed237}{get\+Valor}} () const
+\begin{DoxyCompactList}\small\item\em Obtém a prioridade de um cartão de atividade. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPrioridade_a6967c28770a96100ce11963ca31c9ae8}{set\+Valor}} (const string \&)
+\begin{DoxyCompactList}\small\item\em Define a prioridade de um cartão de atividade no sistema. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classPrioridade_a681d8005b5dc2518c9a4a0f1d71c463f}{validar}} (const string \&)
+\begin{DoxyCompactList}\small\item\em Verifica se a string que representa a proridade de uma atividade é "{}\+ALTA"{}, "{}\+MEDIA"{} ou "{}\+BAIXA"{}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classPrioridade_aa47a4e98a2deac0eeb7e15aecead6376}{valor}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Define a urgência de um cartão de atividade no sistema. 
+
+
+\begin{DoxyItemize}
+\item Pode ser definida somente como "{}\+ALTA"{}, "{}\+MEDIA"{} ou "{}\+BAIXA"{}. 
+\end{DoxyItemize}
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classPrioridade_af24b6a849bc2a2abf880bb65859ed237}\label{classPrioridade_af24b6a849bc2a2abf880bb65859ed237} 
+\index{Prioridade@{Prioridade}!getValor@{getValor}}
+\index{getValor@{getValor}!Prioridade@{Prioridade}}
+\doxysubsubsection{\texorpdfstring{getValor()}{getValor()}}
+{\footnotesize\ttfamily string Prioridade\+::get\+Valor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtém a prioridade de um cartão de atividade. 
+
+\begin{DoxyReturn}{Returns}
+string A prioridade atual de um cartão de atividade. 
+\end{DoxyReturn}
+\Hypertarget{classPrioridade_a6967c28770a96100ce11963ca31c9ae8}\label{classPrioridade_a6967c28770a96100ce11963ca31c9ae8} 
+\index{Prioridade@{Prioridade}!setValor@{setValor}}
+\index{setValor@{setValor}!Prioridade@{Prioridade}}
+\doxysubsubsection{\texorpdfstring{setValor()}{setValor()}}
+{\footnotesize\ttfamily void Prioridade\+::set\+Valor (\begin{DoxyParamCaption}\item[{const string \&}]{valor }\end{DoxyParamCaption})}
+
+
+
+Define a prioridade de um cartão de atividade no sistema. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em valor} & A string a ser definida como prioridade de um cartão de atividade. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & Se a string não é "{}\+ALTA"{}, "{}\+MEDIA"{} ou "{}\+BAIXA"{}. \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{classPrioridade_a681d8005b5dc2518c9a4a0f1d71c463f}\label{classPrioridade_a681d8005b5dc2518c9a4a0f1d71c463f} 
+\index{Prioridade@{Prioridade}!validar@{validar}}
+\index{validar@{validar}!Prioridade@{Prioridade}}
+\doxysubsubsection{\texorpdfstring{validar()}{validar()}}
+{\footnotesize\ttfamily void Prioridade\+::validar (\begin{DoxyParamCaption}\item[{const string \&}]{valor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Verifica se a string que representa a proridade de uma atividade é "{}\+ALTA"{}, "{}\+MEDIA"{} ou "{}\+BAIXA"{}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em valor} & A string que carrega a prioridade a ser verificada. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & Se a string a ser validada não segue as regras de formatação, isto é, não é "{}\+ALTA"{}, "{}\+MEDIA"{} ou "{}\+BAIXA"{}. \\
+\hline
+\end{DoxyExceptions}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classPrioridade_aa47a4e98a2deac0eeb7e15aecead6376}\label{classPrioridade_aa47a4e98a2deac0eeb7e15aecead6376} 
+\index{Prioridade@{Prioridade}!valor@{valor}}
+\index{valor@{valor}!Prioridade@{Prioridade}}
+\doxysubsubsection{\texorpdfstring{valor}{valor}}
+{\footnotesize\ttfamily string Prioridade\+::valor\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/italomrnd/\+Un\+B/\+Ciclo\+Básico\+CIC/\+TP1\+\_\+26\+\_\+2/\+Trabalho26\+\_\+2/\+Headers/\mbox{\hyperlink{dominios_8hpp}{dominios.\+hpp}}\item 
+/home/italomrnd/\+Un\+B/\+Ciclo\+Básico\+CIC/\+TP1\+\_\+26\+\_\+2/\+Trabalho26\+\_\+2/\+Sources/\mbox{\hyperlink{dominios_8cpp}{dominios.\+cpp}}\end{DoxyCompactItemize}

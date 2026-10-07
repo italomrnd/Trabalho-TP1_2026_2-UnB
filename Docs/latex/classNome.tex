@@ -1,0 +1,112 @@
+\doxysection{Nome Class Reference}
+\hypertarget{classNome}{}\label{classNome}\index{Nome@{Nome}}
+
+
+Palavra que designa um usuário (\doxylink{classPessoa}{Pessoa}), um cartão de atividade, um quadro ou um projeto.  
+
+
+
+
+{\ttfamily \#include $<$dominios.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classNome_ac8881234a0e2d0ddff4fb689ceb256eb}{get\+Valor}} () const
+\begin{DoxyCompactList}\small\item\em Obtém o nome de uma pessoa, cartão de atividade, quadro ou projeto. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classNome_ae66ac378b7363a69061bec2356451512}{set\+Valor}} (const string \&)
+\begin{DoxyCompactList}\small\item\em Define o nome de uma pessoa, cartão de atividade, quadro ou projeto. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classNome_a43fda8856abd4100393639eb48e31884}{validar}} (const string \&)
+\begin{DoxyCompactList}\small\item\em Verifica se uma string que representa um nome segue as regras de formatação. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classNome_a0d5c56e6c345e98243eeef9d02cf166b}{valor}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Palavra que designa um usuário (\doxylink{classPessoa}{Pessoa}), um cartão de atividade, um quadro ou um projeto. 
+
+
+\begin{DoxyItemize}
+\item Possui no máximo 25 caracteres;
+\item Não pode ser vazio;
+\item Pode ser composto letras maísculas(A-\/Z), minúsculas(a-\/z) ou espaço em branco;
+\item Espaço em branco é seguido por letra;
+\item Primeiro caractere não é espaço em branco;
+\item Último caractere não é espaço em branco. 
+\end{DoxyItemize}
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classNome_ac8881234a0e2d0ddff4fb689ceb256eb}\label{classNome_ac8881234a0e2d0ddff4fb689ceb256eb} 
+\index{Nome@{Nome}!getValor@{getValor}}
+\index{getValor@{getValor}!Nome@{Nome}}
+\doxysubsubsection{\texorpdfstring{getValor()}{getValor()}}
+{\footnotesize\ttfamily string Nome\+::get\+Valor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtém o nome de uma pessoa, cartão de atividade, quadro ou projeto. 
+
+\begin{DoxyReturn}{Returns}
+string O nome atual. 
+\end{DoxyReturn}
+\Hypertarget{classNome_ae66ac378b7363a69061bec2356451512}\label{classNome_ae66ac378b7363a69061bec2356451512} 
+\index{Nome@{Nome}!setValor@{setValor}}
+\index{setValor@{setValor}!Nome@{Nome}}
+\doxysubsubsection{\texorpdfstring{setValor()}{setValor()}}
+{\footnotesize\ttfamily void Nome\+::set\+Valor (\begin{DoxyParamCaption}\item[{const string \&}]{valor }\end{DoxyParamCaption})}
+
+
+
+Define o nome de uma pessoa, cartão de atividade, quadro ou projeto. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em valor} & String a ser definida como nome. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & Se o nome não é um nome válido que segue as regras de formatação. \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{classNome_a43fda8856abd4100393639eb48e31884}\label{classNome_a43fda8856abd4100393639eb48e31884} 
+\index{Nome@{Nome}!validar@{validar}}
+\index{validar@{validar}!Nome@{Nome}}
+\doxysubsubsection{\texorpdfstring{validar()}{validar()}}
+{\footnotesize\ttfamily void Nome\+::validar (\begin{DoxyParamCaption}\item[{const string \&}]{valor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Verifica se uma string que representa um nome segue as regras de formatação. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em valor} & O nome a ser verificado. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & Se o nome não segue as regras de formatação. \\
+\hline
+\end{DoxyExceptions}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classNome_a0d5c56e6c345e98243eeef9d02cf166b}\label{classNome_a0d5c56e6c345e98243eeef9d02cf166b} 
+\index{Nome@{Nome}!valor@{valor}}
+\index{valor@{valor}!Nome@{Nome}}
+\doxysubsubsection{\texorpdfstring{valor}{valor}}
+{\footnotesize\ttfamily string Nome\+::valor\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/italomrnd/\+Un\+B/\+Ciclo\+Básico\+CIC/\+TP1\+\_\+26\+\_\+2/\+Trabalho26\+\_\+2/\+Headers/\mbox{\hyperlink{dominios_8hpp}{dominios.\+hpp}}\item 
+/home/italomrnd/\+Un\+B/\+Ciclo\+Básico\+CIC/\+TP1\+\_\+26\+\_\+2/\+Trabalho26\+\_\+2/\+Sources/\mbox{\hyperlink{dominios_8cpp}{dominios.\+cpp}}\end{DoxyCompactItemize}

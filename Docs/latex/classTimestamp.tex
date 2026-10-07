@@ -1,0 +1,171 @@
+\doxysection{Timestamp Class Reference}
+\hypertarget{classTimestamp}{}\label{classTimestamp}\index{Timestamp@{Timestamp}}
+
+
+{\ttfamily \#include $<$dominios.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classTimestamp_a3dba4e0f4c64774270dc3d05e1244e12}{get\+Valor}} () const
+\begin{DoxyCompactList}\small\item\em Obtém o timestamp armazenado. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTimestamp_a7bef416bfd85ad460666f716cec7dee4}{set\+Valor}} (const string \&)
+\begin{DoxyCompactList}\small\item\em Define o timestamp atual. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classTimestamp_a6d1a1356f8397f3be37f908d8f54dc0a}{validar}} (const string \&)
+\begin{DoxyCompactList}\small\item\em Verifica se a string a ser definida como timestamp é válida, isto é, segue as regras de formatação. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{classTimestamp_aa5dc932c4465645779c0ab358d5c4c54}{quantidade\+Dias\+No\+Mes}} (const string \&, int)
+\begin{DoxyCompactList}\small\item\em Método auxiliar que ajuda a verificar a quantidade de dias no mês de acordo com a string passada. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{classTimestamp_ae9a740dd9c59ad0d93c42fac278c63b8}{eh\+Mes\+Valido}} (const string \&)
+\begin{DoxyCompactList}\small\item\em Método auxiliar que ajuda a verificar se um mês existe e se está no formato correto. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{classTimestamp_a6a9ca7369b495a7d4380edc4bf514899}{eh\+Digito}} (const string \&)
+\begin{DoxyCompactList}\small\item\em Método auxiliar que ajuda a verificar se uma string é composta apenas por dígitos. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classTimestamp_a0c8bc4129551163d2a0d8e2f9dba7ac3}{valor}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+de caracteres ou números que identifica quando um evento específico ocorreu.
+
+Pode descrever início ou término de um cartão de atividade, instante de entrada do cartão de atividade, bem como início ou término de um projeto. Regras de formatação\+:
+\begin{DoxyItemize}
+\item Segue o formato DIA-\/\+MES-\/\+ANO-\/\+HORARIO
+\item DIA é número de 1 a 31;
+\item MES é sigla JAN, FEV, MAR, ABR, MAI, JUN, JUL, AGO, SET, OUT, NOV, DEZ;
+\item ANO é número de 2000 A 2099;
+\item HORÁ\+RIO é valor de 00\+:00 a 23\+:59;
+\item A data é válida considerando anos bissextos. 
+\end{DoxyItemize}
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classTimestamp_a6a9ca7369b495a7d4380edc4bf514899}\label{classTimestamp_a6a9ca7369b495a7d4380edc4bf514899} 
+\index{Timestamp@{Timestamp}!ehDigito@{ehDigito}}
+\index{ehDigito@{ehDigito}!Timestamp@{Timestamp}}
+\doxysubsubsection{\texorpdfstring{ehDigito()}{ehDigito()}}
+{\footnotesize\ttfamily bool Timestamp\+::eh\+Digito (\begin{DoxyParamCaption}\item[{const string \&}]{str }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Método auxiliar que ajuda a verificar se uma string é composta apenas por dígitos. 
+
+\begin{DoxyReturn}{Returns}
+true Se a string é composta por dígitos. 
+
+false Caso contrário. 
+\end{DoxyReturn}
+\Hypertarget{classTimestamp_ae9a740dd9c59ad0d93c42fac278c63b8}\label{classTimestamp_ae9a740dd9c59ad0d93c42fac278c63b8} 
+\index{Timestamp@{Timestamp}!ehMesValido@{ehMesValido}}
+\index{ehMesValido@{ehMesValido}!Timestamp@{Timestamp}}
+\doxysubsubsection{\texorpdfstring{ehMesValido()}{ehMesValido()}}
+{\footnotesize\ttfamily bool Timestamp\+::eh\+Mes\+Valido (\begin{DoxyParamCaption}\item[{const string \&}]{mes }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Método auxiliar que ajuda a verificar se um mês existe e se está no formato correto. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mes} & O mês a ser verificado. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Se o mês é válido, isto é, JAN, FEV, MAR, ABR, MAI, JUN, JUL, AGO, SET, OUT, NOV ou DEZ. 
+
+false Caso contrário. 
+\end{DoxyReturn}
+\Hypertarget{classTimestamp_a3dba4e0f4c64774270dc3d05e1244e12}\label{classTimestamp_a3dba4e0f4c64774270dc3d05e1244e12} 
+\index{Timestamp@{Timestamp}!getValor@{getValor}}
+\index{getValor@{getValor}!Timestamp@{Timestamp}}
+\doxysubsubsection{\texorpdfstring{getValor()}{getValor()}}
+{\footnotesize\ttfamily string Timestamp\+::get\+Valor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtém o timestamp armazenado. 
+
+\begin{DoxyReturn}{Returns}
+string O timestamp atual. 
+\end{DoxyReturn}
+\Hypertarget{classTimestamp_aa5dc932c4465645779c0ab358d5c4c54}\label{classTimestamp_aa5dc932c4465645779c0ab358d5c4c54} 
+\index{Timestamp@{Timestamp}!quantidadeDiasNoMes@{quantidadeDiasNoMes}}
+\index{quantidadeDiasNoMes@{quantidadeDiasNoMes}!Timestamp@{Timestamp}}
+\doxysubsubsection{\texorpdfstring{quantidadeDiasNoMes()}{quantidadeDiasNoMes()}}
+{\footnotesize\ttfamily int Timestamp\+::quantidade\+Dias\+No\+Mes (\begin{DoxyParamCaption}\item[{const string \&}]{mes,  }\item[{int}]{ano }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Método auxiliar que ajuda a verificar a quantidade de dias no mês de acordo com a string passada. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mes} & O mês que desejamos checar a quantidade de dias. \\
+\hline
+{\em ano} & O ano em que esse mês está. Isso é importante para verificar se ele é ou não bissexto. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int A quantidade de dias daquele mês, atentando-\/se se o ano é bissexto ou não. 
+\end{DoxyReturn}
+\Hypertarget{classTimestamp_a7bef416bfd85ad460666f716cec7dee4}\label{classTimestamp_a7bef416bfd85ad460666f716cec7dee4} 
+\index{Timestamp@{Timestamp}!setValor@{setValor}}
+\index{setValor@{setValor}!Timestamp@{Timestamp}}
+\doxysubsubsection{\texorpdfstring{setValor()}{setValor()}}
+{\footnotesize\ttfamily void Timestamp\+::set\+Valor (\begin{DoxyParamCaption}\item[{const string \&}]{valor }\end{DoxyParamCaption})}
+
+
+
+Define o timestamp atual. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em valor} & A string a ser definida como o timestamp atual. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & Se o timestamp a ser definido não segue as regras de formatação. \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{classTimestamp_a6d1a1356f8397f3be37f908d8f54dc0a}\label{classTimestamp_a6d1a1356f8397f3be37f908d8f54dc0a} 
+\index{Timestamp@{Timestamp}!validar@{validar}}
+\index{validar@{validar}!Timestamp@{Timestamp}}
+\doxysubsubsection{\texorpdfstring{validar()}{validar()}}
+{\footnotesize\ttfamily void Timestamp\+::validar (\begin{DoxyParamCaption}\item[{const string \&}]{valor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Verifica se a string a ser definida como timestamp é válida, isto é, segue as regras de formatação. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em valor} & A string que carrega o timestamp a ser verificado. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & Se o timestamp a ser verificado não segue as regras de formatação. \\
+\hline
+\end{DoxyExceptions}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classTimestamp_a0c8bc4129551163d2a0d8e2f9dba7ac3}\label{classTimestamp_a0c8bc4129551163d2a0d8e2f9dba7ac3} 
+\index{Timestamp@{Timestamp}!valor@{valor}}
+\index{valor@{valor}!Timestamp@{Timestamp}}
+\doxysubsubsection{\texorpdfstring{valor}{valor}}
+{\footnotesize\ttfamily string Timestamp\+::valor\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/italomrnd/\+Un\+B/\+Ciclo\+Básico\+CIC/\+TP1\+\_\+26\+\_\+2/\+Trabalho26\+\_\+2/\+Headers/\mbox{\hyperlink{dominios_8hpp}{dominios.\+hpp}}\item 
+/home/italomrnd/\+Un\+B/\+Ciclo\+Básico\+CIC/\+TP1\+\_\+26\+\_\+2/\+Trabalho26\+\_\+2/\+Sources/\mbox{\hyperlink{dominios_8cpp}{dominios.\+cpp}}\end{DoxyCompactItemize}

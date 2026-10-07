@@ -1,0 +1,100 @@
+\doxysection{entidades.\+hpp}
+\hypertarget{entidades_8hpp_source}{}\label{entidades_8hpp_source}\index{/home/italomrnd/UnB/CicloBásicoCIC/TP1\_26\_2/Trabalho26\_2/Headers/entidades.hpp@{/home/italomrnd/UnB/CicloBásicoCIC/TP1\_26\_2/Trabalho26\_2/Headers/entidades.hpp}}
+\mbox{\hyperlink{entidades_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ ENTIDADES\_HPP\_INCLUDED}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ ENTIDADES\_HPP\_INCLUDED}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{dominios_8hpp}{dominios.hpp}}"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classPessoa}{Pessoa}}\{}
+\DoxyCodeLine{00007\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00008\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classEmail}{Email}}\ \mbox{\hyperlink{classPessoa_a1560ad3e1f1327131518dce3ce09a2fe}{email}};}
+\DoxyCodeLine{00009\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classNome}{Nome}}\ \mbox{\hyperlink{classPessoa_a522b401a9c8c08aa334f75330ca0d74a}{nome}};}
+\DoxyCodeLine{00010\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classSenha}{Senha}}\ \mbox{\hyperlink{classPessoa_a6fc2179270099091fd6a40ec5b2e1d08}{senha}};}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPapel}{Papel}}\ \mbox{\hyperlink{classPessoa_a2261e94d9f9ad9ec34e02991ab391be1}{papel}};}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classEmail}{Email}}\ \mbox{\hyperlink{classPessoa_a137a2a665a10ffa4880d1f7d726b07c7}{getEmail}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classNome}{Nome}}\ \mbox{\hyperlink{classPessoa_ad0c0448768ca2f5b5dfca86f156cdfe9}{getNome}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classSenha}{Senha}}\ \mbox{\hyperlink{classPessoa_a02498f338ca00cdd18e794f17d660281}{getSenha}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPapel}{Papel}}\ \mbox{\hyperlink{classPessoa_a8c7e1938888e9e84b5c30ca977b98b9d}{getPapel}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classPessoa_aaa2c0e6dddfbf2e1a3c6218706ecb325}{setEmail}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classEmail}{Email}}\&);}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classPessoa_a07eb389b22a0163d5d61617aa6c3fb64}{setNome}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classNome}{Nome}}\&);}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classPessoa_ab6736309d629d451bb3e32e6b303c85d}{setPapel}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classPapel}{Papel}}\&);}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classPessoa_ac5c91d988dff484192c47644aa65c882}{setSenha}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classSenha}{Senha}}\&);}
+\DoxyCodeLine{00022\ \};}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classProjeto}{Projeto}}\{}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classIdentificador}{Identificador}}\ \mbox{\hyperlink{classProjeto_a528c0cdbeb450c8f23e4fd0247434add}{identificador}};}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classNome}{Nome}}\ \mbox{\hyperlink{classProjeto_ad924e0c60bd0ca40b00cf51b4c08dac2}{nome}};}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classTexto}{Texto}}\ \mbox{\hyperlink{classProjeto_a99d15a420a9c74c7b419d1425934c00f}{descricao}};}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classTimestamp}{Timestamp}}\ \mbox{\hyperlink{classProjeto_a8d9bc61290144cc6ad6c641aa1e164b7}{inicio}};}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classTimestamp}{Timestamp}}\ \mbox{\hyperlink{classProjeto_a8fb79c89e2b14d4eb8225f085df5bec8}{termino}};}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classIdentificador}{Identificador}}\ \mbox{\hyperlink{classProjeto_a73c48a33c8a22c6fea1349184829eaae}{getIdentificador}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classNome}{Nome}}\ \mbox{\hyperlink{classProjeto_a1eb1c0d356d0f662ac6fda75ff766004}{getNome}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classTexto}{Texto}}\ \mbox{\hyperlink{classProjeto_a600487ea6215134c7035454139cfd348}{getDescricao}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classTimestamp}{Timestamp}}\ \mbox{\hyperlink{classProjeto_a4644b46ebb4291e2993a6d811df50dd8}{getInicio}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classTimestamp}{Timestamp}}\ \mbox{\hyperlink{classProjeto_a3278bde27423f1ab0027acb3e557cfe7}{getTermino}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classProjeto_a6065d41e36b36914a6a81928aebf090e}{setIdentificador}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classIdentificador}{Identificador}}\&);}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classProjeto_a83d37c342dd08d8b4b67dcc447b4defc}{setNome}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classNome}{Nome}}\&);}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classProjeto_aa5b9d3c4894850e326b3c3e28a9670d7}{setDescricao}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classTexto}{Texto}}\&);}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classProjeto_abec4ef1e71afddfd2d7ae0e387831cd5}{setInicio}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classTimestamp}{Timestamp}}\&);}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classProjeto_aee07bce6a143a6e9cf619a1f27b3aa89}{setTermino}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classTimestamp}{Timestamp}}\&);}
+\DoxyCodeLine{00043\ \};}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classCartaodeAtividade}{CartaodeAtividade}}\{}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classIdentificador}{Identificador}}\ \mbox{\hyperlink{classCartaodeAtividade_a1e0e3c1e5e62b43d29d593f0aac0b8b5}{identificador}};}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classNome}{Nome}}\ \mbox{\hyperlink{classCartaodeAtividade_a1043c6753d2ea84adea969e8b07b9a12}{nome}};}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classTexto}{Texto}}\ \mbox{\hyperlink{classCartaodeAtividade_a8cd41bdf5067a4164f337c01a35783e3}{descricao}};}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPrioridade}{Prioridade}}\ \mbox{\hyperlink{classCartaodeAtividade_a5a278812a3681971d08a3d97c5885c60}{prioridade}};}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classEstado}{Estado}}\ \mbox{\hyperlink{classCartaodeAtividade_aeb2feb21b112ef3142a519d4b17abd0a}{estado}};}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classTamanho}{Tamanho}}\ \mbox{\hyperlink{classCartaodeAtividade_aeb9e376da3f86d2ed9e9708d3dc03126}{tamanho}};}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classTimestamp}{Timestamp}}\ \mbox{\hyperlink{classCartaodeAtividade_ab4c4c2203b746b401c6326725d96337f}{entrada}};}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classTimestamp}{Timestamp}}\ \mbox{\hyperlink{classCartaodeAtividade_a93296e5c8e3d1870b6f545cf0bb0dcae}{inicio}};}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classTimestamp}{Timestamp}}\ \mbox{\hyperlink{classCartaodeAtividade_a626b8acf9f297f3619bf9ff24c12ec26}{termino}};}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classIdentificador}{Identificador}}\ \mbox{\hyperlink{classCartaodeAtividade_a77dda18549c11209777bb8835bf9c691}{getIdentificador}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classNome}{Nome}}\ \mbox{\hyperlink{classCartaodeAtividade_a074b7b708525641c80e587c945920638}{getNome}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classTexto}{Texto}}\ \mbox{\hyperlink{classCartaodeAtividade_a047499e4ec7149589de101b8201a8b4d}{getDescricao}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPrioridade}{Prioridade}}\ \mbox{\hyperlink{classCartaodeAtividade_adc4a95d5d7e495edb5dfa941d623bf84}{getPrioridade}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classEstado}{Estado}}\ \mbox{\hyperlink{classCartaodeAtividade_a4fadea84dc6ad1b1bcb7366fd66d7dc2}{getEstado}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classTamanho}{Tamanho}}\ \mbox{\hyperlink{classCartaodeAtividade_aba8cf985b02f675608f741dfa38bcc1a}{getTamanho}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classTimestamp}{Timestamp}}\ \mbox{\hyperlink{classCartaodeAtividade_aeb8140f9dade8eae805e91327011cdd0}{getEntrada}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classTimestamp}{Timestamp}}\ \mbox{\hyperlink{classCartaodeAtividade_a8c42cd5dac30c1c9b37b8e8cdfc111a5}{getInicio}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classTimestamp}{Timestamp}}\ \mbox{\hyperlink{classCartaodeAtividade_ab672b54a5b0ffb2c5a87c70d84aeb494}{getTermino}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCartaodeAtividade_a30372b86781027bb2cbdbbd9fcecf551}{setIdentificador}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classIdentificador}{Identificador}}\&);}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCartaodeAtividade_a1edbea197e0b0b74bccdee07c588a501}{setNome}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classNome}{Nome}}\&);}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCartaodeAtividade_a317fa8fd72ffa703b0efc88457e1e1a2}{setDescricao}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classTexto}{Texto}}\&);}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCartaodeAtividade_aa5e330153032635b9306bba906679159}{setPrioridade}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classPrioridade}{Prioridade}}\&);}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCartaodeAtividade_a2506abb1e2341548e85bbcbfe7c3158c}{setEstado}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classEstado}{Estado}}\&);}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCartaodeAtividade_af0399208c785ca344b21afeb2afa12b4}{setTamanho}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classTamanho}{Tamanho}}\&);}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCartaodeAtividade_a135533ee8eae2ff1e909c1d51b6bf63a}{setEntrada}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classTimestamp}{Timestamp}}\&);}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCartaodeAtividade_ab564ba7b8cdb20201e0ac14edfa88b6c}{setInicio}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classTimestamp}{Timestamp}}\&);}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCartaodeAtividade_af61e1947c726679d49c5e8fe50970645}{setTermino}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classTimestamp}{Timestamp}}\&);}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \};}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classQuadro}{Quadro}}\{}
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classIdentificador}{Identificador}}\ \mbox{\hyperlink{classQuadro_afcaaa0093cfb0ead836d2f566e251a79}{identificador}};}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classNome}{Nome}}\ \mbox{\hyperlink{classQuadro_a3b0647b078aedfbddecff336f760cebf}{nome}};}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classLimite}{Limite}}\ \mbox{\hyperlink{classQuadro_a0fdcbc341238341b80a704100e6a6dc8}{limite}};}
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classIdentificador}{Identificador}}\ \mbox{\hyperlink{classQuadro_a422b4527e318b8fbb72d1a98a18dc98c}{getIdentificador}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classNome}{Nome}}\ \mbox{\hyperlink{classQuadro_a260b4f46651e8551028185dc81ca2692}{getNome}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classLimite}{Limite}}\ \mbox{\hyperlink{classQuadro_a7799b0eea6c85113d94d4f231108c354}{getLimite}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQuadro_afa3dfde5df0eefa9953ce815110e4a7c}{setIdentificador}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classIdentificador}{Identificador}}\&);}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQuadro_ad781ec79c32dc1be1cc34c4e39a9703f}{setNome}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classNome}{Nome}}\&);}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQuadro_a6c25743eeae172a21331f2bfbe6a26d3}{setLimite}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classLimite}{Limite}}\&);}
+\DoxyCodeLine{00092\ \};}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00094\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

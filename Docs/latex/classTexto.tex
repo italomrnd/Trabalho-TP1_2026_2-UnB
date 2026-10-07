@@ -1,0 +1,136 @@
+\doxysection{Texto Class Reference}
+\hypertarget{classTexto}{}\label{classTexto}\index{Texto@{Texto}}
+
+
+Armazena a descrição de um projeto ou de um cartão de atividade. Regras de formatação\+:  
+
+
+
+
+{\ttfamily \#include $<$dominios.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classTexto_a329fce47e83d7d290b1e704e251dcd4b}{get\+Valor}} () const
+\begin{DoxyCompactList}\small\item\em Obtém o texto armazenado. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTexto_a9a603a8a8ddfafb4defe1b69202b5e08}{set\+Valor}} (const string \&)
+\begin{DoxyCompactList}\small\item\em Define o texto atual. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classTexto_a01902e5916271b5c7ddcf1f2016ffa07}{validar}} (const string \&)
+\begin{DoxyCompactList}\small\item\em Verifica se a string que carrega o texto é válida, isto é, se segue as regras de formatação. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{classTexto_a6d10eabaadfd0850a77699a478a5167a}{eh\+Pontuacao\+Aceita}} (char)
+\begin{DoxyCompactList}\small\item\em Método auxiliar para verificar se a pontuação é válida. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classTexto_a5392e83b885443a03205ebe64dc26278}{valor}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Armazena a descrição de um projeto ou de um cartão de atividade. Regras de formatação\+: 
+
+
+\begin{DoxyItemize}
+\item Possui no máximo 30 caracteres;
+\item Não pode ser um texto vazio;
+\item Caractere pode ser letra (a-\/z ou A-\/Z), dígito (0-\/9), espaço em branco ou sinal de pontuação.
+\item Sinal de pontuação não pode ser seguido por sinal de pontuação;
+\item Primeiro caractere é maísculo e último caractere é ponto (.). 
+\end{DoxyItemize}
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classTexto_a6d10eabaadfd0850a77699a478a5167a}\label{classTexto_a6d10eabaadfd0850a77699a478a5167a} 
+\index{Texto@{Texto}!ehPontuacaoAceita@{ehPontuacaoAceita}}
+\index{ehPontuacaoAceita@{ehPontuacaoAceita}!Texto@{Texto}}
+\doxysubsubsection{\texorpdfstring{ehPontuacaoAceita()}{ehPontuacaoAceita()}}
+{\footnotesize\ttfamily bool Texto\+::eh\+Pontuacao\+Aceita (\begin{DoxyParamCaption}\item[{char}]{c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Método auxiliar para verificar se a pontuação é válida. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & O caractere a ser verificado. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Se a pontuação é ponto-\/e-\/vírgula (;), vírgula (,), ponto (.), dois pontos (\+:), ponto de interrogação (?) ou ponto de exclamação (!). 
+
+false Caso contrário. 
+\end{DoxyReturn}
+\Hypertarget{classTexto_a329fce47e83d7d290b1e704e251dcd4b}\label{classTexto_a329fce47e83d7d290b1e704e251dcd4b} 
+\index{Texto@{Texto}!getValor@{getValor}}
+\index{getValor@{getValor}!Texto@{Texto}}
+\doxysubsubsection{\texorpdfstring{getValor()}{getValor()}}
+{\footnotesize\ttfamily string Texto\+::get\+Valor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtém o texto armazenado. 
+
+\begin{DoxyReturn}{Returns}
+string O texto atual. 
+\end{DoxyReturn}
+\Hypertarget{classTexto_a9a603a8a8ddfafb4defe1b69202b5e08}\label{classTexto_a9a603a8a8ddfafb4defe1b69202b5e08} 
+\index{Texto@{Texto}!setValor@{setValor}}
+\index{setValor@{setValor}!Texto@{Texto}}
+\doxysubsubsection{\texorpdfstring{setValor()}{setValor()}}
+{\footnotesize\ttfamily void Texto\+::set\+Valor (\begin{DoxyParamCaption}\item[{const string \&}]{valor }\end{DoxyParamCaption})}
+
+
+
+Define o texto atual. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em valor} & A string a ser definida como o texto atual. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & Se o texto verificado não segue as regras de formatação. \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{classTexto_a01902e5916271b5c7ddcf1f2016ffa07}\label{classTexto_a01902e5916271b5c7ddcf1f2016ffa07} 
+\index{Texto@{Texto}!validar@{validar}}
+\index{validar@{validar}!Texto@{Texto}}
+\doxysubsubsection{\texorpdfstring{validar()}{validar()}}
+{\footnotesize\ttfamily void Texto\+::validar (\begin{DoxyParamCaption}\item[{const string \&}]{valor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Verifica se a string que carrega o texto é válida, isto é, se segue as regras de formatação. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em valor} & O texto a ser verificado. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & Se o texto verificado não segue as regras de formatação. \\
+\hline
+\end{DoxyExceptions}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classTexto_a5392e83b885443a03205ebe64dc26278}\label{classTexto_a5392e83b885443a03205ebe64dc26278} 
+\index{Texto@{Texto}!valor@{valor}}
+\index{valor@{valor}!Texto@{Texto}}
+\doxysubsubsection{\texorpdfstring{valor}{valor}}
+{\footnotesize\ttfamily string Texto\+::valor\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/italomrnd/\+Un\+B/\+Ciclo\+Básico\+CIC/\+TP1\+\_\+26\+\_\+2/\+Trabalho26\+\_\+2/\+Headers/\mbox{\hyperlink{dominios_8hpp}{dominios.\+hpp}}\item 
+/home/italomrnd/\+Un\+B/\+Ciclo\+Básico\+CIC/\+TP1\+\_\+26\+\_\+2/\+Trabalho26\+\_\+2/\+Sources/\mbox{\hyperlink{dominios_8cpp}{dominios.\+cpp}}\end{DoxyCompactItemize}
