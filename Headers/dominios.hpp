@@ -15,7 +15,7 @@ using namespace std;
 /** 
  * @class Email
  * @brief Classe que representa o endereço de correio eletrônico de um usuário do sistema.
- * 
+ * @details Atua como chave primária (PK). Responsável pela validação de formatos de email.
  * Formato válido: parte-local@dominio
  * 
  * Regras para a parte local (máx. 64 caracteres):
@@ -111,6 +111,7 @@ class Estado{
 /**
  * @class Identificador
  * @brief Classe que define um código de identificação para entidades do sistema.
+ * @details Atua como chave primária (PK). Responsável pela validação do formato de identificador.
  * 
  * Define códigos de identificação única para entidades como Quadro, Projeto e Cartão de Atividade.
  * Regras de formatação:
