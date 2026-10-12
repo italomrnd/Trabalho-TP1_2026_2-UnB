@@ -1,5 +1,5 @@
 <map id="Projeto" name="Projeto">
-<area shape="rect" id="Node000001" title=" " alt="" coords="177,108,245,133"/>
+<area shape="rect" id="Node000001" title="Classe que define um projeto de software que será gerenciado utilizando o método Kanban...." alt="" coords="177,108,245,133"/>
 <area shape="rect" id="Node000002" href="$classIdentificador.html" title="Classe que define um código de identificação para entidades do sistema." alt="" coords="5,5,108,31"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="62,44,69,64,81,82,103,97,128,107,177,116,176,121,126,112,100,102,77,86,64,67,57,45"/>
 <area shape="rect" id="Node000003" href="$classNome.html" title="Palavra que designa um usuário (Pessoa), um cartão de atividade, um quadro ou um projeto." alt="" coords="137,5,198,31"/>

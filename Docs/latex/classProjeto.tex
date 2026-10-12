@@ -2,6 +2,11 @@
 \hypertarget{classProjeto}{}\label{classProjeto}\index{Projeto@{Projeto}}
 
 
+Classe que define um projeto de software que será gerenciado utilizando o método Kanban. Todo projeto deve ser criado e gerido por um gestor.  
+
+
+
+
 {\ttfamily \#include $<$entidades.\+hpp$>$}
 
 
@@ -17,39 +22,42 @@ Collaboration diagram for Projeto\+:\nopagebreak
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classIdentificador}{Identificador}} \mbox{\hyperlink{classProjeto_a73c48a33c8a22c6fea1349184829eaae}{get\+Identificador}} () const
-\item 
+\begin{DoxyCompactList}\small\item\em Obtém o \doxylink{classIdentificador}{Identificador} armazenado na variável identificador. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classNome}{Nome}} \mbox{\hyperlink{classProjeto_a1eb1c0d356d0f662ac6fda75ff766004}{get\+Nome}} () const
-\item 
+\begin{DoxyCompactList}\small\item\em Obtém o \doxylink{classNome}{Nome} armazenado na variável nome. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classTexto}{Texto}} \mbox{\hyperlink{classProjeto_a600487ea6215134c7035454139cfd348}{get\+Descricao}} () const
-\item 
+\begin{DoxyCompactList}\small\item\em Obtém o \doxylink{classTexto}{Texto} armazenado na variável descricao. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classTimestamp}{Timestamp}} \mbox{\hyperlink{classProjeto_a4644b46ebb4291e2993a6d811df50dd8}{get\+Inicio}} () const
-\item 
+\begin{DoxyCompactList}\small\item\em Obtém o \doxylink{classTimestamp}{Timestamp} armazenado na variável inicio. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classTimestamp}{Timestamp}} \mbox{\hyperlink{classProjeto_a3278bde27423f1ab0027acb3e557cfe7}{get\+Termino}} () const
-\item 
+\begin{DoxyCompactList}\small\item\em Obtém o \doxylink{classTimestamp}{Timestamp} armazenado na variável termino. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classProjeto_a6065d41e36b36914a6a81928aebf090e}{set\+Identificador}} (const \mbox{\hyperlink{classIdentificador}{Identificador}} \&)
-\item 
+\begin{DoxyCompactList}\small\item\em Define o identificador. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classProjeto_a83d37c342dd08d8b4b67dcc447b4defc}{set\+Nome}} (const \mbox{\hyperlink{classNome}{Nome}} \&)
-\item 
+\begin{DoxyCompactList}\small\item\em Define o nome. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classProjeto_aa5b9d3c4894850e326b3c3e28a9670d7}{set\+Descricao}} (const \mbox{\hyperlink{classTexto}{Texto}} \&)
-\item 
+\begin{DoxyCompactList}\small\item\em Define a descricao. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classProjeto_abec4ef1e71afddfd2d7ae0e387831cd5}{set\+Inicio}} (const \mbox{\hyperlink{classTimestamp}{Timestamp}} \&)
-\item 
+\begin{DoxyCompactList}\small\item\em Define o inicio. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classProjeto_aee07bce6a143a6e9cf619a1f27b3aa89}{set\+Termino}} (const \mbox{\hyperlink{classTimestamp}{Timestamp}} \&)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Define o termino. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classIdentificador}{Identificador}} \mbox{\hyperlink{classProjeto_a528c0cdbeb450c8f23e4fd0247434add}{identificador}}
-\item 
+\begin{DoxyCompactList}\small\item\em Chave Primária (PK), sendo o código único do projeto. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classNome}{Nome}} \mbox{\hyperlink{classProjeto_ad924e0c60bd0ca40b00cf51b4c08dac2}{nome}}
-\item 
+\begin{DoxyCompactList}\small\item\em Título do \doxylink{classProjeto}{Projeto}. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classTexto}{Texto}} \mbox{\hyperlink{classProjeto_a99d15a420a9c74c7b419d1425934c00f}{descricao}}
-\item 
+\begin{DoxyCompactList}\small\item\em Descreve o objetivo e escopo do \doxylink{classProjeto}{Projeto}. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classTimestamp}{Timestamp}} \mbox{\hyperlink{classProjeto_a8d9bc61290144cc6ad6c641aa1e164b7}{inicio}}
-\item 
+\begin{DoxyCompactList}\small\item\em Data e hora do início do projeto. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classTimestamp}{Timestamp}} \mbox{\hyperlink{classProjeto_a8fb79c89e2b14d4eb8225f085df5bec8}{termino}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Data e hora do fim do projeto. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+Classe que define um projeto de software que será gerenciado utilizando o método Kanban. Todo projeto deve ser criado e gerido por um gestor. 
 
 \doxysubsection{Member Function Documentation}
 \Hypertarget{classProjeto_a600487ea6215134c7035454139cfd348}\label{classProjeto_a600487ea6215134c7035454139cfd348} 
@@ -58,60 +66,140 @@ void \mbox{\hyperlink{classProjeto_aee07bce6a143a6e9cf619a1f27b3aa89}{set\+Termi
 \doxysubsubsection{\texorpdfstring{getDescricao()}{getDescricao()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{classTexto}{Texto}} Projeto\+::get\+Descricao (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
+
+
+Obtém o \doxylink{classTexto}{Texto} armazenado na variável descricao. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{classTexto}{Texto} armazenado 
+\end{DoxyReturn}
 \Hypertarget{classProjeto_a73c48a33c8a22c6fea1349184829eaae}\label{classProjeto_a73c48a33c8a22c6fea1349184829eaae} 
 \index{Projeto@{Projeto}!getIdentificador@{getIdentificador}}
 \index{getIdentificador@{getIdentificador}!Projeto@{Projeto}}
 \doxysubsubsection{\texorpdfstring{getIdentificador()}{getIdentificador()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{classIdentificador}{Identificador}} Projeto\+::get\+Identificador (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
+
+
+Obtém o \doxylink{classIdentificador}{Identificador} armazenado na variável identificador. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{classIdentificador}{Identificador} Armazenado 
+\end{DoxyReturn}
 \Hypertarget{classProjeto_a4644b46ebb4291e2993a6d811df50dd8}\label{classProjeto_a4644b46ebb4291e2993a6d811df50dd8} 
 \index{Projeto@{Projeto}!getInicio@{getInicio}}
 \index{getInicio@{getInicio}!Projeto@{Projeto}}
 \doxysubsubsection{\texorpdfstring{getInicio()}{getInicio()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{classTimestamp}{Timestamp}} Projeto\+::get\+Inicio (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
+
+
+Obtém o \doxylink{classTimestamp}{Timestamp} armazenado na variável inicio. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{classTimestamp}{Timestamp} do início do projeto 
+\end{DoxyReturn}
 \Hypertarget{classProjeto_a1eb1c0d356d0f662ac6fda75ff766004}\label{classProjeto_a1eb1c0d356d0f662ac6fda75ff766004} 
 \index{Projeto@{Projeto}!getNome@{getNome}}
 \index{getNome@{getNome}!Projeto@{Projeto}}
 \doxysubsubsection{\texorpdfstring{getNome()}{getNome()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{classNome}{Nome}} Projeto\+::get\+Nome (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
+
+
+Obtém o \doxylink{classNome}{Nome} armazenado na variável nome. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{classNome}{Nome} armazenado 
+\end{DoxyReturn}
 \Hypertarget{classProjeto_a3278bde27423f1ab0027acb3e557cfe7}\label{classProjeto_a3278bde27423f1ab0027acb3e557cfe7} 
 \index{Projeto@{Projeto}!getTermino@{getTermino}}
 \index{getTermino@{getTermino}!Projeto@{Projeto}}
 \doxysubsubsection{\texorpdfstring{getTermino()}{getTermino()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{classTimestamp}{Timestamp}} Projeto\+::get\+Termino (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
+
+
+Obtém o \doxylink{classTimestamp}{Timestamp} armazenado na variável termino. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{classTimestamp}{Timestamp} do fim do projeto 
+\end{DoxyReturn}
 \Hypertarget{classProjeto_aa5b9d3c4894850e326b3c3e28a9670d7}\label{classProjeto_aa5b9d3c4894850e326b3c3e28a9670d7} 
 \index{Projeto@{Projeto}!setDescricao@{setDescricao}}
 \index{setDescricao@{setDescricao}!Projeto@{Projeto}}
 \doxysubsubsection{\texorpdfstring{setDescricao()}{setDescricao()}}
 {\footnotesize\ttfamily void Projeto\+::set\+Descricao (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classTexto}{Texto}} \&}]{descricao }\end{DoxyParamCaption})}
 
+
+
+Define a descricao. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em descricao} & Instância da classe \doxylink{classTexto}{Texto} \\
+\hline
+\end{DoxyParams}
 \Hypertarget{classProjeto_a6065d41e36b36914a6a81928aebf090e}\label{classProjeto_a6065d41e36b36914a6a81928aebf090e} 
 \index{Projeto@{Projeto}!setIdentificador@{setIdentificador}}
 \index{setIdentificador@{setIdentificador}!Projeto@{Projeto}}
 \doxysubsubsection{\texorpdfstring{setIdentificador()}{setIdentificador()}}
 {\footnotesize\ttfamily void Projeto\+::set\+Identificador (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classIdentificador}{Identificador}} \&}]{identificador }\end{DoxyParamCaption})}
 
+
+
+Define o identificador. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em identificador} & Instância da classe \doxylink{classIdentificador}{Identificador} \\
+\hline
+\end{DoxyParams}
 \Hypertarget{classProjeto_abec4ef1e71afddfd2d7ae0e387831cd5}\label{classProjeto_abec4ef1e71afddfd2d7ae0e387831cd5} 
 \index{Projeto@{Projeto}!setInicio@{setInicio}}
 \index{setInicio@{setInicio}!Projeto@{Projeto}}
 \doxysubsubsection{\texorpdfstring{setInicio()}{setInicio()}}
 {\footnotesize\ttfamily void Projeto\+::set\+Inicio (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classTimestamp}{Timestamp}} \&}]{inicio }\end{DoxyParamCaption})}
 
+
+
+Define o inicio. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em inicio} & Instância da classe \doxylink{classTimestamp}{Timestamp} \\
+\hline
+\end{DoxyParams}
 \Hypertarget{classProjeto_a83d37c342dd08d8b4b67dcc447b4defc}\label{classProjeto_a83d37c342dd08d8b4b67dcc447b4defc} 
 \index{Projeto@{Projeto}!setNome@{setNome}}
 \index{setNome@{setNome}!Projeto@{Projeto}}
 \doxysubsubsection{\texorpdfstring{setNome()}{setNome()}}
 {\footnotesize\ttfamily void Projeto\+::set\+Nome (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classNome}{Nome}} \&}]{nome }\end{DoxyParamCaption})}
 
+
+
+Define o nome. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nome} & Instância da classe \doxylink{classNome}{Nome} \\
+\hline
+\end{DoxyParams}
 \Hypertarget{classProjeto_aee07bce6a143a6e9cf619a1f27b3aa89}\label{classProjeto_aee07bce6a143a6e9cf619a1f27b3aa89} 
 \index{Projeto@{Projeto}!setTermino@{setTermino}}
 \index{setTermino@{setTermino}!Projeto@{Projeto}}
 \doxysubsubsection{\texorpdfstring{setTermino()}{setTermino()}}
 {\footnotesize\ttfamily void Projeto\+::set\+Termino (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classTimestamp}{Timestamp}} \&}]{termino }\end{DoxyParamCaption})}
 
+
+
+Define o termino. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em termino} & Instância da classe \doxylink{classTimestamp}{Timestamp} \\
+\hline
+\end{DoxyParams}
 
 
 \doxysubsection{Member Data Documentation}
@@ -121,11 +209,19 @@ void \mbox{\hyperlink{classProjeto_aee07bce6a143a6e9cf619a1f27b3aa89}{set\+Termi
 \doxysubsubsection{\texorpdfstring{descricao}{descricao}}
 {\footnotesize\ttfamily \mbox{\hyperlink{classTexto}{Texto}} Projeto\+::descricao\hspace{0.3cm}{\ttfamily [private]}}
 
+
+
+Descreve o objetivo e escopo do \doxylink{classProjeto}{Projeto}. 
+
 \Hypertarget{classProjeto_a528c0cdbeb450c8f23e4fd0247434add}\label{classProjeto_a528c0cdbeb450c8f23e4fd0247434add} 
 \index{Projeto@{Projeto}!identificador@{identificador}}
 \index{identificador@{identificador}!Projeto@{Projeto}}
 \doxysubsubsection{\texorpdfstring{identificador}{identificador}}
 {\footnotesize\ttfamily \mbox{\hyperlink{classIdentificador}{Identificador}} Projeto\+::identificador\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Chave Primária (PK), sendo o código único do projeto. 
 
 \Hypertarget{classProjeto_a8d9bc61290144cc6ad6c641aa1e164b7}\label{classProjeto_a8d9bc61290144cc6ad6c641aa1e164b7} 
 \index{Projeto@{Projeto}!inicio@{inicio}}
@@ -133,17 +229,29 @@ void \mbox{\hyperlink{classProjeto_aee07bce6a143a6e9cf619a1f27b3aa89}{set\+Termi
 \doxysubsubsection{\texorpdfstring{inicio}{inicio}}
 {\footnotesize\ttfamily \mbox{\hyperlink{classTimestamp}{Timestamp}} Projeto\+::inicio\hspace{0.3cm}{\ttfamily [private]}}
 
+
+
+Data e hora do início do projeto. 
+
 \Hypertarget{classProjeto_ad924e0c60bd0ca40b00cf51b4c08dac2}\label{classProjeto_ad924e0c60bd0ca40b00cf51b4c08dac2} 
 \index{Projeto@{Projeto}!nome@{nome}}
 \index{nome@{nome}!Projeto@{Projeto}}
 \doxysubsubsection{\texorpdfstring{nome}{nome}}
 {\footnotesize\ttfamily \mbox{\hyperlink{classNome}{Nome}} Projeto\+::nome\hspace{0.3cm}{\ttfamily [private]}}
 
+
+
+Título do \doxylink{classProjeto}{Projeto}. 
+
 \Hypertarget{classProjeto_a8fb79c89e2b14d4eb8225f085df5bec8}\label{classProjeto_a8fb79c89e2b14d4eb8225f085df5bec8} 
 \index{Projeto@{Projeto}!termino@{termino}}
 \index{termino@{termino}!Projeto@{Projeto}}
 \doxysubsubsection{\texorpdfstring{termino}{termino}}
 {\footnotesize\ttfamily \mbox{\hyperlink{classTimestamp}{Timestamp}} Projeto\+::termino\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Data e hora do fim do projeto. 
 
 
 

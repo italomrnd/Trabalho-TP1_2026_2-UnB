@@ -99,13 +99,16 @@ $(document).ready(function(){initNavTree('classProjeto.html',''); initResizable(
 </div><!--header-->
 <div class="contents">
 
+<p>Classe que define um projeto de software que será gerenciado utilizando o método Kanban. Todo projeto deve ser criado e gerido por um gestor.  
+ <a href="classProjeto.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="entidades_8hpp_source.html">entidades.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Collaboration diagram for Projeto:</div>
 <div class="dyncontent">
 <div class="center"><img src="classProjeto__coll__graph.png" border="0" usemap="#aProjeto_coll__map" alt="Collaboration graph"/></div>
 <map name="aProjeto_coll__map" id="aProjeto_coll__map">
-<area shape="rect" title=" " alt="" coords="177,108,245,133"/>
+<area shape="rect" title="Classe que define um projeto de software que será gerenciado utilizando o método Kanban...." alt="" coords="177,108,245,133"/>
 <area shape="rect" href="classIdentificador.html" title="Classe que define um código de identificação para entidades do sistema." alt="" coords="5,5,108,31"/>
 <area shape="poly" title=" " alt="" coords="62,44,69,64,81,82,103,97,128,107,177,116,176,121,126,112,100,102,77,86,64,67,57,45"/>
 <area shape="rect" href="classNome.html" title="Palavra que designa um usuário (Pessoa), um cartão de atividade, um quadro ou um projeto." alt="" coords="137,5,198,31"/>
@@ -120,40 +123,57 @@ Collaboration diagram for Projeto:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a73c48a33c8a22c6fea1349184829eaae" id="r_a73c48a33c8a22c6fea1349184829eaae"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classIdentificador.html">Identificador</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classProjeto.html#a73c48a33c8a22c6fea1349184829eaae">getIdentificador</a> () const</td></tr>
+<tr class="memdesc:a73c48a33c8a22c6fea1349184829eaae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtém o <a class="el" href="classIdentificador.html" title="Classe que define um código de identificação para entidades do sistema.">Identificador</a> armazenado na variável identificador.  <br /></td></tr>
 <tr class="separator:a73c48a33c8a22c6fea1349184829eaae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1eb1c0d356d0f662ac6fda75ff766004" id="r_a1eb1c0d356d0f662ac6fda75ff766004"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classNome.html">Nome</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classProjeto.html#a1eb1c0d356d0f662ac6fda75ff766004">getNome</a> () const</td></tr>
+<tr class="memdesc:a1eb1c0d356d0f662ac6fda75ff766004"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtém o <a class="el" href="classNome.html" title="Palavra que designa um usuário (Pessoa), um cartão de atividade, um quadro ou um projeto.">Nome</a> armazenado na variável nome.  <br /></td></tr>
 <tr class="separator:a1eb1c0d356d0f662ac6fda75ff766004"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a600487ea6215134c7035454139cfd348" id="r_a600487ea6215134c7035454139cfd348"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classTexto.html">Texto</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classProjeto.html#a600487ea6215134c7035454139cfd348">getDescricao</a> () const</td></tr>
+<tr class="memdesc:a600487ea6215134c7035454139cfd348"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtém o <a class="el" href="classTexto.html" title="Armazena a descrição de um projeto ou de um cartão de atividade. Regras de formatação:">Texto</a> armazenado na variável descricao.  <br /></td></tr>
 <tr class="separator:a600487ea6215134c7035454139cfd348"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4644b46ebb4291e2993a6d811df50dd8" id="r_a4644b46ebb4291e2993a6d811df50dd8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classTimestamp.html">Timestamp</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classProjeto.html#a4644b46ebb4291e2993a6d811df50dd8">getInicio</a> () const</td></tr>
+<tr class="memdesc:a4644b46ebb4291e2993a6d811df50dd8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtém o <a class="el" href="classTimestamp.html">Timestamp</a> armazenado na variável inicio.  <br /></td></tr>
 <tr class="separator:a4644b46ebb4291e2993a6d811df50dd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3278bde27423f1ab0027acb3e557cfe7" id="r_a3278bde27423f1ab0027acb3e557cfe7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classTimestamp.html">Timestamp</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classProjeto.html#a3278bde27423f1ab0027acb3e557cfe7">getTermino</a> () const</td></tr>
+<tr class="memdesc:a3278bde27423f1ab0027acb3e557cfe7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtém o <a class="el" href="classTimestamp.html">Timestamp</a> armazenado na variável termino.  <br /></td></tr>
 <tr class="separator:a3278bde27423f1ab0027acb3e557cfe7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6065d41e36b36914a6a81928aebf090e" id="r_a6065d41e36b36914a6a81928aebf090e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classProjeto.html#a6065d41e36b36914a6a81928aebf090e">setIdentificador</a> (const <a class="el" href="classIdentificador.html">Identificador</a> &amp;)</td></tr>
+<tr class="memdesc:a6065d41e36b36914a6a81928aebf090e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define o identificador.  <br /></td></tr>
 <tr class="separator:a6065d41e36b36914a6a81928aebf090e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a83d37c342dd08d8b4b67dcc447b4defc" id="r_a83d37c342dd08d8b4b67dcc447b4defc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classProjeto.html#a83d37c342dd08d8b4b67dcc447b4defc">setNome</a> (const <a class="el" href="classNome.html">Nome</a> &amp;)</td></tr>
+<tr class="memdesc:a83d37c342dd08d8b4b67dcc447b4defc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define o nome.  <br /></td></tr>
 <tr class="separator:a83d37c342dd08d8b4b67dcc447b4defc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa5b9d3c4894850e326b3c3e28a9670d7" id="r_aa5b9d3c4894850e326b3c3e28a9670d7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classProjeto.html#aa5b9d3c4894850e326b3c3e28a9670d7">setDescricao</a> (const <a class="el" href="classTexto.html">Texto</a> &amp;)</td></tr>
+<tr class="memdesc:aa5b9d3c4894850e326b3c3e28a9670d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define a descricao.  <br /></td></tr>
 <tr class="separator:aa5b9d3c4894850e326b3c3e28a9670d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abec4ef1e71afddfd2d7ae0e387831cd5" id="r_abec4ef1e71afddfd2d7ae0e387831cd5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classProjeto.html#abec4ef1e71afddfd2d7ae0e387831cd5">setInicio</a> (const <a class="el" href="classTimestamp.html">Timestamp</a> &amp;)</td></tr>
+<tr class="memdesc:abec4ef1e71afddfd2d7ae0e387831cd5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define o inicio.  <br /></td></tr>
 <tr class="separator:abec4ef1e71afddfd2d7ae0e387831cd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aee07bce6a143a6e9cf619a1f27b3aa89" id="r_aee07bce6a143a6e9cf619a1f27b3aa89"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classProjeto.html#aee07bce6a143a6e9cf619a1f27b3aa89">setTermino</a> (const <a class="el" href="classTimestamp.html">Timestamp</a> &amp;)</td></tr>
+<tr class="memdesc:aee07bce6a143a6e9cf619a1f27b3aa89"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define o termino.  <br /></td></tr>
 <tr class="separator:aee07bce6a143a6e9cf619a1f27b3aa89"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:a528c0cdbeb450c8f23e4fd0247434add" id="r_a528c0cdbeb450c8f23e4fd0247434add"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classIdentificador.html">Identificador</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classProjeto.html#a528c0cdbeb450c8f23e4fd0247434add">identificador</a></td></tr>
+<tr class="memdesc:a528c0cdbeb450c8f23e4fd0247434add"><td class="mdescLeft">&#160;</td><td class="mdescRight">Chave Primária (PK), sendo o código único do projeto.  <br /></td></tr>
 <tr class="separator:a528c0cdbeb450c8f23e4fd0247434add"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad924e0c60bd0ca40b00cf51b4c08dac2" id="r_ad924e0c60bd0ca40b00cf51b4c08dac2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classNome.html">Nome</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classProjeto.html#ad924e0c60bd0ca40b00cf51b4c08dac2">nome</a></td></tr>
+<tr class="memdesc:ad924e0c60bd0ca40b00cf51b4c08dac2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Título do <a class="el" href="classProjeto.html" title="Classe que define um projeto de software que será gerenciado utilizando o método Kanban....">Projeto</a>.  <br /></td></tr>
 <tr class="separator:ad924e0c60bd0ca40b00cf51b4c08dac2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a99d15a420a9c74c7b419d1425934c00f" id="r_a99d15a420a9c74c7b419d1425934c00f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classTexto.html">Texto</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classProjeto.html#a99d15a420a9c74c7b419d1425934c00f">descricao</a></td></tr>
+<tr class="memdesc:a99d15a420a9c74c7b419d1425934c00f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Descreve o objetivo e escopo do <a class="el" href="classProjeto.html" title="Classe que define um projeto de software que será gerenciado utilizando o método Kanban....">Projeto</a>.  <br /></td></tr>
 <tr class="separator:a99d15a420a9c74c7b419d1425934c00f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8d9bc61290144cc6ad6c641aa1e164b7" id="r_a8d9bc61290144cc6ad6c641aa1e164b7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classTimestamp.html">Timestamp</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classProjeto.html#a8d9bc61290144cc6ad6c641aa1e164b7">inicio</a></td></tr>
+<tr class="memdesc:a8d9bc61290144cc6ad6c641aa1e164b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Data e hora do início do projeto.  <br /></td></tr>
 <tr class="separator:a8d9bc61290144cc6ad6c641aa1e164b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8fb79c89e2b14d4eb8225f085df5bec8" id="r_a8fb79c89e2b14d4eb8225f085df5bec8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classTimestamp.html">Timestamp</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classProjeto.html#a8fb79c89e2b14d4eb8225f085df5bec8">termino</a></td></tr>
+<tr class="memdesc:a8fb79c89e2b14d4eb8225f085df5bec8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Data e hora do fim do projeto.  <br /></td></tr>
 <tr class="separator:a8fb79c89e2b14d4eb8225f085df5bec8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Classe que define um projeto de software que será gerenciado utilizando o método Kanban. Todo projeto deve ser criado e gerido por um gestor. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a600487ea6215134c7035454139cfd348" name="a600487ea6215134c7035454139cfd348"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a600487ea6215134c7035454139cfd348">&#9670;&#160;</a></span>getDescricao()</h2>
 
@@ -168,6 +188,9 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Obtém o <a class="el" href="classTexto.html" title="Armazena a descrição de um projeto ou de um cartão de atividade. Regras de formatação:">Texto</a> armazenado na variável descricao. </p>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="classTexto.html" title="Armazena a descrição de um projeto ou de um cartão de atividade. Regras de formatação:">Texto</a> armazenado </dd></dl>
 
 </div>
 </div>
@@ -186,6 +209,9 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Obtém o <a class="el" href="classIdentificador.html" title="Classe que define um código de identificação para entidades do sistema.">Identificador</a> armazenado na variável identificador. </p>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="classIdentificador.html" title="Classe que define um código de identificação para entidades do sistema.">Identificador</a> Armazenado </dd></dl>
+
 </div>
 </div>
 <a id="a4644b46ebb4291e2993a6d811df50dd8" name="a4644b46ebb4291e2993a6d811df50dd8"></a>
@@ -202,6 +228,9 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Obtém o <a class="el" href="classTimestamp.html">Timestamp</a> armazenado na variável inicio. </p>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="classTimestamp.html">Timestamp</a> do início do projeto </dd></dl>
 
 </div>
 </div>
@@ -220,6 +249,9 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Obtém o <a class="el" href="classNome.html" title="Palavra que designa um usuário (Pessoa), um cartão de atividade, um quadro ou um projeto.">Nome</a> armazenado na variável nome. </p>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="classNome.html" title="Palavra que designa um usuário (Pessoa), um cartão de atividade, um quadro ou um projeto.">Nome</a> armazenado </dd></dl>
+
 </div>
 </div>
 <a id="a3278bde27423f1ab0027acb3e557cfe7" name="a3278bde27423f1ab0027acb3e557cfe7"></a>
@@ -236,6 +268,9 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Obtém o <a class="el" href="classTimestamp.html">Timestamp</a> armazenado na variável termino. </p>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="classTimestamp.html">Timestamp</a> do fim do projeto </dd></dl>
 
 </div>
 </div>
@@ -255,6 +290,14 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Define a descricao. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">descricao</td><td>Instância da classe <a class="el" href="classTexto.html" title="Armazena a descrição de um projeto ou de um cartão de atividade. Regras de formatação:">Texto</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="a6065d41e36b36914a6a81928aebf090e" name="a6065d41e36b36914a6a81928aebf090e"></a>
@@ -272,6 +315,14 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Define o identificador. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">identificador</td><td>Instância da classe <a class="el" href="classIdentificador.html" title="Classe que define um código de identificação para entidades do sistema.">Identificador</a> </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -291,6 +342,14 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Define o inicio. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">inicio</td><td>Instância da classe <a class="el" href="classTimestamp.html">Timestamp</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="a83d37c342dd08d8b4b67dcc447b4defc" name="a83d37c342dd08d8b4b67dcc447b4defc"></a>
@@ -309,6 +368,14 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Define o nome. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nome</td><td>Instância da classe <a class="el" href="classNome.html" title="Palavra que designa um usuário (Pessoa), um cartão de atividade, um quadro ou um projeto.">Nome</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="aee07bce6a143a6e9cf619a1f27b3aa89" name="aee07bce6a143a6e9cf619a1f27b3aa89"></a>
@@ -326,6 +393,14 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Define o termino. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">termino</td><td>Instância da classe <a class="el" href="classTimestamp.html">Timestamp</a> </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -350,6 +425,8 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Descreve o objetivo e escopo do <a class="el" href="classProjeto.html" title="Classe que define um projeto de software que será gerenciado utilizando o método Kanban....">Projeto</a>. </p>
+
 </div>
 </div>
 <a id="a528c0cdbeb450c8f23e4fd0247434add" name="a528c0cdbeb450c8f23e4fd0247434add"></a>
@@ -371,6 +448,8 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Chave Primária (PK), sendo o código único do projeto. </p>
 
 </div>
 </div>
@@ -394,6 +473,8 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Data e hora do início do projeto. </p>
+
 </div>
 </div>
 <a id="ad924e0c60bd0ca40b00cf51b4c08dac2" name="ad924e0c60bd0ca40b00cf51b4c08dac2"></a>
@@ -416,6 +497,8 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Título do <a class="el" href="classProjeto.html" title="Classe que define um projeto de software que será gerenciado utilizando o método Kanban....">Projeto</a>. </p>
+
 </div>
 </div>
 <a id="a8fb79c89e2b14d4eb8225f085df5bec8" name="a8fb79c89e2b14d4eb8225f085df5bec8"></a>
@@ -437,6 +520,8 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Data e hora do fim do projeto. </p>
 
 </div>
 </div>

@@ -1,5 +1,10 @@
 \doxysection{/home/italomrnd/\+Un\+B/\+Ciclo\+Básico\+CIC/\+TP1\+\_\+26\+\_\+2/\+Trabalho26\+\_\+2/\+Headers/entidades.hpp File Reference}
 \hypertarget{entidades_8hpp}{}\label{entidades_8hpp}\index{/home/italomrnd/UnB/CicloBásicoCIC/TP1\_26\_2/Trabalho26\_2/Headers/entidades.hpp@{/home/italomrnd/UnB/CicloBásicoCIC/TP1\_26\_2/Trabalho26\_2/Headers/entidades.hpp}}
+
+
+Declaração das classes das entidades do sistema de software.  
+
+
 {\ttfamily \#include "{}dominios.\+hpp"{}}\newline
 Include dependency graph for entidades.\+hpp\+:\nopagebreak
 \begin{figure}[H]
@@ -19,10 +24,19 @@ This graph shows which files directly or indirectly include this file\+:\nopageb
 \begin{DoxyCompactItemize}
 \item 
 class \mbox{\hyperlink{classPessoa}{Pessoa}}
-\item 
+\begin{DoxyCompactList}\small\item\em Classe que representa um usuário do programa(\+Desenvolvedor ou Gestor) ~\newline
+ \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{classProjeto}{Projeto}}
-\item 
+\begin{DoxyCompactList}\small\item\em Classe que define um projeto de software que será gerenciado utilizando o método Kanban. Todo projeto deve ser criado e gerido por um gestor. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{classCartaodeAtividade}{Cartaode\+Atividade}}
-\item 
+\begin{DoxyCompactList}\small\item\em É a unidade de trabalho dentro do Kanban, representando uma tarefa que pode estar sobre um de três estados\+: A FAZER, FAZENDO e FEITO. Suas instâncias de \doxylink{classTimestamp}{Timestamp} são usadas para o cálculo de métricas do sistema, como o Lead Time e o Cycle time. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{classQuadro}{Quadro}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Representa o quadro Kanban pertencente a um projeto específico. Ele organiza o fluxo de trabalho. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Declaração das classes das entidades do sistema de software. 
+
+\begin{DoxyAuthor}{Author}
+Mateus Christ Neves Pereira 
+\end{DoxyAuthor}
