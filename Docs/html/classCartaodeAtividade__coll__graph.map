@@ -12,6 +12,6 @@
 <area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="448,45,439,73,423,100,405,115,386,125,384,120,402,110,419,97,434,71,443,44"/>
 <area shape="rect" id="Node000007" href="$classTamanho.html" title="Define o &quot;tamanho&quot; de uma tarefa (o esforço necessário para realizá&#45;la) de um cartão de atividade...." alt="" coords="508,5,589,31"/>
 <area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="541,45,524,74,498,101,461,120,421,131,420,125,459,115,495,97,520,71,537,42"/>
-<area shape="rect" id="Node000008" href="$classTimestamp.html" title=" " alt="" coords="614,5,710,31"/>
+<area shape="rect" id="Node000008" href="$classTimestamp.html" title="Define sequência de caracteres ou números que identifica quando um evento específico ocorreu...." alt="" coords="614,5,710,31"/>
 <area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="652,44,631,75,601,101,568,113,523,121,421,132,420,127,522,116,567,107,598,96,627,71,648,41"/>
 </map>
