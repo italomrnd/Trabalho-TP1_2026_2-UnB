@@ -1,0 +1,59 @@
+\doxysection{IApr\+Pessoas Class Reference}
+\hypertarget{classIAprPessoas}{}\label{classIAprPessoas}\index{IAprPessoas@{IAprPessoas}}
+
+
+Interface para a camada de apresentação da gestão de contas de pessoas.  
+
+
+
+
+{\ttfamily \#include $<$interfaces.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classIAprPessoas_ab74caf480270f3bb4d4a4c0fda9af4b9}{criar}} ()=0
+\begin{DoxyCompactList}\small\item\em Método responsável por solicitar dados e realizar o cadastro inicial de um usuário do sistema de software. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classIAprPessoas_aa75096daa08811b721fab87f100d9693}{exec}} (const \mbox{\hyperlink{classEmail}{Email}} \&)=0
+\begin{DoxyCompactList}\small\item\em Gerencia a execução do submenu de opções de conta do utilizador logado. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Interface para a camada de apresentação da gestão de contas de pessoas. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classIAprPessoas_ab74caf480270f3bb4d4a4c0fda9af4b9}\label{classIAprPessoas_ab74caf480270f3bb4d4a4c0fda9af4b9} 
+\index{IAprPessoas@{IAprPessoas}!criar@{criar}}
+\index{criar@{criar}!IAprPessoas@{IAprPessoas}}
+\doxysubsubsection{\texorpdfstring{criar()}{criar()}}
+{\footnotesize\ttfamily virtual void IApr\+Pessoas\+::criar (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Método responsável por solicitar dados e realizar o cadastro inicial de um usuário do sistema de software. 
+
+\Hypertarget{classIAprPessoas_aa75096daa08811b721fab87f100d9693}\label{classIAprPessoas_aa75096daa08811b721fab87f100d9693} 
+\index{IAprPessoas@{IAprPessoas}!exec@{exec}}
+\index{exec@{exec}!IAprPessoas@{IAprPessoas}}
+\doxysubsubsection{\texorpdfstring{exec()}{exec()}}
+{\footnotesize\ttfamily virtual bool IApr\+Pessoas\+::exec (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classEmail}{Email}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Gerencia a execução do submenu de opções de conta do utilizador logado. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Referência} & para o e-\/mail do utilizador autenticado na sessão. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Se a sessão deve continuar ativa. 
+
+false Caso contrário. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/italomrnd/\+Un\+B/\+Ciclo\+Básico\+CIC/\+TP1\+\_\+26\+\_\+2/\+Trabalho26\+\_\+2/\+Headers/\mbox{\hyperlink{interfaces_8hpp}{interfaces.\+hpp}}\end{DoxyCompactItemize}

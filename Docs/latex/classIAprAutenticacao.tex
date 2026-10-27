@@ -1,0 +1,47 @@
+\doxysection{IApr\+Autenticacao Class Reference}
+\hypertarget{classIAprAutenticacao}{}\label{classIAprAutenticacao}\index{IAprAutenticacao@{IAprAutenticacao}}
+
+
+Interface para a camada de apresentação do fluxo de autenticação.  
+
+
+
+
+{\ttfamily \#include $<$interfaces.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \mbox{\hyperlink{classIAprAutenticacao_a0f6b8c9aee5e9609fdb44b9a75fe0d24}{autenticar}} (\mbox{\hyperlink{classEmail}{Email}} \texorpdfstring{$\ast$}{*})=0
+\begin{DoxyCompactList}\small\item\em Solicita as credenciais ao usuário e registra a identificação autenticada. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Interface para a camada de apresentação do fluxo de autenticação. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classIAprAutenticacao_a0f6b8c9aee5e9609fdb44b9a75fe0d24}\label{classIAprAutenticacao_a0f6b8c9aee5e9609fdb44b9a75fe0d24} 
+\index{IAprAutenticacao@{IAprAutenticacao}!autenticar@{autenticar}}
+\index{autenticar@{autenticar}!IAprAutenticacao@{IAprAutenticacao}}
+\doxysubsubsection{\texorpdfstring{autenticar()}{autenticar()}}
+{\footnotesize\ttfamily virtual bool IApr\+Autenticacao\+::autenticar (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classEmail}{Email}} \texorpdfstring{$\ast$}{*}}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Solicita as credenciais ao usuário e registra a identificação autenticada. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em email} & Ponteiro para o objeto \doxylink{classEmail}{Email} onde será retornado o e-\/mail do usuário autenticado. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Se a autenticação for bem-\/sucedida 
+
+false Caso contrário. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/italomrnd/\+Un\+B/\+Ciclo\+Básico\+CIC/\+TP1\+\_\+26\+\_\+2/\+Trabalho26\+\_\+2/\+Headers/\mbox{\hyperlink{interfaces_8hpp}{interfaces.\+hpp}}\end{DoxyCompactItemize}

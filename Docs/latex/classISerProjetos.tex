@@ -1,0 +1,111 @@
+\doxysection{ISer\+Projetos Class Reference}
+\hypertarget{classISerProjetos}{}\label{classISerProjetos}\index{ISerProjetos@{ISerProjetos}}
+
+
+Interface para camada de serviço de gestão de projetos.  
+
+
+
+
+{\ttfamily \#include $<$interfaces.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \mbox{\hyperlink{classISerProjetos_a4f69bfdb04cdab94b9ea895ba504c048}{criar}} (const \mbox{\hyperlink{classProjeto}{Projeto}} \&)=0
+\begin{DoxyCompactList}\small\item\em Método responsável por registrar os dados de um novo projeto. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classISerProjetos_a485862ea4afb5e15a343127e016484ec}{ler}} (\mbox{\hyperlink{classProjeto}{Projeto}} \texorpdfstring{$\ast$}{*})=0
+\begin{DoxyCompactList}\small\item\em Recupera as informações de um projeto. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classISerProjetos_ad2d8e86b153694465682c0ea7e3dcf4a}{atualizar}} (const \mbox{\hyperlink{classProjeto}{Projeto}} \&)=0
+\begin{DoxyCompactList}\small\item\em Atualiza as informações de um projeto existente. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classISerProjetos_aa97afbbb7c9bd31643c4239268ca3aae}{excluir}} (const \mbox{\hyperlink{classIdentificador}{Identificador}} \&)=0
+\begin{DoxyCompactList}\small\item\em Remove um projeto cadastrado. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Interface para camada de serviço de gestão de projetos. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classISerProjetos_ad2d8e86b153694465682c0ea7e3dcf4a}\label{classISerProjetos_ad2d8e86b153694465682c0ea7e3dcf4a} 
+\index{ISerProjetos@{ISerProjetos}!atualizar@{atualizar}}
+\index{atualizar@{atualizar}!ISerProjetos@{ISerProjetos}}
+\doxysubsubsection{\texorpdfstring{atualizar()}{atualizar()}}
+{\footnotesize\ttfamily virtual bool ISer\+Projetos\+::atualizar (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classProjeto}{Projeto}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Atualiza as informações de um projeto existente. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em projeto} & Referência para o objeto \doxylink{classProjeto}{Projeto} com as informações modificadas. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Se a alteração for realizada com sucesso. 
+
+false Caso contrário. 
+\end{DoxyReturn}
+\Hypertarget{classISerProjetos_a4f69bfdb04cdab94b9ea895ba504c048}\label{classISerProjetos_a4f69bfdb04cdab94b9ea895ba504c048} 
+\index{ISerProjetos@{ISerProjetos}!criar@{criar}}
+\index{criar@{criar}!ISerProjetos@{ISerProjetos}}
+\doxysubsubsection{\texorpdfstring{criar()}{criar()}}
+{\footnotesize\ttfamily virtual bool ISer\+Projetos\+::criar (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classProjeto}{Projeto}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Método responsável por registrar os dados de um novo projeto. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em projeto} & Referência para o objeto \doxylink{classProjeto}{Projeto} a ser cadastrado. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Se a criação teve sucesso. 
+
+false Caso contrário. 
+\end{DoxyReturn}
+\Hypertarget{classISerProjetos_aa97afbbb7c9bd31643c4239268ca3aae}\label{classISerProjetos_aa97afbbb7c9bd31643c4239268ca3aae} 
+\index{ISerProjetos@{ISerProjetos}!excluir@{excluir}}
+\index{excluir@{excluir}!ISerProjetos@{ISerProjetos}}
+\doxysubsubsection{\texorpdfstring{excluir()}{excluir()}}
+{\footnotesize\ttfamily virtual bool ISer\+Projetos\+::excluir (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classIdentificador}{Identificador}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Remove um projeto cadastrado. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em identificador} & Referência para a chave de identificação do projeto a ser removido. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Se a remoção for realizada com sucesso. @retrun false Caso contrário. 
+\end{DoxyReturn}
+\Hypertarget{classISerProjetos_a485862ea4afb5e15a343127e016484ec}\label{classISerProjetos_a485862ea4afb5e15a343127e016484ec} 
+\index{ISerProjetos@{ISerProjetos}!ler@{ler}}
+\index{ler@{ler}!ISerProjetos@{ISerProjetos}}
+\doxysubsubsection{\texorpdfstring{ler()}{ler()}}
+{\footnotesize\ttfamily virtual bool ISer\+Projetos\+::ler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classProjeto}{Projeto}} \texorpdfstring{$\ast$}{*}}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Recupera as informações de um projeto. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em projeto} & Ponteiro para o objeto \doxylink{classProjeto}{Projeto} a ser preenchido com o código de busca. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Se o projeto foi encontrado. 
+
+false Caso contrário 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/italomrnd/\+Un\+B/\+Ciclo\+Básico\+CIC/\+TP1\+\_\+26\+\_\+2/\+Trabalho26\+\_\+2/\+Headers/\mbox{\hyperlink{interfaces_8hpp}{interfaces.\+hpp}}\end{DoxyCompactItemize}

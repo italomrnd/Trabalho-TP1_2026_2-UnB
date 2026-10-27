@@ -1,0 +1,113 @@
+\doxysection{ISer\+Quadros Class Reference}
+\hypertarget{classISerQuadros}{}\label{classISerQuadros}\index{ISerQuadros@{ISerQuadros}}
+
+
+Interface para a camada de serviço de gestão de quadros.  
+
+
+
+
+{\ttfamily \#include $<$interfaces.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \mbox{\hyperlink{classISerQuadros_ac16578d14105464e631905eb4658e631}{criar}} (const \mbox{\hyperlink{classQuadro}{Quadro}} \&)=0
+\begin{DoxyCompactList}\small\item\em Registra um novo quadro de atividades no sistema. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classISerQuadros_ab1c9d726c6f3a3b8dd99e55df6225374}{ler}} (\mbox{\hyperlink{classQuadro}{Quadro}} \texorpdfstring{$\ast$}{*})=0
+\begin{DoxyCompactList}\small\item\em Consulta e carrega as informações de um quadro de atividades. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classISerQuadros_a6e9760aa12ffbb4e058fe77420a47e22}{atualizar}} (const \mbox{\hyperlink{classQuadro}{Quadro}} \&)=0
+\begin{DoxyCompactList}\small\item\em Atualiza as informações de um quadro existente. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classISerQuadros_a5859e823f3b16aed4f8a8bb6113721ce}{excluir}} (const \mbox{\hyperlink{classIdentificador}{Identificador}})=0
+\begin{DoxyCompactList}\small\item\em Remove um quadro registrado do sistema. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Interface para a camada de serviço de gestão de quadros. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classISerQuadros_a6e9760aa12ffbb4e058fe77420a47e22}\label{classISerQuadros_a6e9760aa12ffbb4e058fe77420a47e22} 
+\index{ISerQuadros@{ISerQuadros}!atualizar@{atualizar}}
+\index{atualizar@{atualizar}!ISerQuadros@{ISerQuadros}}
+\doxysubsubsection{\texorpdfstring{atualizar()}{atualizar()}}
+{\footnotesize\ttfamily virtual bool ISer\+Quadros\+::atualizar (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classQuadro}{Quadro}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Atualiza as informações de um quadro existente. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em quadro} & Referência para o objeto \doxylink{classQuadro}{Quadro} contendo as novas informações. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Se a atualização for concluída com sucesso. 
+
+false Caso contrário. 
+\end{DoxyReturn}
+\Hypertarget{classISerQuadros_ac16578d14105464e631905eb4658e631}\label{classISerQuadros_ac16578d14105464e631905eb4658e631} 
+\index{ISerQuadros@{ISerQuadros}!criar@{criar}}
+\index{criar@{criar}!ISerQuadros@{ISerQuadros}}
+\doxysubsubsection{\texorpdfstring{criar()}{criar()}}
+{\footnotesize\ttfamily virtual bool ISer\+Quadros\+::criar (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classQuadro}{Quadro}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Registra um novo quadro de atividades no sistema. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em quadro} & Referência para o objeto \doxylink{classQuadro}{Quadro} a ser salvo. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Se o registro for efetuado com sucesso. 
+
+false Caso contrário. 
+\end{DoxyReturn}
+\Hypertarget{classISerQuadros_a5859e823f3b16aed4f8a8bb6113721ce}\label{classISerQuadros_a5859e823f3b16aed4f8a8bb6113721ce} 
+\index{ISerQuadros@{ISerQuadros}!excluir@{excluir}}
+\index{excluir@{excluir}!ISerQuadros@{ISerQuadros}}
+\doxysubsubsection{\texorpdfstring{excluir()}{excluir()}}
+{\footnotesize\ttfamily virtual bool ISer\+Quadros\+::excluir (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classIdentificador}{Identificador}}}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Remove um quadro registrado do sistema. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em identificador} & Referência para a chave de identificação do quadro a ser removido do sistema de software. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Se o quadro foi excluído com sucesso. 
+
+false Caso contrário. 
+\end{DoxyReturn}
+\Hypertarget{classISerQuadros_ab1c9d726c6f3a3b8dd99e55df6225374}\label{classISerQuadros_ab1c9d726c6f3a3b8dd99e55df6225374} 
+\index{ISerQuadros@{ISerQuadros}!ler@{ler}}
+\index{ler@{ler}!ISerQuadros@{ISerQuadros}}
+\doxysubsubsection{\texorpdfstring{ler()}{ler()}}
+{\footnotesize\ttfamily virtual bool ISer\+Quadros\+::ler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classQuadro}{Quadro}} \texorpdfstring{$\ast$}{*}}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Consulta e carrega as informações de um quadro de atividades. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em quadro} & Ponteiro para o objeto \doxylink{classQuadro}{Quadro} contendo o código de busca e onde os dados recuperados serão armazenados. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Se o quadro for localizado. 
+
+false Caso contrário. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/italomrnd/\+Un\+B/\+Ciclo\+Básico\+CIC/\+TP1\+\_\+26\+\_\+2/\+Trabalho26\+\_\+2/\+Headers/\mbox{\hyperlink{interfaces_8hpp}{interfaces.\+hpp}}\end{DoxyCompactItemize}

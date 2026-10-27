@@ -1,0 +1,49 @@
+\doxysection{ISer\+Autenticacao Class Reference}
+\hypertarget{classISerAutenticacao}{}\label{classISerAutenticacao}\index{ISerAutenticacao@{ISerAutenticacao}}
+
+
+Interface para a camada de serviço de validação de credenciais do usuário.  
+
+
+
+
+{\ttfamily \#include $<$interfaces.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \mbox{\hyperlink{classISerAutenticacao_ac0009a663e08bc769b496a2788dfa14f}{autenticar}} (const \mbox{\hyperlink{classEmail}{Email}} \&, const \mbox{\hyperlink{classSenha}{Senha}} \&)=0
+\begin{DoxyCompactList}\small\item\em Valida as credenciais fornecidas. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Interface para a camada de serviço de validação de credenciais do usuário. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classISerAutenticacao_ac0009a663e08bc769b496a2788dfa14f}\label{classISerAutenticacao_ac0009a663e08bc769b496a2788dfa14f} 
+\index{ISerAutenticacao@{ISerAutenticacao}!autenticar@{autenticar}}
+\index{autenticar@{autenticar}!ISerAutenticacao@{ISerAutenticacao}}
+\doxysubsubsection{\texorpdfstring{autenticar()}{autenticar()}}
+{\footnotesize\ttfamily virtual bool ISer\+Autenticacao\+::autenticar (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classEmail}{Email}} \&}]{,  }\item[{const \mbox{\hyperlink{classSenha}{Senha}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Valida as credenciais fornecidas. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em email} & Referência para a entidade \doxylink{classEmail}{Email} contendo a identificação obtida. \\
+\hline
+{\em senha} & Referência para a entidade \doxylink{classSenha}{Senha} contendo a credencial obtida. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Se as credenciais forem válidas. 
+
+false Caso contrário. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/italomrnd/\+Un\+B/\+Ciclo\+Básico\+CIC/\+TP1\+\_\+26\+\_\+2/\+Trabalho26\+\_\+2/\+Headers/\mbox{\hyperlink{interfaces_8hpp}{interfaces.\+hpp}}\end{DoxyCompactItemize}

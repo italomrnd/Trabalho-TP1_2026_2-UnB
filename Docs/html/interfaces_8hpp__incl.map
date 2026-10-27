@@ -1,0 +1,10 @@
+<map id="/home/italomrnd/UnB/CicloBásicoCIC/TP1_26_2/Trabalho26_2/Headers/interfaces.hpp" name="/home/italomrnd/UnB/CicloBásicoCIC/TP1_26_2/Trabalho26_2/Headers/interfaces.hpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,213,75"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="80,269,139,295"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="101,76,91,123,89,168,92,221,102,256,97,257,87,222,83,168,85,122,96,74"/>
+<area shape="rect" id="Node000003" href="$entidades_8hpp.html" title="Declaração das classes das entidades do sistema de software." alt="" coords="100,123,215,148"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="129,74,147,109,143,112,124,76"/>
+<area shape="rect" id="Node000004" href="$dominios_8hpp.html" title="Declaração das classes do domínio do sistema de software." alt="" coords="101,196,211,221"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="160,148,159,183,154,182,154,148"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="151,223,127,259,122,256,146,220"/>
+</map>

@@ -1,0 +1,86 @@
+\doxysection{interfaces.\+hpp}
+\hypertarget{interfaces_8hpp_source}{}\label{interfaces_8hpp_source}\index{/home/italomrnd/UnB/CicloBásicoCIC/TP1\_26\_2/Trabalho26\_2/Headers/interfaces.hpp@{/home/italomrnd/UnB/CicloBásicoCIC/TP1\_26\_2/Trabalho26\_2/Headers/interfaces.hpp}}
+\mbox{\hyperlink{interfaces_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ INTERFACES\_HPP\_INCLUDED}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ INTERFACES\_HPP\_INCLUDED}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{entidades_8hpp}{entidades.hpp}}"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ AUTENTICACAO}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classIAprAutenticacao}{IAprAutenticacao}}\{}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classIAprAutenticacao_a0f6b8c9aee5e9609fdb44b9a75fe0d24}{autenticar}}(\mbox{\hyperlink{classEmail}{Email}}\ *)\ =\ 0;}
+\DoxyCodeLine{00026\ \};}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00033\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classISerAutenticacao}{ISerAutenticacao}}\{}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classISerAutenticacao_ac0009a663e08bc769b496a2788dfa14f}{autenticar}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classEmail}{Email}}\&,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classSenha}{Senha}}\&)\ =\ 0;}
+\DoxyCodeLine{00044\ \};}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \textcolor{comment}{//\ PESSOAS}}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00053\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classIAprPessoas}{IAprPessoas}}\{}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classIAprPessoas_ab74caf480270f3bb4d4a4c0fda9af4b9}{criar}}()\ =\ 0;}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classIAprPessoas_aa75096daa08811b721fab87f100d9693}{exec}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classEmail}{Email}}\&)\ =\ 0;\ }
+\DoxyCodeLine{00068\ \};}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00075\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classISerPessoas}{ISerPessoas}}\{}
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classISerPessoas_a8aeb0976c146e47d5267ae8821598875}{criar}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classPessoa}{Pessoa}}\&)\ =\ 0;}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classISerPessoas_af758941fe291a2f77e3a8317f96b225d}{ler}}(\mbox{\hyperlink{classPessoa}{Pessoa}}*)\ =\ 0;}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classISerPessoas_a0aca268e78c58c006a71a8a1c9f7b3e2}{atualizar}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classPessoa}{Pessoa}}\&)\ =\ 0;}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classISerPessoas_a125c899af96fe528c67fc4117ab85260}{excluir}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classEmail}{Email}}\&)\ =\ 0;}
+\DoxyCodeLine{00110\ \ \ \ \ \textcolor{comment}{//\ teremos\ no\ futuro\ o\ virtual\ bool\ listar\ no\ futuro,\ como\ resolver\ isso?}}
+\DoxyCodeLine{00111\ \};}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00113\ \textcolor{comment}{//\ PROJETOS}}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00120\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classIAprProjetos}{IAprProjetos}}\{}
+\DoxyCodeLine{00121\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classIAprProjetos_ac5a3c520f4d82b8184ef14d718ce8f2e}{exec}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classEmail}{Email}}\&)\ =\ 0;}
+\DoxyCodeLine{00127\ \};}
+\DoxyCodeLine{00128\ }
+\DoxyCodeLine{00134\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classISerProjetos}{ISerProjetos}}\{}
+\DoxyCodeLine{00135\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classISerProjetos_a4f69bfdb04cdab94b9ea895ba504c048}{criar}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classProjeto}{Projeto}}\&)\ =\ 0;}
+\DoxyCodeLine{00143\ }
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classISerProjetos_a485862ea4afb5e15a343127e016484ec}{ler}}(\mbox{\hyperlink{classProjeto}{Projeto}}*)\ =\ 0;}
+\DoxyCodeLine{00151\ }
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classISerProjetos_ad2d8e86b153694465682c0ea7e3dcf4a}{atualizar}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classProjeto}{Projeto}}\&)\ =\ 0;}
+\DoxyCodeLine{00159\ }
+\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classISerProjetos_aa97afbbb7c9bd31643c4239268ca3aae}{excluir}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classIdentificador}{Identificador}}\&)\ =\ 0;}
+\DoxyCodeLine{00167\ \};}
+\DoxyCodeLine{00168\ }
+\DoxyCodeLine{00169\ \textcolor{comment}{//\ QUADROS\ }}
+\DoxyCodeLine{00170\ }
+\DoxyCodeLine{00176\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classIAprQuadros}{IAprQuadros}}\{}
+\DoxyCodeLine{00177\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00182\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classIAprQuadros_a5fc0d4d2555e764830eaffda8e0c7373}{exec}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classEmail}{Email}}\&)\ =\ 0;}
+\DoxyCodeLine{00183\ \};}
+\DoxyCodeLine{00184\ }
+\DoxyCodeLine{00190\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classISerQuadros}{ISerQuadros}}\{}
+\DoxyCodeLine{00191\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00198\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classISerQuadros_ac16578d14105464e631905eb4658e631}{criar}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classQuadro}{Quadro}}\&)\ =\ 0;}
+\DoxyCodeLine{00199\ }
+\DoxyCodeLine{00206\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classISerQuadros_ab1c9d726c6f3a3b8dd99e55df6225374}{ler}}(\mbox{\hyperlink{classQuadro}{Quadro}}*)\ =\ 0;}
+\DoxyCodeLine{00207\ }
+\DoxyCodeLine{00214\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classISerQuadros_a6e9760aa12ffbb4e058fe77420a47e22}{atualizar}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classQuadro}{Quadro}}\&)\ =\ 0;}
+\DoxyCodeLine{00215\ }
+\DoxyCodeLine{00216\ }
+\DoxyCodeLine{00223\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classISerQuadros_a5859e823f3b16aed4f8a8bb6113721ce}{excluir}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classIdentificador}{Identificador}})\ =\ 0;}
+\DoxyCodeLine{00224\ \};}
+\DoxyCodeLine{00225\ }
+\DoxyCodeLine{00226\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ INTERFACES\_HPP\_INCLUDED}}
+
+\end{DoxyCode}
