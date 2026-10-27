@@ -400,8 +400,8 @@ class Texto{
 };
 
 /**
- * @class Timestamp Define sequência de caracteres ou números que identifica quando um evento específico ocorreu.
- * 
+ * @class Timestamp 
+ * @brief Define sequência de caracteres ou números que identifica quando um evento específico ocorreu.
  * Pode descrever início ou término de um cartão de atividade, instante de entrada do cartão de atividade, bem como início ou término de um projeto.
  * Regras de formatação:
  * - Segue o formato DIA-MES-ANO-HORARIO
