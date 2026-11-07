@@ -3,6 +3,8 @@
 
 #include "entidades.hpp"
 #include <unordered_map>
+#include <list>
+#include <vector>
 #include <string>
 
 /**
@@ -114,15 +116,16 @@ public:
 class ContainerQuadro {
 private:
     std::unordered_map<std::string, Quadro> mapaQuadro; ///< Instância de Mapa que irá armazenar as instâncias de Quadro.
-
+    std::unordered_map<std::string, std::vector<std::string>> relacaoPessoaQuadro; ///< Instância de mapa que associa o e-mail de um usuário à lista de identificadores (IDs) dos seus quadros.
 public:
 /**
  * @brief Adiciona uma instância dada de Quadro no mapa.
- * @param quadro Quadro que deseja-se adicionar.
+ * @param quadro Quadro que se deseja adicionar.
+ * @param emailDono Email do usuário associado àquele Quadro.
  * @return true Se foi possível adicionar ao mapa.
- * @return false Se não foi possível adicionar ao mapa, já existe uma instância no mapa com aquele identificador.
+ * @return false Se não foi possível adicionar ao mapa e/ou já existe essa instância no mapa.
  */
-    bool incluir(const Quadro& quadro);
+    bool incluir(const Quadro& quadro, const Email& emailDono);
 
 /**
  * @brief Remove um Quadro do mapa a partir de um Identificador informado.
@@ -149,6 +152,15 @@ public:
  * @return false Se não foi encontrada nenhuma instância com o mesmo identificador informado.
  */
     bool atualizar(const Quadro& quadro);
+
+/**
+ * @brief Lista todos os quadros associados a um usuário do sistema.
+ * @param emailDono O email do usuário a ser utilizado para buscar os quadros associados
+ * @param listaRetorno Lista que carrega os dados obtidos na busca; os quadros associados são retornados através deste parâmetro.
+ * @return true Se a busca foi bem sucedida e/ou encontrou quadros.
+ * @return false Caso contrário.
+ */
+    bool listar(const Email& emailDono, std::list<Quadro>* listaRetorno);
 };
 
 
@@ -161,15 +173,16 @@ public:
 class ContainerCartao {
 private:
     std::unordered_map<std::string, CartaodeAtividade> mapaCartao; ///< Instância de Mapa que irá armazenar as instâncias de CartaodeAtividade.
-
+    std::unordered_map<std::string, std::vector<std::string>> relacaoQuadroCartoes; std::unordered_map<std::string, std::vector<std::string>> relacaoQuadroCartoes; ///< Instância de Mapa que irá armazenar os cartões de atividade associados a um quadro.
 public:
 /**
- * @brief Adiciona uma instância dada de CartaodeAtividade no mapa.
+ * @brief Adiciona uma instância dada de CartaodeAtividade no mapa, associando-a ao quadro que ela será integrada.
  * @param cartao CartaodeAtividade que deseja-se adicionar.
+ * @param idQuadro O identificador do Quadro em que o cartão está associado.
  * @return true Se foi possível adicionar ao mapa.
  * @return false Se não foi possível adicionar ao mapa, já existe uma instância no mapa com aquele identificador.
  */
-    bool incluir(const CartaodeAtividade& cartao);
+    bool incluir(const CartaodeAtividade& cartao, const Identificador& idQuadro);
 
 /**
  * @brief Remove um CartaodeAtividade do mapa a partir de um Identificador informado.
@@ -196,6 +209,16 @@ public:
  * @return false Se não foi encontrada nenhuma instância com o mesmo identificador informado.
  */
     bool atualizar(const CartaodeAtividade& cartao);
+
+/**
+ * @brief Lista todos os cartões de atividades associados a um quadro.
+ * @param idQuadro O quadro em que se quer visualizar os cartões de atividade existentes.
+ * @param listaRetorno Lista que carrega os dados obtidos na busca; os cartões de atividade associados são retornados através desse parâmetro.
+ * @return true Se a busca foi bem-sucedida e/ou existem cartões de atividade associados ao quadro.
+ * @return false Caso contrário.
+ * 
+ */
+    bool listar(const Identificador& idQuadro, std::list<CartaodeAtividade>* listaRetorno);
 };
 
 #endif // CONTEINERS_HPP

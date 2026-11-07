@@ -2,17 +2,14 @@
 #define INTERFACES_HPP_INCLUDED
 
 #include <string>
+#include <list>
 #include "entidades.hpp"
-
-using namespace std;
 
 /**
  * @file interfaces.hpp
  * @brief Declaração das interfaces do sistema de software.
  * @author Ítalo Miranda Gomes
  */
-
-// AUTENTICACAO
 
 /**
  * @class IAprAutenticacao
@@ -54,8 +51,6 @@ class ISerAutenticacao {
          */
         virtual bool autenticar(const Email& email, const Senha& senha) = 0;
 };
-
-// PESSOAS
 
 /**
  * @class IAprPessoas 
@@ -126,8 +121,6 @@ class ISerPessoas {
         virtual bool excluir(const Email& email) = 0;
 };
 
-// PROJETOS
-
 /**
  * @class IAprProjetos
  * @brief Interface para a camada de apresentação da gestão de projetos.
@@ -190,11 +183,9 @@ class ISerProjetos {
         virtual bool excluir(const Identificador& identificador) = 0;
 };
 
-// QUADROS 
-
 /**
  * @class IAprQuadros
- * @brief Interface para a camada de apresentação da gestão de quadros.
+ * @brief Interface para a camada de apresentação da gestão de quadros e cartões de atividade.
  */
 class IAprQuadros {
     public:
@@ -204,7 +195,7 @@ class IAprQuadros {
         virtual ~IAprQuadros() = default;
 
         /**
-         * @brief Gerencia a execução do submenu de navegação e operações de quadros.
+         * @brief Gerencia a execução do submenu de navegação e operações de quadros e cartões.
          * @param email Referência para o email do utilizador autenticado na sessão.
          */
         virtual void exec(const Email& email) = 0;
@@ -212,7 +203,7 @@ class IAprQuadros {
 
 /**
  * @class ISerQuadros
- * @brief Interface para a camada de serviço de gestão de quadros.
+ * @brief Interface para a camada de serviço de gestão de quadros e cartões de atividade utilizando o padrão Facade.
  */
 class ISerQuadros {
     public:
@@ -251,7 +242,58 @@ class ISerQuadros {
          * @return true Se o quadro foi excluído com sucesso.
          * @return false Caso contrário.
          */
-        virtual bool excluir(const Identificador identificador) = 0;
+        virtual bool excluir(const Identificador& identificador) = 0;
+
+        /**
+         * @brief Lista todos os quadros associados a um usuário do sistema.
+         * @param emailDono O email do usuário a ser utilizado para buscar os quadros associados.
+         * @param listaRetorno Lista que carrega os dados obtidos na busca.
+         * @return true Se a busca foi bem sucedida.
+         * @return false Caso contrário.
+         */
+        virtual bool listar(const Email& emailDono, std::list<Quadro>* listaRetorno) = 0;
+
+        /**
+         * @brief Registra um novo cartão de atividade no sistema associando-o a um quadro.
+         * @param cartao Referência para o objeto CartaodeAtividade a ser salvo.
+         * @param idQuadro Identificador do quadro ao qual o cartão pertencerá.
+         * @return true Se o registro for efetuado com sucesso.
+         * @return false Caso contrário.
+         */
+        virtual bool criarCartao(const CartaodeAtividade& cartao, const Identificador& idQuadro) = 0;
+
+        /**
+         * @brief Consulta e carrega as informações de um cartão de atividade.
+         * @param cartao Ponteiro para o objeto CartaodeAtividade contendo o código de busca e onde os dados serão armazenados.
+         * @return true Se o cartão for localizado.
+         * @return false Caso contrário.
+         */
+        virtual bool lerCartao(CartaodeAtividade* cartao) = 0;
+
+        /**
+         * @brief Atualiza as informações de um cartão de atividade existente.
+         * @param cartao Referência para o objeto CartaodeAtividade contendo as novas informações.
+         * @return true Se a atualização for concluída com sucesso.
+         * @return false Caso contrário.
+         */
+        virtual bool atualizarCartao(const CartaodeAtividade& cartao) = 0;
+
+        /**
+         * @brief Remove um cartão de atividade registrado do sistema.
+         * @param identificador Referência para a chave de identificação do cartão a ser removido.
+         * @return true Se o cartão foi excluído com sucesso.
+         * @return false Caso contrário.
+         */
+        virtual bool excluirCartao(const Identificador& identificador) = 0;
+
+        /**
+         * @brief Lista todos os cartões de atividades associados a um quadro específico.
+         * @param idQuadro O identificador do quadro do qual se deseja listar os cartões.
+         * @param listaRetorno Lista que carrega os dados obtidos na busca.
+         * @return true Se a busca foi bem-sucedida.
+         * @return false Caso contrário.
+         */
+        virtual bool listarCartoes(const Identificador& idQuadro, std::list<CartaodeAtividade>* listaRetorno) = 0;
 };
 
 #endif // INTERFACES_HPP_INCLUDED

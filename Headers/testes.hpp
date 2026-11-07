@@ -5,8 +5,6 @@
 #include "entidades.hpp"
 #include <string>
 
-using namespace std;
-
 //////// Declaracao dos testes de dominios /////////
 
 class TUEmail{

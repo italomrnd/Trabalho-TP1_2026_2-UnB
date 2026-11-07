@@ -6,7 +6,6 @@
 // Implementação dos métodos da classe Email
 
 void Email::validar(const string& valor){
-    // Verificacao inicial de tamanho 
     if (valor.empty() || valor.size() > 320)
         throw std::invalid_argument("O TAMANHO DO EMAIL EH INVALIDO!");
     
