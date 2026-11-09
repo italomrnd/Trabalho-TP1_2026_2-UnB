@@ -1,0 +1,136 @@
+\doxysection{Container\+Pessoa Class Reference}
+\hypertarget{classContainerPessoa}{}\label{classContainerPessoa}\index{ContainerPessoa@{ContainerPessoa}}
+
+
+Classe que representa o armazenamento de instâncias da classe \doxylink{classPessoa}{Pessoa}.  
+
+
+
+
+{\ttfamily \#include $<$containers.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classContainerPessoa_aa8d94dc54ca42e5c5fd5678175475797}{incluir}} (const \mbox{\hyperlink{classPessoa}{Pessoa}} \&pessoa)
+\begin{DoxyCompactList}\small\item\em Adiciona uma instância dada de \doxylink{classPessoa}{Pessoa} no mapa. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classContainerPessoa_a866eacfc83cccb3dbebdf80978a9d50f}{remover}} (const \mbox{\hyperlink{classEmail}{Email}} \&email)
+\begin{DoxyCompactList}\small\item\em Remove uma pessoa do mapa a partir de um \doxylink{classEmail}{Email} informado. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classContainerPessoa_af5855bc72975afee238ee0a97e50751c}{pesquisar}} (const \mbox{\hyperlink{classEmail}{Email}} \&email, \mbox{\hyperlink{classPessoa}{Pessoa}} \texorpdfstring{$\ast$}{*}pessoa\+Retorno)
+\begin{DoxyCompactList}\small\item\em Procura pela existência de uma \doxylink{classPessoa}{Pessoa} através de um \doxylink{classEmail}{Email} informado e atualiza os dados de um ponteiro de \doxylink{classPessoa}{Pessoa} para copiar os dados encontrados. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classContainerPessoa_afedab7918086d2d056a5aac08fa65738}{atualizar}} (const \mbox{\hyperlink{classPessoa}{Pessoa}} \&pessoa)
+\begin{DoxyCompactList}\small\item\em Procura por uma instância de \doxylink{classPessoa}{Pessoa} com o mesmo identificador \doxylink{classEmail}{Email} e a substitui pela dada. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::unordered\+\_\+map$<$ std\+::string, \mbox{\hyperlink{classPessoa}{Pessoa}} $>$ \mbox{\hyperlink{classContainerPessoa_ac3f8aa459c8530138a12ac4cb7ff15a5}{mapa\+Pessoas}}
+\begin{DoxyCompactList}\small\item\em Instância de Mapa que irá armazenar as instâncias de \doxylink{classPessoa}{Pessoa}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Classe que representa o armazenamento de instâncias da classe \doxylink{classPessoa}{Pessoa}. 
+
+A classe utiliza da estrutura mapa para armazenar as instâncias e facilitar o encontro e remoção dessas utilizando o \doxylink{classEmail}{Email} como chave primária de procura. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classContainerPessoa_afedab7918086d2d056a5aac08fa65738}\label{classContainerPessoa_afedab7918086d2d056a5aac08fa65738} 
+\index{ContainerPessoa@{ContainerPessoa}!atualizar@{atualizar}}
+\index{atualizar@{atualizar}!ContainerPessoa@{ContainerPessoa}}
+\doxysubsubsection{\texorpdfstring{atualizar()}{atualizar()}}
+{\footnotesize\ttfamily bool Container\+Pessoa\+::atualizar (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classPessoa}{Pessoa}} \&}]{pessoa }\end{DoxyParamCaption})}
+
+
+
+Procura por uma instância de \doxylink{classPessoa}{Pessoa} com o mesmo identificador \doxylink{classEmail}{Email} e a substitui pela dada. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pessoa} & Novos dados que serão colocados no lugar dos anteriores. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Se houve a atualização. 
+
+false Se não foi encontrada nenhuma instância com o mesmo identificador informado. 
+\end{DoxyReturn}
+\Hypertarget{classContainerPessoa_aa8d94dc54ca42e5c5fd5678175475797}\label{classContainerPessoa_aa8d94dc54ca42e5c5fd5678175475797} 
+\index{ContainerPessoa@{ContainerPessoa}!incluir@{incluir}}
+\index{incluir@{incluir}!ContainerPessoa@{ContainerPessoa}}
+\doxysubsubsection{\texorpdfstring{incluir()}{incluir()}}
+{\footnotesize\ttfamily bool Container\+Pessoa\+::incluir (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classPessoa}{Pessoa}} \&}]{pessoa }\end{DoxyParamCaption})}
+
+
+
+Adiciona uma instância dada de \doxylink{classPessoa}{Pessoa} no mapa. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pessoa} & \doxylink{classPessoa}{Pessoa} que deseja-\/se adicionar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Se foi possível adicionar ao mapa. 
+
+false Se não foi possível adicionar ao mapa, já existe uma instância no mapa com aquele identificador. 
+\end{DoxyReturn}
+\Hypertarget{classContainerPessoa_af5855bc72975afee238ee0a97e50751c}\label{classContainerPessoa_af5855bc72975afee238ee0a97e50751c} 
+\index{ContainerPessoa@{ContainerPessoa}!pesquisar@{pesquisar}}
+\index{pesquisar@{pesquisar}!ContainerPessoa@{ContainerPessoa}}
+\doxysubsubsection{\texorpdfstring{pesquisar()}{pesquisar()}}
+{\footnotesize\ttfamily bool Container\+Pessoa\+::pesquisar (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classEmail}{Email}} \&}]{email,  }\item[{\mbox{\hyperlink{classPessoa}{Pessoa}} \texorpdfstring{$\ast$}{*}}]{pessoa\+Retorno }\end{DoxyParamCaption})}
+
+
+
+Procura pela existência de uma \doxylink{classPessoa}{Pessoa} através de um \doxylink{classEmail}{Email} informado e atualiza os dados de um ponteiro de \doxylink{classPessoa}{Pessoa} para copiar os dados encontrados. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em email} & \doxylink{classEmail}{Email} usado para a procura. \\
+\hline
+{\em pessoa\+Retorno} & Ponteiro de \doxylink{classPessoa}{Pessoa} que retornará os dados encontrados. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Se encontrou aquele \doxylink{classEmail}{Email} no Mapa. 
+
+false Se não encontrou. 
+\end{DoxyReturn}
+\Hypertarget{classContainerPessoa_a866eacfc83cccb3dbebdf80978a9d50f}\label{classContainerPessoa_a866eacfc83cccb3dbebdf80978a9d50f} 
+\index{ContainerPessoa@{ContainerPessoa}!remover@{remover}}
+\index{remover@{remover}!ContainerPessoa@{ContainerPessoa}}
+\doxysubsubsection{\texorpdfstring{remover()}{remover()}}
+{\footnotesize\ttfamily bool Container\+Pessoa\+::remover (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classEmail}{Email}} \&}]{email }\end{DoxyParamCaption})}
+
+
+
+Remove uma pessoa do mapa a partir de um \doxylink{classEmail}{Email} informado. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em email} & \doxylink{classEmail}{Email} que será utilizado para a procura da instância a ser removida. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Se houve remoção. 
+
+false Se aquele identificador não está presente no mapa. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classContainerPessoa_ac3f8aa459c8530138a12ac4cb7ff15a5}\label{classContainerPessoa_ac3f8aa459c8530138a12ac4cb7ff15a5} 
+\index{ContainerPessoa@{ContainerPessoa}!mapaPessoas@{mapaPessoas}}
+\index{mapaPessoas@{mapaPessoas}!ContainerPessoa@{ContainerPessoa}}
+\doxysubsubsection{\texorpdfstring{mapaPessoas}{mapaPessoas}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$std\+::string, \mbox{\hyperlink{classPessoa}{Pessoa}}$>$ Container\+Pessoa\+::mapa\+Pessoas\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Instância de Mapa que irá armazenar as instâncias de \doxylink{classPessoa}{Pessoa}. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/mateuschrist/\+Trabalho-\/\+TP1\+\_\+2026\+\_\+2-\/\+Un\+B/\+Headers/\mbox{\hyperlink{containers_8hpp}{containers.\+hpp}}\item 
+/home/mateuschrist/\+Trabalho-\/\+TP1\+\_\+2026\+\_\+2-\/\+Un\+B/\+Sources/\mbox{\hyperlink{containers_8cpp}{containers.\+cpp}}\end{DoxyCompactItemize}

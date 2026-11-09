@@ -98,31 +98,80 @@ $(document).ready(function(){initNavTree('classISerQuadros.html',''); initResiza
 </div><!--header-->
 <div class="contents">
 
-<p>Interface para a camada de serviço de gestão de quadros.  
+<p>Interface para a camada de serviço de gestão de quadros e cartões de atividade utilizando o padrão Facade.  
  <a href="classISerQuadros.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="interfaces_8hpp_source.html">interfaces.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ac16578d14105464e631905eb4658e631" id="r_ac16578d14105464e631905eb4658e631"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classISerQuadros.html#ac16578d14105464e631905eb4658e631">criar</a> (const <a class="el" href="classQuadro.html">Quadro</a> &amp;)=0</td></tr>
-<tr class="memdesc:ac16578d14105464e631905eb4658e631"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registra um novo quadro de atividades no sistema.  <br /></td></tr>
-<tr class="separator:ac16578d14105464e631905eb4658e631"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab1c9d726c6f3a3b8dd99e55df6225374" id="r_ab1c9d726c6f3a3b8dd99e55df6225374"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classISerQuadros.html#ab1c9d726c6f3a3b8dd99e55df6225374">ler</a> (<a class="el" href="classQuadro.html">Quadro</a> *)=0</td></tr>
-<tr class="memdesc:ab1c9d726c6f3a3b8dd99e55df6225374"><td class="mdescLeft">&#160;</td><td class="mdescRight">Consulta e carrega as informações de um quadro de atividades.  <br /></td></tr>
-<tr class="separator:ab1c9d726c6f3a3b8dd99e55df6225374"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6e9760aa12ffbb4e058fe77420a47e22" id="r_a6e9760aa12ffbb4e058fe77420a47e22"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classISerQuadros.html#a6e9760aa12ffbb4e058fe77420a47e22">atualizar</a> (const <a class="el" href="classQuadro.html">Quadro</a> &amp;)=0</td></tr>
-<tr class="memdesc:a6e9760aa12ffbb4e058fe77420a47e22"><td class="mdescLeft">&#160;</td><td class="mdescRight">Atualiza as informações de um quadro existente.  <br /></td></tr>
-<tr class="separator:a6e9760aa12ffbb4e058fe77420a47e22"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5859e823f3b16aed4f8a8bb6113721ce" id="r_a5859e823f3b16aed4f8a8bb6113721ce"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classISerQuadros.html#a5859e823f3b16aed4f8a8bb6113721ce">excluir</a> (const <a class="el" href="classIdentificador.html">Identificador</a>)=0</td></tr>
-<tr class="memdesc:a5859e823f3b16aed4f8a8bb6113721ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove um quadro registrado do sistema.  <br /></td></tr>
-<tr class="separator:a5859e823f3b16aed4f8a8bb6113721ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae001a942c7cc978e17c89ec1516f1de0" id="r_ae001a942c7cc978e17c89ec1516f1de0"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classISerQuadros.html#ae001a942c7cc978e17c89ec1516f1de0">~ISerQuadros</a> ()=default</td></tr>
+<tr class="memdesc:ae001a942c7cc978e17c89ec1516f1de0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destrutor virtual padrão.  <br /></td></tr>
+<tr class="separator:ae001a942c7cc978e17c89ec1516f1de0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77847b678914adbeae0be6f998db7ccb" id="r_a77847b678914adbeae0be6f998db7ccb"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classISerQuadros.html#a77847b678914adbeae0be6f998db7ccb">criar</a> (const <a class="el" href="classQuadro.html">Quadro</a> &amp;quadro)=0</td></tr>
+<tr class="memdesc:a77847b678914adbeae0be6f998db7ccb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registra um novo quadro de atividades no sistema.  <br /></td></tr>
+<tr class="separator:a77847b678914adbeae0be6f998db7ccb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ba7cf5e260a23b5a1e852b63494ff25" id="r_a8ba7cf5e260a23b5a1e852b63494ff25"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classISerQuadros.html#a8ba7cf5e260a23b5a1e852b63494ff25">ler</a> (<a class="el" href="classQuadro.html">Quadro</a> *quadro)=0</td></tr>
+<tr class="memdesc:a8ba7cf5e260a23b5a1e852b63494ff25"><td class="mdescLeft">&#160;</td><td class="mdescRight">Consulta e carrega as informações de um quadro de atividades.  <br /></td></tr>
+<tr class="separator:a8ba7cf5e260a23b5a1e852b63494ff25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97ee8e0fd02693b5106653095d82ac76" id="r_a97ee8e0fd02693b5106653095d82ac76"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classISerQuadros.html#a97ee8e0fd02693b5106653095d82ac76">atualizar</a> (const <a class="el" href="classQuadro.html">Quadro</a> &amp;quadro)=0</td></tr>
+<tr class="memdesc:a97ee8e0fd02693b5106653095d82ac76"><td class="mdescLeft">&#160;</td><td class="mdescRight">Atualiza as informações de um quadro existente.  <br /></td></tr>
+<tr class="separator:a97ee8e0fd02693b5106653095d82ac76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae08b454fcc748fda7e30b0f1429cbab4" id="r_ae08b454fcc748fda7e30b0f1429cbab4"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classISerQuadros.html#ae08b454fcc748fda7e30b0f1429cbab4">excluir</a> (const <a class="el" href="classIdentificador.html">Identificador</a> &amp;identificador)=0</td></tr>
+<tr class="memdesc:ae08b454fcc748fda7e30b0f1429cbab4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove um quadro registrado do sistema.  <br /></td></tr>
+<tr class="separator:ae08b454fcc748fda7e30b0f1429cbab4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab99363ffe2b6e50d04a81d0cae0b72b2" id="r_ab99363ffe2b6e50d04a81d0cae0b72b2"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classISerQuadros.html#ab99363ffe2b6e50d04a81d0cae0b72b2">listar</a> (const <a class="el" href="classEmail.html">Email</a> &amp;emailDono, std::list&lt; <a class="el" href="classQuadro.html">Quadro</a> &gt; *listaRetorno)=0</td></tr>
+<tr class="memdesc:ab99363ffe2b6e50d04a81d0cae0b72b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lista todos os quadros associados a um usuário do sistema.  <br /></td></tr>
+<tr class="separator:ab99363ffe2b6e50d04a81d0cae0b72b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55e22c53a3fb0064fd3a500d3e13c89c" id="r_a55e22c53a3fb0064fd3a500d3e13c89c"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classISerQuadros.html#a55e22c53a3fb0064fd3a500d3e13c89c">criarCartao</a> (const <a class="el" href="classCartaodeAtividade.html">CartaodeAtividade</a> &amp;cartao, const <a class="el" href="classIdentificador.html">Identificador</a> &amp;idQuadro)=0</td></tr>
+<tr class="memdesc:a55e22c53a3fb0064fd3a500d3e13c89c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registra um novo cartão de atividade no sistema associando-o a um quadro.  <br /></td></tr>
+<tr class="separator:a55e22c53a3fb0064fd3a500d3e13c89c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67e346bcb828877d1251cf59772e5e39" id="r_a67e346bcb828877d1251cf59772e5e39"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classISerQuadros.html#a67e346bcb828877d1251cf59772e5e39">lerCartao</a> (<a class="el" href="classCartaodeAtividade.html">CartaodeAtividade</a> *cartao)=0</td></tr>
+<tr class="memdesc:a67e346bcb828877d1251cf59772e5e39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Consulta e carrega as informações de um cartão de atividade.  <br /></td></tr>
+<tr class="separator:a67e346bcb828877d1251cf59772e5e39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5bf7613dff2d5827156f33264e342e83" id="r_a5bf7613dff2d5827156f33264e342e83"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classISerQuadros.html#a5bf7613dff2d5827156f33264e342e83">atualizarCartao</a> (const <a class="el" href="classCartaodeAtividade.html">CartaodeAtividade</a> &amp;cartao)=0</td></tr>
+<tr class="memdesc:a5bf7613dff2d5827156f33264e342e83"><td class="mdescLeft">&#160;</td><td class="mdescRight">Atualiza as informações de um cartão de atividade existente.  <br /></td></tr>
+<tr class="separator:a5bf7613dff2d5827156f33264e342e83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a272ab5c99ec641fe54054a126aebc8ba" id="r_a272ab5c99ec641fe54054a126aebc8ba"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classISerQuadros.html#a272ab5c99ec641fe54054a126aebc8ba">excluirCartao</a> (const <a class="el" href="classIdentificador.html">Identificador</a> &amp;identificador)=0</td></tr>
+<tr class="memdesc:a272ab5c99ec641fe54054a126aebc8ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove um cartão de atividade registrado do sistema.  <br /></td></tr>
+<tr class="separator:a272ab5c99ec641fe54054a126aebc8ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d88d5058bccd4e44529b2216f0d094a" id="r_a8d88d5058bccd4e44529b2216f0d094a"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classISerQuadros.html#a8d88d5058bccd4e44529b2216f0d094a">listarCartoes</a> (const <a class="el" href="classIdentificador.html">Identificador</a> &amp;idQuadro, std::list&lt; <a class="el" href="classCartaodeAtividade.html">CartaodeAtividade</a> &gt; *listaRetorno)=0</td></tr>
+<tr class="memdesc:a8d88d5058bccd4e44529b2216f0d094a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lista todos os cartões de atividades associados a um quadro específico.  <br /></td></tr>
+<tr class="separator:a8d88d5058bccd4e44529b2216f0d094a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Interface para a camada de serviço de gestão de quadros. </p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a6e9760aa12ffbb4e058fe77420a47e22" name="a6e9760aa12ffbb4e058fe77420a47e22"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6e9760aa12ffbb4e058fe77420a47e22">&#9670;&#160;</a></span>atualizar()</h2>
+<div class="textblock"><p>Interface para a camada de serviço de gestão de quadros e cartões de atividade utilizando o padrão Facade. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="ae001a942c7cc978e17c89ec1516f1de0" name="ae001a942c7cc978e17c89ec1516f1de0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae001a942c7cc978e17c89ec1516f1de0">&#9670;&#160;</a></span>~ISerQuadros()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual ISerQuadros::~ISerQuadros </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Destrutor virtual padrão. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a97ee8e0fd02693b5106653095d82ac76" name="a97ee8e0fd02693b5106653095d82ac76"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97ee8e0fd02693b5106653095d82ac76">&#9670;&#160;</a></span>atualizar()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -134,7 +183,7 @@ Public Member Functions</h2></td></tr>
           <td class="memname">virtual bool ISerQuadros::atualizar </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classQuadro.html">Quadro</a> &amp;&#160;</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><em>quadro</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -158,8 +207,45 @@ false Caso contrário. </dd></dl>
 
 </div>
 </div>
-<a id="ac16578d14105464e631905eb4658e631" name="ac16578d14105464e631905eb4658e631"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac16578d14105464e631905eb4658e631">&#9670;&#160;</a></span>criar()</h2>
+<a id="a5bf7613dff2d5827156f33264e342e83" name="a5bf7613dff2d5827156f33264e342e83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5bf7613dff2d5827156f33264e342e83">&#9670;&#160;</a></span>atualizarCartao()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool ISerQuadros::atualizarCartao </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classCartaodeAtividade.html">CartaodeAtividade</a> &amp;&#160;</td>
+          <td class="paramname"><em>cartao</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Atualiza as informações de um cartão de atividade existente. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cartao</td><td>Referência para o objeto <a class="el" href="classCartaodeAtividade.html" title="É a unidade de trabalho dentro do Kanban, representando uma tarefa que pode estar sobre um de três es...">CartaodeAtividade</a> contendo as novas informações. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true Se a atualização for concluída com sucesso. </dd>
+<dd>
+false Caso contrário. </dd></dl>
+
+</div>
+</div>
+<a id="a77847b678914adbeae0be6f998db7ccb" name="a77847b678914adbeae0be6f998db7ccb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77847b678914adbeae0be6f998db7ccb">&#9670;&#160;</a></span>criar()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -171,7 +257,7 @@ false Caso contrário. </dd></dl>
           <td class="memname">virtual bool ISerQuadros::criar </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classQuadro.html">Quadro</a> &amp;&#160;</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><em>quadro</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -195,8 +281,56 @@ false Caso contrário. </dd></dl>
 
 </div>
 </div>
-<a id="a5859e823f3b16aed4f8a8bb6113721ce" name="a5859e823f3b16aed4f8a8bb6113721ce"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5859e823f3b16aed4f8a8bb6113721ce">&#9670;&#160;</a></span>excluir()</h2>
+<a id="a55e22c53a3fb0064fd3a500d3e13c89c" name="a55e22c53a3fb0064fd3a500d3e13c89c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55e22c53a3fb0064fd3a500d3e13c89c">&#9670;&#160;</a></span>criarCartao()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool ISerQuadros::criarCartao </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classCartaodeAtividade.html">CartaodeAtividade</a> &amp;&#160;</td>
+          <td class="paramname"><em>cartao</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classIdentificador.html">Identificador</a> &amp;&#160;</td>
+          <td class="paramname"><em>idQuadro</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Registra um novo cartão de atividade no sistema associando-o a um quadro. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cartao</td><td>Referência para o objeto <a class="el" href="classCartaodeAtividade.html" title="É a unidade de trabalho dentro do Kanban, representando uma tarefa que pode estar sobre um de três es...">CartaodeAtividade</a> a ser salvo. </td></tr>
+    <tr><td class="paramname">idQuadro</td><td><a class="el" href="classIdentificador.html" title="Classe que define um código de identificação para entidades do sistema.">Identificador</a> do quadro ao qual o cartão pertencerá. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true Se o registro for efetuado com sucesso. </dd>
+<dd>
+false Caso contrário. </dd></dl>
+
+</div>
+</div>
+<a id="ae08b454fcc748fda7e30b0f1429cbab4" name="ae08b454fcc748fda7e30b0f1429cbab4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae08b454fcc748fda7e30b0f1429cbab4">&#9670;&#160;</a></span>excluir()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -207,8 +341,8 @@ false Caso contrário. </dd></dl>
         <tr>
           <td class="memname">virtual bool ISerQuadros::excluir </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classIdentificador.html">Identificador</a>&#160;</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="classIdentificador.html">Identificador</a> &amp;&#160;</td>
+          <td class="paramname"><em>identificador</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -222,7 +356,7 @@ false Caso contrário. </dd></dl>
 <p>Remove um quadro registrado do sistema. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">identificador</td><td>Referência para a chave de identificação do quadro a ser removido do sistema de software. </td></tr>
+    <tr><td class="paramname">identificador</td><td>Referência para a chave de identificação do quadro a ser removido. </td></tr>
   </table>
   </dd>
 </dl>
@@ -232,8 +366,45 @@ false Caso contrário. </dd></dl>
 
 </div>
 </div>
-<a id="ab1c9d726c6f3a3b8dd99e55df6225374" name="ab1c9d726c6f3a3b8dd99e55df6225374"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab1c9d726c6f3a3b8dd99e55df6225374">&#9670;&#160;</a></span>ler()</h2>
+<a id="a272ab5c99ec641fe54054a126aebc8ba" name="a272ab5c99ec641fe54054a126aebc8ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a272ab5c99ec641fe54054a126aebc8ba">&#9670;&#160;</a></span>excluirCartao()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool ISerQuadros::excluirCartao </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classIdentificador.html">Identificador</a> &amp;&#160;</td>
+          <td class="paramname"><em>identificador</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Remove um cartão de atividade registrado do sistema. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">identificador</td><td>Referência para a chave de identificação do cartão a ser removido. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true Se o cartão foi excluído com sucesso. </dd>
+<dd>
+false Caso contrário. </dd></dl>
+
+</div>
+</div>
+<a id="a8ba7cf5e260a23b5a1e852b63494ff25" name="a8ba7cf5e260a23b5a1e852b63494ff25"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ba7cf5e260a23b5a1e852b63494ff25">&#9670;&#160;</a></span>ler()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -245,7 +416,7 @@ false Caso contrário. </dd></dl>
           <td class="memname">virtual bool ISerQuadros::ler </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classQuadro.html">Quadro</a> *&#160;</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><em>quadro</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -269,8 +440,141 @@ false Caso contrário. </dd></dl>
 
 </div>
 </div>
+<a id="a67e346bcb828877d1251cf59772e5e39" name="a67e346bcb828877d1251cf59772e5e39"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67e346bcb828877d1251cf59772e5e39">&#9670;&#160;</a></span>lerCartao()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool ISerQuadros::lerCartao </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classCartaodeAtividade.html">CartaodeAtividade</a> *&#160;</td>
+          <td class="paramname"><em>cartao</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Consulta e carrega as informações de um cartão de atividade. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cartao</td><td>Ponteiro para o objeto <a class="el" href="classCartaodeAtividade.html" title="É a unidade de trabalho dentro do Kanban, representando uma tarefa que pode estar sobre um de três es...">CartaodeAtividade</a> contendo o código de busca e onde os dados serão armazenados. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true Se o cartão for localizado. </dd>
+<dd>
+false Caso contrário. </dd></dl>
+
+</div>
+</div>
+<a id="ab99363ffe2b6e50d04a81d0cae0b72b2" name="ab99363ffe2b6e50d04a81d0cae0b72b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab99363ffe2b6e50d04a81d0cae0b72b2">&#9670;&#160;</a></span>listar()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool ISerQuadros::listar </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classEmail.html">Email</a> &amp;&#160;</td>
+          <td class="paramname"><em>emailDono</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::list&lt; <a class="el" href="classQuadro.html">Quadro</a> &gt; *&#160;</td>
+          <td class="paramname"><em>listaRetorno</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Lista todos os quadros associados a um usuário do sistema. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">emailDono</td><td>O email do usuário a ser utilizado para buscar os quadros associados. </td></tr>
+    <tr><td class="paramname">listaRetorno</td><td>Lista que carrega os dados obtidos na busca. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true Se a busca foi bem sucedida. </dd>
+<dd>
+false Caso contrário. </dd></dl>
+
+</div>
+</div>
+<a id="a8d88d5058bccd4e44529b2216f0d094a" name="a8d88d5058bccd4e44529b2216f0d094a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d88d5058bccd4e44529b2216f0d094a">&#9670;&#160;</a></span>listarCartoes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool ISerQuadros::listarCartoes </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classIdentificador.html">Identificador</a> &amp;&#160;</td>
+          <td class="paramname"><em>idQuadro</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::list&lt; <a class="el" href="classCartaodeAtividade.html">CartaodeAtividade</a> &gt; *&#160;</td>
+          <td class="paramname"><em>listaRetorno</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Lista todos os cartões de atividades associados a um quadro específico. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">idQuadro</td><td>O identificador do quadro do qual se deseja listar os cartões. </td></tr>
+    <tr><td class="paramname">listaRetorno</td><td>Lista que carrega os dados obtidos na busca. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true Se a busca foi bem-sucedida. </dd>
+<dd>
+false Caso contrário. </dd></dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>/home/italomrnd/UnB/CicloBásicoCIC/TP1_26_2/Trabalho26_2/Headers/<a class="el" href="interfaces_8hpp_source.html">interfaces.hpp</a></li>
+<li>/home/mateuschrist/Trabalho-TP1_2026_2-UnB/Headers/<a class="el" href="interfaces_8hpp_source.html">interfaces.hpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

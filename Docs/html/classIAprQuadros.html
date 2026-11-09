@@ -98,22 +98,53 @@ $(document).ready(function(){initNavTree('classIAprQuadros.html',''); initResiza
 </div><!--header-->
 <div class="contents">
 
-<p>Interface para a camada de apresentação da gestão de quadros.  
+<p>Interface para a camada de apresentação da gestão de quadros e cartões de atividade.  
  <a href="classIAprQuadros.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="interfaces_8hpp_source.html">interfaces.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a5fc0d4d2555e764830eaffda8e0c7373" id="r_a5fc0d4d2555e764830eaffda8e0c7373"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIAprQuadros.html#a5fc0d4d2555e764830eaffda8e0c7373">exec</a> (const <a class="el" href="classEmail.html">Email</a> &amp;)=0</td></tr>
-<tr class="memdesc:a5fc0d4d2555e764830eaffda8e0c7373"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gerencia a execução do submenu de navegação e operações de quadros.  <br /></td></tr>
-<tr class="separator:a5fc0d4d2555e764830eaffda8e0c7373"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3409f4ce5cccd93241c6c09a922f4808" id="r_a3409f4ce5cccd93241c6c09a922f4808"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIAprQuadros.html#a3409f4ce5cccd93241c6c09a922f4808">~IAprQuadros</a> ()=default</td></tr>
+<tr class="memdesc:a3409f4ce5cccd93241c6c09a922f4808"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destrutor virtual padrão.  <br /></td></tr>
+<tr class="separator:a3409f4ce5cccd93241c6c09a922f4808"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7ef7c9c71bb35718d107a3a5dd39846" id="r_ae7ef7c9c71bb35718d107a3a5dd39846"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIAprQuadros.html#ae7ef7c9c71bb35718d107a3a5dd39846">exec</a> (const <a class="el" href="classEmail.html">Email</a> &amp;email)=0</td></tr>
+<tr class="memdesc:ae7ef7c9c71bb35718d107a3a5dd39846"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gerencia a execução do submenu de navegação e operações de quadros e cartões.  <br /></td></tr>
+<tr class="separator:ae7ef7c9c71bb35718d107a3a5dd39846"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Interface para a camada de apresentação da gestão de quadros. </p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a5fc0d4d2555e764830eaffda8e0c7373" name="a5fc0d4d2555e764830eaffda8e0c7373"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5fc0d4d2555e764830eaffda8e0c7373">&#9670;&#160;</a></span>exec()</h2>
+<div class="textblock"><p>Interface para a camada de apresentação da gestão de quadros e cartões de atividade. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a3409f4ce5cccd93241c6c09a922f4808" name="a3409f4ce5cccd93241c6c09a922f4808"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3409f4ce5cccd93241c6c09a922f4808">&#9670;&#160;</a></span>~IAprQuadros()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual IAprQuadros::~IAprQuadros </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Destrutor virtual padrão. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="ae7ef7c9c71bb35718d107a3a5dd39846" name="ae7ef7c9c71bb35718d107a3a5dd39846"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae7ef7c9c71bb35718d107a3a5dd39846">&#9670;&#160;</a></span>exec()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -125,7 +156,7 @@ Public Member Functions</h2></td></tr>
           <td class="memname">virtual void IAprQuadros::exec </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classEmail.html">Email</a> &amp;&#160;</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><em>email</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -136,7 +167,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Gerencia a execução do submenu de navegação e operações de quadros. </p>
+<p>Gerencia a execução do submenu de navegação e operações de quadros e cartões. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">email</td><td>Referência para o email do utilizador autenticado na sessão. </td></tr>
@@ -147,7 +178,7 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>/home/italomrnd/UnB/CicloBásicoCIC/TP1_26_2/Trabalho26_2/Headers/<a class="el" href="interfaces_8hpp_source.html">interfaces.hpp</a></li>
+<li>/home/mateuschrist/Trabalho-TP1_2026_2-UnB/Headers/<a class="el" href="interfaces_8hpp_source.html">interfaces.hpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

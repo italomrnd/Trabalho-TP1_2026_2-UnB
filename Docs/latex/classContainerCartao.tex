@@ -1,0 +1,174 @@
+\doxysection{Container\+Cartao Class Reference}
+\hypertarget{classContainerCartao}{}\label{classContainerCartao}\index{ContainerCartao@{ContainerCartao}}
+
+
+Classe que representa o armazenamento de instâncias da classe \doxylink{classCartaodeAtividade}{Cartaode\+Atividade}.  
+
+
+
+
+{\ttfamily \#include $<$containers.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classContainerCartao_aab246bc3f46c3b08ba543ff4fbdc44d0}{incluir}} (const \mbox{\hyperlink{classCartaodeAtividade}{Cartaode\+Atividade}} \&cartao, const \mbox{\hyperlink{classIdentificador}{Identificador}} \&id\+Quadro)
+\begin{DoxyCompactList}\small\item\em Adiciona uma instância dada de \doxylink{classCartaodeAtividade}{Cartaode\+Atividade} no mapa, associando-\/a ao quadro que ela será integrada. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classContainerCartao_a6478df2276be2b541952f833f8babc96}{remover}} (const \mbox{\hyperlink{classIdentificador}{Identificador}} \&identificador)
+\begin{DoxyCompactList}\small\item\em Remove um \doxylink{classCartaodeAtividade}{Cartaode\+Atividade} do mapa a partir de um \doxylink{classIdentificador}{Identificador} informado. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classContainerCartao_a443ccde3dd9dccdf94af5f357072ba26}{pesquisar}} (const \mbox{\hyperlink{classIdentificador}{Identificador}} \&identificador, \mbox{\hyperlink{classCartaodeAtividade}{Cartaode\+Atividade}} \texorpdfstring{$\ast$}{*}cartao\+Retorno)
+\begin{DoxyCompactList}\small\item\em Procura pela existência de um \doxylink{classCartaodeAtividade}{Cartaode\+Atividade} através de um \doxylink{classIdentificador}{Identificador} informado e atualiza os dados de um ponteiro de \doxylink{classCartaodeAtividade}{Cartaode\+Atividade} para copiar os dados encontrados. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classContainerCartao_a9fc827fb568a069addb453fb74e3a345}{atualizar}} (const \mbox{\hyperlink{classCartaodeAtividade}{Cartaode\+Atividade}} \&cartao)
+\begin{DoxyCompactList}\small\item\em Procura por uma instância de \doxylink{classCartaodeAtividade}{Cartaode\+Atividade} com o mesmo \doxylink{classIdentificador}{Identificador} e a substitui pela dada. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classContainerCartao_a5fd0008da505e2ce473e15b0a93c7c3f}{listar}} (const \mbox{\hyperlink{classIdentificador}{Identificador}} \&id\+Quadro, std\+::list$<$ \mbox{\hyperlink{classCartaodeAtividade}{Cartaode\+Atividade}} $>$ \texorpdfstring{$\ast$}{*}lista\+Retorno)
+\begin{DoxyCompactList}\small\item\em Lista todos os cartões de atividades associados a um quadro. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::unordered\+\_\+map$<$ std\+::string, \mbox{\hyperlink{classCartaodeAtividade}{Cartaode\+Atividade}} $>$ \mbox{\hyperlink{classContainerCartao_ac88280a0017d95516a389a9c8b8395ad}{mapa\+Cartao}}
+\begin{DoxyCompactList}\small\item\em Instância de Mapa que irá armazenar as instâncias de \doxylink{classCartaodeAtividade}{Cartaode\+Atividade}. \end{DoxyCompactList}\item 
+std\+::unordered\+\_\+map$<$ std\+::string, std\+::vector$<$ std\+::string $>$ $>$ \mbox{\hyperlink{classContainerCartao_a43caeb45584683c3f9e27558aeb9764c}{relacao\+Quadro\+Cartoes}}
+\begin{DoxyCompactList}\small\item\em Instância de Mapa que irá armazenar os cartões de atividade associados a um quadro. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Classe que representa o armazenamento de instâncias da classe \doxylink{classCartaodeAtividade}{Cartaode\+Atividade}. 
+
+A classe utiliza da estrutura mapa para armazenar as instâncias e facilitar o encontro e remoção dessas utilizando o \doxylink{classIdentificador}{Identificador} como chave primária de procura. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classContainerCartao_a9fc827fb568a069addb453fb74e3a345}\label{classContainerCartao_a9fc827fb568a069addb453fb74e3a345} 
+\index{ContainerCartao@{ContainerCartao}!atualizar@{atualizar}}
+\index{atualizar@{atualizar}!ContainerCartao@{ContainerCartao}}
+\doxysubsubsection{\texorpdfstring{atualizar()}{atualizar()}}
+{\footnotesize\ttfamily bool Container\+Cartao\+::atualizar (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classCartaodeAtividade}{Cartaode\+Atividade}} \&}]{cartao }\end{DoxyParamCaption})}
+
+
+
+Procura por uma instância de \doxylink{classCartaodeAtividade}{Cartaode\+Atividade} com o mesmo \doxylink{classIdentificador}{Identificador} e a substitui pela dada. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cartao} & Novos dados que serão colocados no lugar dos anteriores. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Se houve a atualização. 
+
+false Se não foi encontrada nenhuma instância com o mesmo identificador informado. 
+\end{DoxyReturn}
+\Hypertarget{classContainerCartao_aab246bc3f46c3b08ba543ff4fbdc44d0}\label{classContainerCartao_aab246bc3f46c3b08ba543ff4fbdc44d0} 
+\index{ContainerCartao@{ContainerCartao}!incluir@{incluir}}
+\index{incluir@{incluir}!ContainerCartao@{ContainerCartao}}
+\doxysubsubsection{\texorpdfstring{incluir()}{incluir()}}
+{\footnotesize\ttfamily bool Container\+Cartao\+::incluir (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classCartaodeAtividade}{Cartaode\+Atividade}} \&}]{cartao,  }\item[{const \mbox{\hyperlink{classIdentificador}{Identificador}} \&}]{id\+Quadro }\end{DoxyParamCaption})}
+
+
+
+Adiciona uma instância dada de \doxylink{classCartaodeAtividade}{Cartaode\+Atividade} no mapa, associando-\/a ao quadro que ela será integrada. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cartao} & \doxylink{classCartaodeAtividade}{Cartaode\+Atividade} que deseja-\/se adicionar. \\
+\hline
+{\em id\+Quadro} & O identificador do \doxylink{classQuadro}{Quadro} em que o cartão está associado. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Se foi possível adicionar ao mapa. 
+
+false Se não foi possível adicionar ao mapa, já existe uma instância no mapa com aquele identificador. 
+\end{DoxyReturn}
+\Hypertarget{classContainerCartao_a5fd0008da505e2ce473e15b0a93c7c3f}\label{classContainerCartao_a5fd0008da505e2ce473e15b0a93c7c3f} 
+\index{ContainerCartao@{ContainerCartao}!listar@{listar}}
+\index{listar@{listar}!ContainerCartao@{ContainerCartao}}
+\doxysubsubsection{\texorpdfstring{listar()}{listar()}}
+{\footnotesize\ttfamily bool Container\+Cartao\+::listar (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classIdentificador}{Identificador}} \&}]{id\+Quadro,  }\item[{std\+::list$<$ \mbox{\hyperlink{classCartaodeAtividade}{Cartaode\+Atividade}} $>$ \texorpdfstring{$\ast$}{*}}]{lista\+Retorno }\end{DoxyParamCaption})}
+
+
+
+Lista todos os cartões de atividades associados a um quadro. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id\+Quadro} & O quadro em que se quer visualizar os cartões de atividade existentes. \\
+\hline
+{\em lista\+Retorno} & Lista que carrega os dados obtidos na busca; os cartões de atividade associados são retornados através desse parâmetro. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Se a busca foi bem-\/sucedida e/ou existem cartões de atividade associados ao quadro. 
+
+false Caso contrário. 
+\end{DoxyReturn}
+\Hypertarget{classContainerCartao_a443ccde3dd9dccdf94af5f357072ba26}\label{classContainerCartao_a443ccde3dd9dccdf94af5f357072ba26} 
+\index{ContainerCartao@{ContainerCartao}!pesquisar@{pesquisar}}
+\index{pesquisar@{pesquisar}!ContainerCartao@{ContainerCartao}}
+\doxysubsubsection{\texorpdfstring{pesquisar()}{pesquisar()}}
+{\footnotesize\ttfamily bool Container\+Cartao\+::pesquisar (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classIdentificador}{Identificador}} \&}]{identificador,  }\item[{\mbox{\hyperlink{classCartaodeAtividade}{Cartaode\+Atividade}} \texorpdfstring{$\ast$}{*}}]{cartao\+Retorno }\end{DoxyParamCaption})}
+
+
+
+Procura pela existência de um \doxylink{classCartaodeAtividade}{Cartaode\+Atividade} através de um \doxylink{classIdentificador}{Identificador} informado e atualiza os dados de um ponteiro de \doxylink{classCartaodeAtividade}{Cartaode\+Atividade} para copiar os dados encontrados. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em identificador} & \doxylink{classIdentificador}{Identificador} usado para a procura. \\
+\hline
+{\em cartao\+Retorno} & Ponteiro de \doxylink{classCartaodeAtividade}{Cartaode\+Atividade} que retornará os dados encontrados. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Se encontrou aquele \doxylink{classIdentificador}{Identificador} no Mapa. 
+
+false Se não encontrou. 
+\end{DoxyReturn}
+\Hypertarget{classContainerCartao_a6478df2276be2b541952f833f8babc96}\label{classContainerCartao_a6478df2276be2b541952f833f8babc96} 
+\index{ContainerCartao@{ContainerCartao}!remover@{remover}}
+\index{remover@{remover}!ContainerCartao@{ContainerCartao}}
+\doxysubsubsection{\texorpdfstring{remover()}{remover()}}
+{\footnotesize\ttfamily bool Container\+Cartao\+::remover (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classIdentificador}{Identificador}} \&}]{identificador }\end{DoxyParamCaption})}
+
+
+
+Remove um \doxylink{classCartaodeAtividade}{Cartaode\+Atividade} do mapa a partir de um \doxylink{classIdentificador}{Identificador} informado. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em identificador} & \doxylink{classIdentificador}{Identificador} que será utilizado para a procura da instância a ser removida. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Se houve remoção. 
+
+false Se aquele identificador não está presente no mapa. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classContainerCartao_ac88280a0017d95516a389a9c8b8395ad}\label{classContainerCartao_ac88280a0017d95516a389a9c8b8395ad} 
+\index{ContainerCartao@{ContainerCartao}!mapaCartao@{mapaCartao}}
+\index{mapaCartao@{mapaCartao}!ContainerCartao@{ContainerCartao}}
+\doxysubsubsection{\texorpdfstring{mapaCartao}{mapaCartao}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$std\+::string, \mbox{\hyperlink{classCartaodeAtividade}{Cartaode\+Atividade}}$>$ Container\+Cartao\+::mapa\+Cartao\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Instância de Mapa que irá armazenar as instâncias de \doxylink{classCartaodeAtividade}{Cartaode\+Atividade}. 
+
+\Hypertarget{classContainerCartao_a43caeb45584683c3f9e27558aeb9764c}\label{classContainerCartao_a43caeb45584683c3f9e27558aeb9764c} 
+\index{ContainerCartao@{ContainerCartao}!relacaoQuadroCartoes@{relacaoQuadroCartoes}}
+\index{relacaoQuadroCartoes@{relacaoQuadroCartoes}!ContainerCartao@{ContainerCartao}}
+\doxysubsubsection{\texorpdfstring{relacaoQuadroCartoes}{relacaoQuadroCartoes}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$ std\+::string, std\+::vector$<$ std\+::string $>$ $>$ Container\+Cartao\+::relacao\+Quadro\+Cartoes\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Instância de Mapa que irá armazenar os cartões de atividade associados a um quadro. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/mateuschrist/\+Trabalho-\/\+TP1\+\_\+2026\+\_\+2-\/\+Un\+B/\+Headers/\mbox{\hyperlink{containers_8hpp}{containers.\+hpp}}\item 
+/home/mateuschrist/\+Trabalho-\/\+TP1\+\_\+2026\+\_\+2-\/\+Un\+B/\+Sources/\mbox{\hyperlink{containers_8cpp}{containers.\+cpp}}\end{DoxyCompactItemize}

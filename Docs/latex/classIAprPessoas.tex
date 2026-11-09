@@ -12,14 +12,29 @@ Interface para a camada de apresentação da gestão de contas de pessoas.
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
+virtual \mbox{\hyperlink{classIAprPessoas_a6a16d1f04a3dbdac7d76a777da24a13c}{\texorpdfstring{$\sim$}{\string~}\+IApr\+Pessoas}} ()=default
+\begin{DoxyCompactList}\small\item\em Destrutor virtual padrão. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{classIAprPessoas_ab74caf480270f3bb4d4a4c0fda9af4b9}{criar}} ()=0
-\begin{DoxyCompactList}\small\item\em Método responsável por solicitar dados e realizar o cadastro inicial de um usuário do sistema de software. \end{DoxyCompactList}\item 
-virtual bool \mbox{\hyperlink{classIAprPessoas_aa75096daa08811b721fab87f100d9693}{exec}} (const \mbox{\hyperlink{classEmail}{Email}} \&)=0
+\begin{DoxyCompactList}\small\item\em Método responsável por solicitar dados e realizar o cadastro inicial de um usuário do sistema. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classIAprPessoas_a9cd78811bef6cd5d35e154c04a573685}{exec}} (const \mbox{\hyperlink{classEmail}{Email}} \&email)=0
 \begin{DoxyCompactList}\small\item\em Gerencia a execução do submenu de opções de conta do utilizador logado. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 Interface para a camada de apresentação da gestão de contas de pessoas. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classIAprPessoas_a6a16d1f04a3dbdac7d76a777da24a13c}\label{classIAprPessoas_a6a16d1f04a3dbdac7d76a777da24a13c} 
+\index{IAprPessoas@{IAprPessoas}!````~IAprPessoas@{\texorpdfstring{$\sim$}{\string~}IAprPessoas}}
+\index{````~IAprPessoas@{\texorpdfstring{$\sim$}{\string~}IAprPessoas}!IAprPessoas@{IAprPessoas}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}IAprPessoas()}{\string~IAprPessoas()}}
+{\footnotesize\ttfamily virtual IApr\+Pessoas\+::\texorpdfstring{$\sim$}{\string~}\+IApr\+Pessoas (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+Destrutor virtual padrão. 
+
+
 
 \doxysubsection{Member Function Documentation}
 \Hypertarget{classIAprPessoas_ab74caf480270f3bb4d4a4c0fda9af4b9}\label{classIAprPessoas_ab74caf480270f3bb4d4a4c0fda9af4b9} 
@@ -30,13 +45,13 @@ Interface para a camada de apresentação da gestão de contas de pessoas.
 
 
 
-Método responsável por solicitar dados e realizar o cadastro inicial de um usuário do sistema de software. 
+Método responsável por solicitar dados e realizar o cadastro inicial de um usuário do sistema. 
 
-\Hypertarget{classIAprPessoas_aa75096daa08811b721fab87f100d9693}\label{classIAprPessoas_aa75096daa08811b721fab87f100d9693} 
+\Hypertarget{classIAprPessoas_a9cd78811bef6cd5d35e154c04a573685}\label{classIAprPessoas_a9cd78811bef6cd5d35e154c04a573685} 
 \index{IAprPessoas@{IAprPessoas}!exec@{exec}}
 \index{exec@{exec}!IAprPessoas@{IAprPessoas}}
 \doxysubsubsection{\texorpdfstring{exec()}{exec()}}
-{\footnotesize\ttfamily virtual bool IApr\+Pessoas\+::exec (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classEmail}{Email}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+{\footnotesize\ttfamily virtual bool IApr\+Pessoas\+::exec (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classEmail}{Email}} \&}]{email }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
 
@@ -44,7 +59,7 @@ Gerencia a execução do submenu de opções de conta do utilizador logado.
 
 
 \begin{DoxyParams}{Parameters}
-{\em Referência} & para o e-\/mail do utilizador autenticado na sessão. \\
+{\em email} & Referência para o e-\/mail do utilizador autenticado na sessão. \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
@@ -56,4 +71,4 @@ false Caso contrário.
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-/home/italomrnd/\+Un\+B/\+Ciclo\+Básico\+CIC/\+TP1\+\_\+26\+\_\+2/\+Trabalho26\+\_\+2/\+Headers/\mbox{\hyperlink{interfaces_8hpp}{interfaces.\+hpp}}\end{DoxyCompactItemize}
+/home/mateuschrist/\+Trabalho-\/\+TP1\+\_\+2026\+\_\+2-\/\+Un\+B/\+Headers/\mbox{\hyperlink{interfaces_8hpp}{interfaces.\+hpp}}\end{DoxyCompactItemize}

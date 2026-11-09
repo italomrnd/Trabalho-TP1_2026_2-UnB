@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['tamanho_0',['tamanho',['../classTamanho.html',1,'Tamanho'],['../classCartaodeAtividade.html#aeb9e376da3f86d2ed9e9708d3dc03126',1,'CartaodeAtividade::tamanho']]],
-  ['termino_1',['termino',['../classProjeto.html#a8fb79c89e2b14d4eb8225f085df5bec8',1,'Projeto::termino'],['../classCartaodeAtividade.html#a626b8acf9f297f3619bf9ff24c12ec26',1,'CartaodeAtividade::termino']]],
-  ['texto_2',['Texto',['../classTexto.html',1,'']]],
-  ['timestamp_3',['Timestamp',['../classTimestamp.html',1,'']]]
+  ['relacaopessoaquadro_0',['relacaoPessoaQuadro',['../classContainerQuadro.html#a58498e652ec396f587d513eddf321fb0',1,'ContainerQuadro']]],
+  ['relacaoquadrocartoes_1',['relacaoQuadroCartoes',['../classContainerCartao.html#a43caeb45584683c3f9e27558aeb9764c',1,'ContainerCartao']]],
+  ['remover_2',['remover',['../classContainerPessoa.html#a866eacfc83cccb3dbebdf80978a9d50f',1,'ContainerPessoa::remover()'],['../classContainerProjeto.html#a91d0632756f757ff197d18340c5459e9',1,'ContainerProjeto::remover()'],['../classContainerQuadro.html#abd65200fce063f0fdddcabba8f3f26e5',1,'ContainerQuadro::remover()'],['../classContainerCartao.html#a6478df2276be2b541952f833f8babc96',1,'ContainerCartao::remover()']]]
 ];
