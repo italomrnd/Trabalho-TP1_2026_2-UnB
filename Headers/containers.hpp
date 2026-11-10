@@ -1,224 +1,231 @@
-#ifndef CONTEINERS_HPP
-#define CONTEINERS_HPP
+#ifndef CONTAINERS_HPP_INCLUDED
+#define CONTAINERS_HPP_INCLUDED
 
-#include "entidades.hpp"
 #include <unordered_map>
-#include <list>
-#include <vector>
 #include <string>
+#include <list>
+#include "entidades.hpp"
 
 /**
  * @file containers.hpp
- * @brief Declaração dos containers utilizados pelo sistema para armazenamento das entidades
- * @author Mateus Christ Neves Pereira
+ * @brief Declaração dos containers de memória (RAM) utilizando std::unordered_map.
+ * @author Ítalo Miranda Gomes
  */
+
+// Declaracao dos containers de Pessoas
 
 /**
  * @class ContainerPessoa
- * @brief Classe que representa o armazenamento de instâncias da classe Pessoa.
- * @details A classe utiliza da estrutura mapa para armazenar as instâncias e facilitar o encontro e remoção
- * dessas utilizando o Email como chave primária de procura.
+ * @brief Gerencia o armazenamento em RAM das instâncias da classe Pessoa.
  */
 class ContainerPessoa {
 private:
-    std::unordered_map<std::string, Pessoa> mapaPessoas; ///< Instância de Mapa que irá armazenar as instâncias de Pessoa.
+    std::unordered_map<std::string, Pessoa> mapaPessoas; ///< Tabela hash de armazenamento das pessoas utilizando o e-mail como chave primária.
 
 public:
-/**
- * @brief Adiciona uma instância dada de Pessoa no mapa.
- * @param pessoa Pessoa que deseja-se adicionar.
- * @return true Se foi possível adicionar ao mapa.
- * @return false Se não foi possível adicionar ao mapa, já existe uma instância no mapa com aquele identificador.
- */
+    /**
+     * @brief Insere uma nova pessoa no container.
+     * @param pessoa Referência para o objeto Pessoa a ser cadastrado.
+     * @return true Se o cadastro foi realizado com sucesso.
+     * @return false Caso a pessoa já esteja cadastrada no sistema.
+     */
     bool incluir(const Pessoa& pessoa);
 
-/**
- * @brief Remove uma pessoa do mapa a partir de um Email informado.
- * @param email Email que será utilizado para a procura da instância a ser removida.
- * @return true Se houve remoção.
- * @return false Se aquele identificador não está presente no mapa.
- */
+    /**
+     * @brief Remove o registro de uma pessoa do container.
+     * @param email Referência para o Email que atua como chave primária de remoção.
+     * @return true Se a remoção for concluída com sucesso.
+     * @return false Caso a pessoa não exista.
+     */
     bool remover(const Email& email);
 
-/**
- * @brief Procura pela existência de uma Pessoa através de um Email informado e atualiza os dados de um ponteiro de Pessoa
- * para copiar os dados encontrados.
- * @param email Email usado para a procura.
- * @param pessoaRetorno Ponteiro de Pessoa que retornará os dados encontrados.
- * @return true Se encontrou aquele Email no Mapa.
- * @return false Se não encontrou.
- */
+    /**
+     * @brief Pesquisa os dados de uma pessoa no container.
+     * @param email Referência para o Email de busca.
+     * @param pessoaRetorno Ponteiro onde os dados da pessoa localizada serão armazenados.
+     * @return true Se a pessoa for localizada.
+     * @return false Caso contrário.
+     */
     bool pesquisar(const Email& email, Pessoa* pessoaRetorno);
 
-/**
- * @brief Procura por uma instância de Pessoa com o mesmo identificador Email e a substitui pela dada.
- * @param pessoa Novos dados que serão colocados no lugar dos anteriores.
- * @return true Se houve a atualização.
- * @return false Se não foi encontrada nenhuma instância com o mesmo identificador informado.
- */
+    /**
+     * @brief Atualiza as informações de uma pessoa cadastrada.
+     * @param pessoa Referência para a entidade Pessoa com as novas informações.
+     * @return true Se a alteração for realizada com sucesso.
+     * @return false Caso a pessoa não seja encontrada.
+     */
     bool atualizar(const Pessoa& pessoa);
 };
 
+// Declaracao dos containers de Projeto
 
 /**
  * @class ContainerProjeto
- * @brief Classe que representa o armazenamento de instâncias da classe Projeto.
- * @details A classe utiliza da estrutura mapa para armazenar as instâncias e facilitar o encontro e remoção
- * dessas utilizando o Identificador como chave primária de procura.
+ * @brief Gerencia o armazenamento em RAM das instâncias da classe Projeto.
  */
 class ContainerProjeto {
 private:
-    std::unordered_map<std::string, Projeto> mapaProjeto; ///< Instância de Mapa que irá armazenar as instâncias de Projeto.
+    std::unordered_map<std::string, Projeto> mapaProjetos; ///< Tabela hash de armazenamento dos projetos utilizando o identificador como chave primária.
 
 public:
-/**
- * @brief Adiciona uma instância dada de Projeto no mapa.
- * @param projeto Projeto que deseja-se adicionar.
- * @return true Se foi possível adicionar ao mapa.
- * @return false Se não foi possível adicionar ao mapa, já existe uma instância no mapa com aquele identificador.
- */
+    /**
+     * @brief Insere um novo projeto no container.
+     * @param projeto Referência para o objeto Projeto a ser cadastrado.
+     * @return true Se a inserção foi efetuada com sucesso.
+     * @return false Se o projeto já existir no container.
+     */
     bool incluir(const Projeto& projeto);
 
-/**
- * @brief Remove um projeto do mapa a partir de um Identificador informado.
- * @param identificador Identificador que será utilizado para a procura da instância a ser removida.
- * @return true Se houve remoção.
- * @return false Se aquele identificador não está presente no mapa.
- */
+    /**
+     * @brief Remove um projeto do container.
+     * @param identificador Referência para o Identificador do projeto a ser removido.
+     * @return true Se a remoção for bem-sucedida.
+     * @return false Caso contrário.
+     */
     bool remover(const Identificador& identificador);
 
-/**
- * @brief Procura pela existência de um Projeto através de um Identificador informado e atualiza os dados de um ponteiro de Projeto
- * para copiar os dados encontrados.
- * @param identificador Identificador usado para a procura.
- * @param projetoRetorno Ponteiro de Projeto que retornará os dados encontrados.
- * @return true Se encontrou aquele Identificador no Mapa.
- * @return false Se não encontrou.
- */
+    /**
+     * @brief Pesquisa um projeto no container.
+     * @param identificador Referência para o Identificador do projeto buscado.
+     * @param projetoRetorno Ponteiro onde os dados do projeto localizado serão preenchidos.
+     * @return true Se o projeto for localizado.
+     * @return false Caso contrário.
+     */
     bool pesquisar(const Identificador& identificador, Projeto* projetoRetorno);
 
-/**
- * @brief Procura por uma instância de Projeto com o mesmo Identificador e a substitui pela dada.
- * @param projeto Novos dados que serão colocados no lugar dos anteriores.
- * @return true Se houve a atualização.
- * @return false Se não foi encontrada nenhuma instância com o mesmo identificador informado.
- */
+    /**
+     * @brief Atualiza as informações de um projeto armazenado.
+     * @param projeto Referência para a entidade Projeto contendo as novas informações.
+     * @return true Se o projeto for atualizado com sucesso.
+     * @return false Caso o projeto não seja encontrado.
+     */
     bool atualizar(const Projeto& projeto);
+
+    /**
+     * @brief Lista todos os projetos onde o e-mail fornecido é o gestor responsável.
+     * @param gestor Referência para o Email do gestor responsável pelos projetos.
+     * @param listaRetorno Ponteiro para a lista onde serão inseridos os projetos encontrados.
+     * @return true Se for localizado pelo menos um projeto associado.
+     * @return false Caso nenhum projeto seja encontrado.
+     */
+    bool listar(const Email& gestor, std::list<Projeto>* listaRetorno);
 };
 
+// Declaracao dos containers de Quadro
 
 /**
  * @class ContainerQuadro
- * @brief Classe que representa o armazenamento de instâncias da classe Quadro.
- * @details A classe utiliza da estrutura mapa para armazenar as instâncias e facilitar o encontro e remoção
- * dessas utilizando o Identificador como chave primária de procura.
+ * @brief Gerencia o armazenamento em RAM das instâncias da classe Quadro.
  */
 class ContainerQuadro {
 private:
-    std::unordered_map<std::string, Quadro> mapaQuadro; ///< Instância de Mapa que irá armazenar as instâncias de Quadro.
-    std::unordered_map<std::string, std::vector<std::string>> relacaoPessoaQuadro; ///< Instância de mapa que associa o e-mail de um usuário à lista de identificadores (IDs) dos seus quadros.
-public:
-/**
- * @brief Adiciona uma instância dada de Quadro no mapa.
- * @param quadro Quadro que se deseja adicionar.
- * @param emailDono Email do usuário associado àquele Quadro.
- * @return true Se foi possível adicionar ao mapa.
- * @return false Se não foi possível adicionar ao mapa e/ou já existe essa instância no mapa.
- */
-    bool incluir(const Quadro& quadro, const Email& emailDono);
+    std::unordered_map<std::string, Quadro> mapaQuadros; ///< Tabela hash de armazenamento dos quadros utilizando o identificador como chave primária.
 
-/**
- * @brief Remove um Quadro do mapa a partir de um Identificador informado.
- * @param identificador Identificador que será utilizado para a procura da instância a ser removida.
- * @return true Se houve remoção.
- * @return false Se aquele identificador não está presente no mapa.
- */
+public:
+    /**
+     * @brief Insere um novo quadro no container.
+     * @param quadro Referência para o objeto Quadro a ser cadastrado.
+     * @return true Se a inserção foi realizada com sucesso.
+     * @return false Caso o quadro já esteja armazenado.
+     */
+    bool incluir(const Quadro& quadro);
+
+    /**
+     * @brief Remove um quadro registrado do container.
+     * @param identificador Referência para o Identificador do quadro a ser removido.
+     * @return true Se a exclusão for efetuada com sucesso.
+     * @return false Caso contrário.
+     */
     bool remover(const Identificador& identificador);
 
-/**
- * @brief Procura pela existência de um Quadro através de um Identificador informado e atualiza os dados de um ponteiro de Quadro
- * para copiar os dados encontrados.
- * @param identificador Identificador usado para a procura.
- * @param quadroRetorno Ponteiro de Quadro que retornará os dados encontrados.
- * @return true Se encontrou aquele Identificador no Mapa.
- * @return false Se não encontrou.
- */
+    /**
+     * @brief Pesquisa as informações de um quadro no container.
+     * @param identificador Referência para o Identificador do quadro buscado.
+     * @param quadroRetorno Ponteiro onde os dados do quadro localizado serão armazenados.
+     * @return true Se o quadro for localizado.
+     * @return false Caso contrário.
+     */
     bool pesquisar(const Identificador& identificador, Quadro* quadroRetorno);
 
-/**
- * @brief Procura por uma instância de Quadro com o mesmo Identificador e a substitui pela dada.
- * @param quadro Novos dados que serão colocados no lugar dos anteriores.
- * @return true Se houve a atualização.
- * @return false Se não foi encontrada nenhuma instância com o mesmo identificador informado.
- */
+    /**
+     * @brief Atualiza as informações de um quadro existente.
+     * @param quadro Referência para a entidade Quadro com os novos dados.
+     * @return true Se a alteração for realizada com sucesso.
+     * @return false Caso o quadro não exista.
+     */
     bool atualizar(const Quadro& quadro);
 
-/**
- * @brief Lista todos os quadros associados a um usuário do sistema.
- * @param emailDono O email do usuário a ser utilizado para buscar os quadros associados
- * @param listaRetorno Lista que carrega os dados obtidos na busca; os quadros associados são retornados através deste parâmetro.
- * @return true Se a busca foi bem sucedida e/ou encontrou quadros.
- * @return false Caso contrário.
- */
-    bool listar(const Email& emailDono, std::list<Quadro>* listaRetorno);
+    /**
+     * @brief Lista todos os quadros associados a um projeto específico.
+     * @param idProjeto Referência para o Identificador do projeto pai.
+     * @param listaRetorno Ponteiro para a lista onde os quadros recuperados serão inseridos.
+     * @return true Se ao menos um quadro for localizado.
+     * @return false Caso contrário.
+     */
+    bool listar(const Identificador& idProjeto, std::list<Quadro>* listaRetorno);
 };
 
+// Declaracao dos containers de Cartao
 
 /**
  * @class ContainerCartao
- * @brief Classe que representa o armazenamento de instâncias da classe CartaodeAtividade.
- * @details A classe utiliza da estrutura mapa para armazenar as instâncias e facilitar o encontro e remoção
- * dessas utilizando o Identificador como chave primária de procura.
+ * @brief Gerencia o armazenamento em RAM das instâncias da classe CartaodeAtividade.
  */
 class ContainerCartao {
 private:
-    std::unordered_map<std::string, CartaodeAtividade> mapaCartao; ///< Instância de Mapa que irá armazenar as instâncias de CartaodeAtividade.
-    std::unordered_map<std::string, std::vector<std::string>> relacaoQuadroCartoes; std::unordered_map<std::string, std::vector<std::string>> relacaoQuadroCartoes; ///< Instância de Mapa que irá armazenar os cartões de atividade associados a um quadro.
-public:
-/**
- * @brief Adiciona uma instância dada de CartaodeAtividade no mapa, associando-a ao quadro que ela será integrada.
- * @param cartao CartaodeAtividade que deseja-se adicionar.
- * @param idQuadro O identificador do Quadro em que o cartão está associado.
- * @return true Se foi possível adicionar ao mapa.
- * @return false Se não foi possível adicionar ao mapa, já existe uma instância no mapa com aquele identificador.
- */
-    bool incluir(const CartaodeAtividade& cartao, const Identificador& idQuadro);
+    std::unordered_map<std::string, CartaodeAtividade> mapaCartoes; ///< Tabela hash de armazenamento dos cartões utilizando o identificador como chave primária.
 
-/**
- * @brief Remove um CartaodeAtividade do mapa a partir de um Identificador informado.
- * @param identificador Identificador que será utilizado para a procura da instância a ser removida.
- * @return true Se houve remoção.
- * @return false Se aquele identificador não está presente no mapa.
- */
+public:
+    /**
+     * @brief Insere um novo cartão de atividade no container.
+     * @param cartao Referência para o objeto CartaodeAtividade a ser cadastrado.
+     * @return true Se o cartão for cadastrado com sucesso.
+     * @return false Se o cartão já existir no sistema.
+     */
+    bool incluir(const CartaodeAtividade& cartao);
+
+    /**
+     * @brief Remove um cartão de atividade do container.
+     * @param identificador Referência para o Identificador do cartão a ser removido.
+     * @return true Se a exclusão for concluída com sucesso.
+     * @return false Caso contrário.
+     */
     bool remover(const Identificador& identificador);
 
-/**
- * @brief Procura pela existência de um CartaodeAtividade através de um Identificador informado e atualiza os dados de um ponteiro de CartaodeAtividade
- * para copiar os dados encontrados.
- * @param identificador Identificador usado para a procura.
- * @param cartaoRetorno Ponteiro de CartaodeAtividade que retornará os dados encontrados.
- * @return true Se encontrou aquele Identificador no Mapa.
- * @return false Se não encontrou.
- */
+    /**
+     * @brief Pesquisa as informações de um cartão no container.
+     * @param identificador Referência para o Identificador do cartão buscado.
+     * @param cartaoRetorno Ponteiro onde os dados do cartão localizado serão armazenados.
+     * @return true Se o cartão for encontrado.
+     * @return false Caso contrário.
+     */
     bool pesquisar(const Identificador& identificador, CartaodeAtividade* cartaoRetorno);
 
-/**
- * @brief Procura por uma instância de CartaodeAtividade com o mesmo Identificador e a substitui pela dada.
- * @param cartao Novos dados que serão colocados no lugar dos anteriores.
- * @return true Se houve a atualização.
- * @return false Se não foi encontrada nenhuma instância com o mesmo identificador informado.
- */
+    /**
+     * @brief Atualiza as informações de um cartão existente no container.
+     * @param cartao Referência para a entidade CartaodeAtividade contendo os dados modificados.
+     * @return true Se a atualização for concluída com sucesso.
+     * @return false Se o cartão não for localizado.
+     */
     bool atualizar(const CartaodeAtividade& cartao);
 
-/**
- * @brief Lista todos os cartões de atividades associados a um quadro.
- * @param idQuadro O quadro em que se quer visualizar os cartões de atividade existentes.
- * @param listaRetorno Lista que carrega os dados obtidos na busca; os cartões de atividade associados são retornados através desse parâmetro.
- * @return true Se a busca foi bem-sucedida e/ou existem cartões de atividade associados ao quadro.
- * @return false Caso contrário.
- * 
- */
+    /**
+     * @brief Lista todos os cartões de atividade vinculados a um quadro específico.
+     * @param idQuadro Referência para o Identificador do quadro pai.
+     * @param listaRetorno Ponteiro para a lista onde os cartões encontrados serão salvos.
+     * @return true Se ao menos um cartão for encontrado.
+     * @return false Caso contrário.
+     */
     bool listar(const Identificador& idQuadro, std::list<CartaodeAtividade>* listaRetorno);
+
+    /**
+     * @brief Lista todos os cartões de atividade atribuídos a um determinado desenvolvedor.
+     * @param desenvolvedor Referência para o Email do desenvolvedor associado aos cartões.
+     * @param listaRetorno Ponteiro para a lista onde os cartões encontrados serão salvos.
+     * @return true Se ao menos um cartão for encontrado.
+     * @return false Caso contrário.
+     */
+    bool listarPorDesenvolvedor(const Email& desenvolvedor, std::list<CartaodeAtividade>* listaRetorno);
 };
 
-#endif // CONTEINERS_HPP
+#endif // CONTAINERS_HPP_INCLUDED
