@@ -48,22 +48,22 @@ bool ContainerPessoa::atualizar(const Pessoa& pessoa){
 bool ContainerProjeto::incluir(const Projeto& projeto){
     string chave = projeto.getIdentificador().getValor();
 
-    if (mapaProjeto.find(chave) != mapaProjeto.end())
+    if (mapaProjetos.find(chave) != mapaProjetos.end())
         return false;
-    mapaProjeto[chave] = projeto;
+    mapaProjetos[chave] = projeto;
     return true;
 }
 
 bool ContainerProjeto::remover(const Identificador& identificador){
     string chave = identificador.getValor();
-    return mapaProjeto.erase(chave) > 0;
+    return mapaProjetos.erase(chave) > 0;
 }
 
 bool ContainerProjeto::pesquisar(const Identificador& identificador, Projeto* projetoRetorno){
     string chave = identificador.getValor();
     
-    auto it = mapaProjeto.find(chave);
-    if (it != mapaProjeto.end()){
+    auto it = mapaProjetos.find(chave);
+    if (it != mapaProjetos.end()){
         *projetoRetorno = it->second;
         return true;
     }
@@ -73,53 +73,50 @@ bool ContainerProjeto::pesquisar(const Identificador& identificador, Projeto* pr
 bool ContainerProjeto::atualizar(const Projeto& projeto){
     string chave = projeto.getIdentificador().getValor();
 
-    if (mapaProjeto.find(chave) != mapaProjeto.end()){
-        mapaProjeto[chave] = projeto;
+    if (mapaProjetos.find(chave) != mapaProjetos.end()){
+        mapaProjetos[chave] = projeto;
         return true;
     }
     return false;
 }
 
-// Implementacao dos métodos da classe ContainerQuadro
-
-bool ContainerQuadro::incluir(const Quadro& quadro, const Email& emailDono){
-    string chaveQuadro = quadro.getIdentificador().getValor();
-    string chaveDono = emailDono.getValor();
-
-    if (mapaQuadro.find(chaveQuadro) != mapaQuadro.end())
+bool ContainerProjeto::listar(const Email& gestor, std::list<Projeto>* listaRetorno){
+    if (listaRetorno == nullptr)
         return false;
 
-    mapaQuadro[chaveQuadro] = quadro;
+    listaRetorno->clear();
+    string chaveGestor = gestor.getValor();
 
-    //insere o email do dono no hashmap e adiciona o id do quadro no vetor associado a esse email
-    // ex.: relacaoPessoaQuadro[email@abc.com] -> ["quadroA", "quadroB"]
-    relacaoPessoaQuadro[chaveDono].push_back(chaveQuadro); 
+    for (auto it = mapaProjetos.begin(); it != mapaProjetos.end(); ++it){
+        if (it->second.getGestor().getValor() == chaveGestor){
+            listaRetorno->push_back(it->second);
+        }
+    }
+    return !listaRetorno->empty();
+}
+
+// Implementacao dos métodos da classe ContainerQuadro
+
+bool ContainerQuadro::incluir(const Quadro& quadro){
+    string chaveQuadro = quadro.getIdentificador().getValor();
+
+    if (mapaQuadros.find(chaveQuadro) != mapaQuadros.end())
+        return false;
+
+    mapaQuadros[chaveQuadro] = quadro;
     return true;
 }
 
 bool ContainerQuadro::remover(const Identificador& identificador){
     string chave = identificador.getValor();
-    if (mapaQuadro.erase(chave) == 0) // não esta presente
-        return false;
-
-    for (auto itMapa = relacaoPessoaQuadro.begin(); itMapa != relacaoPessoaQuadro.end(); ++itMapa){
-        // itMapa->second é o vetor de strings de quadros (["QA, "QB", ...])
-        for (auto itVetor = itMapa->second.begin(); itVetor != itMapa->second.end(); ++itVetor){
-            if (*itVetor == chave){
-                itMapa->second.erase(itVetor);
-                break;
-            }
-        }
-    }
-
-    return true;
+    return mapaQuadros.erase(chave) > 0;
 }
 
 bool ContainerQuadro::pesquisar(const Identificador& identificador, Quadro* quadroRetorno){
     string chave = identificador.getValor();
 
-    auto it = mapaQuadro.find(chave);
-    if (it != mapaQuadro.end()){
+    auto it = mapaQuadros.find(chave);
+    if (it != mapaQuadros.end()){
         *quadroRetorno = it->second;
         return true;
     }
@@ -129,83 +126,61 @@ bool ContainerQuadro::pesquisar(const Identificador& identificador, Quadro* quad
 bool ContainerQuadro::atualizar(const Quadro& quadro){
     string chave = quadro.getIdentificador().getValor();
 
-    if (mapaQuadro.find(chave) != mapaQuadro.end()){
-        mapaQuadro[chave] = quadro;
+    if (mapaQuadros.find(chave) != mapaQuadros.end()){
+        mapaQuadros[chave] = quadro;
         return true;
     }
     return false;
 }
 
-bool ContainerQuadro::listar(const Email& emailDono, std::list<Quadro>* listaRetorno){
+bool ContainerQuadro::listar(const Identificador& idProjeto, std::list<Quadro>* listaRetorno){
     if (listaRetorno == nullptr)
         return false;
 
     listaRetorno->clear();
-    auto itRelacao = relacaoPessoaQuadro.find(emailDono.getValor());
+    string chaveProjeto = idProjeto.getValor();
 
-    if (itRelacao != relacaoPessoaQuadro.end()){
-        for (auto it = itRelacao->second.begin(); it != itRelacao->second.end(); ++it){
-            auto itQuadro = mapaQuadro.find(*it);
-            if (itQuadro != mapaQuadro.end())
-                listaRetorno->push_back(itQuadro->second);
+    for (auto it = mapaQuadros.begin(); it != mapaQuadros.end(); ++it){
+        if (it->second.getIdProjeto().getValor() == chaveProjeto){
+            listaRetorno->push_back(it->second);
         }
     }
     return !listaRetorno->empty();
 }
 
-
 // Implementacao dos métodos da classe ContainerCartao
 
-bool ContainerCartao::incluir(const CartaodeAtividade& cartao, const Identificador& idQuadro){
+bool ContainerCartao::incluir(const CartaodeAtividade& cartao){
     string chaveCartao = cartao.getIdentificador().getValor();
-    string chaveQuadroRelacionado = idQuadro.getValor();
 
-    if (mapaCartao.find(chaveCartao) != mapaCartao.end())
+    if (mapaCartoes.find(chaveCartao) != mapaCartoes.end())
         return false;
 
-    mapaCartao[chaveCartao] = cartao;
-
-    // insere o quadro no hashmap e adiciona o id dos cartoes de atividade associados
-    // ex.:relacaoQuadroCartoes["quadroA"] -> ["fazer A", "refazer B"] 
-    relacaoQuadroCartoes[chaveQuadroRelacionado].push_back(chaveCartao);
+    mapaCartoes[chaveCartao] = cartao;
     return true;
 }
 
 bool ContainerCartao::remover(const Identificador& identificador){
     string chave = identificador.getValor();
-    if (mapaCartao.erase(chave) == 0) // não esta presente
-        return false;
-
-    for (auto itMapa = relacaoQuadroCartoes.begin(); itMapa != relacaoQuadroCartoes.end(); ++itMapa){
-        // itMapa->second é o vetor de strings de cartoes (["Atv. A", "Atv. B", ...])
-        for (auto itVetor = itMapa->second.begin(); itVetor != itMapa->second.end(); ++itVetor){
-            if (*itVetor == chave){
-                itMapa->second.erase(itVetor);
-                break;
-            }
-        }
-    }
-
-    return true;
+    return mapaCartoes.erase(chave) > 0;
 }
 
 bool ContainerCartao::pesquisar(const Identificador& identificador, CartaodeAtividade* cartaoRetorno){
     string chave = identificador.getValor();
 
-    auto it = mapaCartao.find(chave);
-    if (it != mapaCartao.end()){
+    auto it = mapaCartoes.find(chave);
+    if (it != mapaCartoes.end()){
         *cartaoRetorno = it->second;
         return true;
     }
     return false;
 }
 
-
 bool ContainerCartao::atualizar(const CartaodeAtividade& cartao){
     string chave = cartao.getIdentificador().getValor();
 
-    if (mapaCartao.find(chave) != mapaCartao.end()){
-        mapaCartao[chave] = cartao;
+    if (mapaCartoes.find(chave) != mapaCartoes.end()){
+        mapaCartoes[chave] = cartao;
         return true;
     }
     return false;
@@ -216,13 +191,26 @@ bool ContainerCartao::listar(const Identificador& idQuadro, std::list<CartaodeAt
         return false;
 
     listaRetorno->clear();
-    auto itRelacao = relacaoQuadroCartoes.find(idQuadro.getValor());
+    string chaveQuadro = idQuadro.getValor();
 
-    if (itRelacao != relacaoQuadroCartoes.end()){
-        for (auto it = itRelacao->second.begin(); it != itRelacao->second.end(); ++it){
-            auto itQuadro = mapaCartao.find(*it);
-            if (itQuadro != mapaCartao.end())
-                listaRetorno->push_back(itQuadro->second);
+    for (auto it = mapaCartoes.begin(); it != mapaCartoes.end(); ++it){
+        if (it->second.getIdQuadro().getValor() == chaveQuadro){
+            listaRetorno->push_back(it->second);
+        }
+    }
+    return !listaRetorno->empty();
+}
+
+bool ContainerCartao::listarPorDesenvolvedor(const Email& desenvolvedor, std::list<CartaodeAtividade>* listaRetorno){
+    if (listaRetorno == nullptr)
+        return false;
+
+    listaRetorno->clear();
+    string chaveDev = desenvolvedor.getValor();
+
+    for (auto it = mapaCartoes.begin(); it != mapaCartoes.end(); ++it){
+        if (it->second.getDesenvolvedor().getValor() == chaveDev){
+            listaRetorno->push_back(it->second);
         }
     }
     return !listaRetorno->empty();
