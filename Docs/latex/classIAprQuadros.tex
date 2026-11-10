@@ -2,7 +2,7 @@
 \hypertarget{classIAprQuadros}{}\label{classIAprQuadros}\index{IAprQuadros@{IAprQuadros}}
 
 
-Interface para a camada de apresentação da gestão de quadros.  
+Interface para a camada de apresentação da gestão de quadros e cartões de atividade.  
 
 
 
@@ -12,23 +12,38 @@ Interface para a camada de apresentação da gestão de quadros.
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-virtual void \mbox{\hyperlink{classIAprQuadros_a5fc0d4d2555e764830eaffda8e0c7373}{exec}} (const \mbox{\hyperlink{classEmail}{Email}} \&)=0
-\begin{DoxyCompactList}\small\item\em Gerencia a execução do submenu de navegação e operações de quadros. \end{DoxyCompactList}\end{DoxyCompactItemize}
+virtual \mbox{\hyperlink{classIAprQuadros_a3409f4ce5cccd93241c6c09a922f4808}{\texorpdfstring{$\sim$}{\string~}\+IApr\+Quadros}} ()=default
+\begin{DoxyCompactList}\small\item\em Destrutor virtual padrão. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classIAprQuadros_ae7ef7c9c71bb35718d107a3a5dd39846}{exec}} (const \mbox{\hyperlink{classEmail}{Email}} \&email)=0
+\begin{DoxyCompactList}\small\item\em Gerencia a execução do submenu de navegação e operações de quadros e cartões. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
-Interface para a camada de apresentação da gestão de quadros. 
+Interface para a camada de apresentação da gestão de quadros e cartões de atividade. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classIAprQuadros_a3409f4ce5cccd93241c6c09a922f4808}\label{classIAprQuadros_a3409f4ce5cccd93241c6c09a922f4808} 
+\index{IAprQuadros@{IAprQuadros}!````~IAprQuadros@{\texorpdfstring{$\sim$}{\string~}IAprQuadros}}
+\index{````~IAprQuadros@{\texorpdfstring{$\sim$}{\string~}IAprQuadros}!IAprQuadros@{IAprQuadros}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}IAprQuadros()}{\string~IAprQuadros()}}
+{\footnotesize\ttfamily virtual IApr\+Quadros\+::\texorpdfstring{$\sim$}{\string~}\+IApr\+Quadros (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+Destrutor virtual padrão. 
+
+
 
 \doxysubsection{Member Function Documentation}
-\Hypertarget{classIAprQuadros_a5fc0d4d2555e764830eaffda8e0c7373}\label{classIAprQuadros_a5fc0d4d2555e764830eaffda8e0c7373} 
+\Hypertarget{classIAprQuadros_ae7ef7c9c71bb35718d107a3a5dd39846}\label{classIAprQuadros_ae7ef7c9c71bb35718d107a3a5dd39846} 
 \index{IAprQuadros@{IAprQuadros}!exec@{exec}}
 \index{exec@{exec}!IAprQuadros@{IAprQuadros}}
 \doxysubsubsection{\texorpdfstring{exec()}{exec()}}
-{\footnotesize\ttfamily virtual void IApr\+Quadros\+::exec (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classEmail}{Email}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+{\footnotesize\ttfamily virtual void IApr\+Quadros\+::exec (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classEmail}{Email}} \&}]{email }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
 
-Gerencia a execução do submenu de navegação e operações de quadros. 
+Gerencia a execução do submenu de navegação e operações de quadros e cartões. 
 
 
 \begin{DoxyParams}{Parameters}

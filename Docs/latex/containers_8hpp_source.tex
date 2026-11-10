@@ -1,0 +1,79 @@
+\doxysection{containers.\+hpp}
+\hypertarget{containers_8hpp_source}{}\label{containers_8hpp_source}\index{/home/italomrnd/UnB/CicloBásicoCIC/TP1\_26\_2/Trabalho26\_2/Headers/containers.hpp@{/home/italomrnd/UnB/CicloBásicoCIC/TP1\_26\_2/Trabalho26\_2/Headers/containers.hpp}}
+\mbox{\hyperlink{containers_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ CONTEINERS\_HPP}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ CONTEINERS\_HPP}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{entidades_8hpp}{entidades.hpp}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <unordered\_map>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <list>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classContainerPessoa}{ContainerPessoa}}\ \{}
+\DoxyCodeLine{00023\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00024\ \ \ \ \ std::unordered\_map<std::string,\ Pessoa>\ \mbox{\hyperlink{classContainerPessoa_ac3f8aa459c8530138a12ac4cb7ff15a5}{mapaPessoas}};\ }
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classContainerPessoa_aa8d94dc54ca42e5c5fd5678175475797}{incluir}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classPessoa}{Pessoa}}\&\ pessoa);}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classContainerPessoa_a866eacfc83cccb3dbebdf80978a9d50f}{remover}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classEmail}{Email}}\&\ email);}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classContainerPessoa_af5855bc72975afee238ee0a97e50751c}{pesquisar}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classEmail}{Email}}\&\ email,\ \mbox{\hyperlink{classPessoa}{Pessoa}}*\ pessoaRetorno);}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classContainerPessoa_afedab7918086d2d056a5aac08fa65738}{atualizar}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classPessoa}{Pessoa}}\&\ pessoa);}
+\DoxyCodeLine{00060\ \};}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00069\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classContainerProjeto}{ContainerProjeto}}\ \{}
+\DoxyCodeLine{00070\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00071\ \ \ \ \ std::unordered\_map<std::string,\ Projeto>\ \mbox{\hyperlink{classContainerProjeto_a9ff119ded70309c5db3082301558ee6a}{mapaProjeto}};\ }
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classContainerProjeto_a67bcd0c36d30d61f50c3643d4ded5131}{incluir}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classProjeto}{Projeto}}\&\ projeto);}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classContainerProjeto_a91d0632756f757ff197d18340c5459e9}{remover}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classIdentificador}{Identificador}}\&\ identificador);}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classContainerProjeto_a17108005c19717e320b3f164385e3751}{pesquisar}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classIdentificador}{Identificador}}\&\ identificador,\ \mbox{\hyperlink{classProjeto}{Projeto}}*\ projetoRetorno);}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00106\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classContainerProjeto_ae7f39b7160054bc1a6bbe9968727bad0}{atualizar}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classProjeto}{Projeto}}\&\ projeto);}
+\DoxyCodeLine{00107\ \};}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00116\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classContainerQuadro}{ContainerQuadro}}\ \{}
+\DoxyCodeLine{00117\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00118\ \ \ \ \ std::unordered\_map<std::string,\ Quadro>\ \mbox{\hyperlink{classContainerQuadro_ab1ca456ebc8a636d838abd22033a8c1c}{mapaQuadro}};\ }
+\DoxyCodeLine{00119\ \ \ \ \ std::unordered\_map<std::string,\ std::vector<std::string>>\ \mbox{\hyperlink{classContainerQuadro_a58498e652ec396f587d513eddf321fb0}{relacaoPessoaQuadro}};\ }
+\DoxyCodeLine{00120\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00128\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classContainerQuadro_a369abe3ca7bfa76e5a01afbdff940033}{incluir}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classQuadro}{Quadro}}\&\ quadro,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classEmail}{Email}}\&\ emailDono);}
+\DoxyCodeLine{00129\ }
+\DoxyCodeLine{00136\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classContainerQuadro_abd65200fce063f0fdddcabba8f3f26e5}{remover}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classIdentificador}{Identificador}}\&\ identificador);}
+\DoxyCodeLine{00137\ }
+\DoxyCodeLine{00146\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classContainerQuadro_a56445ef9483d9de90b9ac1d596c57e69}{pesquisar}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classIdentificador}{Identificador}}\&\ identificador,\ \mbox{\hyperlink{classQuadro}{Quadro}}*\ quadroRetorno);}
+\DoxyCodeLine{00147\ }
+\DoxyCodeLine{00154\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classContainerQuadro_a18b5254a3a91be727cbc28dc47317cc7}{atualizar}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classQuadro}{Quadro}}\&\ quadro);}
+\DoxyCodeLine{00155\ }
+\DoxyCodeLine{00163\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classContainerQuadro_a0a75f3af8f6d76e24bb39a6d07c024ac}{listar}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classEmail}{Email}}\&\ emailDono,\ std::list<Quadro>*\ listaRetorno);}
+\DoxyCodeLine{00164\ \};}
+\DoxyCodeLine{00165\ }
+\DoxyCodeLine{00166\ }
+\DoxyCodeLine{00173\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classContainerCartao}{ContainerCartao}}\ \{}
+\DoxyCodeLine{00174\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00175\ \ \ \ \ std::unordered\_map<std::string,\ CartaodeAtividade>\ \mbox{\hyperlink{classContainerCartao_ac88280a0017d95516a389a9c8b8395ad}{mapaCartao}};\ }
+\DoxyCodeLine{00176\ \ \ \ \ std::unordered\_map<std::string,\ std::vector<std::string>>\ \mbox{\hyperlink{classContainerCartao_a43caeb45584683c3f9e27558aeb9764c}{relacaoQuadroCartoes}};\ std::unordered\_map<std::string,\ std::vector<std::string>>\ \mbox{\hyperlink{classContainerCartao_a43caeb45584683c3f9e27558aeb9764c}{relacaoQuadroCartoes}};\ }
+\DoxyCodeLine{00177\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00185\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classContainerCartao_aab246bc3f46c3b08ba543ff4fbdc44d0}{incluir}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classCartaodeAtividade}{CartaodeAtividade}}\&\ cartao,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classIdentificador}{Identificador}}\&\ idQuadro);}
+\DoxyCodeLine{00186\ }
+\DoxyCodeLine{00193\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classContainerCartao_a6478df2276be2b541952f833f8babc96}{remover}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classIdentificador}{Identificador}}\&\ identificador);}
+\DoxyCodeLine{00194\ }
+\DoxyCodeLine{00203\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classContainerCartao_a443ccde3dd9dccdf94af5f357072ba26}{pesquisar}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classIdentificador}{Identificador}}\&\ identificador,\ \mbox{\hyperlink{classCartaodeAtividade}{CartaodeAtividade}}*\ cartaoRetorno);}
+\DoxyCodeLine{00204\ }
+\DoxyCodeLine{00211\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classContainerCartao_a9fc827fb568a069addb453fb74e3a345}{atualizar}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classCartaodeAtividade}{CartaodeAtividade}}\&\ cartao);}
+\DoxyCodeLine{00212\ }
+\DoxyCodeLine{00221\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classContainerCartao_a5fd0008da505e2ce473e15b0a93c7c3f}{listar}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classIdentificador}{Identificador}}\&\ idQuadro,\ std::list<CartaodeAtividade>*\ listaRetorno);}
+\DoxyCodeLine{00222\ \};}
+\DoxyCodeLine{00223\ }
+\DoxyCodeLine{00224\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ CONTEINERS\_HPP}}
+
+\end{DoxyCode}

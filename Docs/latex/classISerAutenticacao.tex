@@ -12,19 +12,34 @@ Interface para a camada de serviço de validação de credenciais do usuário.
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-virtual bool \mbox{\hyperlink{classISerAutenticacao_ac0009a663e08bc769b496a2788dfa14f}{autenticar}} (const \mbox{\hyperlink{classEmail}{Email}} \&, const \mbox{\hyperlink{classSenha}{Senha}} \&)=0
+virtual \mbox{\hyperlink{classISerAutenticacao_a7325ad1600607f4efcc05d67b88d2941}{\texorpdfstring{$\sim$}{\string~}\+ISer\+Autenticacao}} ()=default
+\begin{DoxyCompactList}\small\item\em Destrutor virtual padrão. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classISerAutenticacao_aa35554bd604b0806c29166503fbaf7de}{autenticar}} (const \mbox{\hyperlink{classEmail}{Email}} \&email, const \mbox{\hyperlink{classSenha}{Senha}} \&senha)=0
 \begin{DoxyCompactList}\small\item\em Valida as credenciais fornecidas. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 Interface para a camada de serviço de validação de credenciais do usuário. 
 
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classISerAutenticacao_a7325ad1600607f4efcc05d67b88d2941}\label{classISerAutenticacao_a7325ad1600607f4efcc05d67b88d2941} 
+\index{ISerAutenticacao@{ISerAutenticacao}!````~ISerAutenticacao@{\texorpdfstring{$\sim$}{\string~}ISerAutenticacao}}
+\index{````~ISerAutenticacao@{\texorpdfstring{$\sim$}{\string~}ISerAutenticacao}!ISerAutenticacao@{ISerAutenticacao}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}ISerAutenticacao()}{\string~ISerAutenticacao()}}
+{\footnotesize\ttfamily virtual ISer\+Autenticacao\+::\texorpdfstring{$\sim$}{\string~}\+ISer\+Autenticacao (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+Destrutor virtual padrão. 
+
+
+
 \doxysubsection{Member Function Documentation}
-\Hypertarget{classISerAutenticacao_ac0009a663e08bc769b496a2788dfa14f}\label{classISerAutenticacao_ac0009a663e08bc769b496a2788dfa14f} 
+\Hypertarget{classISerAutenticacao_aa35554bd604b0806c29166503fbaf7de}\label{classISerAutenticacao_aa35554bd604b0806c29166503fbaf7de} 
 \index{ISerAutenticacao@{ISerAutenticacao}!autenticar@{autenticar}}
 \index{autenticar@{autenticar}!ISerAutenticacao@{ISerAutenticacao}}
 \doxysubsubsection{\texorpdfstring{autenticar()}{autenticar()}}
-{\footnotesize\ttfamily virtual bool ISer\+Autenticacao\+::autenticar (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classEmail}{Email}} \&}]{,  }\item[{const \mbox{\hyperlink{classSenha}{Senha}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+{\footnotesize\ttfamily virtual bool ISer\+Autenticacao\+::autenticar (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classEmail}{Email}} \&}]{email,  }\item[{const \mbox{\hyperlink{classSenha}{Senha}} \&}]{senha }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
 

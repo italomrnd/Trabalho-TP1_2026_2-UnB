@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['entidades_2ecpp_0',['entidades.cpp',['../entidades_8cpp.html',1,'']]],
-  ['entidades_2ehpp_1',['entidades.hpp',['../entidades_8hpp.html',1,'']]]
+  ['dominios_2ecpp_0',['dominios.cpp',['../dominios_8cpp.html',1,'']]],
+  ['dominios_2ehpp_1',['dominios.hpp',['../dominios_8hpp.html',1,'']]]
 ];

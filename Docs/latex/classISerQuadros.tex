@@ -2,7 +2,7 @@
 \hypertarget{classISerQuadros}{}\label{classISerQuadros}\index{ISerQuadros@{ISerQuadros}}
 
 
-Interface para a camada de serviço de gestão de quadros.  
+Interface para a camada de serviço de gestão de quadros e cartões de atividade utilizando o padrão Facade.  
 
 
 
@@ -12,25 +12,52 @@ Interface para a camada de serviço de gestão de quadros.
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-virtual bool \mbox{\hyperlink{classISerQuadros_ac16578d14105464e631905eb4658e631}{criar}} (const \mbox{\hyperlink{classQuadro}{Quadro}} \&)=0
+virtual \mbox{\hyperlink{classISerQuadros_ae001a942c7cc978e17c89ec1516f1de0}{\texorpdfstring{$\sim$}{\string~}\+ISer\+Quadros}} ()=default
+\begin{DoxyCompactList}\small\item\em Destrutor virtual padrão. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classISerQuadros_a77847b678914adbeae0be6f998db7ccb}{criar}} (const \mbox{\hyperlink{classQuadro}{Quadro}} \&quadro)=0
 \begin{DoxyCompactList}\small\item\em Registra um novo quadro de atividades no sistema. \end{DoxyCompactList}\item 
-virtual bool \mbox{\hyperlink{classISerQuadros_ab1c9d726c6f3a3b8dd99e55df6225374}{ler}} (\mbox{\hyperlink{classQuadro}{Quadro}} \texorpdfstring{$\ast$}{*})=0
+virtual bool \mbox{\hyperlink{classISerQuadros_a8ba7cf5e260a23b5a1e852b63494ff25}{ler}} (\mbox{\hyperlink{classQuadro}{Quadro}} \texorpdfstring{$\ast$}{*}quadro)=0
 \begin{DoxyCompactList}\small\item\em Consulta e carrega as informações de um quadro de atividades. \end{DoxyCompactList}\item 
-virtual bool \mbox{\hyperlink{classISerQuadros_a6e9760aa12ffbb4e058fe77420a47e22}{atualizar}} (const \mbox{\hyperlink{classQuadro}{Quadro}} \&)=0
+virtual bool \mbox{\hyperlink{classISerQuadros_a97ee8e0fd02693b5106653095d82ac76}{atualizar}} (const \mbox{\hyperlink{classQuadro}{Quadro}} \&quadro)=0
 \begin{DoxyCompactList}\small\item\em Atualiza as informações de um quadro existente. \end{DoxyCompactList}\item 
-virtual bool \mbox{\hyperlink{classISerQuadros_a5859e823f3b16aed4f8a8bb6113721ce}{excluir}} (const \mbox{\hyperlink{classIdentificador}{Identificador}})=0
-\begin{DoxyCompactList}\small\item\em Remove um quadro registrado do sistema. \end{DoxyCompactList}\end{DoxyCompactItemize}
+virtual bool \mbox{\hyperlink{classISerQuadros_ae08b454fcc748fda7e30b0f1429cbab4}{excluir}} (const \mbox{\hyperlink{classIdentificador}{Identificador}} \&identificador)=0
+\begin{DoxyCompactList}\small\item\em Remove um quadro registrado do sistema. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classISerQuadros_ab99363ffe2b6e50d04a81d0cae0b72b2}{listar}} (const \mbox{\hyperlink{classEmail}{Email}} \&email\+Dono, std\+::list$<$ \mbox{\hyperlink{classQuadro}{Quadro}} $>$ \texorpdfstring{$\ast$}{*}lista\+Retorno)=0
+\begin{DoxyCompactList}\small\item\em Lista todos os quadros associados a um usuário do sistema. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classISerQuadros_a55e22c53a3fb0064fd3a500d3e13c89c}{criar\+Cartao}} (const \mbox{\hyperlink{classCartaodeAtividade}{Cartaode\+Atividade}} \&cartao, const \mbox{\hyperlink{classIdentificador}{Identificador}} \&id\+Quadro)=0
+\begin{DoxyCompactList}\small\item\em Registra um novo cartão de atividade no sistema associando-\/o a um quadro. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classISerQuadros_a67e346bcb828877d1251cf59772e5e39}{ler\+Cartao}} (\mbox{\hyperlink{classCartaodeAtividade}{Cartaode\+Atividade}} \texorpdfstring{$\ast$}{*}cartao)=0
+\begin{DoxyCompactList}\small\item\em Consulta e carrega as informações de um cartão de atividade. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classISerQuadros_a5bf7613dff2d5827156f33264e342e83}{atualizar\+Cartao}} (const \mbox{\hyperlink{classCartaodeAtividade}{Cartaode\+Atividade}} \&cartao)=0
+\begin{DoxyCompactList}\small\item\em Atualiza as informações de um cartão de atividade existente. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classISerQuadros_a272ab5c99ec641fe54054a126aebc8ba}{excluir\+Cartao}} (const \mbox{\hyperlink{classIdentificador}{Identificador}} \&identificador)=0
+\begin{DoxyCompactList}\small\item\em Remove um cartão de atividade registrado do sistema. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classISerQuadros_a8d88d5058bccd4e44529b2216f0d094a}{listar\+Cartoes}} (const \mbox{\hyperlink{classIdentificador}{Identificador}} \&id\+Quadro, std\+::list$<$ \mbox{\hyperlink{classCartaodeAtividade}{Cartaode\+Atividade}} $>$ \texorpdfstring{$\ast$}{*}lista\+Retorno)=0
+\begin{DoxyCompactList}\small\item\em Lista todos os cartões de atividades associados a um quadro específico. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
-Interface para a camada de serviço de gestão de quadros. 
+Interface para a camada de serviço de gestão de quadros e cartões de atividade utilizando o padrão Facade. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classISerQuadros_ae001a942c7cc978e17c89ec1516f1de0}\label{classISerQuadros_ae001a942c7cc978e17c89ec1516f1de0} 
+\index{ISerQuadros@{ISerQuadros}!````~ISerQuadros@{\texorpdfstring{$\sim$}{\string~}ISerQuadros}}
+\index{````~ISerQuadros@{\texorpdfstring{$\sim$}{\string~}ISerQuadros}!ISerQuadros@{ISerQuadros}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}ISerQuadros()}{\string~ISerQuadros()}}
+{\footnotesize\ttfamily virtual ISer\+Quadros\+::\texorpdfstring{$\sim$}{\string~}\+ISer\+Quadros (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+Destrutor virtual padrão. 
+
+
 
 \doxysubsection{Member Function Documentation}
-\Hypertarget{classISerQuadros_a6e9760aa12ffbb4e058fe77420a47e22}\label{classISerQuadros_a6e9760aa12ffbb4e058fe77420a47e22} 
+\Hypertarget{classISerQuadros_a97ee8e0fd02693b5106653095d82ac76}\label{classISerQuadros_a97ee8e0fd02693b5106653095d82ac76} 
 \index{ISerQuadros@{ISerQuadros}!atualizar@{atualizar}}
 \index{atualizar@{atualizar}!ISerQuadros@{ISerQuadros}}
 \doxysubsubsection{\texorpdfstring{atualizar()}{atualizar()}}
-{\footnotesize\ttfamily virtual bool ISer\+Quadros\+::atualizar (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classQuadro}{Quadro}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+{\footnotesize\ttfamily virtual bool ISer\+Quadros\+::atualizar (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classQuadro}{Quadro}} \&}]{quadro }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
 
@@ -46,11 +73,31 @@ true Se a atualização for concluída com sucesso.
 
 false Caso contrário. 
 \end{DoxyReturn}
-\Hypertarget{classISerQuadros_ac16578d14105464e631905eb4658e631}\label{classISerQuadros_ac16578d14105464e631905eb4658e631} 
+\Hypertarget{classISerQuadros_a5bf7613dff2d5827156f33264e342e83}\label{classISerQuadros_a5bf7613dff2d5827156f33264e342e83} 
+\index{ISerQuadros@{ISerQuadros}!atualizarCartao@{atualizarCartao}}
+\index{atualizarCartao@{atualizarCartao}!ISerQuadros@{ISerQuadros}}
+\doxysubsubsection{\texorpdfstring{atualizarCartao()}{atualizarCartao()}}
+{\footnotesize\ttfamily virtual bool ISer\+Quadros\+::atualizar\+Cartao (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classCartaodeAtividade}{Cartaode\+Atividade}} \&}]{cartao }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Atualiza as informações de um cartão de atividade existente. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cartao} & Referência para o objeto \doxylink{classCartaodeAtividade}{Cartaode\+Atividade} contendo as novas informações. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Se a atualização for concluída com sucesso. 
+
+false Caso contrário. 
+\end{DoxyReturn}
+\Hypertarget{classISerQuadros_a77847b678914adbeae0be6f998db7ccb}\label{classISerQuadros_a77847b678914adbeae0be6f998db7ccb} 
 \index{ISerQuadros@{ISerQuadros}!criar@{criar}}
 \index{criar@{criar}!ISerQuadros@{ISerQuadros}}
 \doxysubsubsection{\texorpdfstring{criar()}{criar()}}
-{\footnotesize\ttfamily virtual bool ISer\+Quadros\+::criar (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classQuadro}{Quadro}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+{\footnotesize\ttfamily virtual bool ISer\+Quadros\+::criar (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classQuadro}{Quadro}} \&}]{quadro }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
 
@@ -66,11 +113,33 @@ true Se o registro for efetuado com sucesso.
 
 false Caso contrário. 
 \end{DoxyReturn}
-\Hypertarget{classISerQuadros_a5859e823f3b16aed4f8a8bb6113721ce}\label{classISerQuadros_a5859e823f3b16aed4f8a8bb6113721ce} 
+\Hypertarget{classISerQuadros_a55e22c53a3fb0064fd3a500d3e13c89c}\label{classISerQuadros_a55e22c53a3fb0064fd3a500d3e13c89c} 
+\index{ISerQuadros@{ISerQuadros}!criarCartao@{criarCartao}}
+\index{criarCartao@{criarCartao}!ISerQuadros@{ISerQuadros}}
+\doxysubsubsection{\texorpdfstring{criarCartao()}{criarCartao()}}
+{\footnotesize\ttfamily virtual bool ISer\+Quadros\+::criar\+Cartao (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classCartaodeAtividade}{Cartaode\+Atividade}} \&}]{cartao,  }\item[{const \mbox{\hyperlink{classIdentificador}{Identificador}} \&}]{id\+Quadro }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Registra um novo cartão de atividade no sistema associando-\/o a um quadro. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cartao} & Referência para o objeto \doxylink{classCartaodeAtividade}{Cartaode\+Atividade} a ser salvo. \\
+\hline
+{\em id\+Quadro} & \doxylink{classIdentificador}{Identificador} do quadro ao qual o cartão pertencerá. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Se o registro for efetuado com sucesso. 
+
+false Caso contrário. 
+\end{DoxyReturn}
+\Hypertarget{classISerQuadros_ae08b454fcc748fda7e30b0f1429cbab4}\label{classISerQuadros_ae08b454fcc748fda7e30b0f1429cbab4} 
 \index{ISerQuadros@{ISerQuadros}!excluir@{excluir}}
 \index{excluir@{excluir}!ISerQuadros@{ISerQuadros}}
 \doxysubsubsection{\texorpdfstring{excluir()}{excluir()}}
-{\footnotesize\ttfamily virtual bool ISer\+Quadros\+::excluir (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classIdentificador}{Identificador}}}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+{\footnotesize\ttfamily virtual bool ISer\+Quadros\+::excluir (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classIdentificador}{Identificador}} \&}]{identificador }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
 
@@ -78,7 +147,7 @@ Remove um quadro registrado do sistema.
 
 
 \begin{DoxyParams}{Parameters}
-{\em identificador} & Referência para a chave de identificação do quadro a ser removido do sistema de software. \\
+{\em identificador} & Referência para a chave de identificação do quadro a ser removido. \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
@@ -86,11 +155,31 @@ true Se o quadro foi excluído com sucesso.
 
 false Caso contrário. 
 \end{DoxyReturn}
-\Hypertarget{classISerQuadros_ab1c9d726c6f3a3b8dd99e55df6225374}\label{classISerQuadros_ab1c9d726c6f3a3b8dd99e55df6225374} 
+\Hypertarget{classISerQuadros_a272ab5c99ec641fe54054a126aebc8ba}\label{classISerQuadros_a272ab5c99ec641fe54054a126aebc8ba} 
+\index{ISerQuadros@{ISerQuadros}!excluirCartao@{excluirCartao}}
+\index{excluirCartao@{excluirCartao}!ISerQuadros@{ISerQuadros}}
+\doxysubsubsection{\texorpdfstring{excluirCartao()}{excluirCartao()}}
+{\footnotesize\ttfamily virtual bool ISer\+Quadros\+::excluir\+Cartao (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classIdentificador}{Identificador}} \&}]{identificador }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Remove um cartão de atividade registrado do sistema. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em identificador} & Referência para a chave de identificação do cartão a ser removido. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Se o cartão foi excluído com sucesso. 
+
+false Caso contrário. 
+\end{DoxyReturn}
+\Hypertarget{classISerQuadros_a8ba7cf5e260a23b5a1e852b63494ff25}\label{classISerQuadros_a8ba7cf5e260a23b5a1e852b63494ff25} 
 \index{ISerQuadros@{ISerQuadros}!ler@{ler}}
 \index{ler@{ler}!ISerQuadros@{ISerQuadros}}
 \doxysubsubsection{\texorpdfstring{ler()}{ler()}}
-{\footnotesize\ttfamily virtual bool ISer\+Quadros\+::ler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classQuadro}{Quadro}} \texorpdfstring{$\ast$}{*}}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+{\footnotesize\ttfamily virtual bool ISer\+Quadros\+::ler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classQuadro}{Quadro}} \texorpdfstring{$\ast$}{*}}]{quadro }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
 
@@ -103,6 +192,70 @@ Consulta e carrega as informações de um quadro de atividades.
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 true Se o quadro for localizado. 
+
+false Caso contrário. 
+\end{DoxyReturn}
+\Hypertarget{classISerQuadros_a67e346bcb828877d1251cf59772e5e39}\label{classISerQuadros_a67e346bcb828877d1251cf59772e5e39} 
+\index{ISerQuadros@{ISerQuadros}!lerCartao@{lerCartao}}
+\index{lerCartao@{lerCartao}!ISerQuadros@{ISerQuadros}}
+\doxysubsubsection{\texorpdfstring{lerCartao()}{lerCartao()}}
+{\footnotesize\ttfamily virtual bool ISer\+Quadros\+::ler\+Cartao (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classCartaodeAtividade}{Cartaode\+Atividade}} \texorpdfstring{$\ast$}{*}}]{cartao }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Consulta e carrega as informações de um cartão de atividade. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cartao} & Ponteiro para o objeto \doxylink{classCartaodeAtividade}{Cartaode\+Atividade} contendo o código de busca e onde os dados serão armazenados. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Se o cartão for localizado. 
+
+false Caso contrário. 
+\end{DoxyReturn}
+\Hypertarget{classISerQuadros_ab99363ffe2b6e50d04a81d0cae0b72b2}\label{classISerQuadros_ab99363ffe2b6e50d04a81d0cae0b72b2} 
+\index{ISerQuadros@{ISerQuadros}!listar@{listar}}
+\index{listar@{listar}!ISerQuadros@{ISerQuadros}}
+\doxysubsubsection{\texorpdfstring{listar()}{listar()}}
+{\footnotesize\ttfamily virtual bool ISer\+Quadros\+::listar (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classEmail}{Email}} \&}]{email\+Dono,  }\item[{std\+::list$<$ \mbox{\hyperlink{classQuadro}{Quadro}} $>$ \texorpdfstring{$\ast$}{*}}]{lista\+Retorno }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Lista todos os quadros associados a um usuário do sistema. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em email\+Dono} & O email do usuário a ser utilizado para buscar os quadros associados. \\
+\hline
+{\em lista\+Retorno} & Lista que carrega os dados obtidos na busca. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Se a busca foi bem sucedida. 
+
+false Caso contrário. 
+\end{DoxyReturn}
+\Hypertarget{classISerQuadros_a8d88d5058bccd4e44529b2216f0d094a}\label{classISerQuadros_a8d88d5058bccd4e44529b2216f0d094a} 
+\index{ISerQuadros@{ISerQuadros}!listarCartoes@{listarCartoes}}
+\index{listarCartoes@{listarCartoes}!ISerQuadros@{ISerQuadros}}
+\doxysubsubsection{\texorpdfstring{listarCartoes()}{listarCartoes()}}
+{\footnotesize\ttfamily virtual bool ISer\+Quadros\+::listar\+Cartoes (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classIdentificador}{Identificador}} \&}]{id\+Quadro,  }\item[{std\+::list$<$ \mbox{\hyperlink{classCartaodeAtividade}{Cartaode\+Atividade}} $>$ \texorpdfstring{$\ast$}{*}}]{lista\+Retorno }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Lista todos os cartões de atividades associados a um quadro específico. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id\+Quadro} & O identificador do quadro do qual se deseja listar os cartões. \\
+\hline
+{\em lista\+Retorno} & Lista que carrega os dados obtidos na busca. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Se a busca foi bem-\/sucedida. 
 
 false Caso contrário. 
 \end{DoxyReturn}

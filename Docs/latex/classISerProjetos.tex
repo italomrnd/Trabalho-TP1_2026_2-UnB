@@ -12,25 +12,40 @@ Interface para camada de serviço de gestão de projetos.
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-virtual bool \mbox{\hyperlink{classISerProjetos_a4f69bfdb04cdab94b9ea895ba504c048}{criar}} (const \mbox{\hyperlink{classProjeto}{Projeto}} \&)=0
+virtual \mbox{\hyperlink{classISerProjetos_a7f8bdf98221224132419a99b9a2eec10}{\texorpdfstring{$\sim$}{\string~}\+ISer\+Projetos}} ()=default
+\begin{DoxyCompactList}\small\item\em Destrutor virtual padrão. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classISerProjetos_a65fdb3575b7788159757a9b654486a58}{criar}} (const \mbox{\hyperlink{classProjeto}{Projeto}} \&projeto)=0
 \begin{DoxyCompactList}\small\item\em Método responsável por registrar os dados de um novo projeto. \end{DoxyCompactList}\item 
-virtual bool \mbox{\hyperlink{classISerProjetos_a485862ea4afb5e15a343127e016484ec}{ler}} (\mbox{\hyperlink{classProjeto}{Projeto}} \texorpdfstring{$\ast$}{*})=0
+virtual bool \mbox{\hyperlink{classISerProjetos_a63501e0dc8dd924d89ee64cbb737dea5}{ler}} (\mbox{\hyperlink{classProjeto}{Projeto}} \texorpdfstring{$\ast$}{*}projeto)=0
 \begin{DoxyCompactList}\small\item\em Recupera as informações de um projeto. \end{DoxyCompactList}\item 
-virtual bool \mbox{\hyperlink{classISerProjetos_ad2d8e86b153694465682c0ea7e3dcf4a}{atualizar}} (const \mbox{\hyperlink{classProjeto}{Projeto}} \&)=0
+virtual bool \mbox{\hyperlink{classISerProjetos_abfae72c67b0591897903d1a1d83cdbf3}{atualizar}} (const \mbox{\hyperlink{classProjeto}{Projeto}} \&projeto)=0
 \begin{DoxyCompactList}\small\item\em Atualiza as informações de um projeto existente. \end{DoxyCompactList}\item 
-virtual bool \mbox{\hyperlink{classISerProjetos_aa97afbbb7c9bd31643c4239268ca3aae}{excluir}} (const \mbox{\hyperlink{classIdentificador}{Identificador}} \&)=0
+virtual bool \mbox{\hyperlink{classISerProjetos_a61682404c8761e00ceb461e5fc030b2f}{excluir}} (const \mbox{\hyperlink{classIdentificador}{Identificador}} \&identificador)=0
 \begin{DoxyCompactList}\small\item\em Remove um projeto cadastrado. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 Interface para camada de serviço de gestão de projetos. 
 
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classISerProjetos_a7f8bdf98221224132419a99b9a2eec10}\label{classISerProjetos_a7f8bdf98221224132419a99b9a2eec10} 
+\index{ISerProjetos@{ISerProjetos}!````~ISerProjetos@{\texorpdfstring{$\sim$}{\string~}ISerProjetos}}
+\index{````~ISerProjetos@{\texorpdfstring{$\sim$}{\string~}ISerProjetos}!ISerProjetos@{ISerProjetos}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}ISerProjetos()}{\string~ISerProjetos()}}
+{\footnotesize\ttfamily virtual ISer\+Projetos\+::\texorpdfstring{$\sim$}{\string~}\+ISer\+Projetos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+Destrutor virtual padrão. 
+
+
+
 \doxysubsection{Member Function Documentation}
-\Hypertarget{classISerProjetos_ad2d8e86b153694465682c0ea7e3dcf4a}\label{classISerProjetos_ad2d8e86b153694465682c0ea7e3dcf4a} 
+\Hypertarget{classISerProjetos_abfae72c67b0591897903d1a1d83cdbf3}\label{classISerProjetos_abfae72c67b0591897903d1a1d83cdbf3} 
 \index{ISerProjetos@{ISerProjetos}!atualizar@{atualizar}}
 \index{atualizar@{atualizar}!ISerProjetos@{ISerProjetos}}
 \doxysubsubsection{\texorpdfstring{atualizar()}{atualizar()}}
-{\footnotesize\ttfamily virtual bool ISer\+Projetos\+::atualizar (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classProjeto}{Projeto}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+{\footnotesize\ttfamily virtual bool ISer\+Projetos\+::atualizar (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classProjeto}{Projeto}} \&}]{projeto }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
 
@@ -46,11 +61,11 @@ true Se a alteração for realizada com sucesso.
 
 false Caso contrário. 
 \end{DoxyReturn}
-\Hypertarget{classISerProjetos_a4f69bfdb04cdab94b9ea895ba504c048}\label{classISerProjetos_a4f69bfdb04cdab94b9ea895ba504c048} 
+\Hypertarget{classISerProjetos_a65fdb3575b7788159757a9b654486a58}\label{classISerProjetos_a65fdb3575b7788159757a9b654486a58} 
 \index{ISerProjetos@{ISerProjetos}!criar@{criar}}
 \index{criar@{criar}!ISerProjetos@{ISerProjetos}}
 \doxysubsubsection{\texorpdfstring{criar()}{criar()}}
-{\footnotesize\ttfamily virtual bool ISer\+Projetos\+::criar (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classProjeto}{Projeto}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+{\footnotesize\ttfamily virtual bool ISer\+Projetos\+::criar (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classProjeto}{Projeto}} \&}]{projeto }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
 
@@ -66,11 +81,11 @@ true Se a criação teve sucesso.
 
 false Caso contrário. 
 \end{DoxyReturn}
-\Hypertarget{classISerProjetos_aa97afbbb7c9bd31643c4239268ca3aae}\label{classISerProjetos_aa97afbbb7c9bd31643c4239268ca3aae} 
+\Hypertarget{classISerProjetos_a61682404c8761e00ceb461e5fc030b2f}\label{classISerProjetos_a61682404c8761e00ceb461e5fc030b2f} 
 \index{ISerProjetos@{ISerProjetos}!excluir@{excluir}}
 \index{excluir@{excluir}!ISerProjetos@{ISerProjetos}}
 \doxysubsubsection{\texorpdfstring{excluir()}{excluir()}}
-{\footnotesize\ttfamily virtual bool ISer\+Projetos\+::excluir (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classIdentificador}{Identificador}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+{\footnotesize\ttfamily virtual bool ISer\+Projetos\+::excluir (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classIdentificador}{Identificador}} \&}]{identificador }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
 
@@ -82,13 +97,15 @@ Remove um projeto cadastrado.
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-true Se a remoção for realizada com sucesso. @retrun false Caso contrário. 
+true Se a remoção for realizada com sucesso. 
+
+false Caso contrário. 
 \end{DoxyReturn}
-\Hypertarget{classISerProjetos_a485862ea4afb5e15a343127e016484ec}\label{classISerProjetos_a485862ea4afb5e15a343127e016484ec} 
+\Hypertarget{classISerProjetos_a63501e0dc8dd924d89ee64cbb737dea5}\label{classISerProjetos_a63501e0dc8dd924d89ee64cbb737dea5} 
 \index{ISerProjetos@{ISerProjetos}!ler@{ler}}
 \index{ler@{ler}!ISerProjetos@{ISerProjetos}}
 \doxysubsubsection{\texorpdfstring{ler()}{ler()}}
-{\footnotesize\ttfamily virtual bool ISer\+Projetos\+::ler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classProjeto}{Projeto}} \texorpdfstring{$\ast$}{*}}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+{\footnotesize\ttfamily virtual bool ISer\+Projetos\+::ler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classProjeto}{Projeto}} \texorpdfstring{$\ast$}{*}}]{projeto }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
 
@@ -102,7 +119,7 @@ Recupera as informações de um projeto.
 \begin{DoxyReturn}{Returns}
 true Se o projeto foi encontrado. 
 
-false Caso contrário 
+false Caso contrário. 
 \end{DoxyReturn}
 
 

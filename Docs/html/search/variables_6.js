@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['senha_0',['senha',['../classPessoa.html#a6fc2179270099091fd6a40ec5b2e1d08',1,'Pessoa']]]
+  ['papel_0',['papel',['../classPessoa.html#a2261e94d9f9ad9ec34e02991ab391be1',1,'Pessoa']]],
+  ['prioridade_1',['prioridade',['../classCartaodeAtividade.html#a5a278812a3681971d08a3d97c5885c60',1,'CartaodeAtividade']]]
 ];

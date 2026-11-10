@@ -105,15 +105,46 @@ $(document).ready(function(){initNavTree('classISerAutenticacao.html',''); initR
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ac0009a663e08bc769b496a2788dfa14f" id="r_ac0009a663e08bc769b496a2788dfa14f"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classISerAutenticacao.html#ac0009a663e08bc769b496a2788dfa14f">autenticar</a> (const <a class="el" href="classEmail.html">Email</a> &amp;, const <a class="el" href="classSenha.html">Senha</a> &amp;)=0</td></tr>
-<tr class="memdesc:ac0009a663e08bc769b496a2788dfa14f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Valida as credenciais fornecidas.  <br /></td></tr>
-<tr class="separator:ac0009a663e08bc769b496a2788dfa14f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7325ad1600607f4efcc05d67b88d2941" id="r_a7325ad1600607f4efcc05d67b88d2941"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classISerAutenticacao.html#a7325ad1600607f4efcc05d67b88d2941">~ISerAutenticacao</a> ()=default</td></tr>
+<tr class="memdesc:a7325ad1600607f4efcc05d67b88d2941"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destrutor virtual padrão.  <br /></td></tr>
+<tr class="separator:a7325ad1600607f4efcc05d67b88d2941"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa35554bd604b0806c29166503fbaf7de" id="r_aa35554bd604b0806c29166503fbaf7de"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classISerAutenticacao.html#aa35554bd604b0806c29166503fbaf7de">autenticar</a> (const <a class="el" href="classEmail.html">Email</a> &amp;email, const <a class="el" href="classSenha.html">Senha</a> &amp;senha)=0</td></tr>
+<tr class="memdesc:aa35554bd604b0806c29166503fbaf7de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Valida as credenciais fornecidas.  <br /></td></tr>
+<tr class="separator:aa35554bd604b0806c29166503fbaf7de"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Interface para a camada de serviço de validação de credenciais do usuário. </p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="ac0009a663e08bc769b496a2788dfa14f" name="ac0009a663e08bc769b496a2788dfa14f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac0009a663e08bc769b496a2788dfa14f">&#9670;&#160;</a></span>autenticar()</h2>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a7325ad1600607f4efcc05d67b88d2941" name="a7325ad1600607f4efcc05d67b88d2941"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7325ad1600607f4efcc05d67b88d2941">&#9670;&#160;</a></span>~ISerAutenticacao()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual ISerAutenticacao::~ISerAutenticacao </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Destrutor virtual padrão. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="aa35554bd604b0806c29166503fbaf7de" name="aa35554bd604b0806c29166503fbaf7de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa35554bd604b0806c29166503fbaf7de">&#9670;&#160;</a></span>autenticar()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -125,13 +156,13 @@ Public Member Functions</h2></td></tr>
           <td class="memname">virtual bool ISerAutenticacao::autenticar </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classEmail.html">Email</a> &amp;&#160;</td>
-          <td class="paramname">, </td>
+          <td class="paramname"><em>email</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const <a class="el" href="classSenha.html">Senha</a> &amp;&#160;</td>
-          <td class="paramname">&#160;</td>
+          <td class="paramname"><em>senha</em>&#160;</td>
         </tr>
         <tr>
           <td></td>

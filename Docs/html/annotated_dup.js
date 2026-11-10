@@ -1,6 +1,10 @@
 var annotated_dup =
 [
     [ "CartaodeAtividade", "classCartaodeAtividade.html", "classCartaodeAtividade" ],
+    [ "ContainerCartao", "classContainerCartao.html", "classContainerCartao" ],
+    [ "ContainerPessoa", "classContainerPessoa.html", "classContainerPessoa" ],
+    [ "ContainerProjeto", "classContainerProjeto.html", "classContainerProjeto" ],
+    [ "ContainerQuadro", "classContainerQuadro.html", "classContainerQuadro" ],
     [ "Email", "classEmail.html", "classEmail" ],
     [ "Estado", "classEstado.html", "classEstado" ],
     [ "IAprAutenticacao", "classIAprAutenticacao.html", "classIAprAutenticacao" ],
