@@ -10,20 +10,16 @@
 #include <ctime>
 #include <cstdio>
 
-// ============================================================================
-// Instanciação estática dos Containers em memória
-// ============================================================================
+// Instanciacao dos containers em memoria
 
 static ContainerPessoa containerPessoa;
 static ContainerProjeto containerProjeto;
 static ContainerQuadro containerQuadro;
 static ContainerCartao containerCartao;
 
-// ============================================================================
-// IMPLEMENTAÇÃO DAS CONTROLADORAS DE SERVIÇO
-// ============================================================================
+// Implementacao das controladoras de servico
 
-// 1. Controladora de Serviço de Autenticação
+// Controladora de servico de Autenticacao
 
 bool CntrSerAutenticacao::autenticar(const Email& email, const Senha& senha){
     Pessoa pessoaRetorno;
@@ -34,7 +30,7 @@ bool CntrSerAutenticacao::autenticar(const Email& email, const Senha& senha){
     return (pessoaRetorno.getSenha().getValor() == senha.getValor());
 }
 
-// 2. Controladora de Serviço relativa a Pessoas
+// Controladora de servico relativa a Pessoas
 
 bool CntrSerPessoas::criar(const Pessoa& pessoa){
     return containerPessoa.incluir(pessoa);
@@ -62,7 +58,7 @@ bool CntrSerPessoas::excluir(const Email& email){
     return containerPessoa.remover(email);
 }
 
-// 3. Controladora de Serviço relativa a Projetos
+// Controladora de servico relativa a Projetos
 
 bool CntrSerProjetos::criar(const Projeto& projeto){
     Pessoa gestorRetorno;
@@ -98,7 +94,7 @@ bool CntrSerProjetos::excluir(const Identificador& identificador){
     return containerProjeto.remover(identificador);
 }
 
-// 4. Controladora de Serviço relativa a Quadros e Cartões
+// Controladora de servico relativa a Quadros e Cartoes
 
 bool CntrSerQuadros::criar(const Quadro& quadro){
     Projeto projetoRetorno;
@@ -361,9 +357,7 @@ bool CntrSerQuadros::lerLeadTimeMedio(const Identificador& idQuadro, double* med
     return true;
 }
 
-// ============================================================================
-// FUNÇÕES AUXILIARES PARA A INTERFACE GRÁFICA (ncurses)
-// ============================================================================
+// Funcoes auxiliares para a interface grafica (ncurses)
 
 static void desenharCabecalho(const char* titulo){
     clear();
@@ -400,11 +394,9 @@ static void exibirMensagem(const char* mensagem){
     getch();
 }
 
-// ============================================================================
-// IMPLEMENTAÇÃO DAS CONTROLADORAS DE APRESENTAÇÃO
-// ============================================================================
+// Implementacao das controladoras de apresentacao
 
-// 1. Módulo de Autenticação (cntrAprAutenticacao)
+// Modulo de Autenticacao (cntrAprAutenticacao)
 
 void cntrAprAutenticacao::setCntrServico(ISerAutenticacao* cntr){
     this->cntrServico = cntr;
@@ -440,7 +432,7 @@ bool cntrAprAutenticacao::autenticar(Email* email){
     }
 }
 
-// 2. Módulo de Pessoas (cntrAprPessoas)
+// Modulo de Pessoas (cntrAprPessoas)
 
 void cntrAprPessoas::setCntrServico(ISerPessoas* cntr){
     this->cntrServico = cntr;
@@ -580,7 +572,7 @@ bool cntrAprPessoas::exec(const Email& email){
     return continuarSessao;
 }
 
-// 3. Módulo de Projetos (cntrAprProjetos)
+// Modulo de Projetos (cntrAprProjetos)
 
 void cntrAprProjetos::setCntrServico(ISerProjetos* cntr) {
     this->cntrServico = cntr;
@@ -625,6 +617,7 @@ void cntrAprProjetos::exec(const Email& email) {
                     proj.setDescricao(desc);
                     proj.setInicio(inicio);
                     proj.setTermino(termino);
+                    proj.setGestor(email);
 
                     if (cntrServico != nullptr && cntrServico->criar(proj)) {
                         exibirMensagem("Projeto criado com sucesso!");
@@ -680,6 +673,7 @@ void cntrAprProjetos::exec(const Email& email) {
                     proj.setDescricao(desc);
                     proj.setInicio(inicio);
                     proj.setTermino(termino);
+                    proj.setGestor(email);
 
                     if (cntrServico != nullptr && cntrServico->atualizar(proj)) {
                         exibirMensagem("Projeto atualizado com sucesso!");
@@ -717,7 +711,7 @@ void cntrAprProjetos::exec(const Email& email) {
     }
 }
 
-// 4. Módulo de Quadros e Cartões (cntrAprQuadros)
+// Modulo de Quadros e Cartoes (cntrAprQuadros)
 
 void cntrAprQuadros::setCntrServico(ISerQuadros* cntr) {
     this->cntrServico = cntr;
@@ -885,7 +879,7 @@ void cntrAprQuadros::exec(const Email& email) {
     }
 }
 
-// 5. Controladora Principal da Aplicação (cntrControlePrincipal)
+// Controladora principal da aplicacao (cntrControlePrincipal)
 
 void cntrControlePrincipal::setCntrAprAutenticacao(IAprAutenticacao* cntr) {
     this->cntrAprAutenticacao = cntr;

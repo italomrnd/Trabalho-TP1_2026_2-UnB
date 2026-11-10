@@ -1,0 +1,155 @@
+\doxysection{Cntr\+Ser\+Pessoas Class Reference}
+\hypertarget{classCntrSerPessoas}{}\label{classCntrSerPessoas}\index{CntrSerPessoas@{CntrSerPessoas}}
+
+
+Controladora responsável pela gestão dos serviços CRUD da entidade \doxylink{classPessoa}{Pessoa}.  
+
+
+
+
+{\ttfamily \#include $<$controladoras.\+hpp$>$}
+
+
+
+Inheritance diagram for Cntr\+Ser\+Pessoas\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=172pt]{classCntrSerPessoas__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Cntr\+Ser\+Pessoas\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=172pt]{classCntrSerPessoas__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classCntrSerPessoas_a1b341e8f48bd2b79aa44f59ab2e77911}{criar}} (const \mbox{\hyperlink{classPessoa}{Pessoa}} \&pessoa) override
+\begin{DoxyCompactList}\small\item\em Método responsável por registrar os dados de um novo usuário. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classCntrSerPessoas_ae6d85d701a88f71369bab1a28c6a3095}{ler}} (\mbox{\hyperlink{classPessoa}{Pessoa}} \texorpdfstring{$\ast$}{*}pessoa\+Retorno) override
+\begin{DoxyCompactList}\small\item\em Método responsável por consultar e recuperar os dados de um usuário no sistema de software. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classCntrSerPessoas_ad435df36caff4e480a962b03f2d90973}{atualizar}} (const \mbox{\hyperlink{classPessoa}{Pessoa}} \&pessoa) override
+\begin{DoxyCompactList}\small\item\em Método responsável por atualizar os dados registrados de um usuário. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classCntrSerPessoas_a191ca0d590734ee781e2741dbf1d9d4b}{excluir}} (const \mbox{\hyperlink{classEmail}{Email}} \&email) override
+\begin{DoxyCompactList}\small\item\em Método responsável por remover o registro de uma pessoa do sistema. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classISerPessoas}{ISer\+Pessoas}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classISerPessoas_aff18b5b89fb95228ddae3383bd6d5600}{\texorpdfstring{$\sim$}{\string~}\+ISer\+Pessoas}} ()=default
+\begin{DoxyCompactList}\small\item\em Destrutor virtual padrão. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Controladora responsável pela gestão dos serviços CRUD da entidade \doxylink{classPessoa}{Pessoa}. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classCntrSerPessoas_ad435df36caff4e480a962b03f2d90973}\label{classCntrSerPessoas_ad435df36caff4e480a962b03f2d90973} 
+\index{CntrSerPessoas@{CntrSerPessoas}!atualizar@{atualizar}}
+\index{atualizar@{atualizar}!CntrSerPessoas@{CntrSerPessoas}}
+\doxysubsubsection{\texorpdfstring{atualizar()}{atualizar()}}
+{\footnotesize\ttfamily bool Cntr\+Ser\+Pessoas\+::atualizar (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classPessoa}{Pessoa}} \&}]{pessoa }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Método responsável por atualizar os dados registrados de um usuário. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pessoa} & Referência para o objeto \doxylink{classPessoa}{Pessoa} contendo os novos dados. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Se a operação foi realizada com sucesso. 
+
+false Caso contrário. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classISerPessoas_a9e35aa3c8d2c6e3981cf59a9bc587b54}{ISer\+Pessoas}}.
+
+\Hypertarget{classCntrSerPessoas_a1b341e8f48bd2b79aa44f59ab2e77911}\label{classCntrSerPessoas_a1b341e8f48bd2b79aa44f59ab2e77911} 
+\index{CntrSerPessoas@{CntrSerPessoas}!criar@{criar}}
+\index{criar@{criar}!CntrSerPessoas@{CntrSerPessoas}}
+\doxysubsubsection{\texorpdfstring{criar()}{criar()}}
+{\footnotesize\ttfamily bool Cntr\+Ser\+Pessoas\+::criar (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classPessoa}{Pessoa}} \&}]{pessoa }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Método responsável por registrar os dados de um novo usuário. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pessoa} & Referência para o objeto \doxylink{classPessoa}{Pessoa} com os dados a serem registrados. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Se o registro foi efetuado com sucesso. 
+
+false Caso contrário. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classISerPessoas_af1ba454c986e97775cf455213a39698e}{ISer\+Pessoas}}.
+
+\Hypertarget{classCntrSerPessoas_a191ca0d590734ee781e2741dbf1d9d4b}\label{classCntrSerPessoas_a191ca0d590734ee781e2741dbf1d9d4b} 
+\index{CntrSerPessoas@{CntrSerPessoas}!excluir@{excluir}}
+\index{excluir@{excluir}!CntrSerPessoas@{CntrSerPessoas}}
+\doxysubsubsection{\texorpdfstring{excluir()}{excluir()}}
+{\footnotesize\ttfamily bool Cntr\+Ser\+Pessoas\+::excluir (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classEmail}{Email}} \&}]{email }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Método responsável por remover o registro de uma pessoa do sistema. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em email} & Referência para o \doxylink{classEmail}{Email} associado à conta a ser removida. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Se a remoção foi realizada com sucesso. 
+
+false Caso contrário. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classISerPessoas_ad24c8fa479ea665e332afa87df5a4d16}{ISer\+Pessoas}}.
+
+\Hypertarget{classCntrSerPessoas_ae6d85d701a88f71369bab1a28c6a3095}\label{classCntrSerPessoas_ae6d85d701a88f71369bab1a28c6a3095} 
+\index{CntrSerPessoas@{CntrSerPessoas}!ler@{ler}}
+\index{ler@{ler}!CntrSerPessoas@{CntrSerPessoas}}
+\doxysubsubsection{\texorpdfstring{ler()}{ler()}}
+{\footnotesize\ttfamily bool Cntr\+Ser\+Pessoas\+::ler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classPessoa}{Pessoa}} \texorpdfstring{$\ast$}{*}}]{pessoa\+Retorno }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Método responsável por consultar e recuperar os dados de um usuário no sistema de software. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pessoa\+Retorno} & Ponteiro para o objeto \doxylink{classPessoa}{Pessoa} onde serão preenchidos e retornados os dados completos. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Se os dados foram encontrados. 
+
+false Caso contrário. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classISerPessoas_af7c400eb5647ed16b209100ad142f8da}{ISer\+Pessoas}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/italomrnd/\+Un\+B/\+Ciclo\+Básico\+CIC/\+TP1\+\_\+26\+\_\+2/\+Trabalho26\+\_\+2/\+Headers/\mbox{\hyperlink{controladoras_8hpp}{controladoras.\+hpp}}\item 
+/home/italomrnd/\+Un\+B/\+Ciclo\+Básico\+CIC/\+TP1\+\_\+26\+\_\+2/\+Trabalho26\+\_\+2/\+Sources/\mbox{\hyperlink{controladoras_8cpp}{controladoras.\+cpp}}\end{DoxyCompactItemize}

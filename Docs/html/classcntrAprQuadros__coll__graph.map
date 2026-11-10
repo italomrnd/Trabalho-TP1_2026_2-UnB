@@ -1,0 +1,7 @@
+<map id="cntrAprQuadros" name="cntrAprQuadros">
+<area shape="rect" id="Node000001" title=" " alt="" coords="58,93,181,119"/>
+<area shape="rect" id="Node000002" href="$classIAprQuadros.html" title="Interface para a camada de apresentação da gestão de quadros e cartões de atividade." alt="" coords="5,5,108,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="75,40,113,91,108,94,71,43"/>
+<area shape="rect" id="Node000003" href="$classISerQuadros.html" title="Interface para a camada de serviço de gestão de quadros e cartões de atividade utilizando o padrão Fa..." alt="" coords="133,5,234,31"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="169,43,130,94,126,91,164,40"/>
+</map>

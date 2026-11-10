@@ -11,7 +11,8 @@
 
 
 
-Collaboration diagram for Cartaode\+Atividade\+:\nopagebreak
+Collaboration diagram for Cartaode\+Atividade\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -22,7 +23,7 @@ Collaboration diagram for Cartaode\+Atividade\+:\nopagebreak
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classIdentificador}{Identificador}} \mbox{\hyperlink{classCartaodeAtividade_a77dda18549c11209777bb8835bf9c691}{get\+Identificador}} () const
-\begin{DoxyCompactList}\small\item\em Obtém o \doxylink{classIdentificador}{Identificador} armazenado na variavel identificador. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Obtém o \doxylink{classIdentificador}{Identificador} armazenado na variável identificador. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classNome}{Nome}} \mbox{\hyperlink{classCartaodeAtividade_a074b7b708525641c80e587c945920638}{get\+Nome}} () const
 \begin{DoxyCompactList}\small\item\em Obtém o \doxylink{classNome}{Nome} armazenado na variável nome. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classTexto}{Texto}} \mbox{\hyperlink{classCartaodeAtividade_a047499e4ec7149589de101b8201a8b4d}{get\+Descricao}} () const
@@ -39,6 +40,10 @@ Collaboration diagram for Cartaode\+Atividade\+:\nopagebreak
 \begin{DoxyCompactList}\small\item\em Obtém o \doxylink{classTimestamp}{Timestamp} armazenado na variável inicio. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classTimestamp}{Timestamp}} \mbox{\hyperlink{classCartaodeAtividade_ab672b54a5b0ffb2c5a87c70d84aeb494}{get\+Termino}} () const
 \begin{DoxyCompactList}\small\item\em Obtém o \doxylink{classTimestamp}{Timestamp} armazenado na variável termino. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classEmail}{Email}} \mbox{\hyperlink{classCartaodeAtividade_a7f68b98fd6e99c722322b58c06c7bc78}{get\+Desenvolvedor}} () const
+\begin{DoxyCompactList}\small\item\em Obtém o \doxylink{classEmail}{Email} do desenvolvedor associado ao cartão. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classIdentificador}{Identificador}} \mbox{\hyperlink{classCartaodeAtividade_a8e28bd0eecf3c24c7b7fa370e0035280}{get\+Id\+Quadro}} () const
+\begin{DoxyCompactList}\small\item\em Obtém o \doxylink{classIdentificador}{Identificador} do quadro pai. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classCartaodeAtividade_a30372b86781027bb2cbdbbd9fcecf551}{set\+Identificador}} (const \mbox{\hyperlink{classIdentificador}{Identificador}} \&)
 \begin{DoxyCompactList}\small\item\em Define o identificador. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classCartaodeAtividade_a1edbea197e0b0b74bccdee07c588a501}{set\+Nome}} (const \mbox{\hyperlink{classNome}{Nome}} \&)
@@ -56,7 +61,11 @@ void \mbox{\hyperlink{classCartaodeAtividade_a135533ee8eae2ff1e909c1d51b6bf63a}{
 void \mbox{\hyperlink{classCartaodeAtividade_ab564ba7b8cdb20201e0ac14edfa88b6c}{set\+Inicio}} (const \mbox{\hyperlink{classTimestamp}{Timestamp}} \&)
 \begin{DoxyCompactList}\small\item\em Define o inicio. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classCartaodeAtividade_af61e1947c726679d49c5e8fe50970645}{set\+Termino}} (const \mbox{\hyperlink{classTimestamp}{Timestamp}} \&)
-\begin{DoxyCompactList}\small\item\em Define o termino. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Define o termino. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCartaodeAtividade_a0de9c7884988b67fd2d3fdfcb4cb314f}{set\+Desenvolvedor}} (const \mbox{\hyperlink{classEmail}{Email}} \&)
+\begin{DoxyCompactList}\small\item\em Define o desenvolvedor responsável. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCartaodeAtividade_adf39d621269855e50fb213967738acae}{set\+Id\+Quadro}} (const \mbox{\hyperlink{classIdentificador}{Identificador}} \&)
+\begin{DoxyCompactList}\small\item\em Define o quadro pai ao qual o cartão pertence. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -75,9 +84,13 @@ void \mbox{\hyperlink{classCartaodeAtividade_af61e1947c726679d49c5e8fe50970645}{
 \mbox{\hyperlink{classTimestamp}{Timestamp}} \mbox{\hyperlink{classCartaodeAtividade_ab4c4c2203b746b401c6326725d96337f}{entrada}}
 \begin{DoxyCompactList}\small\item\em Data e Hora em que a atividade entra na coluna "{}\+A FAZER"{}. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classTimestamp}{Timestamp}} \mbox{\hyperlink{classCartaodeAtividade_a93296e5c8e3d1870b6f545cf0bb0dcae}{inicio}}
-\begin{DoxyCompactList}\small\item\em Data e hora em que a a atividade entra na coluna "{}\+FAZENDO"{}. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Data e hora em que a atividade entra na coluna "{}\+FAZENDO"{}. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classTimestamp}{Timestamp}} \mbox{\hyperlink{classCartaodeAtividade_a626b8acf9f297f3619bf9ff24c12ec26}{termino}}
-\begin{DoxyCompactList}\small\item\em Data e hora em que a atividade entra na coluna "{}\+FEITO"{}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Data e hora em que a atividade entra na coluna "{}\+FEITO"{}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classEmail}{Email}} \mbox{\hyperlink{classCartaodeAtividade_a93d2dd9af80606d26d35072549f0aa23}{desenvolvedor}}
+\begin{DoxyCompactList}\small\item\em (FK) \doxylink{classEmail}{Email} do desenvolvedor responsável pelo cartão. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classIdentificador}{Identificador}} \mbox{\hyperlink{classCartaodeAtividade_a73ebd0ab592af8945945c1ca8cde3dfc}{id\+Quadro}}
+\begin{DoxyCompactList}\small\item\em (FK) \doxylink{classIdentificador}{Identificador} do quadro ao qual o cartão pertence. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -95,7 +108,20 @@ void \mbox{\hyperlink{classCartaodeAtividade_af61e1947c726679d49c5e8fe50970645}{
 Obtém a Descricao armazenada na variável descricao. 
 
 \begin{DoxyReturn}{Returns}
-\doxylink{classTexto}{Texto} que tem a descricao armazenada 
+\doxylink{classTexto}{Texto} com a descrição. 
+\end{DoxyReturn}
+\Hypertarget{classCartaodeAtividade_a7f68b98fd6e99c722322b58c06c7bc78}\label{classCartaodeAtividade_a7f68b98fd6e99c722322b58c06c7bc78} 
+\index{CartaodeAtividade@{CartaodeAtividade}!getDesenvolvedor@{getDesenvolvedor}}
+\index{getDesenvolvedor@{getDesenvolvedor}!CartaodeAtividade@{CartaodeAtividade}}
+\doxysubsubsection{\texorpdfstring{getDesenvolvedor()}{getDesenvolvedor()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classEmail}{Email}} Cartaode\+Atividade\+::get\+Desenvolvedor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Obtém o \doxylink{classEmail}{Email} do desenvolvedor associado ao cartão. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{classEmail}{Email} armazenado (FK). 
 \end{DoxyReturn}
 \Hypertarget{classCartaodeAtividade_aeb8140f9dade8eae805e91327011cdd0}\label{classCartaodeAtividade_aeb8140f9dade8eae805e91327011cdd0} 
 \index{CartaodeAtividade@{CartaodeAtividade}!getEntrada@{getEntrada}}
@@ -108,7 +134,7 @@ Obtém a Descricao armazenada na variável descricao.
 Obtém o \doxylink{classTimestamp}{Timestamp} armazenado na variável entrada. 
 
 \begin{DoxyReturn}{Returns}
-\doxylink{classTimestamp}{Timestamp} do momento em que a atividade entra na coluna "{}\+A FAZER"{} 
+\doxylink{classTimestamp}{Timestamp} de entrada na coluna "{}\+A FAZER"{}. 
 \end{DoxyReturn}
 \Hypertarget{classCartaodeAtividade_a4fadea84dc6ad1b1bcb7366fd66d7dc2}\label{classCartaodeAtividade_a4fadea84dc6ad1b1bcb7366fd66d7dc2} 
 \index{CartaodeAtividade@{CartaodeAtividade}!getEstado@{getEstado}}
@@ -121,7 +147,7 @@ Obtém o \doxylink{classTimestamp}{Timestamp} armazenado na variável entrada.
 Obtém o \doxylink{classEstado}{Estado} armazenado na variável estado. 
 
 \begin{DoxyReturn}{Returns}
-\doxylink{classEstado}{Estado} armazenado 
+\doxylink{classEstado}{Estado} armazenado. 
 \end{DoxyReturn}
 \Hypertarget{classCartaodeAtividade_a77dda18549c11209777bb8835bf9c691}\label{classCartaodeAtividade_a77dda18549c11209777bb8835bf9c691} 
 \index{CartaodeAtividade@{CartaodeAtividade}!getIdentificador@{getIdentificador}}
@@ -131,10 +157,23 @@ Obtém o \doxylink{classEstado}{Estado} armazenado na variável estado.
 
 
 
-Obtém o \doxylink{classIdentificador}{Identificador} armazenado na variavel identificador. 
+Obtém o \doxylink{classIdentificador}{Identificador} armazenado na variável identificador. 
 
 \begin{DoxyReturn}{Returns}
-\doxylink{classIdentificador}{Identificador} armazenado 
+\doxylink{classIdentificador}{Identificador} armazenado. 
+\end{DoxyReturn}
+\Hypertarget{classCartaodeAtividade_a8e28bd0eecf3c24c7b7fa370e0035280}\label{classCartaodeAtividade_a8e28bd0eecf3c24c7b7fa370e0035280} 
+\index{CartaodeAtividade@{CartaodeAtividade}!getIdQuadro@{getIdQuadro}}
+\index{getIdQuadro@{getIdQuadro}!CartaodeAtividade@{CartaodeAtividade}}
+\doxysubsubsection{\texorpdfstring{getIdQuadro()}{getIdQuadro()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classIdentificador}{Identificador}} Cartaode\+Atividade\+::get\+Id\+Quadro (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Obtém o \doxylink{classIdentificador}{Identificador} do quadro pai. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{classIdentificador}{Identificador} do quadro (FK). 
 \end{DoxyReturn}
 \Hypertarget{classCartaodeAtividade_a8c42cd5dac30c1c9b37b8e8cdfc111a5}\label{classCartaodeAtividade_a8c42cd5dac30c1c9b37b8e8cdfc111a5} 
 \index{CartaodeAtividade@{CartaodeAtividade}!getInicio@{getInicio}}
@@ -147,7 +186,7 @@ Obtém o \doxylink{classIdentificador}{Identificador} armazenado na variavel ide
 Obtém o \doxylink{classTimestamp}{Timestamp} armazenado na variável inicio. 
 
 \begin{DoxyReturn}{Returns}
-\doxylink{classTimestamp}{Timestamp} do momento em que a atividade entra na coluna "{}\+FAZENDO"{} 
+\doxylink{classTimestamp}{Timestamp} de entrada na coluna "{}\+FAZENDO"{}. 
 \end{DoxyReturn}
 \Hypertarget{classCartaodeAtividade_a074b7b708525641c80e587c945920638}\label{classCartaodeAtividade_a074b7b708525641c80e587c945920638} 
 \index{CartaodeAtividade@{CartaodeAtividade}!getNome@{getNome}}
@@ -160,7 +199,7 @@ Obtém o \doxylink{classTimestamp}{Timestamp} armazenado na variável inicio.
 Obtém o \doxylink{classNome}{Nome} armazenado na variável nome. 
 
 \begin{DoxyReturn}{Returns}
-\doxylink{classNome}{Nome} armazenado 
+\doxylink{classNome}{Nome} armazenado. 
 \end{DoxyReturn}
 \Hypertarget{classCartaodeAtividade_adc4a95d5d7e495edb5dfa941d623bf84}\label{classCartaodeAtividade_adc4a95d5d7e495edb5dfa941d623bf84} 
 \index{CartaodeAtividade@{CartaodeAtividade}!getPrioridade@{getPrioridade}}
@@ -173,7 +212,7 @@ Obtém o \doxylink{classNome}{Nome} armazenado na variável nome.
 Obtém a prioridade armazenada na variável prioridade. 
 
 \begin{DoxyReturn}{Returns}
-\doxylink{classPrioridade}{Prioridade} armazenada 
+\doxylink{classPrioridade}{Prioridade} armazenada. 
 \end{DoxyReturn}
 \Hypertarget{classCartaodeAtividade_aba8cf985b02f675608f741dfa38bcc1a}\label{classCartaodeAtividade_aba8cf985b02f675608f741dfa38bcc1a} 
 \index{CartaodeAtividade@{CartaodeAtividade}!getTamanho@{getTamanho}}
@@ -186,7 +225,7 @@ Obtém a prioridade armazenada na variável prioridade.
 Obtém o \doxylink{classTamanho}{Tamanho} armazenado na variável tamanho. 
 
 \begin{DoxyReturn}{Returns}
-\doxylink{classTamanho}{Tamanho} armazenado 
+\doxylink{classTamanho}{Tamanho} armazenado. 
 \end{DoxyReturn}
 \Hypertarget{classCartaodeAtividade_ab672b54a5b0ffb2c5a87c70d84aeb494}\label{classCartaodeAtividade_ab672b54a5b0ffb2c5a87c70d84aeb494} 
 \index{CartaodeAtividade@{CartaodeAtividade}!getTermino@{getTermino}}
@@ -199,7 +238,7 @@ Obtém o \doxylink{classTamanho}{Tamanho} armazenado na variável tamanho.
 Obtém o \doxylink{classTimestamp}{Timestamp} armazenado na variável termino. 
 
 \begin{DoxyReturn}{Returns}
-\doxylink{classTimestamp}{Timestamp} do momento em que a atividade entra na coluna "{}\+FEITO"{} 
+\doxylink{classTimestamp}{Timestamp} de entrada na coluna "{}\+FEITO"{}. 
 \end{DoxyReturn}
 \Hypertarget{classCartaodeAtividade_a317fa8fd72ffa703b0efc88457e1e1a2}\label{classCartaodeAtividade_a317fa8fd72ffa703b0efc88457e1e1a2} 
 \index{CartaodeAtividade@{CartaodeAtividade}!setDescricao@{setDescricao}}
@@ -213,7 +252,22 @@ Define a descricao.
 
 
 \begin{DoxyParams}{Parameters}
-{\em descricao} & instância da classe \doxylink{classTexto}{Texto} \\
+{\em descricao} & Instância da classe \doxylink{classTexto}{Texto}. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classCartaodeAtividade_a0de9c7884988b67fd2d3fdfcb4cb314f}\label{classCartaodeAtividade_a0de9c7884988b67fd2d3fdfcb4cb314f} 
+\index{CartaodeAtividade@{CartaodeAtividade}!setDesenvolvedor@{setDesenvolvedor}}
+\index{setDesenvolvedor@{setDesenvolvedor}!CartaodeAtividade@{CartaodeAtividade}}
+\doxysubsubsection{\texorpdfstring{setDesenvolvedor()}{setDesenvolvedor()}}
+{\footnotesize\ttfamily void Cartaode\+Atividade\+::set\+Desenvolvedor (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classEmail}{Email}} \&}]{desenvolvedor }\end{DoxyParamCaption})}
+
+
+
+Define o desenvolvedor responsável. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em desenvolvedor} & Instância da classe \doxylink{classEmail}{Email} (FK). \\
 \hline
 \end{DoxyParams}
 \Hypertarget{classCartaodeAtividade_a135533ee8eae2ff1e909c1d51b6bf63a}\label{classCartaodeAtividade_a135533ee8eae2ff1e909c1d51b6bf63a} 
@@ -228,7 +282,7 @@ Define a entrada.
 
 
 \begin{DoxyParams}{Parameters}
-{\em entrada} & instância da classe \doxylink{classTimestamp}{Timestamp} \\
+{\em entrada} & Instância da classe \doxylink{classTimestamp}{Timestamp}. \\
 \hline
 \end{DoxyParams}
 \Hypertarget{classCartaodeAtividade_a2506abb1e2341548e85bbcbfe7c3158c}\label{classCartaodeAtividade_a2506abb1e2341548e85bbcbfe7c3158c} 
@@ -243,7 +297,7 @@ Define o estado.
 
 
 \begin{DoxyParams}{Parameters}
-{\em estado} & instância da classe \doxylink{classEstado}{Estado} \\
+{\em estado} & Instância da classe \doxylink{classEstado}{Estado}. \\
 \hline
 \end{DoxyParams}
 \Hypertarget{classCartaodeAtividade_a30372b86781027bb2cbdbbd9fcecf551}\label{classCartaodeAtividade_a30372b86781027bb2cbdbbd9fcecf551} 
@@ -258,7 +312,22 @@ Define o identificador.
 
 
 \begin{DoxyParams}{Parameters}
-{\em identificador} & instância da classe \doxylink{classIdentificador}{Identificador} \\
+{\em identificador} & Instância da classe \doxylink{classIdentificador}{Identificador}. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classCartaodeAtividade_adf39d621269855e50fb213967738acae}\label{classCartaodeAtividade_adf39d621269855e50fb213967738acae} 
+\index{CartaodeAtividade@{CartaodeAtividade}!setIdQuadro@{setIdQuadro}}
+\index{setIdQuadro@{setIdQuadro}!CartaodeAtividade@{CartaodeAtividade}}
+\doxysubsubsection{\texorpdfstring{setIdQuadro()}{setIdQuadro()}}
+{\footnotesize\ttfamily void Cartaode\+Atividade\+::set\+Id\+Quadro (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classIdentificador}{Identificador}} \&}]{id\+Quadro }\end{DoxyParamCaption})}
+
+
+
+Define o quadro pai ao qual o cartão pertence. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id\+Quadro} & Instância da classe \doxylink{classIdentificador}{Identificador} (FK). \\
 \hline
 \end{DoxyParams}
 \Hypertarget{classCartaodeAtividade_ab564ba7b8cdb20201e0ac14edfa88b6c}\label{classCartaodeAtividade_ab564ba7b8cdb20201e0ac14edfa88b6c} 
@@ -273,7 +342,7 @@ Define o inicio.
 
 
 \begin{DoxyParams}{Parameters}
-{\em inicio} & instância da classe \doxylink{classTimestamp}{Timestamp} \\
+{\em inicio} & Instância da classe \doxylink{classTimestamp}{Timestamp}. \\
 \hline
 \end{DoxyParams}
 \Hypertarget{classCartaodeAtividade_a1edbea197e0b0b74bccdee07c588a501}\label{classCartaodeAtividade_a1edbea197e0b0b74bccdee07c588a501} 
@@ -288,7 +357,7 @@ Define o nome.
 
 
 \begin{DoxyParams}{Parameters}
-{\em nome} & instância da classe \doxylink{classNome}{Nome} \\
+{\em nome} & Instância da classe \doxylink{classNome}{Nome}. \\
 \hline
 \end{DoxyParams}
 \Hypertarget{classCartaodeAtividade_aa5e330153032635b9306bba906679159}\label{classCartaodeAtividade_aa5e330153032635b9306bba906679159} 
@@ -303,7 +372,7 @@ Define a prioridade.
 
 
 \begin{DoxyParams}{Parameters}
-{\em prioridade} & instância da classe \doxylink{classPrioridade}{Prioridade} \\
+{\em prioridade} & Instância da classe \doxylink{classPrioridade}{Prioridade}. \\
 \hline
 \end{DoxyParams}
 \Hypertarget{classCartaodeAtividade_af0399208c785ca344b21afeb2afa12b4}\label{classCartaodeAtividade_af0399208c785ca344b21afeb2afa12b4} 
@@ -318,7 +387,7 @@ Define o tamanho.
 
 
 \begin{DoxyParams}{Parameters}
-{\em tamanho} & instância da classe \doxylink{classTamanho}{Tamanho} \\
+{\em tamanho} & Instância da classe \doxylink{classTamanho}{Tamanho}. \\
 \hline
 \end{DoxyParams}
 \Hypertarget{classCartaodeAtividade_af61e1947c726679d49c5e8fe50970645}\label{classCartaodeAtividade_af61e1947c726679d49c5e8fe50970645} 
@@ -333,7 +402,7 @@ Define o termino.
 
 
 \begin{DoxyParams}{Parameters}
-{\em termino} & instância da classe \doxylink{classTimestamp}{Timestamp} \\
+{\em termino} & Instância da classe \doxylink{classTimestamp}{Timestamp}. \\
 \hline
 \end{DoxyParams}
 
@@ -348,6 +417,16 @@ Define o termino.
 
 
 Descrição do que deve ser feito. 
+
+\Hypertarget{classCartaodeAtividade_a93d2dd9af80606d26d35072549f0aa23}\label{classCartaodeAtividade_a93d2dd9af80606d26d35072549f0aa23} 
+\index{CartaodeAtividade@{CartaodeAtividade}!desenvolvedor@{desenvolvedor}}
+\index{desenvolvedor@{desenvolvedor}!CartaodeAtividade@{CartaodeAtividade}}
+\doxysubsubsection{\texorpdfstring{desenvolvedor}{desenvolvedor}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classEmail}{Email}} Cartaode\+Atividade\+::desenvolvedor\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+(FK) \doxylink{classEmail}{Email} do desenvolvedor responsável pelo cartão. 
 
 \Hypertarget{classCartaodeAtividade_ab4c4c2203b746b401c6326725d96337f}\label{classCartaodeAtividade_ab4c4c2203b746b401c6326725d96337f} 
 \index{CartaodeAtividade@{CartaodeAtividade}!entrada@{entrada}}
@@ -379,6 +458,16 @@ Coluna do \doxylink{classQuadro}{Quadro} em que se encontra (A FAZER, FAZENDO, F
 
 Chave primária (PK) do tipo \doxylink{classIdentificador}{Identificador}, atua como código único do cartão. 
 
+\Hypertarget{classCartaodeAtividade_a73ebd0ab592af8945945c1ca8cde3dfc}\label{classCartaodeAtividade_a73ebd0ab592af8945945c1ca8cde3dfc} 
+\index{CartaodeAtividade@{CartaodeAtividade}!idQuadro@{idQuadro}}
+\index{idQuadro@{idQuadro}!CartaodeAtividade@{CartaodeAtividade}}
+\doxysubsubsection{\texorpdfstring{idQuadro}{idQuadro}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classIdentificador}{Identificador}} Cartaode\+Atividade\+::id\+Quadro\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+(FK) \doxylink{classIdentificador}{Identificador} do quadro ao qual o cartão pertence. 
+
 \Hypertarget{classCartaodeAtividade_a93296e5c8e3d1870b6f545cf0bb0dcae}\label{classCartaodeAtividade_a93296e5c8e3d1870b6f545cf0bb0dcae} 
 \index{CartaodeAtividade@{CartaodeAtividade}!inicio@{inicio}}
 \index{inicio@{inicio}!CartaodeAtividade@{CartaodeAtividade}}
@@ -387,7 +476,7 @@ Chave primária (PK) do tipo \doxylink{classIdentificador}{Identificador}, atua 
 
 
 
-Data e hora em que a a atividade entra na coluna "{}\+FAZENDO"{}. 
+Data e hora em que a atividade entra na coluna "{}\+FAZENDO"{}. 
 
 \Hypertarget{classCartaodeAtividade_a1043c6753d2ea84adea969e8b07b9a12}\label{classCartaodeAtividade_a1043c6753d2ea84adea969e8b07b9a12} 
 \index{CartaodeAtividade@{CartaodeAtividade}!nome@{nome}}
@@ -433,5 +522,5 @@ Data e hora em que a atividade entra na coluna "{}\+FEITO"{}.
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-/home/mateuschrist/\+Trabalho-\/\+TP1\+\_\+2026\+\_\+2-\/\+Un\+B/\+Headers/\mbox{\hyperlink{entidades_8hpp}{entidades.\+hpp}}\item 
-/home/mateuschrist/\+Trabalho-\/\+TP1\+\_\+2026\+\_\+2-\/\+Un\+B/\+Sources/\mbox{\hyperlink{entidades_8cpp}{entidades.\+cpp}}\end{DoxyCompactItemize}
+/home/italomrnd/\+Un\+B/\+Ciclo\+Básico\+CIC/\+TP1\+\_\+26\+\_\+2/\+Trabalho26\+\_\+2/\+Headers/\mbox{\hyperlink{entidades_8hpp}{entidades.\+hpp}}\item 
+/home/italomrnd/\+Un\+B/\+Ciclo\+Básico\+CIC/\+TP1\+\_\+26\+\_\+2/\+Trabalho26\+\_\+2/\+Sources/\mbox{\hyperlink{entidades_8cpp}{entidades.\+cpp}}\end{DoxyCompactItemize}

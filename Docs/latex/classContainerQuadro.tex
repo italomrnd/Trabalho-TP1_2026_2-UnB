@@ -2,7 +2,7 @@
 \hypertarget{classContainerQuadro}{}\label{classContainerQuadro}\index{ContainerQuadro@{ContainerQuadro}}
 
 
-Classe que representa o armazenamento de instâncias da classe \doxylink{classQuadro}{Quadro}.  
+Gerencia o armazenamento em RAM das instâncias da classe \doxylink{classQuadro}{Quadro}.  
 
 
 
@@ -12,29 +12,25 @@ Classe que representa o armazenamento de instâncias da classe \doxylink{classQu
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-bool \mbox{\hyperlink{classContainerQuadro_a369abe3ca7bfa76e5a01afbdff940033}{incluir}} (const \mbox{\hyperlink{classQuadro}{Quadro}} \&quadro, const \mbox{\hyperlink{classEmail}{Email}} \&email\+Dono)
-\begin{DoxyCompactList}\small\item\em Adiciona uma instância dada de \doxylink{classQuadro}{Quadro} no mapa. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classContainerQuadro_a71ac28ada114559e9e65d26d37570606}{incluir}} (const \mbox{\hyperlink{classQuadro}{Quadro}} \&quadro)
+\begin{DoxyCompactList}\small\item\em Insere um novo quadro no container. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classContainerQuadro_abd65200fce063f0fdddcabba8f3f26e5}{remover}} (const \mbox{\hyperlink{classIdentificador}{Identificador}} \&identificador)
-\begin{DoxyCompactList}\small\item\em Remove um \doxylink{classQuadro}{Quadro} do mapa a partir de um \doxylink{classIdentificador}{Identificador} informado. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Remove um quadro registrado do container. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classContainerQuadro_a56445ef9483d9de90b9ac1d596c57e69}{pesquisar}} (const \mbox{\hyperlink{classIdentificador}{Identificador}} \&identificador, \mbox{\hyperlink{classQuadro}{Quadro}} \texorpdfstring{$\ast$}{*}quadro\+Retorno)
-\begin{DoxyCompactList}\small\item\em Procura pela existência de um \doxylink{classQuadro}{Quadro} através de um \doxylink{classIdentificador}{Identificador} informado e atualiza os dados de um ponteiro de \doxylink{classQuadro}{Quadro} para copiar os dados encontrados. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Pesquisa as informações de um quadro no container. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classContainerQuadro_a18b5254a3a91be727cbc28dc47317cc7}{atualizar}} (const \mbox{\hyperlink{classQuadro}{Quadro}} \&quadro)
-\begin{DoxyCompactList}\small\item\em Procura por uma instância de \doxylink{classQuadro}{Quadro} com o mesmo \doxylink{classIdentificador}{Identificador} e a substitui pela dada. \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{classContainerQuadro_a0a75f3af8f6d76e24bb39a6d07c024ac}{listar}} (const \mbox{\hyperlink{classEmail}{Email}} \&email\+Dono, std\+::list$<$ \mbox{\hyperlink{classQuadro}{Quadro}} $>$ \texorpdfstring{$\ast$}{*}lista\+Retorno)
-\begin{DoxyCompactList}\small\item\em Lista todos os quadros associados a um usuário do sistema. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Atualiza as informações de um quadro existente. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classContainerQuadro_ae281a4787fe44ffc24dffed4700f9421}{listar}} (const \mbox{\hyperlink{classIdentificador}{Identificador}} \&id\+Projeto, std\+::list$<$ \mbox{\hyperlink{classQuadro}{Quadro}} $>$ \texorpdfstring{$\ast$}{*}lista\+Retorno)
+\begin{DoxyCompactList}\small\item\em Lista todos os quadros associados a um projeto específico. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
-std\+::unordered\+\_\+map$<$ std\+::string, \mbox{\hyperlink{classQuadro}{Quadro}} $>$ \mbox{\hyperlink{classContainerQuadro_ab1ca456ebc8a636d838abd22033a8c1c}{mapa\+Quadro}}
-\begin{DoxyCompactList}\small\item\em Instância de Mapa que irá armazenar as instâncias de \doxylink{classQuadro}{Quadro}. \end{DoxyCompactList}\item 
-std\+::unordered\+\_\+map$<$ std\+::string, std\+::vector$<$ std\+::string $>$ $>$ \mbox{\hyperlink{classContainerQuadro_a58498e652ec396f587d513eddf321fb0}{relacao\+Pessoa\+Quadro}}
-\begin{DoxyCompactList}\small\item\em Instância de mapa que associa o e-\/mail de um usuário à lista de identificadores (IDs) dos seus quadros. \end{DoxyCompactList}\end{DoxyCompactItemize}
+std\+::unordered\+\_\+map$<$ std\+::string, \mbox{\hyperlink{classQuadro}{Quadro}} $>$ \mbox{\hyperlink{classContainerQuadro_aa1a791af7ed12ca632d31cc1324f474f}{mapa\+Quadros}}
+\begin{DoxyCompactList}\small\item\em Tabela hash de armazenamento dos quadros utilizando o identificador como chave primária. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
-Classe que representa o armazenamento de instâncias da classe \doxylink{classQuadro}{Quadro}. 
-
-A classe utiliza da estrutura mapa para armazenar as instâncias e facilitar o encontro e remoção dessas utilizando o \doxylink{classIdentificador}{Identificador} como chave primária de procura. 
+Gerencia o armazenamento em RAM das instâncias da classe \doxylink{classQuadro}{Quadro}. 
 
 \doxysubsection{Member Function Documentation}
 \Hypertarget{classContainerQuadro_a18b5254a3a91be727cbc28dc47317cc7}\label{classContainerQuadro_a18b5254a3a91be727cbc28dc47317cc7} 
@@ -45,59 +41,57 @@ A classe utiliza da estrutura mapa para armazenar as instâncias e facilitar o e
 
 
 
-Procura por uma instância de \doxylink{classQuadro}{Quadro} com o mesmo \doxylink{classIdentificador}{Identificador} e a substitui pela dada. 
+Atualiza as informações de um quadro existente. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em quadro} & Novos dados que serão colocados no lugar dos anteriores. \\
+{\em quadro} & Referência para a entidade \doxylink{classQuadro}{Quadro} com os novos dados. \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-true Se houve a atualização. 
+true Se a alteração for realizada com sucesso. 
 
-false Se não foi encontrada nenhuma instância com o mesmo identificador informado. 
+false Caso o quadro não exista. 
 \end{DoxyReturn}
-\Hypertarget{classContainerQuadro_a369abe3ca7bfa76e5a01afbdff940033}\label{classContainerQuadro_a369abe3ca7bfa76e5a01afbdff940033} 
+\Hypertarget{classContainerQuadro_a71ac28ada114559e9e65d26d37570606}\label{classContainerQuadro_a71ac28ada114559e9e65d26d37570606} 
 \index{ContainerQuadro@{ContainerQuadro}!incluir@{incluir}}
 \index{incluir@{incluir}!ContainerQuadro@{ContainerQuadro}}
 \doxysubsubsection{\texorpdfstring{incluir()}{incluir()}}
-{\footnotesize\ttfamily bool Container\+Quadro\+::incluir (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classQuadro}{Quadro}} \&}]{quadro,  }\item[{const \mbox{\hyperlink{classEmail}{Email}} \&}]{email\+Dono }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily bool Container\+Quadro\+::incluir (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classQuadro}{Quadro}} \&}]{quadro }\end{DoxyParamCaption})}
 
 
 
-Adiciona uma instância dada de \doxylink{classQuadro}{Quadro} no mapa. 
+Insere um novo quadro no container. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em quadro} & \doxylink{classQuadro}{Quadro} que se deseja adicionar. \\
-\hline
-{\em email\+Dono} & \doxylink{classEmail}{Email} do usuário associado àquele \doxylink{classQuadro}{Quadro}. \\
+{\em quadro} & Referência para o objeto \doxylink{classQuadro}{Quadro} a ser cadastrado. \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-true Se foi possível adicionar ao mapa. 
+true Se a inserção foi realizada com sucesso. 
 
-false Se não foi possível adicionar ao mapa e/ou já existe essa instância no mapa. 
+false Caso o quadro já esteja armazenado. 
 \end{DoxyReturn}
-\Hypertarget{classContainerQuadro_a0a75f3af8f6d76e24bb39a6d07c024ac}\label{classContainerQuadro_a0a75f3af8f6d76e24bb39a6d07c024ac} 
+\Hypertarget{classContainerQuadro_ae281a4787fe44ffc24dffed4700f9421}\label{classContainerQuadro_ae281a4787fe44ffc24dffed4700f9421} 
 \index{ContainerQuadro@{ContainerQuadro}!listar@{listar}}
 \index{listar@{listar}!ContainerQuadro@{ContainerQuadro}}
 \doxysubsubsection{\texorpdfstring{listar()}{listar()}}
-{\footnotesize\ttfamily bool Container\+Quadro\+::listar (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classEmail}{Email}} \&}]{email\+Dono,  }\item[{std\+::list$<$ \mbox{\hyperlink{classQuadro}{Quadro}} $>$ \texorpdfstring{$\ast$}{*}}]{lista\+Retorno }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily bool Container\+Quadro\+::listar (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classIdentificador}{Identificador}} \&}]{id\+Projeto,  }\item[{std\+::list$<$ \mbox{\hyperlink{classQuadro}{Quadro}} $>$ \texorpdfstring{$\ast$}{*}}]{lista\+Retorno }\end{DoxyParamCaption})}
 
 
 
-Lista todos os quadros associados a um usuário do sistema. 
+Lista todos os quadros associados a um projeto específico. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em email\+Dono} & O email do usuário a ser utilizado para buscar os quadros associados \\
+{\em id\+Projeto} & Referência para o \doxylink{classIdentificador}{Identificador} do projeto pai. \\
 \hline
-{\em lista\+Retorno} & Lista que carrega os dados obtidos na busca; os quadros associados são retornados através deste parâmetro. \\
+{\em lista\+Retorno} & Ponteiro para a lista onde os quadros recuperados serão inseridos. \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-true Se a busca foi bem sucedida e/ou encontrou quadros. 
+true Se ao menos um quadro for localizado. 
 
 false Caso contrário. 
 \end{DoxyReturn}
@@ -109,19 +103,19 @@ false Caso contrário.
 
 
 
-Procura pela existência de um \doxylink{classQuadro}{Quadro} através de um \doxylink{classIdentificador}{Identificador} informado e atualiza os dados de um ponteiro de \doxylink{classQuadro}{Quadro} para copiar os dados encontrados. 
+Pesquisa as informações de um quadro no container. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em identificador} & \doxylink{classIdentificador}{Identificador} usado para a procura. \\
+{\em identificador} & Referência para o \doxylink{classIdentificador}{Identificador} do quadro buscado. \\
 \hline
-{\em quadro\+Retorno} & Ponteiro de \doxylink{classQuadro}{Quadro} que retornará os dados encontrados. \\
+{\em quadro\+Retorno} & Ponteiro onde os dados do quadro localizado serão armazenados. \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-true Se encontrou aquele \doxylink{classIdentificador}{Identificador} no Mapa. 
+true Se o quadro for localizado. 
 
-false Se não encontrou. 
+false Caso contrário. 
 \end{DoxyReturn}
 \Hypertarget{classContainerQuadro_abd65200fce063f0fdddcabba8f3f26e5}\label{classContainerQuadro_abd65200fce063f0fdddcabba8f3f26e5} 
 \index{ContainerQuadro@{ContainerQuadro}!remover@{remover}}
@@ -131,44 +125,34 @@ false Se não encontrou.
 
 
 
-Remove um \doxylink{classQuadro}{Quadro} do mapa a partir de um \doxylink{classIdentificador}{Identificador} informado. 
+Remove um quadro registrado do container. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em identificador} & \doxylink{classIdentificador}{Identificador} que será utilizado para a procura da instância a ser removida. \\
+{\em identificador} & Referência para o \doxylink{classIdentificador}{Identificador} do quadro a ser removido. \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-true Se houve remoção. 
+true Se a exclusão for efetuada com sucesso. 
 
-false Se aquele identificador não está presente no mapa. 
+false Caso contrário. 
 \end{DoxyReturn}
 
 
 \doxysubsection{Member Data Documentation}
-\Hypertarget{classContainerQuadro_ab1ca456ebc8a636d838abd22033a8c1c}\label{classContainerQuadro_ab1ca456ebc8a636d838abd22033a8c1c} 
-\index{ContainerQuadro@{ContainerQuadro}!mapaQuadro@{mapaQuadro}}
-\index{mapaQuadro@{mapaQuadro}!ContainerQuadro@{ContainerQuadro}}
-\doxysubsubsection{\texorpdfstring{mapaQuadro}{mapaQuadro}}
-{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$std\+::string, \mbox{\hyperlink{classQuadro}{Quadro}}$>$ Container\+Quadro\+::mapa\+Quadro\hspace{0.3cm}{\ttfamily [private]}}
+\Hypertarget{classContainerQuadro_aa1a791af7ed12ca632d31cc1324f474f}\label{classContainerQuadro_aa1a791af7ed12ca632d31cc1324f474f} 
+\index{ContainerQuadro@{ContainerQuadro}!mapaQuadros@{mapaQuadros}}
+\index{mapaQuadros@{mapaQuadros}!ContainerQuadro@{ContainerQuadro}}
+\doxysubsubsection{\texorpdfstring{mapaQuadros}{mapaQuadros}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$std\+::string, \mbox{\hyperlink{classQuadro}{Quadro}}$>$ Container\+Quadro\+::mapa\+Quadros\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
-Instância de Mapa que irá armazenar as instâncias de \doxylink{classQuadro}{Quadro}. 
-
-\Hypertarget{classContainerQuadro_a58498e652ec396f587d513eddf321fb0}\label{classContainerQuadro_a58498e652ec396f587d513eddf321fb0} 
-\index{ContainerQuadro@{ContainerQuadro}!relacaoPessoaQuadro@{relacaoPessoaQuadro}}
-\index{relacaoPessoaQuadro@{relacaoPessoaQuadro}!ContainerQuadro@{ContainerQuadro}}
-\doxysubsubsection{\texorpdfstring{relacaoPessoaQuadro}{relacaoPessoaQuadro}}
-{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$std\+::string, std\+::vector$<$std\+::string$>$ $>$ Container\+Quadro\+::relacao\+Pessoa\+Quadro\hspace{0.3cm}{\ttfamily [private]}}
-
-
-
-Instância de mapa que associa o e-\/mail de um usuário à lista de identificadores (IDs) dos seus quadros. 
+Tabela hash de armazenamento dos quadros utilizando o identificador como chave primária. 
 
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-/home/mateuschrist/\+Trabalho-\/\+TP1\+\_\+2026\+\_\+2-\/\+Un\+B/\+Headers/\mbox{\hyperlink{containers_8hpp}{containers.\+hpp}}\item 
-/home/mateuschrist/\+Trabalho-\/\+TP1\+\_\+2026\+\_\+2-\/\+Un\+B/\+Sources/\mbox{\hyperlink{containers_8cpp}{containers.\+cpp}}\end{DoxyCompactItemize}
+/home/italomrnd/\+Un\+B/\+Ciclo\+Básico\+CIC/\+TP1\+\_\+26\+\_\+2/\+Trabalho26\+\_\+2/\+Headers/\mbox{\hyperlink{containers_8hpp}{containers.\+hpp}}\item 
+/home/italomrnd/\+Un\+B/\+Ciclo\+Básico\+CIC/\+TP1\+\_\+26\+\_\+2/\+Trabalho26\+\_\+2/\+Sources/\mbox{\hyperlink{containers_8cpp}{containers.\+cpp}}\end{DoxyCompactItemize}

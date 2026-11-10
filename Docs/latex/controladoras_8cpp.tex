@@ -1,2 +1,89 @@
 \doxysection{/home/italomrnd/\+Un\+B/\+Ciclo\+Básico\+CIC/\+TP1\+\_\+26\+\_\+2/\+Trabalho26\+\_\+2/\+Sources/controladoras.cpp File Reference}
 \hypertarget{controladoras_8cpp}{}\label{controladoras_8cpp}\index{/home/italomrnd/UnB/CicloBásicoCIC/TP1\_26\_2/Trabalho26\_2/Sources/controladoras.cpp@{/home/italomrnd/UnB/CicloBásicoCIC/TP1\_26\_2/Trabalho26\_2/Sources/controladoras.cpp}}
+{\ttfamily \#include "{}controladoras.\+hpp"{}}\newline
+{\ttfamily \#include "{}containers.\+hpp"{}}\newline
+{\ttfamily \#include "{}interfaces.\+hpp"{}}\newline
+{\ttfamily \#include $<$ncurses.\+h$>$}\newline
+{\ttfamily \#include $<$cstring$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$stdexcept$>$}\newline
+{\ttfamily \#include $<$list$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$ctime$>$}\newline
+{\ttfamily \#include $<$cstdio$>$}\newline
+Include dependency graph for controladoras.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{controladoras_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{controladoras_8cpp_aeedbd7623ad5eebe8f1a41252c595f1e}{desenhar\+Cabecalho}} (const char \texorpdfstring{$\ast$}{*}titulo)
+\item 
+static void \mbox{\hyperlink{controladoras_8cpp_afda10e70b04ba27d460f91d51ea6b17a}{ler\+String}} (int y, int x, const char \texorpdfstring{$\ast$}{*}rotulo, char \texorpdfstring{$\ast$}{*}destino, int tamanho\+Max, bool esconder=false)
+\item 
+static void \mbox{\hyperlink{controladoras_8cpp_a41bfeb543512166f563895ed36482dfb}{exibir\+Mensagem}} (const char \texorpdfstring{$\ast$}{*}mensagem)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classContainerPessoa}{Container\+Pessoa}} \mbox{\hyperlink{controladoras_8cpp_a4476dfe93aa5999687a379136be6c288}{container\+Pessoa}}
+\item 
+static \mbox{\hyperlink{classContainerProjeto}{Container\+Projeto}} \mbox{\hyperlink{controladoras_8cpp_ad4d03640001f05e308ee751cc44bcf8d}{container\+Projeto}}
+\item 
+static \mbox{\hyperlink{classContainerQuadro}{Container\+Quadro}} \mbox{\hyperlink{controladoras_8cpp_a094205072ac8583f7643ebad3bdb565c}{container\+Quadro}}
+\item 
+static \mbox{\hyperlink{classContainerCartao}{Container\+Cartao}} \mbox{\hyperlink{controladoras_8cpp_a5eabebd86733be07e5433ae24f247837}{container\+Cartao}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{controladoras_8cpp_aeedbd7623ad5eebe8f1a41252c595f1e}\label{controladoras_8cpp_aeedbd7623ad5eebe8f1a41252c595f1e} 
+\index{controladoras.cpp@{controladoras.cpp}!desenharCabecalho@{desenharCabecalho}}
+\index{desenharCabecalho@{desenharCabecalho}!controladoras.cpp@{controladoras.cpp}}
+\doxysubsubsection{\texorpdfstring{desenharCabecalho()}{desenharCabecalho()}}
+{\footnotesize\ttfamily static void desenhar\+Cabecalho (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{titulo }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{controladoras_8cpp_a41bfeb543512166f563895ed36482dfb}\label{controladoras_8cpp_a41bfeb543512166f563895ed36482dfb} 
+\index{controladoras.cpp@{controladoras.cpp}!exibirMensagem@{exibirMensagem}}
+\index{exibirMensagem@{exibirMensagem}!controladoras.cpp@{controladoras.cpp}}
+\doxysubsubsection{\texorpdfstring{exibirMensagem()}{exibirMensagem()}}
+{\footnotesize\ttfamily static void exibir\+Mensagem (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{mensagem }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{controladoras_8cpp_afda10e70b04ba27d460f91d51ea6b17a}\label{controladoras_8cpp_afda10e70b04ba27d460f91d51ea6b17a} 
+\index{controladoras.cpp@{controladoras.cpp}!lerString@{lerString}}
+\index{lerString@{lerString}!controladoras.cpp@{controladoras.cpp}}
+\doxysubsubsection{\texorpdfstring{lerString()}{lerString()}}
+{\footnotesize\ttfamily static void ler\+String (\begin{DoxyParamCaption}\item[{int}]{y,  }\item[{int}]{x,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{rotulo,  }\item[{char \texorpdfstring{$\ast$}{*}}]{destino,  }\item[{int}]{tamanho\+Max,  }\item[{bool}]{esconder = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{controladoras_8cpp_a5eabebd86733be07e5433ae24f247837}\label{controladoras_8cpp_a5eabebd86733be07e5433ae24f247837} 
+\index{controladoras.cpp@{controladoras.cpp}!containerCartao@{containerCartao}}
+\index{containerCartao@{containerCartao}!controladoras.cpp@{controladoras.cpp}}
+\doxysubsubsection{\texorpdfstring{containerCartao}{containerCartao}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classContainerCartao}{Container\+Cartao}} container\+Cartao\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{controladoras_8cpp_a4476dfe93aa5999687a379136be6c288}\label{controladoras_8cpp_a4476dfe93aa5999687a379136be6c288} 
+\index{controladoras.cpp@{controladoras.cpp}!containerPessoa@{containerPessoa}}
+\index{containerPessoa@{containerPessoa}!controladoras.cpp@{controladoras.cpp}}
+\doxysubsubsection{\texorpdfstring{containerPessoa}{containerPessoa}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classContainerPessoa}{Container\+Pessoa}} container\+Pessoa\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{controladoras_8cpp_ad4d03640001f05e308ee751cc44bcf8d}\label{controladoras_8cpp_ad4d03640001f05e308ee751cc44bcf8d} 
+\index{controladoras.cpp@{controladoras.cpp}!containerProjeto@{containerProjeto}}
+\index{containerProjeto@{containerProjeto}!controladoras.cpp@{controladoras.cpp}}
+\doxysubsubsection{\texorpdfstring{containerProjeto}{containerProjeto}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classContainerProjeto}{Container\+Projeto}} container\+Projeto\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{controladoras_8cpp_a094205072ac8583f7643ebad3bdb565c}\label{controladoras_8cpp_a094205072ac8583f7643ebad3bdb565c} 
+\index{controladoras.cpp@{controladoras.cpp}!containerQuadro@{containerQuadro}}
+\index{containerQuadro@{containerQuadro}!controladoras.cpp@{controladoras.cpp}}
+\doxysubsubsection{\texorpdfstring{containerQuadro}{containerQuadro}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classContainerQuadro}{Container\+Quadro}} container\+Quadro\hspace{0.3cm}{\ttfamily [static]}}
+

@@ -1,6 +1,15 @@
 var annotated_dup =
 [
     [ "CartaodeAtividade", "classCartaodeAtividade.html", "classCartaodeAtividade" ],
+    [ "cntrAprAutenticacao", "classcntrAprAutenticacao.html", "classcntrAprAutenticacao" ],
+    [ "cntrAprPessoas", "classcntrAprPessoas.html", "classcntrAprPessoas" ],
+    [ "cntrAprProjetos", "classcntrAprProjetos.html", "classcntrAprProjetos" ],
+    [ "cntrAprQuadros", "classcntrAprQuadros.html", "classcntrAprQuadros" ],
+    [ "cntrControlePrincipal", "classcntrControlePrincipal.html", "classcntrControlePrincipal" ],
+    [ "CntrSerAutenticacao", "classCntrSerAutenticacao.html", "classCntrSerAutenticacao" ],
+    [ "CntrSerPessoas", "classCntrSerPessoas.html", "classCntrSerPessoas" ],
+    [ "CntrSerProjetos", "classCntrSerProjetos.html", "classCntrSerProjetos" ],
+    [ "CntrSerQuadros", "classCntrSerQuadros.html", "classCntrSerQuadros" ],
     [ "ContainerCartao", "classContainerCartao.html", "classContainerCartao" ],
     [ "ContainerPessoa", "classContainerPessoa.html", "classContainerPessoa" ],
     [ "ContainerProjeto", "classContainerProjeto.html", "classContainerProjeto" ],

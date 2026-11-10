@@ -99,7 +99,7 @@ $(document).ready(function(){initNavTree('classContainerPessoa.html',''); initRe
 </div><!--header-->
 <div class="contents">
 
-<p>Classe que representa o armazenamento de instâncias da classe <a class="el" href="classPessoa.html" title="Classe que representa um usuário do programa(Desenvolvedor ou Gestor)">Pessoa</a>.  
+<p>Gerencia o armazenamento em RAM das instâncias da classe <a class="el" href="classPessoa.html" title="Classe que representa um usuário do programa (Desenvolvedor ou Gestor).">Pessoa</a>.  
  <a href="classContainerPessoa.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="containers_8hpp_source.html">containers.hpp</a>&gt;</code></p>
@@ -107,27 +107,26 @@ $(document).ready(function(){initNavTree('classContainerPessoa.html',''); initRe
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aa8d94dc54ca42e5c5fd5678175475797" id="r_aa8d94dc54ca42e5c5fd5678175475797"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classContainerPessoa.html#aa8d94dc54ca42e5c5fd5678175475797">incluir</a> (const <a class="el" href="classPessoa.html">Pessoa</a> &amp;pessoa)</td></tr>
-<tr class="memdesc:aa8d94dc54ca42e5c5fd5678175475797"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adiciona uma instância dada de <a class="el" href="classPessoa.html" title="Classe que representa um usuário do programa(Desenvolvedor ou Gestor)">Pessoa</a> no mapa.  <br /></td></tr>
+<tr class="memdesc:aa8d94dc54ca42e5c5fd5678175475797"><td class="mdescLeft">&#160;</td><td class="mdescRight">Insere uma nova pessoa no container.  <br /></td></tr>
 <tr class="separator:aa8d94dc54ca42e5c5fd5678175475797"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a866eacfc83cccb3dbebdf80978a9d50f" id="r_a866eacfc83cccb3dbebdf80978a9d50f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classContainerPessoa.html#a866eacfc83cccb3dbebdf80978a9d50f">remover</a> (const <a class="el" href="classEmail.html">Email</a> &amp;email)</td></tr>
-<tr class="memdesc:a866eacfc83cccb3dbebdf80978a9d50f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove uma pessoa do mapa a partir de um <a class="el" href="classEmail.html" title="Classe que representa o endereço de correio eletrônico de um usuário do sistema.">Email</a> informado.  <br /></td></tr>
+<tr class="memdesc:a866eacfc83cccb3dbebdf80978a9d50f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove o registro de uma pessoa do container.  <br /></td></tr>
 <tr class="separator:a866eacfc83cccb3dbebdf80978a9d50f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af5855bc72975afee238ee0a97e50751c" id="r_af5855bc72975afee238ee0a97e50751c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classContainerPessoa.html#af5855bc72975afee238ee0a97e50751c">pesquisar</a> (const <a class="el" href="classEmail.html">Email</a> &amp;email, <a class="el" href="classPessoa.html">Pessoa</a> *pessoaRetorno)</td></tr>
-<tr class="memdesc:af5855bc72975afee238ee0a97e50751c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Procura pela existência de uma <a class="el" href="classPessoa.html" title="Classe que representa um usuário do programa(Desenvolvedor ou Gestor)">Pessoa</a> através de um <a class="el" href="classEmail.html" title="Classe que representa o endereço de correio eletrônico de um usuário do sistema.">Email</a> informado e atualiza os dados de um ponteiro de <a class="el" href="classPessoa.html" title="Classe que representa um usuário do programa(Desenvolvedor ou Gestor)">Pessoa</a> para copiar os dados encontrados.  <br /></td></tr>
+<tr class="memdesc:af5855bc72975afee238ee0a97e50751c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pesquisa os dados de uma pessoa no container.  <br /></td></tr>
 <tr class="separator:af5855bc72975afee238ee0a97e50751c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afedab7918086d2d056a5aac08fa65738" id="r_afedab7918086d2d056a5aac08fa65738"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classContainerPessoa.html#afedab7918086d2d056a5aac08fa65738">atualizar</a> (const <a class="el" href="classPessoa.html">Pessoa</a> &amp;pessoa)</td></tr>
-<tr class="memdesc:afedab7918086d2d056a5aac08fa65738"><td class="mdescLeft">&#160;</td><td class="mdescRight">Procura por uma instância de <a class="el" href="classPessoa.html" title="Classe que representa um usuário do programa(Desenvolvedor ou Gestor)">Pessoa</a> com o mesmo identificador <a class="el" href="classEmail.html" title="Classe que representa o endereço de correio eletrônico de um usuário do sistema.">Email</a> e a substitui pela dada.  <br /></td></tr>
+<tr class="memdesc:afedab7918086d2d056a5aac08fa65738"><td class="mdescLeft">&#160;</td><td class="mdescRight">Atualiza as informações de uma pessoa cadastrada.  <br /></td></tr>
 <tr class="separator:afedab7918086d2d056a5aac08fa65738"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:ac3f8aa459c8530138a12ac4cb7ff15a5" id="r_ac3f8aa459c8530138a12ac4cb7ff15a5"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; std::string, <a class="el" href="classPessoa.html">Pessoa</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classContainerPessoa.html#ac3f8aa459c8530138a12ac4cb7ff15a5">mapaPessoas</a></td></tr>
-<tr class="memdesc:ac3f8aa459c8530138a12ac4cb7ff15a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Instância de Mapa que irá armazenar as instâncias de <a class="el" href="classPessoa.html" title="Classe que representa um usuário do programa(Desenvolvedor ou Gestor)">Pessoa</a>.  <br /></td></tr>
+<tr class="memdesc:ac3f8aa459c8530138a12ac4cb7ff15a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tabela hash de armazenamento das pessoas utilizando o e-mail como chave primária.  <br /></td></tr>
 <tr class="separator:ac3f8aa459c8530138a12ac4cb7ff15a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Classe que representa o armazenamento de instâncias da classe <a class="el" href="classPessoa.html" title="Classe que representa um usuário do programa(Desenvolvedor ou Gestor)">Pessoa</a>. </p>
-<p>A classe utiliza da estrutura mapa para armazenar as instâncias e facilitar o encontro e remoção dessas utilizando o <a class="el" href="classEmail.html" title="Classe que representa o endereço de correio eletrônico de um usuário do sistema.">Email</a> como chave primária de procura. </p>
+<div class="textblock"><p>Gerencia o armazenamento em RAM das instâncias da classe <a class="el" href="classPessoa.html" title="Classe que representa um usuário do programa (Desenvolvedor ou Gestor).">Pessoa</a>. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="afedab7918086d2d056a5aac08fa65738" name="afedab7918086d2d056a5aac08fa65738"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afedab7918086d2d056a5aac08fa65738">&#9670;&#160;</a></span>atualizar()</h2>
@@ -145,16 +144,16 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Procura por uma instância de <a class="el" href="classPessoa.html" title="Classe que representa um usuário do programa(Desenvolvedor ou Gestor)">Pessoa</a> com o mesmo identificador <a class="el" href="classEmail.html" title="Classe que representa o endereço de correio eletrônico de um usuário do sistema.">Email</a> e a substitui pela dada. </p>
+<p>Atualiza as informações de uma pessoa cadastrada. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">pessoa</td><td>Novos dados que serão colocados no lugar dos anteriores. </td></tr>
+    <tr><td class="paramname">pessoa</td><td>Referência para a entidade <a class="el" href="classPessoa.html" title="Classe que representa um usuário do programa (Desenvolvedor ou Gestor).">Pessoa</a> com as novas informações. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>true Se houve a atualização. </dd>
+<dl class="section return"><dt>Returns</dt><dd>true Se a alteração for realizada com sucesso. </dd>
 <dd>
-false Se não foi encontrada nenhuma instância com o mesmo identificador informado. </dd></dl>
+false Caso a pessoa não seja encontrada. </dd></dl>
 
 </div>
 </div>
@@ -174,16 +173,16 @@ false Se não foi encontrada nenhuma instância com o mesmo identificador inform
       </table>
 </div><div class="memdoc">
 
-<p>Adiciona uma instância dada de <a class="el" href="classPessoa.html" title="Classe que representa um usuário do programa(Desenvolvedor ou Gestor)">Pessoa</a> no mapa. </p>
+<p>Insere uma nova pessoa no container. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">pessoa</td><td><a class="el" href="classPessoa.html" title="Classe que representa um usuário do programa(Desenvolvedor ou Gestor)">Pessoa</a> que deseja-se adicionar. </td></tr>
+    <tr><td class="paramname">pessoa</td><td>Referência para o objeto <a class="el" href="classPessoa.html" title="Classe que representa um usuário do programa (Desenvolvedor ou Gestor).">Pessoa</a> a ser cadastrado. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>true Se foi possível adicionar ao mapa. </dd>
+<dl class="section return"><dt>Returns</dt><dd>true Se o cadastro foi realizado com sucesso. </dd>
 <dd>
-false Se não foi possível adicionar ao mapa, já existe uma instância no mapa com aquele identificador. </dd></dl>
+false Caso a pessoa já esteja cadastrada no sistema. </dd></dl>
 
 </div>
 </div>
@@ -213,17 +212,17 @@ false Se não foi possível adicionar ao mapa, já existe uma instância no mapa
       </table>
 </div><div class="memdoc">
 
-<p>Procura pela existência de uma <a class="el" href="classPessoa.html" title="Classe que representa um usuário do programa(Desenvolvedor ou Gestor)">Pessoa</a> através de um <a class="el" href="classEmail.html" title="Classe que representa o endereço de correio eletrônico de um usuário do sistema.">Email</a> informado e atualiza os dados de um ponteiro de <a class="el" href="classPessoa.html" title="Classe que representa um usuário do programa(Desenvolvedor ou Gestor)">Pessoa</a> para copiar os dados encontrados. </p>
+<p>Pesquisa os dados de uma pessoa no container. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">email</td><td><a class="el" href="classEmail.html" title="Classe que representa o endereço de correio eletrônico de um usuário do sistema.">Email</a> usado para a procura. </td></tr>
-    <tr><td class="paramname">pessoaRetorno</td><td>Ponteiro de <a class="el" href="classPessoa.html" title="Classe que representa um usuário do programa(Desenvolvedor ou Gestor)">Pessoa</a> que retornará os dados encontrados. </td></tr>
+    <tr><td class="paramname">email</td><td>Referência para o <a class="el" href="classEmail.html" title="Classe que representa o endereço de correio eletrônico de um usuário do sistema.">Email</a> de busca. </td></tr>
+    <tr><td class="paramname">pessoaRetorno</td><td>Ponteiro onde os dados da pessoa localizada serão armazenados. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>true Se encontrou aquele <a class="el" href="classEmail.html" title="Classe que representa o endereço de correio eletrônico de um usuário do sistema.">Email</a> no Mapa. </dd>
+<dl class="section return"><dt>Returns</dt><dd>true Se a pessoa for localizada. </dd>
 <dd>
-false Se não encontrou. </dd></dl>
+false Caso contrário. </dd></dl>
 
 </div>
 </div>
@@ -243,16 +242,16 @@ false Se não encontrou. </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Remove uma pessoa do mapa a partir de um <a class="el" href="classEmail.html" title="Classe que representa o endereço de correio eletrônico de um usuário do sistema.">Email</a> informado. </p>
+<p>Remove o registro de uma pessoa do container. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">email</td><td><a class="el" href="classEmail.html" title="Classe que representa o endereço de correio eletrônico de um usuário do sistema.">Email</a> que será utilizado para a procura da instância a ser removida. </td></tr>
+    <tr><td class="paramname">email</td><td>Referência para o <a class="el" href="classEmail.html" title="Classe que representa o endereço de correio eletrônico de um usuário do sistema.">Email</a> que atua como chave primária de remoção. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>true Se houve remoção. </dd>
+<dl class="section return"><dt>Returns</dt><dd>true Se a remoção for concluída com sucesso. </dd>
 <dd>
-false Se aquele identificador não está presente no mapa. </dd></dl>
+false Caso a pessoa não exista. </dd></dl>
 
 </div>
 </div>
@@ -277,13 +276,13 @@ false Se aquele identificador não está presente no mapa. </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p>Instância de Mapa que irá armazenar as instâncias de <a class="el" href="classPessoa.html" title="Classe que representa um usuário do programa(Desenvolvedor ou Gestor)">Pessoa</a>. </p>
+<p>Tabela hash de armazenamento das pessoas utilizando o e-mail como chave primária. </p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>/home/mateuschrist/Trabalho-TP1_2026_2-UnB/Headers/<a class="el" href="containers_8hpp_source.html">containers.hpp</a></li>
-<li>/home/mateuschrist/Trabalho-TP1_2026_2-UnB/Sources/<a class="el" href="containers_8cpp.html">containers.cpp</a></li>
+<li>/home/italomrnd/UnB/CicloBásicoCIC/TP1_26_2/Trabalho26_2/Headers/<a class="el" href="containers_8hpp_source.html">containers.hpp</a></li>
+<li>/home/italomrnd/UnB/CicloBásicoCIC/TP1_26_2/Trabalho26_2/Sources/<a class="el" href="containers_8cpp.html">containers.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

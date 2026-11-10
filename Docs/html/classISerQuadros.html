@@ -102,6 +102,16 @@ $(document).ready(function(){initNavTree('classISerQuadros.html',''); initResiza
  <a href="classISerQuadros.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="interfaces_8hpp_source.html">interfaces.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for ISerQuadros:</div>
+<div class="dyncontent">
+<div class="center"><img src="classISerQuadros__inherit__graph.png" border="0" usemap="#aISerQuadros_inherit__map" alt="Inheritance graph"/></div>
+<map name="aISerQuadros_inherit__map" id="aISerQuadros_inherit__map">
+<area shape="rect" title="Interface para a camada de serviço de gestão de quadros e cartões de atividade utilizando o padrão Fa..." alt="" coords="17,5,118,31"/>
+<area shape="rect" href="classCntrSerQuadros.html" title="Controladora responsável pela gestão dos serviços CRUD e Listar das entidades Quadros e Cartões de At..." alt="" coords="5,79,129,104"/>
+<area shape="poly" title=" " alt="" coords="70,44,70,79,65,79,65,44"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -138,6 +148,24 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a8d88d5058bccd4e44529b2216f0d094a" id="r_a8d88d5058bccd4e44529b2216f0d094a"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classISerQuadros.html#a8d88d5058bccd4e44529b2216f0d094a">listarCartoes</a> (const <a class="el" href="classIdentificador.html">Identificador</a> &amp;idQuadro, std::list&lt; <a class="el" href="classCartaodeAtividade.html">CartaodeAtividade</a> &gt; *listaRetorno)=0</td></tr>
 <tr class="memdesc:a8d88d5058bccd4e44529b2216f0d094a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lista todos os cartões de atividades associados a um quadro específico.  <br /></td></tr>
 <tr class="separator:a8d88d5058bccd4e44529b2216f0d094a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a184ce93c5bd0745c06036cbd1c75d8b4" id="r_a184ce93c5bd0745c06036cbd1c75d8b4"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classISerQuadros.html#a184ce93c5bd0745c06036cbd1c75d8b4">moverCartao</a> (const <a class="el" href="classIdentificador.html">Identificador</a> &amp;idCartao, const <a class="el" href="classEstado.html">Estado</a> &amp;novoEstado, const <a class="el" href="classTimestamp.html">Timestamp</a> &amp;momentoAtual)=0</td></tr>
+<tr class="memdesc:a184ce93c5bd0745c06036cbd1c75d8b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Promove a transição de estado de um cartão no fluxo Kanban.  <br /></td></tr>
+<tr class="separator:a184ce93c5bd0745c06036cbd1c75d8b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3673482789ed0aef77ba101cfed04cb" id="r_ac3673482789ed0aef77ba101cfed04cb"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classISerQuadros.html#ac3673482789ed0aef77ba101cfed04cb">lerTempoCiclo</a> (const <a class="el" href="classIdentificador.html">Identificador</a> &amp;idCartao, double *tempoSegundos)=0</td></tr>
+<tr class="memdesc:ac3673482789ed0aef77ba101cfed04cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Consulta o Tempo de Ciclo (Cycle Time) de uma atividade concluída.  <br /></td></tr>
+<tr class="separator:ac3673482789ed0aef77ba101cfed04cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d91b164f6c5825e4579fbb7afbfbb5d" id="r_a7d91b164f6c5825e4579fbb7afbfbb5d"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classISerQuadros.html#a7d91b164f6c5825e4579fbb7afbfbb5d">lerTempoCicloMedio</a> (const <a class="el" href="classIdentificador.html">Identificador</a> &amp;idQuadro, double *mediaSegundos)=0</td></tr>
+<tr class="memdesc:a7d91b164f6c5825e4579fbb7afbfbb5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Consulta o Tempo de Ciclo médio dos cartões concluídos de um quadro.  <br /></td></tr>
+<tr class="separator:a7d91b164f6c5825e4579fbb7afbfbb5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a245bf97b0d665bb7070a2a0e037c8449" id="r_a245bf97b0d665bb7070a2a0e037c8449"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classISerQuadros.html#a245bf97b0d665bb7070a2a0e037c8449">lerLeadTime</a> (const <a class="el" href="classIdentificador.html">Identificador</a> &amp;idCartao, double *tempoSegundos)=0</td></tr>
+<tr class="memdesc:a245bf97b0d665bb7070a2a0e037c8449"><td class="mdescLeft">&#160;</td><td class="mdescRight">Consulta o Lead Time de uma atividade concluída.  <br /></td></tr>
+<tr class="separator:a245bf97b0d665bb7070a2a0e037c8449"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a089a01dc321f4d165b1e6f4f0604d67c" id="r_a089a01dc321f4d165b1e6f4f0604d67c"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classISerQuadros.html#a089a01dc321f4d165b1e6f4f0604d67c">lerLeadTimeMedio</a> (const <a class="el" href="classIdentificador.html">Identificador</a> &amp;idQuadro, double *mediaSegundos)=0</td></tr>
+<tr class="memdesc:a089a01dc321f4d165b1e6f4f0604d67c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Consulta o Lead Time médio dos cartões concluídos de um quadro.  <br /></td></tr>
+<tr class="separator:a089a01dc321f4d165b1e6f4f0604d67c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6be4f5fb2b352c72ba71af901f0a2003" id="r_a6be4f5fb2b352c72ba71af901f0a2003"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classISerQuadros.html#a6be4f5fb2b352c72ba71af901f0a2003">lerWIP</a> (const <a class="el" href="classIdentificador.html">Identificador</a> &amp;idQuadro, int *quantidadeWIP)=0</td></tr>
+<tr class="memdesc:a6be4f5fb2b352c72ba71af901f0a2003"><td class="mdescLeft">&#160;</td><td class="mdescRight">Consulta a quantidade de Work in Progress (WIP) de um quadro.  <br /></td></tr>
+<tr class="separator:a6be4f5fb2b352c72ba71af901f0a2003"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Interface para a camada de serviço de gestão de quadros e cartões de atividade utilizando o padrão Facade. </p>
@@ -205,6 +233,8 @@ Public Member Functions</h2></td></tr>
 <dd>
 false Caso contrário. </dd></dl>
 
+<p>Implemented in <a class="el" href="classCntrSerQuadros.html#a16e1dcadb77592e472764fe5df199d3b">CntrSerQuadros</a>.</p>
+
 </div>
 </div>
 <a id="a5bf7613dff2d5827156f33264e342e83" name="a5bf7613dff2d5827156f33264e342e83"></a>
@@ -242,6 +272,8 @@ false Caso contrário. </dd></dl>
 <dd>
 false Caso contrário. </dd></dl>
 
+<p>Implemented in <a class="el" href="classCntrSerQuadros.html#ab19563a3c93e17e9313c724ce169783f">CntrSerQuadros</a>.</p>
+
 </div>
 </div>
 <a id="a77847b678914adbeae0be6f998db7ccb" name="a77847b678914adbeae0be6f998db7ccb"></a>
@@ -278,6 +310,8 @@ false Caso contrário. </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>true Se o registro for efetuado com sucesso. </dd>
 <dd>
 false Caso contrário. </dd></dl>
+
+<p>Implemented in <a class="el" href="classCntrSerQuadros.html#ae637d643552f0df8dd7a793eef6ded55">CntrSerQuadros</a>.</p>
 
 </div>
 </div>
@@ -327,6 +361,8 @@ false Caso contrário. </dd></dl>
 <dd>
 false Caso contrário. </dd></dl>
 
+<p>Implemented in <a class="el" href="classCntrSerQuadros.html#ab72552e15c0e16e902c59fed01012c5f">CntrSerQuadros</a>.</p>
+
 </div>
 </div>
 <a id="ae08b454fcc748fda7e30b0f1429cbab4" name="ae08b454fcc748fda7e30b0f1429cbab4"></a>
@@ -363,6 +399,8 @@ false Caso contrário. </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>true Se o quadro foi excluído com sucesso. </dd>
 <dd>
 false Caso contrário. </dd></dl>
+
+<p>Implemented in <a class="el" href="classCntrSerQuadros.html#a87292e637bd07efad4b44e09b9d3bb19">CntrSerQuadros</a>.</p>
 
 </div>
 </div>
@@ -401,6 +439,8 @@ false Caso contrário. </dd></dl>
 <dd>
 false Caso contrário. </dd></dl>
 
+<p>Implemented in <a class="el" href="classCntrSerQuadros.html#ace0f64e91a9ce36acc93cfd5fd3fa110">CntrSerQuadros</a>.</p>
+
 </div>
 </div>
 <a id="a8ba7cf5e260a23b5a1e852b63494ff25" name="a8ba7cf5e260a23b5a1e852b63494ff25"></a>
@@ -438,6 +478,8 @@ false Caso contrário. </dd></dl>
 <dd>
 false Caso contrário. </dd></dl>
 
+<p>Implemented in <a class="el" href="classCntrSerQuadros.html#ad693e414d9574952a8051ada39f263ce">CntrSerQuadros</a>.</p>
+
 </div>
 </div>
 <a id="a67e346bcb828877d1251cf59772e5e39" name="a67e346bcb828877d1251cf59772e5e39"></a>
@@ -474,6 +516,258 @@ false Caso contrário. </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>true Se o cartão for localizado. </dd>
 <dd>
 false Caso contrário. </dd></dl>
+
+<p>Implemented in <a class="el" href="classCntrSerQuadros.html#a0219e9985c9e1603c226d1af8e31162d">CntrSerQuadros</a>.</p>
+
+</div>
+</div>
+<a id="a245bf97b0d665bb7070a2a0e037c8449" name="a245bf97b0d665bb7070a2a0e037c8449"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a245bf97b0d665bb7070a2a0e037c8449">&#9670;&#160;</a></span>lerLeadTime()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool ISerQuadros::lerLeadTime </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classIdentificador.html">Identificador</a> &amp;&#160;</td>
+          <td class="paramname"><em>idCartao</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>tempoSegundos</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Consulta o Lead Time de uma atividade concluída. </p>
+<p>Calcula o tempo total medindo a diferença temporal da entrada em A FAZER até a chegada em FEITO. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">idCartao</td><td><a class="el" href="classIdentificador.html" title="Classe que define um código de identificação para entidades do sistema.">Identificador</a> do cartão consultado. </td></tr>
+    <tr><td class="paramname">tempoSegundos</td><td>Ponteiro onde será armazenado o valor obtido em segundos. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true Se a medição for realizada com sucesso. </dd>
+<dd>
+false Caso contrário. </dd></dl>
+
+<p>Implemented in <a class="el" href="classCntrSerQuadros.html#ac6620db4923d37af0cf948f50d99abf8">CntrSerQuadros</a>.</p>
+
+</div>
+</div>
+<a id="a089a01dc321f4d165b1e6f4f0604d67c" name="a089a01dc321f4d165b1e6f4f0604d67c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a089a01dc321f4d165b1e6f4f0604d67c">&#9670;&#160;</a></span>lerLeadTimeMedio()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool ISerQuadros::lerLeadTimeMedio </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classIdentificador.html">Identificador</a> &amp;&#160;</td>
+          <td class="paramname"><em>idQuadro</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>mediaSegundos</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Consulta o Lead Time médio dos cartões concluídos de um quadro. </p>
+<p>Realiza a média aritmética do Lead Time das atividades em FEITO do quadro. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">idQuadro</td><td><a class="el" href="classIdentificador.html" title="Classe que define um código de identificação para entidades do sistema.">Identificador</a> do quadro alvo. </td></tr>
+    <tr><td class="paramname">mediaSegundos</td><td>Ponteiro onde será armazenada a média calculada em segundos. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true Se a média for calculada com sucesso. </dd>
+<dd>
+false Caso contrário. </dd></dl>
+
+<p>Implemented in <a class="el" href="classCntrSerQuadros.html#a8477b2d31f49755bf068b6b9a7e2379a">CntrSerQuadros</a>.</p>
+
+</div>
+</div>
+<a id="ac3673482789ed0aef77ba101cfed04cb" name="ac3673482789ed0aef77ba101cfed04cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3673482789ed0aef77ba101cfed04cb">&#9670;&#160;</a></span>lerTempoCiclo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool ISerQuadros::lerTempoCiclo </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classIdentificador.html">Identificador</a> &amp;&#160;</td>
+          <td class="paramname"><em>idCartao</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>tempoSegundos</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Consulta o Tempo de Ciclo (Cycle Time) de uma atividade concluída. </p>
+<p>Calcula o tempo medindo a diferença temporal da entrada em FAZENDO até a chegada em FEITO. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">idCartao</td><td><a class="el" href="classIdentificador.html" title="Classe que define um código de identificação para entidades do sistema.">Identificador</a> do cartão consultado. </td></tr>
+    <tr><td class="paramname">tempoSegundos</td><td>Ponteiro onde será armazenado o valor obtido em segundos. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true Se a medição for realizada com sucesso. </dd>
+<dd>
+false Caso contrário. </dd></dl>
+
+<p>Implemented in <a class="el" href="classCntrSerQuadros.html#a68be16fb83b36cfda8ea9679ec95f6b6">CntrSerQuadros</a>.</p>
+
+</div>
+</div>
+<a id="a7d91b164f6c5825e4579fbb7afbfbb5d" name="a7d91b164f6c5825e4579fbb7afbfbb5d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d91b164f6c5825e4579fbb7afbfbb5d">&#9670;&#160;</a></span>lerTempoCicloMedio()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool ISerQuadros::lerTempoCicloMedio </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classIdentificador.html">Identificador</a> &amp;&#160;</td>
+          <td class="paramname"><em>idQuadro</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>mediaSegundos</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Consulta o Tempo de Ciclo médio dos cartões concluídos de um quadro. </p>
+<p>Realiza a média aritmética do Tempo de Ciclo das atividades em FEITO do quadro. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">idQuadro</td><td><a class="el" href="classIdentificador.html" title="Classe que define um código de identificação para entidades do sistema.">Identificador</a> do quadro alvo. </td></tr>
+    <tr><td class="paramname">mediaSegundos</td><td>Ponteiro onde será armazenada a média calculada em segundos. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true Se a média for calculada com sucesso. </dd>
+<dd>
+false Caso contrário. </dd></dl>
+
+<p>Implemented in <a class="el" href="classCntrSerQuadros.html#a9723aea2b29276b86ec468f4dfb331e0">CntrSerQuadros</a>.</p>
+
+</div>
+</div>
+<a id="a6be4f5fb2b352c72ba71af901f0a2003" name="a6be4f5fb2b352c72ba71af901f0a2003"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6be4f5fb2b352c72ba71af901f0a2003">&#9670;&#160;</a></span>lerWIP()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool ISerQuadros::lerWIP </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classIdentificador.html">Identificador</a> &amp;&#160;</td>
+          <td class="paramname"><em>idQuadro</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>quantidadeWIP</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Consulta a quantidade de Work in Progress (WIP) de um quadro. </p>
+<p>Contabiliza o número total de cartões de atividade alocados na coluna FAZENDO do quadro. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">idQuadro</td><td><a class="el" href="classIdentificador.html" title="Classe que define um código de identificação para entidades do sistema.">Identificador</a> do quadro alvo. </td></tr>
+    <tr><td class="paramname">quantidadeWIP</td><td>Ponteiro onde será armazenada a quantidade de tarefas em andamento. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true Se a contagem for realizada com sucesso. </dd>
+<dd>
+false Caso contrário. </dd></dl>
+
+<p>Implemented in <a class="el" href="classCntrSerQuadros.html#a6cb53a121781934b60c991246b2b373d">CntrSerQuadros</a>.</p>
 
 </div>
 </div>
@@ -523,6 +817,8 @@ false Caso contrário. </dd></dl>
 <dd>
 false Caso contrário. </dd></dl>
 
+<p>Implemented in <a class="el" href="classCntrSerQuadros.html#afcde07e2f83c06ad7079fc315a31a213">CntrSerQuadros</a>.</p>
+
 </div>
 </div>
 <a id="a8d88d5058bccd4e44529b2216f0d094a" name="a8d88d5058bccd4e44529b2216f0d094a"></a>
@@ -571,10 +867,69 @@ false Caso contrário. </dd></dl>
 <dd>
 false Caso contrário. </dd></dl>
 
+<p>Implemented in <a class="el" href="classCntrSerQuadros.html#a68b88dcdc5bdd387a2368dd8a2703061">CntrSerQuadros</a>.</p>
+
+</div>
+</div>
+<a id="a184ce93c5bd0745c06036cbd1c75d8b4" name="a184ce93c5bd0745c06036cbd1c75d8b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a184ce93c5bd0745c06036cbd1c75d8b4">&#9670;&#160;</a></span>moverCartao()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool ISerQuadros::moverCartao </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classIdentificador.html">Identificador</a> &amp;&#160;</td>
+          <td class="paramname"><em>idCartao</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classEstado.html">Estado</a> &amp;&#160;</td>
+          <td class="paramname"><em>novoEstado</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classTimestamp.html">Timestamp</a> &amp;&#160;</td>
+          <td class="paramname"><em>momentoAtual</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Promove a transição de estado de um cartão no fluxo Kanban. </p>
+<p>Realiza as movimentações permitidas pelo sistema (A FAZER -&gt; FAZENDO e FAZENDO -&gt; FEITO). </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">idCartao</td><td><a class="el" href="classIdentificador.html" title="Classe que define um código de identificação para entidades do sistema.">Identificador</a> da atividade a ser movimentada. </td></tr>
+    <tr><td class="paramname">novoEstado</td><td>Instância com o novo estado de destino. </td></tr>
+    <tr><td class="paramname">momentoAtual</td><td>Instância de <a class="el" href="classTimestamp.html" title="Define sequência de caracteres ou números que identifica quando um evento específico ocorreu....">Timestamp</a> registrando o momento da transição. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true Se a movimentação for realizada com sucesso. </dd>
+<dd>
+false Caso contrário. </dd></dl>
+
+<p>Implemented in <a class="el" href="classCntrSerQuadros.html#ac97be6c8a82d019abf0144be440c43b1">CntrSerQuadros</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>/home/mateuschrist/Trabalho-TP1_2026_2-UnB/Headers/<a class="el" href="interfaces_8hpp_source.html">interfaces.hpp</a></li>
+<li>/home/italomrnd/UnB/CicloBásicoCIC/TP1_26_2/Trabalho26_2/Headers/<a class="el" href="interfaces_8hpp_source.html">interfaces.hpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

@@ -2,7 +2,7 @@
 \hypertarget{classContainerProjeto}{}\label{classContainerProjeto}\index{ContainerProjeto@{ContainerProjeto}}
 
 
-Classe que representa o armazenamento de instâncias da classe \doxylink{classProjeto}{Projeto}.  
+Gerencia o armazenamento em RAM das instâncias da classe \doxylink{classProjeto}{Projeto}.  
 
 
 
@@ -13,24 +13,24 @@ Classe que representa o armazenamento de instâncias da classe \doxylink{classPr
 \begin{DoxyCompactItemize}
 \item 
 bool \mbox{\hyperlink{classContainerProjeto_a67bcd0c36d30d61f50c3643d4ded5131}{incluir}} (const \mbox{\hyperlink{classProjeto}{Projeto}} \&projeto)
-\begin{DoxyCompactList}\small\item\em Adiciona uma instância dada de \doxylink{classProjeto}{Projeto} no mapa. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Insere um novo projeto no container. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classContainerProjeto_a91d0632756f757ff197d18340c5459e9}{remover}} (const \mbox{\hyperlink{classIdentificador}{Identificador}} \&identificador)
-\begin{DoxyCompactList}\small\item\em Remove um projeto do mapa a partir de um \doxylink{classIdentificador}{Identificador} informado. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Remove um projeto do container. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classContainerProjeto_a17108005c19717e320b3f164385e3751}{pesquisar}} (const \mbox{\hyperlink{classIdentificador}{Identificador}} \&identificador, \mbox{\hyperlink{classProjeto}{Projeto}} \texorpdfstring{$\ast$}{*}projeto\+Retorno)
-\begin{DoxyCompactList}\small\item\em Procura pela existência de um \doxylink{classProjeto}{Projeto} através de um \doxylink{classIdentificador}{Identificador} informado e atualiza os dados de um ponteiro de \doxylink{classProjeto}{Projeto} para copiar os dados encontrados. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Pesquisa um projeto no container. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classContainerProjeto_ae7f39b7160054bc1a6bbe9968727bad0}{atualizar}} (const \mbox{\hyperlink{classProjeto}{Projeto}} \&projeto)
-\begin{DoxyCompactList}\small\item\em Procura por uma instância de \doxylink{classProjeto}{Projeto} com o mesmo \doxylink{classIdentificador}{Identificador} e a substitui pela dada. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Atualiza as informações de um projeto armazenado. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classContainerProjeto_a8ad1996d6a32f3e5ef22f61c1738202f}{listar}} (const \mbox{\hyperlink{classEmail}{Email}} \&gestor, std\+::list$<$ \mbox{\hyperlink{classProjeto}{Projeto}} $>$ \texorpdfstring{$\ast$}{*}lista\+Retorno)
+\begin{DoxyCompactList}\small\item\em Lista todos os projetos onde o e-\/mail fornecido é o gestor responsável. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
-std\+::unordered\+\_\+map$<$ std\+::string, \mbox{\hyperlink{classProjeto}{Projeto}} $>$ \mbox{\hyperlink{classContainerProjeto_a9ff119ded70309c5db3082301558ee6a}{mapa\+Projeto}}
-\begin{DoxyCompactList}\small\item\em Instância de Mapa que irá armazenar as instâncias de \doxylink{classProjeto}{Projeto}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+std\+::unordered\+\_\+map$<$ std\+::string, \mbox{\hyperlink{classProjeto}{Projeto}} $>$ \mbox{\hyperlink{classContainerProjeto_a1f6c7cc03b613979e77a2023bcf14d01}{mapa\+Projetos}}
+\begin{DoxyCompactList}\small\item\em Tabela hash de armazenamento dos projetos utilizando o identificador como chave primária. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
-Classe que representa o armazenamento de instâncias da classe \doxylink{classProjeto}{Projeto}. 
-
-A classe utiliza da estrutura mapa para armazenar as instâncias e facilitar o encontro e remoção dessas utilizando o \doxylink{classIdentificador}{Identificador} como chave primária de procura. 
+Gerencia o armazenamento em RAM das instâncias da classe \doxylink{classProjeto}{Projeto}. 
 
 \doxysubsection{Member Function Documentation}
 \Hypertarget{classContainerProjeto_ae7f39b7160054bc1a6bbe9968727bad0}\label{classContainerProjeto_ae7f39b7160054bc1a6bbe9968727bad0} 
@@ -41,17 +41,17 @@ A classe utiliza da estrutura mapa para armazenar as instâncias e facilitar o e
 
 
 
-Procura por uma instância de \doxylink{classProjeto}{Projeto} com o mesmo \doxylink{classIdentificador}{Identificador} e a substitui pela dada. 
+Atualiza as informações de um projeto armazenado. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em projeto} & Novos dados que serão colocados no lugar dos anteriores. \\
+{\em projeto} & Referência para a entidade \doxylink{classProjeto}{Projeto} contendo as novas informações. \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-true Se houve a atualização. 
+true Se o projeto for atualizado com sucesso. 
 
-false Se não foi encontrada nenhuma instância com o mesmo identificador informado. 
+false Caso o projeto não seja encontrado. 
 \end{DoxyReturn}
 \Hypertarget{classContainerProjeto_a67bcd0c36d30d61f50c3643d4ded5131}\label{classContainerProjeto_a67bcd0c36d30d61f50c3643d4ded5131} 
 \index{ContainerProjeto@{ContainerProjeto}!incluir@{incluir}}
@@ -61,17 +61,39 @@ false Se não foi encontrada nenhuma instância com o mesmo identificador inform
 
 
 
-Adiciona uma instância dada de \doxylink{classProjeto}{Projeto} no mapa. 
+Insere um novo projeto no container. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em projeto} & \doxylink{classProjeto}{Projeto} que deseja-\/se adicionar. \\
+{\em projeto} & Referência para o objeto \doxylink{classProjeto}{Projeto} a ser cadastrado. \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-true Se foi possível adicionar ao mapa. 
+true Se a inserção foi efetuada com sucesso. 
 
-false Se não foi possível adicionar ao mapa, já existe uma instância no mapa com aquele identificador. 
+false Se o projeto já existir no container. 
+\end{DoxyReturn}
+\Hypertarget{classContainerProjeto_a8ad1996d6a32f3e5ef22f61c1738202f}\label{classContainerProjeto_a8ad1996d6a32f3e5ef22f61c1738202f} 
+\index{ContainerProjeto@{ContainerProjeto}!listar@{listar}}
+\index{listar@{listar}!ContainerProjeto@{ContainerProjeto}}
+\doxysubsubsection{\texorpdfstring{listar()}{listar()}}
+{\footnotesize\ttfamily bool Container\+Projeto\+::listar (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classEmail}{Email}} \&}]{gestor,  }\item[{std\+::list$<$ \mbox{\hyperlink{classProjeto}{Projeto}} $>$ \texorpdfstring{$\ast$}{*}}]{lista\+Retorno }\end{DoxyParamCaption})}
+
+
+
+Lista todos os projetos onde o e-\/mail fornecido é o gestor responsável. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em gestor} & Referência para o \doxylink{classEmail}{Email} do gestor responsável pelos projetos. \\
+\hline
+{\em lista\+Retorno} & Ponteiro para a lista onde serão inseridos os projetos encontrados. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Se for localizado pelo menos um projeto associado. 
+
+false Caso nenhum projeto seja encontrado. 
 \end{DoxyReturn}
 \Hypertarget{classContainerProjeto_a17108005c19717e320b3f164385e3751}\label{classContainerProjeto_a17108005c19717e320b3f164385e3751} 
 \index{ContainerProjeto@{ContainerProjeto}!pesquisar@{pesquisar}}
@@ -81,19 +103,19 @@ false Se não foi possível adicionar ao mapa, já existe uma instância no mapa
 
 
 
-Procura pela existência de um \doxylink{classProjeto}{Projeto} através de um \doxylink{classIdentificador}{Identificador} informado e atualiza os dados de um ponteiro de \doxylink{classProjeto}{Projeto} para copiar os dados encontrados. 
+Pesquisa um projeto no container. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em identificador} & \doxylink{classIdentificador}{Identificador} usado para a procura. \\
+{\em identificador} & Referência para o \doxylink{classIdentificador}{Identificador} do projeto buscado. \\
 \hline
-{\em projeto\+Retorno} & Ponteiro de \doxylink{classProjeto}{Projeto} que retornará os dados encontrados. \\
+{\em projeto\+Retorno} & Ponteiro onde os dados do projeto localizado serão preenchidos. \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-true Se encontrou aquele \doxylink{classIdentificador}{Identificador} no Mapa. 
+true Se o projeto for localizado. 
 
-false Se não encontrou. 
+false Caso contrário. 
 \end{DoxyReturn}
 \Hypertarget{classContainerProjeto_a91d0632756f757ff197d18340c5459e9}\label{classContainerProjeto_a91d0632756f757ff197d18340c5459e9} 
 \index{ContainerProjeto@{ContainerProjeto}!remover@{remover}}
@@ -103,34 +125,34 @@ false Se não encontrou.
 
 
 
-Remove um projeto do mapa a partir de um \doxylink{classIdentificador}{Identificador} informado. 
+Remove um projeto do container. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em identificador} & \doxylink{classIdentificador}{Identificador} que será utilizado para a procura da instância a ser removida. \\
+{\em identificador} & Referência para o \doxylink{classIdentificador}{Identificador} do projeto a ser removido. \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-true Se houve remoção. 
+true Se a remoção for bem-\/sucedida. 
 
-false Se aquele identificador não está presente no mapa. 
+false Caso contrário. 
 \end{DoxyReturn}
 
 
 \doxysubsection{Member Data Documentation}
-\Hypertarget{classContainerProjeto_a9ff119ded70309c5db3082301558ee6a}\label{classContainerProjeto_a9ff119ded70309c5db3082301558ee6a} 
-\index{ContainerProjeto@{ContainerProjeto}!mapaProjeto@{mapaProjeto}}
-\index{mapaProjeto@{mapaProjeto}!ContainerProjeto@{ContainerProjeto}}
-\doxysubsubsection{\texorpdfstring{mapaProjeto}{mapaProjeto}}
-{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$std\+::string, \mbox{\hyperlink{classProjeto}{Projeto}}$>$ Container\+Projeto\+::mapa\+Projeto\hspace{0.3cm}{\ttfamily [private]}}
+\Hypertarget{classContainerProjeto_a1f6c7cc03b613979e77a2023bcf14d01}\label{classContainerProjeto_a1f6c7cc03b613979e77a2023bcf14d01} 
+\index{ContainerProjeto@{ContainerProjeto}!mapaProjetos@{mapaProjetos}}
+\index{mapaProjetos@{mapaProjetos}!ContainerProjeto@{ContainerProjeto}}
+\doxysubsubsection{\texorpdfstring{mapaProjetos}{mapaProjetos}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$std\+::string, \mbox{\hyperlink{classProjeto}{Projeto}}$>$ Container\+Projeto\+::mapa\+Projetos\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
-Instância de Mapa que irá armazenar as instâncias de \doxylink{classProjeto}{Projeto}. 
+Tabela hash de armazenamento dos projetos utilizando o identificador como chave primária. 
 
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-/home/mateuschrist/\+Trabalho-\/\+TP1\+\_\+2026\+\_\+2-\/\+Un\+B/\+Headers/\mbox{\hyperlink{containers_8hpp}{containers.\+hpp}}\item 
-/home/mateuschrist/\+Trabalho-\/\+TP1\+\_\+2026\+\_\+2-\/\+Un\+B/\+Sources/\mbox{\hyperlink{containers_8cpp}{containers.\+cpp}}\end{DoxyCompactItemize}
+/home/italomrnd/\+Un\+B/\+Ciclo\+Básico\+CIC/\+TP1\+\_\+26\+\_\+2/\+Trabalho26\+\_\+2/\+Headers/\mbox{\hyperlink{containers_8hpp}{containers.\+hpp}}\item 
+/home/italomrnd/\+Un\+B/\+Ciclo\+Básico\+CIC/\+TP1\+\_\+26\+\_\+2/\+Trabalho26\+\_\+2/\+Sources/\mbox{\hyperlink{containers_8cpp}{containers.\+cpp}}\end{DoxyCompactItemize}

@@ -9,6 +9,16 @@ Interface para a camada de serviço de gestão de quadros e cartões de atividad
 
 {\ttfamily \#include $<$interfaces.\+hpp$>$}
 
+
+
+Inheritance diagram for ISer\+Quadros\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=173pt]{classISerQuadros__inherit__graph}
+\end{center}
+\end{figure}
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -33,7 +43,19 @@ virtual bool \mbox{\hyperlink{classISerQuadros_a5bf7613dff2d5827156f33264e342e83
 virtual bool \mbox{\hyperlink{classISerQuadros_a272ab5c99ec641fe54054a126aebc8ba}{excluir\+Cartao}} (const \mbox{\hyperlink{classIdentificador}{Identificador}} \&identificador)=0
 \begin{DoxyCompactList}\small\item\em Remove um cartão de atividade registrado do sistema. \end{DoxyCompactList}\item 
 virtual bool \mbox{\hyperlink{classISerQuadros_a8d88d5058bccd4e44529b2216f0d094a}{listar\+Cartoes}} (const \mbox{\hyperlink{classIdentificador}{Identificador}} \&id\+Quadro, std\+::list$<$ \mbox{\hyperlink{classCartaodeAtividade}{Cartaode\+Atividade}} $>$ \texorpdfstring{$\ast$}{*}lista\+Retorno)=0
-\begin{DoxyCompactList}\small\item\em Lista todos os cartões de atividades associados a um quadro específico. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Lista todos os cartões de atividades associados a um quadro específico. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classISerQuadros_a184ce93c5bd0745c06036cbd1c75d8b4}{mover\+Cartao}} (const \mbox{\hyperlink{classIdentificador}{Identificador}} \&id\+Cartao, const \mbox{\hyperlink{classEstado}{Estado}} \&novo\+Estado, const \mbox{\hyperlink{classTimestamp}{Timestamp}} \&momento\+Atual)=0
+\begin{DoxyCompactList}\small\item\em Promove a transição de estado de um cartão no fluxo Kanban. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classISerQuadros_ac3673482789ed0aef77ba101cfed04cb}{ler\+Tempo\+Ciclo}} (const \mbox{\hyperlink{classIdentificador}{Identificador}} \&id\+Cartao, double \texorpdfstring{$\ast$}{*}tempo\+Segundos)=0
+\begin{DoxyCompactList}\small\item\em Consulta o Tempo de Ciclo (Cycle Time) de uma atividade concluída. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classISerQuadros_a7d91b164f6c5825e4579fbb7afbfbb5d}{ler\+Tempo\+Ciclo\+Medio}} (const \mbox{\hyperlink{classIdentificador}{Identificador}} \&id\+Quadro, double \texorpdfstring{$\ast$}{*}media\+Segundos)=0
+\begin{DoxyCompactList}\small\item\em Consulta o Tempo de Ciclo médio dos cartões concluídos de um quadro. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classISerQuadros_a245bf97b0d665bb7070a2a0e037c8449}{ler\+Lead\+Time}} (const \mbox{\hyperlink{classIdentificador}{Identificador}} \&id\+Cartao, double \texorpdfstring{$\ast$}{*}tempo\+Segundos)=0
+\begin{DoxyCompactList}\small\item\em Consulta o Lead Time de uma atividade concluída. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classISerQuadros_a089a01dc321f4d165b1e6f4f0604d67c}{ler\+Lead\+Time\+Medio}} (const \mbox{\hyperlink{classIdentificador}{Identificador}} \&id\+Quadro, double \texorpdfstring{$\ast$}{*}media\+Segundos)=0
+\begin{DoxyCompactList}\small\item\em Consulta o Lead Time médio dos cartões concluídos de um quadro. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classISerQuadros_a6be4f5fb2b352c72ba71af901f0a2003}{ler\+WIP}} (const \mbox{\hyperlink{classIdentificador}{Identificador}} \&id\+Quadro, int \texorpdfstring{$\ast$}{*}quantidade\+WIP)=0
+\begin{DoxyCompactList}\small\item\em Consulta a quantidade de Work in Progress (WIP) de um quadro. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -73,6 +95,10 @@ true Se a atualização for concluída com sucesso.
 
 false Caso contrário. 
 \end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classCntrSerQuadros_a16e1dcadb77592e472764fe5df199d3b}{Cntr\+Ser\+Quadros}}.
+
 \Hypertarget{classISerQuadros_a5bf7613dff2d5827156f33264e342e83}\label{classISerQuadros_a5bf7613dff2d5827156f33264e342e83} 
 \index{ISerQuadros@{ISerQuadros}!atualizarCartao@{atualizarCartao}}
 \index{atualizarCartao@{atualizarCartao}!ISerQuadros@{ISerQuadros}}
@@ -93,6 +119,10 @@ true Se a atualização for concluída com sucesso.
 
 false Caso contrário. 
 \end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classCntrSerQuadros_ab19563a3c93e17e9313c724ce169783f}{Cntr\+Ser\+Quadros}}.
+
 \Hypertarget{classISerQuadros_a77847b678914adbeae0be6f998db7ccb}\label{classISerQuadros_a77847b678914adbeae0be6f998db7ccb} 
 \index{ISerQuadros@{ISerQuadros}!criar@{criar}}
 \index{criar@{criar}!ISerQuadros@{ISerQuadros}}
@@ -113,6 +143,10 @@ true Se o registro for efetuado com sucesso.
 
 false Caso contrário. 
 \end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classCntrSerQuadros_ae637d643552f0df8dd7a793eef6ded55}{Cntr\+Ser\+Quadros}}.
+
 \Hypertarget{classISerQuadros_a55e22c53a3fb0064fd3a500d3e13c89c}\label{classISerQuadros_a55e22c53a3fb0064fd3a500d3e13c89c} 
 \index{ISerQuadros@{ISerQuadros}!criarCartao@{criarCartao}}
 \index{criarCartao@{criarCartao}!ISerQuadros@{ISerQuadros}}
@@ -135,6 +169,10 @@ true Se o registro for efetuado com sucesso.
 
 false Caso contrário. 
 \end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classCntrSerQuadros_ab72552e15c0e16e902c59fed01012c5f}{Cntr\+Ser\+Quadros}}.
+
 \Hypertarget{classISerQuadros_ae08b454fcc748fda7e30b0f1429cbab4}\label{classISerQuadros_ae08b454fcc748fda7e30b0f1429cbab4} 
 \index{ISerQuadros@{ISerQuadros}!excluir@{excluir}}
 \index{excluir@{excluir}!ISerQuadros@{ISerQuadros}}
@@ -155,6 +193,10 @@ true Se o quadro foi excluído com sucesso.
 
 false Caso contrário. 
 \end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classCntrSerQuadros_a87292e637bd07efad4b44e09b9d3bb19}{Cntr\+Ser\+Quadros}}.
+
 \Hypertarget{classISerQuadros_a272ab5c99ec641fe54054a126aebc8ba}\label{classISerQuadros_a272ab5c99ec641fe54054a126aebc8ba} 
 \index{ISerQuadros@{ISerQuadros}!excluirCartao@{excluirCartao}}
 \index{excluirCartao@{excluirCartao}!ISerQuadros@{ISerQuadros}}
@@ -175,6 +217,10 @@ true Se o cartão foi excluído com sucesso.
 
 false Caso contrário. 
 \end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classCntrSerQuadros_ace0f64e91a9ce36acc93cfd5fd3fa110}{Cntr\+Ser\+Quadros}}.
+
 \Hypertarget{classISerQuadros_a8ba7cf5e260a23b5a1e852b63494ff25}\label{classISerQuadros_a8ba7cf5e260a23b5a1e852b63494ff25} 
 \index{ISerQuadros@{ISerQuadros}!ler@{ler}}
 \index{ler@{ler}!ISerQuadros@{ISerQuadros}}
@@ -195,6 +241,10 @@ true Se o quadro for localizado.
 
 false Caso contrário. 
 \end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classCntrSerQuadros_ad693e414d9574952a8051ada39f263ce}{Cntr\+Ser\+Quadros}}.
+
 \Hypertarget{classISerQuadros_a67e346bcb828877d1251cf59772e5e39}\label{classISerQuadros_a67e346bcb828877d1251cf59772e5e39} 
 \index{ISerQuadros@{ISerQuadros}!lerCartao@{lerCartao}}
 \index{lerCartao@{lerCartao}!ISerQuadros@{ISerQuadros}}
@@ -215,6 +265,140 @@ true Se o cartão for localizado.
 
 false Caso contrário. 
 \end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classCntrSerQuadros_a0219e9985c9e1603c226d1af8e31162d}{Cntr\+Ser\+Quadros}}.
+
+\Hypertarget{classISerQuadros_a245bf97b0d665bb7070a2a0e037c8449}\label{classISerQuadros_a245bf97b0d665bb7070a2a0e037c8449} 
+\index{ISerQuadros@{ISerQuadros}!lerLeadTime@{lerLeadTime}}
+\index{lerLeadTime@{lerLeadTime}!ISerQuadros@{ISerQuadros}}
+\doxysubsubsection{\texorpdfstring{lerLeadTime()}{lerLeadTime()}}
+{\footnotesize\ttfamily virtual bool ISer\+Quadros\+::ler\+Lead\+Time (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classIdentificador}{Identificador}} \&}]{id\+Cartao,  }\item[{double \texorpdfstring{$\ast$}{*}}]{tempo\+Segundos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Consulta o Lead Time de uma atividade concluída. 
+
+Calcula o tempo total medindo a diferença temporal da entrada em A FAZER até a chegada em FEITO. 
+\begin{DoxyParams}{Parameters}
+{\em id\+Cartao} & \doxylink{classIdentificador}{Identificador} do cartão consultado. \\
+\hline
+{\em tempo\+Segundos} & Ponteiro onde será armazenado o valor obtido em segundos. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Se a medição for realizada com sucesso. 
+
+false Caso contrário. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classCntrSerQuadros_ac6620db4923d37af0cf948f50d99abf8}{Cntr\+Ser\+Quadros}}.
+
+\Hypertarget{classISerQuadros_a089a01dc321f4d165b1e6f4f0604d67c}\label{classISerQuadros_a089a01dc321f4d165b1e6f4f0604d67c} 
+\index{ISerQuadros@{ISerQuadros}!lerLeadTimeMedio@{lerLeadTimeMedio}}
+\index{lerLeadTimeMedio@{lerLeadTimeMedio}!ISerQuadros@{ISerQuadros}}
+\doxysubsubsection{\texorpdfstring{lerLeadTimeMedio()}{lerLeadTimeMedio()}}
+{\footnotesize\ttfamily virtual bool ISer\+Quadros\+::ler\+Lead\+Time\+Medio (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classIdentificador}{Identificador}} \&}]{id\+Quadro,  }\item[{double \texorpdfstring{$\ast$}{*}}]{media\+Segundos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Consulta o Lead Time médio dos cartões concluídos de um quadro. 
+
+Realiza a média aritmética do Lead Time das atividades em FEITO do quadro. 
+\begin{DoxyParams}{Parameters}
+{\em id\+Quadro} & \doxylink{classIdentificador}{Identificador} do quadro alvo. \\
+\hline
+{\em media\+Segundos} & Ponteiro onde será armazenada a média calculada em segundos. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Se a média for calculada com sucesso. 
+
+false Caso contrário. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classCntrSerQuadros_a8477b2d31f49755bf068b6b9a7e2379a}{Cntr\+Ser\+Quadros}}.
+
+\Hypertarget{classISerQuadros_ac3673482789ed0aef77ba101cfed04cb}\label{classISerQuadros_ac3673482789ed0aef77ba101cfed04cb} 
+\index{ISerQuadros@{ISerQuadros}!lerTempoCiclo@{lerTempoCiclo}}
+\index{lerTempoCiclo@{lerTempoCiclo}!ISerQuadros@{ISerQuadros}}
+\doxysubsubsection{\texorpdfstring{lerTempoCiclo()}{lerTempoCiclo()}}
+{\footnotesize\ttfamily virtual bool ISer\+Quadros\+::ler\+Tempo\+Ciclo (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classIdentificador}{Identificador}} \&}]{id\+Cartao,  }\item[{double \texorpdfstring{$\ast$}{*}}]{tempo\+Segundos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Consulta o Tempo de Ciclo (Cycle Time) de uma atividade concluída. 
+
+Calcula o tempo medindo a diferença temporal da entrada em FAZENDO até a chegada em FEITO. 
+\begin{DoxyParams}{Parameters}
+{\em id\+Cartao} & \doxylink{classIdentificador}{Identificador} do cartão consultado. \\
+\hline
+{\em tempo\+Segundos} & Ponteiro onde será armazenado o valor obtido em segundos. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Se a medição for realizada com sucesso. 
+
+false Caso contrário. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classCntrSerQuadros_a68be16fb83b36cfda8ea9679ec95f6b6}{Cntr\+Ser\+Quadros}}.
+
+\Hypertarget{classISerQuadros_a7d91b164f6c5825e4579fbb7afbfbb5d}\label{classISerQuadros_a7d91b164f6c5825e4579fbb7afbfbb5d} 
+\index{ISerQuadros@{ISerQuadros}!lerTempoCicloMedio@{lerTempoCicloMedio}}
+\index{lerTempoCicloMedio@{lerTempoCicloMedio}!ISerQuadros@{ISerQuadros}}
+\doxysubsubsection{\texorpdfstring{lerTempoCicloMedio()}{lerTempoCicloMedio()}}
+{\footnotesize\ttfamily virtual bool ISer\+Quadros\+::ler\+Tempo\+Ciclo\+Medio (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classIdentificador}{Identificador}} \&}]{id\+Quadro,  }\item[{double \texorpdfstring{$\ast$}{*}}]{media\+Segundos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Consulta o Tempo de Ciclo médio dos cartões concluídos de um quadro. 
+
+Realiza a média aritmética do Tempo de Ciclo das atividades em FEITO do quadro. 
+\begin{DoxyParams}{Parameters}
+{\em id\+Quadro} & \doxylink{classIdentificador}{Identificador} do quadro alvo. \\
+\hline
+{\em media\+Segundos} & Ponteiro onde será armazenada a média calculada em segundos. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Se a média for calculada com sucesso. 
+
+false Caso contrário. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classCntrSerQuadros_a9723aea2b29276b86ec468f4dfb331e0}{Cntr\+Ser\+Quadros}}.
+
+\Hypertarget{classISerQuadros_a6be4f5fb2b352c72ba71af901f0a2003}\label{classISerQuadros_a6be4f5fb2b352c72ba71af901f0a2003} 
+\index{ISerQuadros@{ISerQuadros}!lerWIP@{lerWIP}}
+\index{lerWIP@{lerWIP}!ISerQuadros@{ISerQuadros}}
+\doxysubsubsection{\texorpdfstring{lerWIP()}{lerWIP()}}
+{\footnotesize\ttfamily virtual bool ISer\+Quadros\+::ler\+WIP (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classIdentificador}{Identificador}} \&}]{id\+Quadro,  }\item[{int \texorpdfstring{$\ast$}{*}}]{quantidade\+WIP }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Consulta a quantidade de Work in Progress (WIP) de um quadro. 
+
+Contabiliza o número total de cartões de atividade alocados na coluna FAZENDO do quadro. 
+\begin{DoxyParams}{Parameters}
+{\em id\+Quadro} & \doxylink{classIdentificador}{Identificador} do quadro alvo. \\
+\hline
+{\em quantidade\+WIP} & Ponteiro onde será armazenada a quantidade de tarefas em andamento. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Se a contagem for realizada com sucesso. 
+
+false Caso contrário. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classCntrSerQuadros_a6cb53a121781934b60c991246b2b373d}{Cntr\+Ser\+Quadros}}.
+
 \Hypertarget{classISerQuadros_ab99363ffe2b6e50d04a81d0cae0b72b2}\label{classISerQuadros_ab99363ffe2b6e50d04a81d0cae0b72b2} 
 \index{ISerQuadros@{ISerQuadros}!listar@{listar}}
 \index{listar@{listar}!ISerQuadros@{ISerQuadros}}
@@ -237,6 +421,10 @@ true Se a busca foi bem sucedida.
 
 false Caso contrário. 
 \end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classCntrSerQuadros_afcde07e2f83c06ad7079fc315a31a213}{Cntr\+Ser\+Quadros}}.
+
 \Hypertarget{classISerQuadros_a8d88d5058bccd4e44529b2216f0d094a}\label{classISerQuadros_a8d88d5058bccd4e44529b2216f0d094a} 
 \index{ISerQuadros@{ISerQuadros}!listarCartoes@{listarCartoes}}
 \index{listarCartoes@{listarCartoes}!ISerQuadros@{ISerQuadros}}
@@ -261,6 +449,38 @@ false Caso contrário.
 \end{DoxyReturn}
 
 
+Implemented in \mbox{\hyperlink{classCntrSerQuadros_a68b88dcdc5bdd387a2368dd8a2703061}{Cntr\+Ser\+Quadros}}.
+
+\Hypertarget{classISerQuadros_a184ce93c5bd0745c06036cbd1c75d8b4}\label{classISerQuadros_a184ce93c5bd0745c06036cbd1c75d8b4} 
+\index{ISerQuadros@{ISerQuadros}!moverCartao@{moverCartao}}
+\index{moverCartao@{moverCartao}!ISerQuadros@{ISerQuadros}}
+\doxysubsubsection{\texorpdfstring{moverCartao()}{moverCartao()}}
+{\footnotesize\ttfamily virtual bool ISer\+Quadros\+::mover\+Cartao (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classIdentificador}{Identificador}} \&}]{id\+Cartao,  }\item[{const \mbox{\hyperlink{classEstado}{Estado}} \&}]{novo\+Estado,  }\item[{const \mbox{\hyperlink{classTimestamp}{Timestamp}} \&}]{momento\+Atual }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Promove a transição de estado de um cartão no fluxo Kanban. 
+
+Realiza as movimentações permitidas pelo sistema (A FAZER -\/\texorpdfstring{$>$}{>} FAZENDO e FAZENDO -\/\texorpdfstring{$>$}{>} FEITO). 
+\begin{DoxyParams}{Parameters}
+{\em id\+Cartao} & \doxylink{classIdentificador}{Identificador} da atividade a ser movimentada. \\
+\hline
+{\em novo\+Estado} & Instância com o novo estado de destino. \\
+\hline
+{\em momento\+Atual} & Instância de \doxylink{classTimestamp}{Timestamp} registrando o momento da transição. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Se a movimentação for realizada com sucesso. 
+
+false Caso contrário. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classCntrSerQuadros_ac97be6c8a82d019abf0144be440c43b1}{Cntr\+Ser\+Quadros}}.
+
+
+
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-/home/mateuschrist/\+Trabalho-\/\+TP1\+\_\+2026\+\_\+2-\/\+Un\+B/\+Headers/\mbox{\hyperlink{interfaces_8hpp}{interfaces.\+hpp}}\end{DoxyCompactItemize}
+/home/italomrnd/\+Un\+B/\+Ciclo\+Básico\+CIC/\+TP1\+\_\+26\+\_\+2/\+Trabalho26\+\_\+2/\+Headers/\mbox{\hyperlink{interfaces_8hpp}{interfaces.\+hpp}}\end{DoxyCompactItemize}

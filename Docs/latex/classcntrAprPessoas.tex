@@ -1,0 +1,107 @@
+\doxysection{cntr\+Apr\+Pessoas Class Reference}
+\hypertarget{classcntrAprPessoas}{}\label{classcntrAprPessoas}\index{cntrAprPessoas@{cntrAprPessoas}}
+
+
+{\ttfamily \#include $<$controladoras.\+hpp$>$}
+
+
+
+Inheritance diagram for cntr\+Apr\+Pessoas\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=172pt]{classcntrAprPessoas__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for cntr\+Apr\+Pessoas\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=250pt]{classcntrAprPessoas__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classcntrAprPessoas_a110fe93553a59a589b5054107eb41365}{criar}} () override
+\begin{DoxyCompactList}\small\item\em Método responsável por solicitar dados e realizar o cadastro inicial de um usuário do sistema. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classcntrAprPessoas_a18abb9f506d3117f9225cb75083392e1}{exec}} (const \mbox{\hyperlink{classEmail}{Email}} \&email) override
+\begin{DoxyCompactList}\small\item\em Gerencia a execução do submenu de opções de conta do utilizador logado. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcntrAprPessoas_a7858edead2fb6788706edc9e5ab9f0fe}{set\+Cntr\+Servico}} (\mbox{\hyperlink{classISerPessoas}{ISer\+Pessoas}} \texorpdfstring{$\ast$}{*}cntr)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classIAprPessoas}{IApr\+Pessoas}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classIAprPessoas_a6a16d1f04a3dbdac7d76a777da24a13c}{\texorpdfstring{$\sim$}{\string~}\+IApr\+Pessoas}} ()=default
+\begin{DoxyCompactList}\small\item\em Destrutor virtual padrão. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classISerPessoas}{ISer\+Pessoas}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classcntrAprPessoas_a26d56cfc77766366344394761bba4d7b}{cntr\+Servico}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classcntrAprPessoas_a110fe93553a59a589b5054107eb41365}\label{classcntrAprPessoas_a110fe93553a59a589b5054107eb41365} 
+\index{cntrAprPessoas@{cntrAprPessoas}!criar@{criar}}
+\index{criar@{criar}!cntrAprPessoas@{cntrAprPessoas}}
+\doxysubsubsection{\texorpdfstring{criar()}{criar()}}
+{\footnotesize\ttfamily void cntr\+Apr\+Pessoas\+::criar (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Método responsável por solicitar dados e realizar o cadastro inicial de um usuário do sistema. 
+
+
+
+Implements \mbox{\hyperlink{classIAprPessoas_ab74caf480270f3bb4d4a4c0fda9af4b9}{IApr\+Pessoas}}.
+
+\Hypertarget{classcntrAprPessoas_a18abb9f506d3117f9225cb75083392e1}\label{classcntrAprPessoas_a18abb9f506d3117f9225cb75083392e1} 
+\index{cntrAprPessoas@{cntrAprPessoas}!exec@{exec}}
+\index{exec@{exec}!cntrAprPessoas@{cntrAprPessoas}}
+\doxysubsubsection{\texorpdfstring{exec()}{exec()}}
+{\footnotesize\ttfamily bool cntr\+Apr\+Pessoas\+::exec (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classEmail}{Email}} \&}]{email }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gerencia a execução do submenu de opções de conta do utilizador logado. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em email} & Referência para o e-\/mail do utilizador autenticado na sessão. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Se a sessão deve continuar ativa. 
+
+false Caso contrário. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classIAprPessoas_a9cd78811bef6cd5d35e154c04a573685}{IApr\+Pessoas}}.
+
+\Hypertarget{classcntrAprPessoas_a7858edead2fb6788706edc9e5ab9f0fe}\label{classcntrAprPessoas_a7858edead2fb6788706edc9e5ab9f0fe} 
+\index{cntrAprPessoas@{cntrAprPessoas}!setCntrServico@{setCntrServico}}
+\index{setCntrServico@{setCntrServico}!cntrAprPessoas@{cntrAprPessoas}}
+\doxysubsubsection{\texorpdfstring{setCntrServico()}{setCntrServico()}}
+{\footnotesize\ttfamily void cntr\+Apr\+Pessoas\+::set\+Cntr\+Servico (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classISerPessoas}{ISer\+Pessoas}} \texorpdfstring{$\ast$}{*}}]{cntr }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classcntrAprPessoas_a26d56cfc77766366344394761bba4d7b}\label{classcntrAprPessoas_a26d56cfc77766366344394761bba4d7b} 
+\index{cntrAprPessoas@{cntrAprPessoas}!cntrServico@{cntrServico}}
+\index{cntrServico@{cntrServico}!cntrAprPessoas@{cntrAprPessoas}}
+\doxysubsubsection{\texorpdfstring{cntrServico}{cntrServico}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classISerPessoas}{ISer\+Pessoas}}\texorpdfstring{$\ast$}{*} cntr\+Apr\+Pessoas\+::cntr\+Servico\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/italomrnd/\+Un\+B/\+Ciclo\+Básico\+CIC/\+TP1\+\_\+26\+\_\+2/\+Trabalho26\+\_\+2/\+Headers/\mbox{\hyperlink{controladoras_8hpp}{controladoras.\+hpp}}\item 
+/home/italomrnd/\+Un\+B/\+Ciclo\+Básico\+CIC/\+TP1\+\_\+26\+\_\+2/\+Trabalho26\+\_\+2/\+Sources/\mbox{\hyperlink{controladoras_8cpp}{controladoras.\+cpp}}\end{DoxyCompactItemize}

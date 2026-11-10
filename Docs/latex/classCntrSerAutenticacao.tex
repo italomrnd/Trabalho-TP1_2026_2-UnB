@@ -1,0 +1,79 @@
+\doxysection{Cntr\+Ser\+Autenticacao Class Reference}
+\hypertarget{classCntrSerAutenticacao}{}\label{classCntrSerAutenticacao}\index{CntrSerAutenticacao@{CntrSerAutenticacao}}
+
+
+Controladora de serviço responsável por gerenciar a autenticação/login de um usuário no sistema.  
+
+
+
+
+{\ttfamily \#include $<$controladoras.\+hpp$>$}
+
+
+
+Inheritance diagram for Cntr\+Ser\+Autenticacao\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=196pt]{classCntrSerAutenticacao__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Cntr\+Ser\+Autenticacao\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=196pt]{classCntrSerAutenticacao__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classCntrSerAutenticacao_a1451cabce0af2e153e3b2a7b9f6f886b}{autenticar}} (const \mbox{\hyperlink{classEmail}{Email}} \&email, const \mbox{\hyperlink{classSenha}{Senha}} \&senha) override
+\begin{DoxyCompactList}\small\item\em Autentica as credenciais de e-\/mail e senha do usuário. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classISerAutenticacao}{ISer\+Autenticacao}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classISerAutenticacao_a7325ad1600607f4efcc05d67b88d2941}{\texorpdfstring{$\sim$}{\string~}\+ISer\+Autenticacao}} ()=default
+\begin{DoxyCompactList}\small\item\em Destrutor virtual padrão. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Controladora de serviço responsável por gerenciar a autenticação/login de um usuário no sistema. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classCntrSerAutenticacao_a1451cabce0af2e153e3b2a7b9f6f886b}\label{classCntrSerAutenticacao_a1451cabce0af2e153e3b2a7b9f6f886b} 
+\index{CntrSerAutenticacao@{CntrSerAutenticacao}!autenticar@{autenticar}}
+\index{autenticar@{autenticar}!CntrSerAutenticacao@{CntrSerAutenticacao}}
+\doxysubsubsection{\texorpdfstring{autenticar()}{autenticar()}}
+{\footnotesize\ttfamily bool Cntr\+Ser\+Autenticacao\+::autenticar (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classEmail}{Email}} \&}]{email,  }\item[{const \mbox{\hyperlink{classSenha}{Senha}} \&}]{senha }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Autentica as credenciais de e-\/mail e senha do usuário. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em email} & Instância de email contendo a identificação do usuário. \\
+\hline
+{\em senha} & Instância de senha contendo a credencial do usuário. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Se a instância é válida/existe no sistema. 
+
+false Caso contrário. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classISerAutenticacao_aa35554bd604b0806c29166503fbaf7de}{ISer\+Autenticacao}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/italomrnd/\+Un\+B/\+Ciclo\+Básico\+CIC/\+TP1\+\_\+26\+\_\+2/\+Trabalho26\+\_\+2/\+Headers/\mbox{\hyperlink{controladoras_8hpp}{controladoras.\+hpp}}\item 
+/home/italomrnd/\+Un\+B/\+Ciclo\+Básico\+CIC/\+TP1\+\_\+26\+\_\+2/\+Trabalho26\+\_\+2/\+Sources/\mbox{\hyperlink{controladoras_8cpp}{controladoras.\+cpp}}\end{DoxyCompactItemize}

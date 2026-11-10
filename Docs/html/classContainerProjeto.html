@@ -99,7 +99,7 @@ $(document).ready(function(){initNavTree('classContainerProjeto.html',''); initR
 </div><!--header-->
 <div class="contents">
 
-<p>Classe que representa o armazenamento de instâncias da classe <a class="el" href="classProjeto.html" title="Classe que define um projeto de software que será gerenciado utilizando o método Kanban....">Projeto</a>.  
+<p>Gerencia o armazenamento em RAM das instâncias da classe <a class="el" href="classProjeto.html" title="Classe que define um projeto de software que será gerenciado utilizando o método Kanban....">Projeto</a>.  
  <a href="classContainerProjeto.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="containers_8hpp_source.html">containers.hpp</a>&gt;</code></p>
@@ -107,27 +107,29 @@ $(document).ready(function(){initNavTree('classContainerProjeto.html',''); initR
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a67bcd0c36d30d61f50c3643d4ded5131" id="r_a67bcd0c36d30d61f50c3643d4ded5131"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classContainerProjeto.html#a67bcd0c36d30d61f50c3643d4ded5131">incluir</a> (const <a class="el" href="classProjeto.html">Projeto</a> &amp;projeto)</td></tr>
-<tr class="memdesc:a67bcd0c36d30d61f50c3643d4ded5131"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adiciona uma instância dada de <a class="el" href="classProjeto.html" title="Classe que define um projeto de software que será gerenciado utilizando o método Kanban....">Projeto</a> no mapa.  <br /></td></tr>
+<tr class="memdesc:a67bcd0c36d30d61f50c3643d4ded5131"><td class="mdescLeft">&#160;</td><td class="mdescRight">Insere um novo projeto no container.  <br /></td></tr>
 <tr class="separator:a67bcd0c36d30d61f50c3643d4ded5131"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a91d0632756f757ff197d18340c5459e9" id="r_a91d0632756f757ff197d18340c5459e9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classContainerProjeto.html#a91d0632756f757ff197d18340c5459e9">remover</a> (const <a class="el" href="classIdentificador.html">Identificador</a> &amp;identificador)</td></tr>
-<tr class="memdesc:a91d0632756f757ff197d18340c5459e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove um projeto do mapa a partir de um <a class="el" href="classIdentificador.html" title="Classe que define um código de identificação para entidades do sistema.">Identificador</a> informado.  <br /></td></tr>
+<tr class="memdesc:a91d0632756f757ff197d18340c5459e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove um projeto do container.  <br /></td></tr>
 <tr class="separator:a91d0632756f757ff197d18340c5459e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a17108005c19717e320b3f164385e3751" id="r_a17108005c19717e320b3f164385e3751"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classContainerProjeto.html#a17108005c19717e320b3f164385e3751">pesquisar</a> (const <a class="el" href="classIdentificador.html">Identificador</a> &amp;identificador, <a class="el" href="classProjeto.html">Projeto</a> *projetoRetorno)</td></tr>
-<tr class="memdesc:a17108005c19717e320b3f164385e3751"><td class="mdescLeft">&#160;</td><td class="mdescRight">Procura pela existência de um <a class="el" href="classProjeto.html" title="Classe que define um projeto de software que será gerenciado utilizando o método Kanban....">Projeto</a> através de um <a class="el" href="classIdentificador.html" title="Classe que define um código de identificação para entidades do sistema.">Identificador</a> informado e atualiza os dados de um ponteiro de <a class="el" href="classProjeto.html" title="Classe que define um projeto de software que será gerenciado utilizando o método Kanban....">Projeto</a> para copiar os dados encontrados.  <br /></td></tr>
+<tr class="memdesc:a17108005c19717e320b3f164385e3751"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pesquisa um projeto no container.  <br /></td></tr>
 <tr class="separator:a17108005c19717e320b3f164385e3751"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae7f39b7160054bc1a6bbe9968727bad0" id="r_ae7f39b7160054bc1a6bbe9968727bad0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classContainerProjeto.html#ae7f39b7160054bc1a6bbe9968727bad0">atualizar</a> (const <a class="el" href="classProjeto.html">Projeto</a> &amp;projeto)</td></tr>
-<tr class="memdesc:ae7f39b7160054bc1a6bbe9968727bad0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Procura por uma instância de <a class="el" href="classProjeto.html" title="Classe que define um projeto de software que será gerenciado utilizando o método Kanban....">Projeto</a> com o mesmo <a class="el" href="classIdentificador.html" title="Classe que define um código de identificação para entidades do sistema.">Identificador</a> e a substitui pela dada.  <br /></td></tr>
+<tr class="memdesc:ae7f39b7160054bc1a6bbe9968727bad0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Atualiza as informações de um projeto armazenado.  <br /></td></tr>
 <tr class="separator:ae7f39b7160054bc1a6bbe9968727bad0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ad1996d6a32f3e5ef22f61c1738202f" id="r_a8ad1996d6a32f3e5ef22f61c1738202f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classContainerProjeto.html#a8ad1996d6a32f3e5ef22f61c1738202f">listar</a> (const <a class="el" href="classEmail.html">Email</a> &amp;gestor, std::list&lt; <a class="el" href="classProjeto.html">Projeto</a> &gt; *listaRetorno)</td></tr>
+<tr class="memdesc:a8ad1996d6a32f3e5ef22f61c1738202f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lista todos os projetos onde o e-mail fornecido é o gestor responsável.  <br /></td></tr>
+<tr class="separator:a8ad1996d6a32f3e5ef22f61c1738202f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:a9ff119ded70309c5db3082301558ee6a" id="r_a9ff119ded70309c5db3082301558ee6a"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; std::string, <a class="el" href="classProjeto.html">Projeto</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classContainerProjeto.html#a9ff119ded70309c5db3082301558ee6a">mapaProjeto</a></td></tr>
-<tr class="memdesc:a9ff119ded70309c5db3082301558ee6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Instância de Mapa que irá armazenar as instâncias de <a class="el" href="classProjeto.html" title="Classe que define um projeto de software que será gerenciado utilizando o método Kanban....">Projeto</a>.  <br /></td></tr>
-<tr class="separator:a9ff119ded70309c5db3082301558ee6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f6c7cc03b613979e77a2023bcf14d01" id="r_a1f6c7cc03b613979e77a2023bcf14d01"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; std::string, <a class="el" href="classProjeto.html">Projeto</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classContainerProjeto.html#a1f6c7cc03b613979e77a2023bcf14d01">mapaProjetos</a></td></tr>
+<tr class="memdesc:a1f6c7cc03b613979e77a2023bcf14d01"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tabela hash de armazenamento dos projetos utilizando o identificador como chave primária.  <br /></td></tr>
+<tr class="separator:a1f6c7cc03b613979e77a2023bcf14d01"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Classe que representa o armazenamento de instâncias da classe <a class="el" href="classProjeto.html" title="Classe que define um projeto de software que será gerenciado utilizando o método Kanban....">Projeto</a>. </p>
-<p>A classe utiliza da estrutura mapa para armazenar as instâncias e facilitar o encontro e remoção dessas utilizando o <a class="el" href="classIdentificador.html" title="Classe que define um código de identificação para entidades do sistema.">Identificador</a> como chave primária de procura. </p>
+<div class="textblock"><p>Gerencia o armazenamento em RAM das instâncias da classe <a class="el" href="classProjeto.html" title="Classe que define um projeto de software que será gerenciado utilizando o método Kanban....">Projeto</a>. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="ae7f39b7160054bc1a6bbe9968727bad0" name="ae7f39b7160054bc1a6bbe9968727bad0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae7f39b7160054bc1a6bbe9968727bad0">&#9670;&#160;</a></span>atualizar()</h2>
@@ -145,16 +147,16 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Procura por uma instância de <a class="el" href="classProjeto.html" title="Classe que define um projeto de software que será gerenciado utilizando o método Kanban....">Projeto</a> com o mesmo <a class="el" href="classIdentificador.html" title="Classe que define um código de identificação para entidades do sistema.">Identificador</a> e a substitui pela dada. </p>
+<p>Atualiza as informações de um projeto armazenado. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">projeto</td><td>Novos dados que serão colocados no lugar dos anteriores. </td></tr>
+    <tr><td class="paramname">projeto</td><td>Referência para a entidade <a class="el" href="classProjeto.html" title="Classe que define um projeto de software que será gerenciado utilizando o método Kanban....">Projeto</a> contendo as novas informações. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>true Se houve a atualização. </dd>
+<dl class="section return"><dt>Returns</dt><dd>true Se o projeto for atualizado com sucesso. </dd>
 <dd>
-false Se não foi encontrada nenhuma instância com o mesmo identificador informado. </dd></dl>
+false Caso o projeto não seja encontrado. </dd></dl>
 
 </div>
 </div>
@@ -174,16 +176,56 @@ false Se não foi encontrada nenhuma instância com o mesmo identificador inform
       </table>
 </div><div class="memdoc">
 
-<p>Adiciona uma instância dada de <a class="el" href="classProjeto.html" title="Classe que define um projeto de software que será gerenciado utilizando o método Kanban....">Projeto</a> no mapa. </p>
+<p>Insere um novo projeto no container. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">projeto</td><td><a class="el" href="classProjeto.html" title="Classe que define um projeto de software que será gerenciado utilizando o método Kanban....">Projeto</a> que deseja-se adicionar. </td></tr>
+    <tr><td class="paramname">projeto</td><td>Referência para o objeto <a class="el" href="classProjeto.html" title="Classe que define um projeto de software que será gerenciado utilizando o método Kanban....">Projeto</a> a ser cadastrado. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>true Se foi possível adicionar ao mapa. </dd>
+<dl class="section return"><dt>Returns</dt><dd>true Se a inserção foi efetuada com sucesso. </dd>
 <dd>
-false Se não foi possível adicionar ao mapa, já existe uma instância no mapa com aquele identificador. </dd></dl>
+false Se o projeto já existir no container. </dd></dl>
+
+</div>
+</div>
+<a id="a8ad1996d6a32f3e5ef22f61c1738202f" name="a8ad1996d6a32f3e5ef22f61c1738202f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ad1996d6a32f3e5ef22f61c1738202f">&#9670;&#160;</a></span>listar()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ContainerProjeto::listar </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classEmail.html">Email</a> &amp;&#160;</td>
+          <td class="paramname"><em>gestor</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::list&lt; <a class="el" href="classProjeto.html">Projeto</a> &gt; *&#160;</td>
+          <td class="paramname"><em>listaRetorno</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Lista todos os projetos onde o e-mail fornecido é o gestor responsável. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">gestor</td><td>Referência para o <a class="el" href="classEmail.html" title="Classe que representa o endereço de correio eletrônico de um usuário do sistema.">Email</a> do gestor responsável pelos projetos. </td></tr>
+    <tr><td class="paramname">listaRetorno</td><td>Ponteiro para a lista onde serão inseridos os projetos encontrados. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true Se for localizado pelo menos um projeto associado. </dd>
+<dd>
+false Caso nenhum projeto seja encontrado. </dd></dl>
 
 </div>
 </div>
@@ -213,17 +255,17 @@ false Se não foi possível adicionar ao mapa, já existe uma instância no mapa
       </table>
 </div><div class="memdoc">
 
-<p>Procura pela existência de um <a class="el" href="classProjeto.html" title="Classe que define um projeto de software que será gerenciado utilizando o método Kanban....">Projeto</a> através de um <a class="el" href="classIdentificador.html" title="Classe que define um código de identificação para entidades do sistema.">Identificador</a> informado e atualiza os dados de um ponteiro de <a class="el" href="classProjeto.html" title="Classe que define um projeto de software que será gerenciado utilizando o método Kanban....">Projeto</a> para copiar os dados encontrados. </p>
+<p>Pesquisa um projeto no container. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">identificador</td><td><a class="el" href="classIdentificador.html" title="Classe que define um código de identificação para entidades do sistema.">Identificador</a> usado para a procura. </td></tr>
-    <tr><td class="paramname">projetoRetorno</td><td>Ponteiro de <a class="el" href="classProjeto.html" title="Classe que define um projeto de software que será gerenciado utilizando o método Kanban....">Projeto</a> que retornará os dados encontrados. </td></tr>
+    <tr><td class="paramname">identificador</td><td>Referência para o <a class="el" href="classIdentificador.html" title="Classe que define um código de identificação para entidades do sistema.">Identificador</a> do projeto buscado. </td></tr>
+    <tr><td class="paramname">projetoRetorno</td><td>Ponteiro onde os dados do projeto localizado serão preenchidos. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>true Se encontrou aquele <a class="el" href="classIdentificador.html" title="Classe que define um código de identificação para entidades do sistema.">Identificador</a> no Mapa. </dd>
+<dl class="section return"><dt>Returns</dt><dd>true Se o projeto for localizado. </dd>
 <dd>
-false Se não encontrou. </dd></dl>
+false Caso contrário. </dd></dl>
 
 </div>
 </div>
@@ -243,22 +285,22 @@ false Se não encontrou. </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Remove um projeto do mapa a partir de um <a class="el" href="classIdentificador.html" title="Classe que define um código de identificação para entidades do sistema.">Identificador</a> informado. </p>
+<p>Remove um projeto do container. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">identificador</td><td><a class="el" href="classIdentificador.html" title="Classe que define um código de identificação para entidades do sistema.">Identificador</a> que será utilizado para a procura da instância a ser removida. </td></tr>
+    <tr><td class="paramname">identificador</td><td>Referência para o <a class="el" href="classIdentificador.html" title="Classe que define um código de identificação para entidades do sistema.">Identificador</a> do projeto a ser removido. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>true Se houve remoção. </dd>
+<dl class="section return"><dt>Returns</dt><dd>true Se a remoção for bem-sucedida. </dd>
 <dd>
-false Se aquele identificador não está presente no mapa. </dd></dl>
+false Caso contrário. </dd></dl>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="a9ff119ded70309c5db3082301558ee6a" name="a9ff119ded70309c5db3082301558ee6a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9ff119ded70309c5db3082301558ee6a">&#9670;&#160;</a></span>mapaProjeto</h2>
+<a id="a1f6c7cc03b613979e77a2023bcf14d01" name="a1f6c7cc03b613979e77a2023bcf14d01"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f6c7cc03b613979e77a2023bcf14d01">&#9670;&#160;</a></span>mapaProjetos</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -267,7 +309,7 @@ false Se aquele identificador não está presente no mapa. </dd></dl>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::unordered_map&lt;std::string, <a class="el" href="classProjeto.html">Projeto</a>&gt; ContainerProjeto::mapaProjeto</td>
+          <td class="memname">std::unordered_map&lt;std::string, <a class="el" href="classProjeto.html">Projeto</a>&gt; ContainerProjeto::mapaProjetos</td>
         </tr>
       </table>
   </td>
@@ -277,13 +319,13 @@ false Se aquele identificador não está presente no mapa. </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p>Instância de Mapa que irá armazenar as instâncias de <a class="el" href="classProjeto.html" title="Classe que define um projeto de software que será gerenciado utilizando o método Kanban....">Projeto</a>. </p>
+<p>Tabela hash de armazenamento dos projetos utilizando o identificador como chave primária. </p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>/home/mateuschrist/Trabalho-TP1_2026_2-UnB/Headers/<a class="el" href="containers_8hpp_source.html">containers.hpp</a></li>
-<li>/home/mateuschrist/Trabalho-TP1_2026_2-UnB/Sources/<a class="el" href="containers_8cpp.html">containers.cpp</a></li>
+<li>/home/italomrnd/UnB/CicloBásicoCIC/TP1_26_2/Trabalho26_2/Headers/<a class="el" href="containers_8hpp_source.html">containers.hpp</a></li>
+<li>/home/italomrnd/UnB/CicloBásicoCIC/TP1_26_2/Trabalho26_2/Sources/<a class="el" href="containers_8cpp.html">containers.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

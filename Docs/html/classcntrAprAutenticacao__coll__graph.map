@@ -1,0 +1,7 @@
+<map id="cntrAprAutenticacao" name="cntrAprAutenticacao">
+<area shape="rect" id="Node000001" title=" " alt="" coords="73,93,228,119"/>
+<area shape="rect" id="Node000002" href="$classIAprAutenticacao.html" title="Interface para a camada de apresentação do fluxo de autenticação." alt="" coords="5,5,139,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="94,39,142,91,138,95,90,43"/>
+<area shape="rect" id="Node000003" href="$classISerAutenticacao.html" title="Interface para a camada de serviço de validação de credenciais do usuário." alt="" coords="163,5,295,31"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="212,43,164,95,160,91,208,39"/>
+</map>

@@ -1,0 +1,155 @@
+\doxysection{Cntr\+Ser\+Projetos Class Reference}
+\hypertarget{classCntrSerProjetos}{}\label{classCntrSerProjetos}\index{CntrSerProjetos@{CntrSerProjetos}}
+
+
+Controladora responsável pela gestão dos serviços CRUD da entidade \doxylink{classProjeto}{Projeto}.  
+
+
+
+
+{\ttfamily \#include $<$controladoras.\+hpp$>$}
+
+
+
+Inheritance diagram for Cntr\+Ser\+Projetos\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=172pt]{classCntrSerProjetos__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Cntr\+Ser\+Projetos\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=172pt]{classCntrSerProjetos__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classCntrSerProjetos_abeb4bbb9af806ccc6687f9d33bf305dc}{criar}} (const \mbox{\hyperlink{classProjeto}{Projeto}} \&projeto) override
+\begin{DoxyCompactList}\small\item\em Método responsável por registrar os dados de um novo projeto. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classCntrSerProjetos_ab327284919379d36eaad7b3b6e8bdcb5}{ler}} (\mbox{\hyperlink{classProjeto}{Projeto}} \texorpdfstring{$\ast$}{*}projeto\+Retorno) override
+\begin{DoxyCompactList}\small\item\em Recupera as informações de um projeto. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classCntrSerProjetos_a58c99315fd6d29b59036c88555155e6f}{atualizar}} (const \mbox{\hyperlink{classProjeto}{Projeto}} \&projeto) override
+\begin{DoxyCompactList}\small\item\em Atualiza as informações de um projeto existente. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classCntrSerProjetos_a7666f7223e35844bf28e208412099509}{excluir}} (const \mbox{\hyperlink{classIdentificador}{Identificador}} \&identificador) override
+\begin{DoxyCompactList}\small\item\em Remove um projeto cadastrado. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classISerProjetos}{ISer\+Projetos}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classISerProjetos_a7f8bdf98221224132419a99b9a2eec10}{\texorpdfstring{$\sim$}{\string~}\+ISer\+Projetos}} ()=default
+\begin{DoxyCompactList}\small\item\em Destrutor virtual padrão. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Controladora responsável pela gestão dos serviços CRUD da entidade \doxylink{classProjeto}{Projeto}. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classCntrSerProjetos_a58c99315fd6d29b59036c88555155e6f}\label{classCntrSerProjetos_a58c99315fd6d29b59036c88555155e6f} 
+\index{CntrSerProjetos@{CntrSerProjetos}!atualizar@{atualizar}}
+\index{atualizar@{atualizar}!CntrSerProjetos@{CntrSerProjetos}}
+\doxysubsubsection{\texorpdfstring{atualizar()}{atualizar()}}
+{\footnotesize\ttfamily bool Cntr\+Ser\+Projetos\+::atualizar (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classProjeto}{Projeto}} \&}]{projeto }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Atualiza as informações de um projeto existente. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em projeto} & Referência para o objeto \doxylink{classProjeto}{Projeto} com as informações modificadas. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Se a alteração for realizada com sucesso. 
+
+false Caso contrário. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classISerProjetos_abfae72c67b0591897903d1a1d83cdbf3}{ISer\+Projetos}}.
+
+\Hypertarget{classCntrSerProjetos_abeb4bbb9af806ccc6687f9d33bf305dc}\label{classCntrSerProjetos_abeb4bbb9af806ccc6687f9d33bf305dc} 
+\index{CntrSerProjetos@{CntrSerProjetos}!criar@{criar}}
+\index{criar@{criar}!CntrSerProjetos@{CntrSerProjetos}}
+\doxysubsubsection{\texorpdfstring{criar()}{criar()}}
+{\footnotesize\ttfamily bool Cntr\+Ser\+Projetos\+::criar (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classProjeto}{Projeto}} \&}]{projeto }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Método responsável por registrar os dados de um novo projeto. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em projeto} & Referência para o objeto \doxylink{classProjeto}{Projeto} a ser cadastrado. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Se a criação teve sucesso. 
+
+false Caso contrário. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classISerProjetos_a65fdb3575b7788159757a9b654486a58}{ISer\+Projetos}}.
+
+\Hypertarget{classCntrSerProjetos_a7666f7223e35844bf28e208412099509}\label{classCntrSerProjetos_a7666f7223e35844bf28e208412099509} 
+\index{CntrSerProjetos@{CntrSerProjetos}!excluir@{excluir}}
+\index{excluir@{excluir}!CntrSerProjetos@{CntrSerProjetos}}
+\doxysubsubsection{\texorpdfstring{excluir()}{excluir()}}
+{\footnotesize\ttfamily bool Cntr\+Ser\+Projetos\+::excluir (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classIdentificador}{Identificador}} \&}]{identificador }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Remove um projeto cadastrado. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em identificador} & Referência para a chave de identificação do projeto a ser removido. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Se a remoção for realizada com sucesso. 
+
+false Caso contrário. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classISerProjetos_a61682404c8761e00ceb461e5fc030b2f}{ISer\+Projetos}}.
+
+\Hypertarget{classCntrSerProjetos_ab327284919379d36eaad7b3b6e8bdcb5}\label{classCntrSerProjetos_ab327284919379d36eaad7b3b6e8bdcb5} 
+\index{CntrSerProjetos@{CntrSerProjetos}!ler@{ler}}
+\index{ler@{ler}!CntrSerProjetos@{CntrSerProjetos}}
+\doxysubsubsection{\texorpdfstring{ler()}{ler()}}
+{\footnotesize\ttfamily bool Cntr\+Ser\+Projetos\+::ler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classProjeto}{Projeto}} \texorpdfstring{$\ast$}{*}}]{projeto\+Retorno }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Recupera as informações de um projeto. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em projeto\+Retorno} & Ponteiro para o objeto \doxylink{classProjeto}{Projeto} onde serão armazenados os dados recuperados. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Se o projeto foi encontrado. 
+
+false Caso contrário. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classISerProjetos_a63501e0dc8dd924d89ee64cbb737dea5}{ISer\+Projetos}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/italomrnd/\+Un\+B/\+Ciclo\+Básico\+CIC/\+TP1\+\_\+26\+\_\+2/\+Trabalho26\+\_\+2/\+Headers/\mbox{\hyperlink{controladoras_8hpp}{controladoras.\+hpp}}\item 
+/home/italomrnd/\+Un\+B/\+Ciclo\+Básico\+CIC/\+TP1\+\_\+26\+\_\+2/\+Trabalho26\+\_\+2/\+Sources/\mbox{\hyperlink{controladoras_8cpp}{controladoras.\+cpp}}\end{DoxyCompactItemize}

@@ -2,5 +2,150 @@
 \hypertarget{controladoras_8hpp_source}{}\label{controladoras_8hpp_source}\index{/home/italomrnd/UnB/CicloBásicoCIC/TP1\_26\_2/Trabalho26\_2/Headers/controladoras.hpp@{/home/italomrnd/UnB/CicloBásicoCIC/TP1\_26\_2/Trabalho26\_2/Headers/controladoras.hpp}}
 \mbox{\hyperlink{controladoras_8hpp}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ CONTROLADORAS\_HPP}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ CONTROLADORAS\_HPP}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{interfaces_8hpp}{interfaces.hpp}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{entidades_8hpp}{entidades.hpp}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <unordered\_map>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ Declaracao\ das\ controladoras\ da\ camada\ de\ apresentacao}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classcntrAprAutenticacao}{cntrAprAutenticacao}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classIAprAutenticacao}{IAprAutenticacao}}\{}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classISerAutenticacao}{ISerAutenticacao}}\ *\mbox{\hyperlink{classcntrAprAutenticacao_afa724ab37267936a2b433fba3ccf2c8d}{cntrServico}};}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classcntrAprAutenticacao_a128bf09528ee3d8789a7507247851c0f}{autenticar}}(\mbox{\hyperlink{classEmail}{Email}}*)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcntrAprAutenticacao_acaa5c3cdd4721dd9cc83184a9fff5b10}{setCntrServico}}(\mbox{\hyperlink{classISerAutenticacao}{ISerAutenticacao}}*\ cntr);}
+\DoxyCodeLine{00025\ \};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classcntrAprPessoas}{cntrAprPessoas}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classIAprPessoas}{IAprPessoas}}\{}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classISerPessoas}{ISerPessoas}}\ *\mbox{\hyperlink{classcntrAprPessoas_a26d56cfc77766366344394761bba4d7b}{cntrServico}};}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcntrAprPessoas_a110fe93553a59a589b5054107eb41365}{criar}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classcntrAprPessoas_a18abb9f506d3117f9225cb75083392e1}{exec}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classEmail}{Email}}\&\ email)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcntrAprPessoas_a7858edead2fb6788706edc9e5ab9f0fe}{setCntrServico}}(\mbox{\hyperlink{classISerPessoas}{ISerPessoas}}*\ cntr);}
+\DoxyCodeLine{00039\ \};}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classcntrAprProjetos}{cntrAprProjetos}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classIAprProjetos}{IAprProjetos}}\{}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classISerProjetos}{ISerProjetos}}\ *\mbox{\hyperlink{classcntrAprProjetos_af86f401fbc5c306c19c0aef0a12463d9}{cntrServico}};}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcntrAprProjetos_a2578fefc799eec55b321f8db52a09bba}{exec}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classEmail}{Email}}\&\ email)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcntrAprProjetos_ae7c991cb2600a6ee472cbfd1937eff51}{setCntrServico}}(\mbox{\hyperlink{classISerProjetos}{ISerProjetos}}*\ cntr);}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \};}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classcntrAprQuadros}{cntrAprQuadros}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classIAprQuadros}{IAprQuadros}}\{}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classISerQuadros}{ISerQuadros}}*\ \mbox{\hyperlink{classcntrAprQuadros_a5a4ffbad6d2faf47836fe5a2829ed507}{cntrServico}};}
+\DoxyCodeLine{00059\ \ \ \ \ }
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcntrAprQuadros_a67faa4a0b19df3c40a1aa1d350cc0c4a}{exec}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classEmail}{Email}}\&\ email)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcntrAprQuadros_aaaf8eb30168806d78a582500bc2019cb}{setCntrServico}}(\mbox{\hyperlink{classISerQuadros}{ISerQuadros}}*\ cntr);}
+\DoxyCodeLine{00064\ \ \ \ \ }
+\DoxyCodeLine{00065\ \};}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classcntrControlePrincipal}{cntrControlePrincipal}}\{}
+\DoxyCodeLine{00069\ \ \ \ \ }
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classIAprAutenticacao}{IAprAutenticacao}}*\ \mbox{\hyperlink{classcntrControlePrincipal_a96900a57162b51798cea6c3a172c32b8}{cntrAprAutenticacao}};}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classIAprPessoas}{IAprPessoas}}*\ \mbox{\hyperlink{classcntrControlePrincipal_aace2828fb59f9f88471e46182aebba63}{cntrAprPessoas}};}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classIAprProjetos}{IAprProjetos}}*\ \mbox{\hyperlink{classcntrControlePrincipal_ae912bae68c44383185c2138f98bacfd2}{cntrAprProjetos}};}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classIAprQuadros}{IAprQuadros}}*\ \mbox{\hyperlink{classcntrControlePrincipal_ab532c092a5348dadb290a4de05220e51}{cntrAprQuadros}};}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcntrControlePrincipal_ad2e971c9961544904967b6329d2a26e4}{executar}}();\ }
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcntrControlePrincipal_ac67722193c12bbe40c4bb8d2f679e430}{setCntrAprAutenticacao}}(\mbox{\hyperlink{classIAprAutenticacao}{IAprAutenticacao}}*\ cntr);}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcntrControlePrincipal_a8c202f2083224cacd6f2b118db275cd7}{setCntrAprPessoas}}(\mbox{\hyperlink{classIAprPessoas}{IAprPessoas}}*\ cntr);}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcntrControlePrincipal_a10204fad91565c92a4ecf19da1e816c8}{setCntrAprProjetos}}(\mbox{\hyperlink{classIAprProjetos}{IAprProjetos}}*\ cntr);}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcntrControlePrincipal_abcd5be4473a51cedbeafb40b465967ed}{setCntrAprQuadros}}(\mbox{\hyperlink{classIAprQuadros}{IAprQuadros}}*\ cntr);}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ \};}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ \textcolor{comment}{//\ Declaracao\ das\ controladoras\ da\ camada\ de\ servico}}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00093\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classCntrSerAutenticacao}{CntrSerAutenticacao}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classISerAutenticacao}{ISerAutenticacao}}\ \{}
+\DoxyCodeLine{00094\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classCntrSerAutenticacao_a1451cabce0af2e153e3b2a7b9f6f886b}{autenticar}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classEmail}{Email}}\&\ email,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classSenha}{Senha}}\&\ senha)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00103\ \};}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00109\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classCntrSerPessoas}{CntrSerPessoas}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classISerPessoas}{ISerPessoas}}\ \{}
+\DoxyCodeLine{00110\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00117\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classCntrSerPessoas_a1b341e8f48bd2b79aa44f59ab2e77911}{criar}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classPessoa}{Pessoa}}\&\ pessoa)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00118\ }
+\DoxyCodeLine{00125\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classCntrSerPessoas_ae6d85d701a88f71369bab1a28c6a3095}{ler}}(\mbox{\hyperlink{classPessoa}{Pessoa}}*\ pessoaRetorno)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00133\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classCntrSerPessoas_ad435df36caff4e480a962b03f2d90973}{atualizar}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classPessoa}{Pessoa}}\&\ pessoa)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00134\ }
+\DoxyCodeLine{00141\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classCntrSerPessoas_a191ca0d590734ee781e2741dbf1d9d4b}{excluir}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classEmail}{Email}}\&\ email)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00142\ \};}
+\DoxyCodeLine{00143\ }
+\DoxyCodeLine{00148\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classCntrSerProjetos}{CntrSerProjetos}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classISerProjetos}{ISerProjetos}}\ \{}
+\DoxyCodeLine{00149\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00156\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classCntrSerProjetos_abeb4bbb9af806ccc6687f9d33bf305dc}{criar}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classProjeto}{Projeto}}\&\ projeto)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00157\ }
+\DoxyCodeLine{00164\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classCntrSerProjetos_ab327284919379d36eaad7b3b6e8bdcb5}{ler}}(\mbox{\hyperlink{classProjeto}{Projeto}}*\ projetoRetorno)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00165\ }
+\DoxyCodeLine{00172\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classCntrSerProjetos_a58c99315fd6d29b59036c88555155e6f}{atualizar}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classProjeto}{Projeto}}\&\ projeto)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00173\ }
+\DoxyCodeLine{00180\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classCntrSerProjetos_a7666f7223e35844bf28e208412099509}{excluir}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classIdentificador}{Identificador}}\&\ identificador)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00181\ \};}
+\DoxyCodeLine{00182\ }
+\DoxyCodeLine{00189\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classCntrSerQuadros}{CntrSerQuadros}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classISerQuadros}{ISerQuadros}}\ \{}
+\DoxyCodeLine{00190\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00197\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classCntrSerQuadros_ae637d643552f0df8dd7a793eef6ded55}{criar}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classQuadro}{Quadro}}\&\ quadro)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00198\ }
+\DoxyCodeLine{00205\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classCntrSerQuadros_ad693e414d9574952a8051ada39f263ce}{ler}}(\mbox{\hyperlink{classQuadro}{Quadro}}*\ quadroRetorno)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00206\ }
+\DoxyCodeLine{00213\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classCntrSerQuadros_a16e1dcadb77592e472764fe5df199d3b}{atualizar}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classQuadro}{Quadro}}\&\ quadro)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00214\ }
+\DoxyCodeLine{00221\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classCntrSerQuadros_a87292e637bd07efad4b44e09b9d3bb19}{excluir}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classIdentificador}{Identificador}}\&\ identificador)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00222\ }
+\DoxyCodeLine{00230\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classCntrSerQuadros_afcde07e2f83c06ad7079fc315a31a213}{listar}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classEmail}{Email}}\&\ emailDono,\ std::list<Quadro>*\ listaQuadrosRetorno)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00231\ }
+\DoxyCodeLine{00239\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classCntrSerQuadros_ab72552e15c0e16e902c59fed01012c5f}{criarCartao}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classCartaodeAtividade}{CartaodeAtividade}}\&\ cartao,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classIdentificador}{Identificador}}\&\ idQuadro)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00240\ }
+\DoxyCodeLine{00247\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classCntrSerQuadros_a0219e9985c9e1603c226d1af8e31162d}{lerCartao}}(\mbox{\hyperlink{classCartaodeAtividade}{CartaodeAtividade}}*\ cartaoRetorno)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00248\ }
+\DoxyCodeLine{00255\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classCntrSerQuadros_ab19563a3c93e17e9313c724ce169783f}{atualizarCartao}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classCartaodeAtividade}{CartaodeAtividade}}\&\ cartao)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00256\ }
+\DoxyCodeLine{00263\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classCntrSerQuadros_ace0f64e91a9ce36acc93cfd5fd3fa110}{excluirCartao}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classIdentificador}{Identificador}}\&\ identificador)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00264\ }
+\DoxyCodeLine{00272\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classCntrSerQuadros_a68b88dcdc5bdd387a2368dd8a2703061}{listarCartoes}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classIdentificador}{Identificador}}\&\ idQuadro,\ std::list<CartaodeAtividade>*\ listaCartoesRetorno)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00273\ }
+\DoxyCodeLine{00285\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classCntrSerQuadros_ac97be6c8a82d019abf0144be440c43b1}{moverCartao}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classIdentificador}{Identificador}}\&\ idCartao,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classEstado}{Estado}}\&\ novoEstado,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classTimestamp}{Timestamp}}\&\ momentoAtual)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00286\ }
+\DoxyCodeLine{00296\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classCntrSerQuadros_a68be16fb83b36cfda8ea9679ec95f6b6}{lerTempoCiclo}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classIdentificador}{Identificador}}\&\ idCartao,\ \textcolor{keywordtype}{double}*\ tempoSegundosRetorno)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00297\ }
+\DoxyCodeLine{00307\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classCntrSerQuadros_a9723aea2b29276b86ec468f4dfb331e0}{lerTempoCicloMedio}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classIdentificador}{Identificador}}\&\ idQuadro,\ \textcolor{keywordtype}{double}*\ mediaSegundosRetorno)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00308\ }
+\DoxyCodeLine{00318\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classCntrSerQuadros_ac6620db4923d37af0cf948f50d99abf8}{lerLeadTime}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classIdentificador}{Identificador}}\&\ idCartao,\ \textcolor{keywordtype}{double}*\ tempoSegundosRetorno)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00319\ }
+\DoxyCodeLine{00329\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classCntrSerQuadros_a8477b2d31f49755bf068b6b9a7e2379a}{lerLeadTimeMedio}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classIdentificador}{Identificador}}\&\ idQuadro,\ \textcolor{keywordtype}{double}*\ mediaSegundosRetorno)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00330\ }
+\DoxyCodeLine{00340\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classCntrSerQuadros_a6cb53a121781934b60c991246b2b373d}{lerWIP}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classIdentificador}{Identificador}}\&\ idQuadro,\ \textcolor{keywordtype}{int}*\ quantidadeWIPRetorno)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00341\ \};}
+\DoxyCodeLine{00342\ }
+\DoxyCodeLine{00343\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ CONTROLADORAS\_HPP}}
 
 \end{DoxyCode}

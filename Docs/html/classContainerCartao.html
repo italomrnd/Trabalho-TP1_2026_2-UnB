@@ -99,41 +99,40 @@ $(document).ready(function(){initNavTree('classContainerCartao.html',''); initRe
 </div><!--header-->
 <div class="contents">
 
-<p>Classe que representa o armazenamento de instâncias da classe <a class="el" href="classCartaodeAtividade.html" title="É a unidade de trabalho dentro do Kanban, representando uma tarefa que pode estar sobre um de três es...">CartaodeAtividade</a>.  
+<p>Gerencia o armazenamento em RAM das instâncias da classe <a class="el" href="classCartaodeAtividade.html" title="É a unidade de trabalho dentro do Kanban, representando uma tarefa que pode estar sobre um de três es...">CartaodeAtividade</a>.  
  <a href="classContainerCartao.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="containers_8hpp_source.html">containers.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aab246bc3f46c3b08ba543ff4fbdc44d0" id="r_aab246bc3f46c3b08ba543ff4fbdc44d0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classContainerCartao.html#aab246bc3f46c3b08ba543ff4fbdc44d0">incluir</a> (const <a class="el" href="classCartaodeAtividade.html">CartaodeAtividade</a> &amp;cartao, const <a class="el" href="classIdentificador.html">Identificador</a> &amp;idQuadro)</td></tr>
-<tr class="memdesc:aab246bc3f46c3b08ba543ff4fbdc44d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adiciona uma instância dada de <a class="el" href="classCartaodeAtividade.html" title="É a unidade de trabalho dentro do Kanban, representando uma tarefa que pode estar sobre um de três es...">CartaodeAtividade</a> no mapa, associando-a ao quadro que ela será integrada.  <br /></td></tr>
-<tr class="separator:aab246bc3f46c3b08ba543ff4fbdc44d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7cfc4f686e56f9b5a38be57db7c2cfd7" id="r_a7cfc4f686e56f9b5a38be57db7c2cfd7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classContainerCartao.html#a7cfc4f686e56f9b5a38be57db7c2cfd7">incluir</a> (const <a class="el" href="classCartaodeAtividade.html">CartaodeAtividade</a> &amp;cartao)</td></tr>
+<tr class="memdesc:a7cfc4f686e56f9b5a38be57db7c2cfd7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Insere um novo cartão de atividade no container.  <br /></td></tr>
+<tr class="separator:a7cfc4f686e56f9b5a38be57db7c2cfd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6478df2276be2b541952f833f8babc96" id="r_a6478df2276be2b541952f833f8babc96"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classContainerCartao.html#a6478df2276be2b541952f833f8babc96">remover</a> (const <a class="el" href="classIdentificador.html">Identificador</a> &amp;identificador)</td></tr>
-<tr class="memdesc:a6478df2276be2b541952f833f8babc96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove um <a class="el" href="classCartaodeAtividade.html" title="É a unidade de trabalho dentro do Kanban, representando uma tarefa que pode estar sobre um de três es...">CartaodeAtividade</a> do mapa a partir de um <a class="el" href="classIdentificador.html" title="Classe que define um código de identificação para entidades do sistema.">Identificador</a> informado.  <br /></td></tr>
+<tr class="memdesc:a6478df2276be2b541952f833f8babc96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove um cartão de atividade do container.  <br /></td></tr>
 <tr class="separator:a6478df2276be2b541952f833f8babc96"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a443ccde3dd9dccdf94af5f357072ba26" id="r_a443ccde3dd9dccdf94af5f357072ba26"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classContainerCartao.html#a443ccde3dd9dccdf94af5f357072ba26">pesquisar</a> (const <a class="el" href="classIdentificador.html">Identificador</a> &amp;identificador, <a class="el" href="classCartaodeAtividade.html">CartaodeAtividade</a> *cartaoRetorno)</td></tr>
-<tr class="memdesc:a443ccde3dd9dccdf94af5f357072ba26"><td class="mdescLeft">&#160;</td><td class="mdescRight">Procura pela existência de um <a class="el" href="classCartaodeAtividade.html" title="É a unidade de trabalho dentro do Kanban, representando uma tarefa que pode estar sobre um de três es...">CartaodeAtividade</a> através de um <a class="el" href="classIdentificador.html" title="Classe que define um código de identificação para entidades do sistema.">Identificador</a> informado e atualiza os dados de um ponteiro de <a class="el" href="classCartaodeAtividade.html" title="É a unidade de trabalho dentro do Kanban, representando uma tarefa que pode estar sobre um de três es...">CartaodeAtividade</a> para copiar os dados encontrados.  <br /></td></tr>
+<tr class="memdesc:a443ccde3dd9dccdf94af5f357072ba26"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pesquisa as informações de um cartão no container.  <br /></td></tr>
 <tr class="separator:a443ccde3dd9dccdf94af5f357072ba26"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9fc827fb568a069addb453fb74e3a345" id="r_a9fc827fb568a069addb453fb74e3a345"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classContainerCartao.html#a9fc827fb568a069addb453fb74e3a345">atualizar</a> (const <a class="el" href="classCartaodeAtividade.html">CartaodeAtividade</a> &amp;cartao)</td></tr>
-<tr class="memdesc:a9fc827fb568a069addb453fb74e3a345"><td class="mdescLeft">&#160;</td><td class="mdescRight">Procura por uma instância de <a class="el" href="classCartaodeAtividade.html" title="É a unidade de trabalho dentro do Kanban, representando uma tarefa que pode estar sobre um de três es...">CartaodeAtividade</a> com o mesmo <a class="el" href="classIdentificador.html" title="Classe que define um código de identificação para entidades do sistema.">Identificador</a> e a substitui pela dada.  <br /></td></tr>
+<tr class="memdesc:a9fc827fb568a069addb453fb74e3a345"><td class="mdescLeft">&#160;</td><td class="mdescRight">Atualiza as informações de um cartão existente no container.  <br /></td></tr>
 <tr class="separator:a9fc827fb568a069addb453fb74e3a345"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5fd0008da505e2ce473e15b0a93c7c3f" id="r_a5fd0008da505e2ce473e15b0a93c7c3f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classContainerCartao.html#a5fd0008da505e2ce473e15b0a93c7c3f">listar</a> (const <a class="el" href="classIdentificador.html">Identificador</a> &amp;idQuadro, std::list&lt; <a class="el" href="classCartaodeAtividade.html">CartaodeAtividade</a> &gt; *listaRetorno)</td></tr>
-<tr class="memdesc:a5fd0008da505e2ce473e15b0a93c7c3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lista todos os cartões de atividades associados a um quadro.  <br /></td></tr>
+<tr class="memdesc:a5fd0008da505e2ce473e15b0a93c7c3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lista todos os cartões de atividade vinculados a um quadro específico.  <br /></td></tr>
 <tr class="separator:a5fd0008da505e2ce473e15b0a93c7c3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa692f1abba6960307adaf69fa319ca05" id="r_aa692f1abba6960307adaf69fa319ca05"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classContainerCartao.html#aa692f1abba6960307adaf69fa319ca05">listarPorDesenvolvedor</a> (const <a class="el" href="classEmail.html">Email</a> &amp;desenvolvedor, std::list&lt; <a class="el" href="classCartaodeAtividade.html">CartaodeAtividade</a> &gt; *listaRetorno)</td></tr>
+<tr class="memdesc:aa692f1abba6960307adaf69fa319ca05"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lista todos os cartões de atividade atribuídos a um determinado desenvolvedor.  <br /></td></tr>
+<tr class="separator:aa692f1abba6960307adaf69fa319ca05"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:ac88280a0017d95516a389a9c8b8395ad" id="r_ac88280a0017d95516a389a9c8b8395ad"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; std::string, <a class="el" href="classCartaodeAtividade.html">CartaodeAtividade</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classContainerCartao.html#ac88280a0017d95516a389a9c8b8395ad">mapaCartao</a></td></tr>
-<tr class="memdesc:ac88280a0017d95516a389a9c8b8395ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Instância de Mapa que irá armazenar as instâncias de <a class="el" href="classCartaodeAtividade.html" title="É a unidade de trabalho dentro do Kanban, representando uma tarefa que pode estar sobre um de três es...">CartaodeAtividade</a>.  <br /></td></tr>
-<tr class="separator:ac88280a0017d95516a389a9c8b8395ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a43caeb45584683c3f9e27558aeb9764c" id="r_a43caeb45584683c3f9e27558aeb9764c"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; std::string, std::vector&lt; std::string &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classContainerCartao.html#a43caeb45584683c3f9e27558aeb9764c">relacaoQuadroCartoes</a></td></tr>
-<tr class="memdesc:a43caeb45584683c3f9e27558aeb9764c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Instância de Mapa que irá armazenar os cartões de atividade associados a um quadro.  <br /></td></tr>
-<tr class="separator:a43caeb45584683c3f9e27558aeb9764c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb1a8df6633b89caeedbe89aec307202" id="r_aeb1a8df6633b89caeedbe89aec307202"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; std::string, <a class="el" href="classCartaodeAtividade.html">CartaodeAtividade</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classContainerCartao.html#aeb1a8df6633b89caeedbe89aec307202">mapaCartoes</a></td></tr>
+<tr class="memdesc:aeb1a8df6633b89caeedbe89aec307202"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tabela hash de armazenamento dos cartões utilizando o identificador como chave primária.  <br /></td></tr>
+<tr class="separator:aeb1a8df6633b89caeedbe89aec307202"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Classe que representa o armazenamento de instâncias da classe <a class="el" href="classCartaodeAtividade.html" title="É a unidade de trabalho dentro do Kanban, representando uma tarefa que pode estar sobre um de três es...">CartaodeAtividade</a>. </p>
-<p>A classe utiliza da estrutura mapa para armazenar as instâncias e facilitar o encontro e remoção dessas utilizando o <a class="el" href="classIdentificador.html" title="Classe que define um código de identificação para entidades do sistema.">Identificador</a> como chave primária de procura. </p>
+<div class="textblock"><p>Gerencia o armazenamento em RAM das instâncias da classe <a class="el" href="classCartaodeAtividade.html" title="É a unidade de trabalho dentro do Kanban, representando uma tarefa que pode estar sobre um de três es...">CartaodeAtividade</a>. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a9fc827fb568a069addb453fb74e3a345" name="a9fc827fb568a069addb453fb74e3a345"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9fc827fb568a069addb453fb74e3a345">&#9670;&#160;</a></span>atualizar()</h2>
@@ -151,21 +150,21 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Procura por uma instância de <a class="el" href="classCartaodeAtividade.html" title="É a unidade de trabalho dentro do Kanban, representando uma tarefa que pode estar sobre um de três es...">CartaodeAtividade</a> com o mesmo <a class="el" href="classIdentificador.html" title="Classe que define um código de identificação para entidades do sistema.">Identificador</a> e a substitui pela dada. </p>
+<p>Atualiza as informações de um cartão existente no container. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">cartao</td><td>Novos dados que serão colocados no lugar dos anteriores. </td></tr>
+    <tr><td class="paramname">cartao</td><td>Referência para a entidade <a class="el" href="classCartaodeAtividade.html" title="É a unidade de trabalho dentro do Kanban, representando uma tarefa que pode estar sobre um de três es...">CartaodeAtividade</a> contendo os dados modificados. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>true Se houve a atualização. </dd>
+<dl class="section return"><dt>Returns</dt><dd>true Se a atualização for concluída com sucesso. </dd>
 <dd>
-false Se não foi encontrada nenhuma instância com o mesmo identificador informado. </dd></dl>
+false Se o cartão não for localizado. </dd></dl>
 
 </div>
 </div>
-<a id="aab246bc3f46c3b08ba543ff4fbdc44d0" name="aab246bc3f46c3b08ba543ff4fbdc44d0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aab246bc3f46c3b08ba543ff4fbdc44d0">&#9670;&#160;</a></span>incluir()</h2>
+<a id="a7cfc4f686e56f9b5a38be57db7c2cfd7" name="a7cfc4f686e56f9b5a38be57db7c2cfd7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7cfc4f686e56f9b5a38be57db7c2cfd7">&#9670;&#160;</a></span>incluir()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -174,33 +173,22 @@ false Se não foi encontrada nenhuma instância com o mesmo identificador inform
           <td class="memname">bool ContainerCartao::incluir </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classCartaodeAtividade.html">CartaodeAtividade</a> &amp;&#160;</td>
-          <td class="paramname"><em>cartao</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramname"><em>cartao</em></td><td>)</td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classIdentificador.html">Identificador</a> &amp;&#160;</td>
-          <td class="paramname"><em>idQuadro</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Adiciona uma instância dada de <a class="el" href="classCartaodeAtividade.html" title="É a unidade de trabalho dentro do Kanban, representando uma tarefa que pode estar sobre um de três es...">CartaodeAtividade</a> no mapa, associando-a ao quadro que ela será integrada. </p>
+<p>Insere um novo cartão de atividade no container. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">cartao</td><td><a class="el" href="classCartaodeAtividade.html" title="É a unidade de trabalho dentro do Kanban, representando uma tarefa que pode estar sobre um de três es...">CartaodeAtividade</a> que deseja-se adicionar. </td></tr>
-    <tr><td class="paramname">idQuadro</td><td>O identificador do <a class="el" href="classQuadro.html" title="Representa o quadro Kanban pertencente a um projeto específico. Ele organiza o fluxo de trabalho.">Quadro</a> em que o cartão está associado. </td></tr>
+    <tr><td class="paramname">cartao</td><td>Referência para o objeto <a class="el" href="classCartaodeAtividade.html" title="É a unidade de trabalho dentro do Kanban, representando uma tarefa que pode estar sobre um de três es...">CartaodeAtividade</a> a ser cadastrado. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>true Se foi possível adicionar ao mapa. </dd>
+<dl class="section return"><dt>Returns</dt><dd>true Se o cartão for cadastrado com sucesso. </dd>
 <dd>
-false Se não foi possível adicionar ao mapa, já existe uma instância no mapa com aquele identificador. </dd></dl>
+false Se o cartão já existir no sistema. </dd></dl>
 
 </div>
 </div>
@@ -230,15 +218,55 @@ false Se não foi possível adicionar ao mapa, já existe uma instância no mapa
       </table>
 </div><div class="memdoc">
 
-<p>Lista todos os cartões de atividades associados a um quadro. </p>
+<p>Lista todos os cartões de atividade vinculados a um quadro específico. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">idQuadro</td><td>O quadro em que se quer visualizar os cartões de atividade existentes. </td></tr>
-    <tr><td class="paramname">listaRetorno</td><td>Lista que carrega os dados obtidos na busca; os cartões de atividade associados são retornados através desse parâmetro. </td></tr>
+    <tr><td class="paramname">idQuadro</td><td>Referência para o <a class="el" href="classIdentificador.html" title="Classe que define um código de identificação para entidades do sistema.">Identificador</a> do quadro pai. </td></tr>
+    <tr><td class="paramname">listaRetorno</td><td>Ponteiro para a lista onde os cartões encontrados serão salvos. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>true Se a busca foi bem-sucedida e/ou existem cartões de atividade associados ao quadro. </dd>
+<dl class="section return"><dt>Returns</dt><dd>true Se ao menos um cartão for encontrado. </dd>
+<dd>
+false Caso contrário. </dd></dl>
+
+</div>
+</div>
+<a id="aa692f1abba6960307adaf69fa319ca05" name="aa692f1abba6960307adaf69fa319ca05"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa692f1abba6960307adaf69fa319ca05">&#9670;&#160;</a></span>listarPorDesenvolvedor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ContainerCartao::listarPorDesenvolvedor </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classEmail.html">Email</a> &amp;&#160;</td>
+          <td class="paramname"><em>desenvolvedor</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::list&lt; <a class="el" href="classCartaodeAtividade.html">CartaodeAtividade</a> &gt; *&#160;</td>
+          <td class="paramname"><em>listaRetorno</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Lista todos os cartões de atividade atribuídos a um determinado desenvolvedor. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">desenvolvedor</td><td>Referência para o <a class="el" href="classEmail.html" title="Classe que representa o endereço de correio eletrônico de um usuário do sistema.">Email</a> do desenvolvedor associado aos cartões. </td></tr>
+    <tr><td class="paramname">listaRetorno</td><td>Ponteiro para a lista onde os cartões encontrados serão salvos. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true Se ao menos um cartão for encontrado. </dd>
 <dd>
 false Caso contrário. </dd></dl>
 
@@ -270,17 +298,17 @@ false Caso contrário. </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Procura pela existência de um <a class="el" href="classCartaodeAtividade.html" title="É a unidade de trabalho dentro do Kanban, representando uma tarefa que pode estar sobre um de três es...">CartaodeAtividade</a> através de um <a class="el" href="classIdentificador.html" title="Classe que define um código de identificação para entidades do sistema.">Identificador</a> informado e atualiza os dados de um ponteiro de <a class="el" href="classCartaodeAtividade.html" title="É a unidade de trabalho dentro do Kanban, representando uma tarefa que pode estar sobre um de três es...">CartaodeAtividade</a> para copiar os dados encontrados. </p>
+<p>Pesquisa as informações de um cartão no container. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">identificador</td><td><a class="el" href="classIdentificador.html" title="Classe que define um código de identificação para entidades do sistema.">Identificador</a> usado para a procura. </td></tr>
-    <tr><td class="paramname">cartaoRetorno</td><td>Ponteiro de <a class="el" href="classCartaodeAtividade.html" title="É a unidade de trabalho dentro do Kanban, representando uma tarefa que pode estar sobre um de três es...">CartaodeAtividade</a> que retornará os dados encontrados. </td></tr>
+    <tr><td class="paramname">identificador</td><td>Referência para o <a class="el" href="classIdentificador.html" title="Classe que define um código de identificação para entidades do sistema.">Identificador</a> do cartão buscado. </td></tr>
+    <tr><td class="paramname">cartaoRetorno</td><td>Ponteiro onde os dados do cartão localizado serão armazenados. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>true Se encontrou aquele <a class="el" href="classIdentificador.html" title="Classe que define um código de identificação para entidades do sistema.">Identificador</a> no Mapa. </dd>
+<dl class="section return"><dt>Returns</dt><dd>true Se o cartão for encontrado. </dd>
 <dd>
-false Se não encontrou. </dd></dl>
+false Caso contrário. </dd></dl>
 
 </div>
 </div>
@@ -300,22 +328,22 @@ false Se não encontrou. </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Remove um <a class="el" href="classCartaodeAtividade.html" title="É a unidade de trabalho dentro do Kanban, representando uma tarefa que pode estar sobre um de três es...">CartaodeAtividade</a> do mapa a partir de um <a class="el" href="classIdentificador.html" title="Classe que define um código de identificação para entidades do sistema.">Identificador</a> informado. </p>
+<p>Remove um cartão de atividade do container. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">identificador</td><td><a class="el" href="classIdentificador.html" title="Classe que define um código de identificação para entidades do sistema.">Identificador</a> que será utilizado para a procura da instância a ser removida. </td></tr>
+    <tr><td class="paramname">identificador</td><td>Referência para o <a class="el" href="classIdentificador.html" title="Classe que define um código de identificação para entidades do sistema.">Identificador</a> do cartão a ser removido. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>true Se houve remoção. </dd>
+<dl class="section return"><dt>Returns</dt><dd>true Se a exclusão for concluída com sucesso. </dd>
 <dd>
-false Se aquele identificador não está presente no mapa. </dd></dl>
+false Caso contrário. </dd></dl>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="ac88280a0017d95516a389a9c8b8395ad" name="ac88280a0017d95516a389a9c8b8395ad"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac88280a0017d95516a389a9c8b8395ad">&#9670;&#160;</a></span>mapaCartao</h2>
+<a id="aeb1a8df6633b89caeedbe89aec307202" name="aeb1a8df6633b89caeedbe89aec307202"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb1a8df6633b89caeedbe89aec307202">&#9670;&#160;</a></span>mapaCartoes</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -324,7 +352,7 @@ false Se aquele identificador não está presente no mapa. </dd></dl>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::unordered_map&lt;std::string, <a class="el" href="classCartaodeAtividade.html">CartaodeAtividade</a>&gt; ContainerCartao::mapaCartao</td>
+          <td class="memname">std::unordered_map&lt;std::string, <a class="el" href="classCartaodeAtividade.html">CartaodeAtividade</a>&gt; ContainerCartao::mapaCartoes</td>
         </tr>
       </table>
   </td>
@@ -334,37 +362,13 @@ false Se aquele identificador não está presente no mapa. </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p>Instância de Mapa que irá armazenar as instâncias de <a class="el" href="classCartaodeAtividade.html" title="É a unidade de trabalho dentro do Kanban, representando uma tarefa que pode estar sobre um de três es...">CartaodeAtividade</a>. </p>
-
-</div>
-</div>
-<a id="a43caeb45584683c3f9e27558aeb9764c" name="a43caeb45584683c3f9e27558aeb9764c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a43caeb45584683c3f9e27558aeb9764c">&#9670;&#160;</a></span>relacaoQuadroCartoes</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::unordered_map&lt; std::string, std::vector&lt; std::string &gt; &gt; ContainerCartao::relacaoQuadroCartoes</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Instância de Mapa que irá armazenar os cartões de atividade associados a um quadro. </p>
+<p>Tabela hash de armazenamento dos cartões utilizando o identificador como chave primária. </p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>/home/mateuschrist/Trabalho-TP1_2026_2-UnB/Headers/<a class="el" href="containers_8hpp_source.html">containers.hpp</a></li>
-<li>/home/mateuschrist/Trabalho-TP1_2026_2-UnB/Sources/<a class="el" href="containers_8cpp.html">containers.cpp</a></li>
+<li>/home/italomrnd/UnB/CicloBásicoCIC/TP1_26_2/Trabalho26_2/Headers/<a class="el" href="containers_8hpp_source.html">containers.hpp</a></li>
+<li>/home/italomrnd/UnB/CicloBásicoCIC/TP1_26_2/Trabalho26_2/Sources/<a class="el" href="containers_8cpp.html">containers.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

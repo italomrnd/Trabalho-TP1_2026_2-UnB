@@ -3,15 +3,15 @@
 #include <stdexcept>
 #include <cctype>
 
+using namespace std;
+
 // Implementação dos métodos da classe Email
 
 void Email::validar(const string& valor){
     if (valor.empty() || valor.size() > 320)
         throw std::invalid_argument("O TAMANHO DO EMAIL EH INVALIDO!");
-    
 
-    size_t posArroba = valor.find('@'); 
-    size_t posPonto = valor.find('.');
+    size_t posArroba = valor.find('@');
 
     if (posArroba == string::npos || posArroba != valor.rfind('@'))
         throw std::invalid_argument("NAO HA @ NO EMAIL OU HA MAIS DE UM @!");
@@ -72,14 +72,16 @@ void Email::validar(const string& valor){
                 throw std::invalid_argument("SEPARADORES CONSECUTIVOS NO DOMINIO!");
         }
     }   
-
 }
 
+void Email::setValor(const string& valor){
+    validar(valor);
+    this->valor = valor;
+}
 
 //////////////////////////////////////////////
 
-
-// Implementação do métodos da classe Estado
+// Implementação dos métodos da classe Estado
 
 void Estado::validar(const string& valor){
     if (valor != "A FAZER" &&
@@ -97,7 +99,6 @@ void Estado::setValor(const string& valor){
 ///////////////////////////////////////////////
 
 // Implementação dos métodos da classe Identificador
-
 
 void Identificador::validar(const string& valor){
     if (valor.size() != 6)
@@ -119,15 +120,12 @@ void Identificador::setValor(const string& valor){
     this->valor = valor;
 }
 
-
 ///////////////////////////////////////////////
 
 // Implementação dos métodos da classe Limite
 
-
-
-void Limite::validar(int valor){ //
-    if(valor > 25 || valor < 1){ // 
+void Limite::validar(int valor){
+    if(valor > 25 || valor < 1){ 
         throw std::invalid_argument("LIMITE INVALIDO!"); 
     }
 }
@@ -137,14 +135,12 @@ void Limite::setValor(int valor){
     this->valor = valor;
 }
 
-
 ///////////////////////////////////////////////
 
 // Implementação dos métodos da classe Nome
 
-
 void Nome::validar(const string& valor){
-    if(valor.size() > 15 || valor.empty()){ // antes tava size(valor) -> isso retorna o tamanho de um vetor
+    if(valor.size() > 15 || valor.empty()){
         throw std::invalid_argument("NOME EXCEDE 15 CARACTERES!");
     }
     if(valor.front() == ' ' || valor.back() == ' ') {
@@ -171,9 +167,7 @@ void Nome::setValor(const string& valor){
     this->valor = valor;
 }  
 
-
 ////////////////////////////////////////////////
-
 
 // Implementação dos métodos da classe Papel
 
@@ -188,16 +182,13 @@ void Papel::setValor(const string& valor){
     this->valor = valor;
 }
 
-
-
 ////////////////////////////////////////////////
-
 
 // Implementação dos métodos da classe Prioridade
 
 void Prioridade::validar(const string& valor){
     if(valor != "ALTA" && valor != "MEDIA" && valor!= "BAIXA"){
-        throw std:: invalid_argument("PRIORIDADE INVALIDA!");  
+        throw std::invalid_argument("PRIORIDADE INVALIDA!");  
     }
 }
 
@@ -208,11 +199,7 @@ void Prioridade::setValor(const string& valor){
 
 ////////////////////////////////////////////////
 
-
 // Implementação dos métodos da classe Senha
-
-/*5 caracteres
-Caractere pode ser letra (a-z ou A-Z) ou dígito (0-9); existe pelo menos uma letra e um dígito. */
 
 void Senha::validar(const string& valor){
     if (valor.size() != 5)
@@ -236,14 +223,10 @@ void Senha::validar(const string& valor){
         throw std::invalid_argument("A SENHA PRECISA TER PELO MENOS UMA LETRA E UM DIGITO!");
 }
 
-
-
 void Senha::setValor(const string& valor){
     validar(valor);
     this->valor = valor;
 }
-
-
 
 ////////////////////////////////////////////////
 
@@ -259,40 +242,39 @@ void Tamanho::setValor(const string& valor){
     this->valor = valor;
 }
 
-
-
-
 ////////////////////////////////////////////////
 
 // Implementação dos métodos da classe Texto
+
 bool Texto::ehPontuacaoAceita(char c){
     return c == '.' || c == ',' || c == ';'
         || c == ':' || c == '?' || c == '!';
 }
+
 void Texto::validar(const string& valor){
     if(valor.size() > 30 || valor.empty()){
-        throw std :: invalid_argument("NOME DE TAMANHO INVALIDO!");
+        throw std::invalid_argument("NOME DE TAMANHO INVALIDO!");
     } 
     char c = valor.front(); 
 
     if(!isupper(c)){
-        throw std :: invalid_argument("TEXTO DEVE COMECAR COM LETRA MAIUSCULA!");
+        throw std::invalid_argument("TEXTO DEVE COMECAR COM LETRA MAIUSCULA!");
     }
 
     c = valor.back();
 
     if(c != '.'){
-        throw std :: invalid_argument("TEXTO DEVE TERMINAR COM PONTO FINAL!");
+        throw std::invalid_argument("TEXTO DEVE TERMINAR COM PONTO FINAL!");
     }
 
     for(size_t i = 0; i < valor.size(); i++){
         c = valor[i];
         if(!isalpha(c) && !isspace(c) && !isdigit(c) && !ehPontuacaoAceita(c)){
-            throw std :: invalid_argument("TEXTO CONTEM CARACTERES INVALIDOS!");
+            throw std::invalid_argument("TEXTO CONTEM CARACTERES INVALIDOS!");
         }
 
         if(ehPontuacaoAceita(c) && (i + 1 < valor.size()) && ehPontuacaoAceita(valor[i+1])){
-            throw std :: invalid_argument("PONTUACAO NAO PODE SER SEGUIDA DE PONTUACAO!");
+            throw std::invalid_argument("PONTUACAO NAO PODE SER SEGUIDA DE PONTUACAO!");
         }
     }
 }
@@ -301,7 +283,6 @@ void Texto::setValor(const string& valor){
     validar(valor);
     this->valor = valor;
 }
-
 
 /////////////////////////////////////////////////
 
@@ -333,7 +314,6 @@ int Timestamp::quantidadeDiasNoMes(const string& mes, int ano){
     return 0;
 }
 
-
 bool Timestamp::ehMesValido(const string& mes){
     return mes == "JAN" || mes == "MAR" || mes == "MAI" || mes == "JUL" 
         || mes == "AGO" || mes == "OUT" || mes == "DEZ" || mes == "ABR" || 
@@ -359,7 +339,6 @@ void Timestamp::validar(const string& valor){
     if(!ehDigito(str_dia) || !ehDigito(str_ano) || !ehDigito(str_hora) || !ehDigito(str_minutos)){
         throw std::invalid_argument("DIA, ANO OU HORARIO CONTEM CARACTERES NAO NUMERICOS!");
     }
-
 
     int dia = std::stoi(str_dia);
     int ano = std::stoi(str_ano);
@@ -388,4 +367,3 @@ void Timestamp::setValor(const string& valor){
 }
 
 /////////////////////////////////////////////////
-

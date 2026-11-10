@@ -1,0 +1,4 @@
+var searchData=
+[
+  ['validar_0',['validar',['../classEmail.html#a8ac9bcfd96aea01d418c59feb0d16017',1,'Email::validar()'],['../classEstado.html#a6564da1ce9db82ab790e2aec1c9c45c2',1,'Estado::validar()'],['../classIdentificador.html#ac91aca5853c84d4e8ff168bd9cdc70c6',1,'Identificador::validar()'],['../classLimite.html#af13062890778d46f3c332794b45f6fdd',1,'Limite::validar()'],['../classNome.html#a43fda8856abd4100393639eb48e31884',1,'Nome::validar()'],['../classPapel.html#afbb5ebe3b7d9585de13bcb90d7a1de4d',1,'Papel::validar()'],['../classPrioridade.html#a681d8005b5dc2518c9a4a0f1d71c463f',1,'Prioridade::validar()'],['../classSenha.html#a31345814fe8ec2ce1e3d38b67d4e40bc',1,'Senha::validar()'],['../classTamanho.html#a894dafcb0a6f72015b916d93c8282494',1,'Tamanho::validar()'],['../classTexto.html#a01902e5916271b5c7ddcf1f2016ffa07',1,'Texto::validar()'],['../classTimestamp.html#a6d1a1356f8397f3be37f908d8f54dc0a',1,'Timestamp::validar()']]]
+];

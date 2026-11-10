@@ -99,41 +99,37 @@ $(document).ready(function(){initNavTree('classContainerQuadro.html',''); initRe
 </div><!--header-->
 <div class="contents">
 
-<p>Classe que representa o armazenamento de instâncias da classe <a class="el" href="classQuadro.html" title="Representa o quadro Kanban pertencente a um projeto específico. Ele organiza o fluxo de trabalho.">Quadro</a>.  
+<p>Gerencia o armazenamento em RAM das instâncias da classe <a class="el" href="classQuadro.html" title="Representa o quadro Kanban pertencente a um projeto específico. Ele organiza o fluxo de trabalho.">Quadro</a>.  
  <a href="classContainerQuadro.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="containers_8hpp_source.html">containers.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a369abe3ca7bfa76e5a01afbdff940033" id="r_a369abe3ca7bfa76e5a01afbdff940033"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classContainerQuadro.html#a369abe3ca7bfa76e5a01afbdff940033">incluir</a> (const <a class="el" href="classQuadro.html">Quadro</a> &amp;quadro, const <a class="el" href="classEmail.html">Email</a> &amp;emailDono)</td></tr>
-<tr class="memdesc:a369abe3ca7bfa76e5a01afbdff940033"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adiciona uma instância dada de <a class="el" href="classQuadro.html" title="Representa o quadro Kanban pertencente a um projeto específico. Ele organiza o fluxo de trabalho.">Quadro</a> no mapa.  <br /></td></tr>
-<tr class="separator:a369abe3ca7bfa76e5a01afbdff940033"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71ac28ada114559e9e65d26d37570606" id="r_a71ac28ada114559e9e65d26d37570606"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classContainerQuadro.html#a71ac28ada114559e9e65d26d37570606">incluir</a> (const <a class="el" href="classQuadro.html">Quadro</a> &amp;quadro)</td></tr>
+<tr class="memdesc:a71ac28ada114559e9e65d26d37570606"><td class="mdescLeft">&#160;</td><td class="mdescRight">Insere um novo quadro no container.  <br /></td></tr>
+<tr class="separator:a71ac28ada114559e9e65d26d37570606"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abd65200fce063f0fdddcabba8f3f26e5" id="r_abd65200fce063f0fdddcabba8f3f26e5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classContainerQuadro.html#abd65200fce063f0fdddcabba8f3f26e5">remover</a> (const <a class="el" href="classIdentificador.html">Identificador</a> &amp;identificador)</td></tr>
-<tr class="memdesc:abd65200fce063f0fdddcabba8f3f26e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove um <a class="el" href="classQuadro.html" title="Representa o quadro Kanban pertencente a um projeto específico. Ele organiza o fluxo de trabalho.">Quadro</a> do mapa a partir de um <a class="el" href="classIdentificador.html" title="Classe que define um código de identificação para entidades do sistema.">Identificador</a> informado.  <br /></td></tr>
+<tr class="memdesc:abd65200fce063f0fdddcabba8f3f26e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove um quadro registrado do container.  <br /></td></tr>
 <tr class="separator:abd65200fce063f0fdddcabba8f3f26e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a56445ef9483d9de90b9ac1d596c57e69" id="r_a56445ef9483d9de90b9ac1d596c57e69"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classContainerQuadro.html#a56445ef9483d9de90b9ac1d596c57e69">pesquisar</a> (const <a class="el" href="classIdentificador.html">Identificador</a> &amp;identificador, <a class="el" href="classQuadro.html">Quadro</a> *quadroRetorno)</td></tr>
-<tr class="memdesc:a56445ef9483d9de90b9ac1d596c57e69"><td class="mdescLeft">&#160;</td><td class="mdescRight">Procura pela existência de um <a class="el" href="classQuadro.html" title="Representa o quadro Kanban pertencente a um projeto específico. Ele organiza o fluxo de trabalho.">Quadro</a> através de um <a class="el" href="classIdentificador.html" title="Classe que define um código de identificação para entidades do sistema.">Identificador</a> informado e atualiza os dados de um ponteiro de <a class="el" href="classQuadro.html" title="Representa o quadro Kanban pertencente a um projeto específico. Ele organiza o fluxo de trabalho.">Quadro</a> para copiar os dados encontrados.  <br /></td></tr>
+<tr class="memdesc:a56445ef9483d9de90b9ac1d596c57e69"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pesquisa as informações de um quadro no container.  <br /></td></tr>
 <tr class="separator:a56445ef9483d9de90b9ac1d596c57e69"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a18b5254a3a91be727cbc28dc47317cc7" id="r_a18b5254a3a91be727cbc28dc47317cc7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classContainerQuadro.html#a18b5254a3a91be727cbc28dc47317cc7">atualizar</a> (const <a class="el" href="classQuadro.html">Quadro</a> &amp;quadro)</td></tr>
-<tr class="memdesc:a18b5254a3a91be727cbc28dc47317cc7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Procura por uma instância de <a class="el" href="classQuadro.html" title="Representa o quadro Kanban pertencente a um projeto específico. Ele organiza o fluxo de trabalho.">Quadro</a> com o mesmo <a class="el" href="classIdentificador.html" title="Classe que define um código de identificação para entidades do sistema.">Identificador</a> e a substitui pela dada.  <br /></td></tr>
+<tr class="memdesc:a18b5254a3a91be727cbc28dc47317cc7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Atualiza as informações de um quadro existente.  <br /></td></tr>
 <tr class="separator:a18b5254a3a91be727cbc28dc47317cc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0a75f3af8f6d76e24bb39a6d07c024ac" id="r_a0a75f3af8f6d76e24bb39a6d07c024ac"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classContainerQuadro.html#a0a75f3af8f6d76e24bb39a6d07c024ac">listar</a> (const <a class="el" href="classEmail.html">Email</a> &amp;emailDono, std::list&lt; <a class="el" href="classQuadro.html">Quadro</a> &gt; *listaRetorno)</td></tr>
-<tr class="memdesc:a0a75f3af8f6d76e24bb39a6d07c024ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lista todos os quadros associados a um usuário do sistema.  <br /></td></tr>
-<tr class="separator:a0a75f3af8f6d76e24bb39a6d07c024ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae281a4787fe44ffc24dffed4700f9421" id="r_ae281a4787fe44ffc24dffed4700f9421"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classContainerQuadro.html#ae281a4787fe44ffc24dffed4700f9421">listar</a> (const <a class="el" href="classIdentificador.html">Identificador</a> &amp;idProjeto, std::list&lt; <a class="el" href="classQuadro.html">Quadro</a> &gt; *listaRetorno)</td></tr>
+<tr class="memdesc:ae281a4787fe44ffc24dffed4700f9421"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lista todos os quadros associados a um projeto específico.  <br /></td></tr>
+<tr class="separator:ae281a4787fe44ffc24dffed4700f9421"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:ab1ca456ebc8a636d838abd22033a8c1c" id="r_ab1ca456ebc8a636d838abd22033a8c1c"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; std::string, <a class="el" href="classQuadro.html">Quadro</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classContainerQuadro.html#ab1ca456ebc8a636d838abd22033a8c1c">mapaQuadro</a></td></tr>
-<tr class="memdesc:ab1ca456ebc8a636d838abd22033a8c1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Instância de Mapa que irá armazenar as instâncias de <a class="el" href="classQuadro.html" title="Representa o quadro Kanban pertencente a um projeto específico. Ele organiza o fluxo de trabalho.">Quadro</a>.  <br /></td></tr>
-<tr class="separator:ab1ca456ebc8a636d838abd22033a8c1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a58498e652ec396f587d513eddf321fb0" id="r_a58498e652ec396f587d513eddf321fb0"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; std::string, std::vector&lt; std::string &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classContainerQuadro.html#a58498e652ec396f587d513eddf321fb0">relacaoPessoaQuadro</a></td></tr>
-<tr class="memdesc:a58498e652ec396f587d513eddf321fb0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Instância de mapa que associa o e-mail de um usuário à lista de identificadores (IDs) dos seus quadros.  <br /></td></tr>
-<tr class="separator:a58498e652ec396f587d513eddf321fb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1a791af7ed12ca632d31cc1324f474f" id="r_aa1a791af7ed12ca632d31cc1324f474f"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; std::string, <a class="el" href="classQuadro.html">Quadro</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classContainerQuadro.html#aa1a791af7ed12ca632d31cc1324f474f">mapaQuadros</a></td></tr>
+<tr class="memdesc:aa1a791af7ed12ca632d31cc1324f474f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tabela hash de armazenamento dos quadros utilizando o identificador como chave primária.  <br /></td></tr>
+<tr class="separator:aa1a791af7ed12ca632d31cc1324f474f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Classe que representa o armazenamento de instâncias da classe <a class="el" href="classQuadro.html" title="Representa o quadro Kanban pertencente a um projeto específico. Ele organiza o fluxo de trabalho.">Quadro</a>. </p>
-<p>A classe utiliza da estrutura mapa para armazenar as instâncias e facilitar o encontro e remoção dessas utilizando o <a class="el" href="classIdentificador.html" title="Classe que define um código de identificação para entidades do sistema.">Identificador</a> como chave primária de procura. </p>
+<div class="textblock"><p>Gerencia o armazenamento em RAM das instâncias da classe <a class="el" href="classQuadro.html" title="Representa o quadro Kanban pertencente a um projeto específico. Ele organiza o fluxo de trabalho.">Quadro</a>. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a18b5254a3a91be727cbc28dc47317cc7" name="a18b5254a3a91be727cbc28dc47317cc7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a18b5254a3a91be727cbc28dc47317cc7">&#9670;&#160;</a></span>atualizar()</h2>
@@ -151,21 +147,21 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Procura por uma instância de <a class="el" href="classQuadro.html" title="Representa o quadro Kanban pertencente a um projeto específico. Ele organiza o fluxo de trabalho.">Quadro</a> com o mesmo <a class="el" href="classIdentificador.html" title="Classe que define um código de identificação para entidades do sistema.">Identificador</a> e a substitui pela dada. </p>
+<p>Atualiza as informações de um quadro existente. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">quadro</td><td>Novos dados que serão colocados no lugar dos anteriores. </td></tr>
+    <tr><td class="paramname">quadro</td><td>Referência para a entidade <a class="el" href="classQuadro.html" title="Representa o quadro Kanban pertencente a um projeto específico. Ele organiza o fluxo de trabalho.">Quadro</a> com os novos dados. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>true Se houve a atualização. </dd>
+<dl class="section return"><dt>Returns</dt><dd>true Se a alteração for realizada com sucesso. </dd>
 <dd>
-false Se não foi encontrada nenhuma instância com o mesmo identificador informado. </dd></dl>
+false Caso o quadro não exista. </dd></dl>
 
 </div>
 </div>
-<a id="a369abe3ca7bfa76e5a01afbdff940033" name="a369abe3ca7bfa76e5a01afbdff940033"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a369abe3ca7bfa76e5a01afbdff940033">&#9670;&#160;</a></span>incluir()</h2>
+<a id="a71ac28ada114559e9e65d26d37570606" name="a71ac28ada114559e9e65d26d37570606"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71ac28ada114559e9e65d26d37570606">&#9670;&#160;</a></span>incluir()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -174,38 +170,27 @@ false Se não foi encontrada nenhuma instância com o mesmo identificador inform
           <td class="memname">bool ContainerQuadro::incluir </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classQuadro.html">Quadro</a> &amp;&#160;</td>
-          <td class="paramname"><em>quadro</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramname"><em>quadro</em></td><td>)</td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classEmail.html">Email</a> &amp;&#160;</td>
-          <td class="paramname"><em>emailDono</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Adiciona uma instância dada de <a class="el" href="classQuadro.html" title="Representa o quadro Kanban pertencente a um projeto específico. Ele organiza o fluxo de trabalho.">Quadro</a> no mapa. </p>
+<p>Insere um novo quadro no container. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">quadro</td><td><a class="el" href="classQuadro.html" title="Representa o quadro Kanban pertencente a um projeto específico. Ele organiza o fluxo de trabalho.">Quadro</a> que se deseja adicionar. </td></tr>
-    <tr><td class="paramname">emailDono</td><td><a class="el" href="classEmail.html" title="Classe que representa o endereço de correio eletrônico de um usuário do sistema.">Email</a> do usuário associado àquele <a class="el" href="classQuadro.html" title="Representa o quadro Kanban pertencente a um projeto específico. Ele organiza o fluxo de trabalho.">Quadro</a>. </td></tr>
+    <tr><td class="paramname">quadro</td><td>Referência para o objeto <a class="el" href="classQuadro.html" title="Representa o quadro Kanban pertencente a um projeto específico. Ele organiza o fluxo de trabalho.">Quadro</a> a ser cadastrado. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>true Se foi possível adicionar ao mapa. </dd>
+<dl class="section return"><dt>Returns</dt><dd>true Se a inserção foi realizada com sucesso. </dd>
 <dd>
-false Se não foi possível adicionar ao mapa e/ou já existe essa instância no mapa. </dd></dl>
+false Caso o quadro já esteja armazenado. </dd></dl>
 
 </div>
 </div>
-<a id="a0a75f3af8f6d76e24bb39a6d07c024ac" name="a0a75f3af8f6d76e24bb39a6d07c024ac"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0a75f3af8f6d76e24bb39a6d07c024ac">&#9670;&#160;</a></span>listar()</h2>
+<a id="ae281a4787fe44ffc24dffed4700f9421" name="ae281a4787fe44ffc24dffed4700f9421"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae281a4787fe44ffc24dffed4700f9421">&#9670;&#160;</a></span>listar()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -213,8 +198,8 @@ false Se não foi possível adicionar ao mapa e/ou já existe essa instância no
         <tr>
           <td class="memname">bool ContainerQuadro::listar </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classEmail.html">Email</a> &amp;&#160;</td>
-          <td class="paramname"><em>emailDono</em>, </td>
+          <td class="paramtype">const <a class="el" href="classIdentificador.html">Identificador</a> &amp;&#160;</td>
+          <td class="paramname"><em>idProjeto</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -230,15 +215,15 @@ false Se não foi possível adicionar ao mapa e/ou já existe essa instância no
       </table>
 </div><div class="memdoc">
 
-<p>Lista todos os quadros associados a um usuário do sistema. </p>
+<p>Lista todos os quadros associados a um projeto específico. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">emailDono</td><td>O email do usuário a ser utilizado para buscar os quadros associados </td></tr>
-    <tr><td class="paramname">listaRetorno</td><td>Lista que carrega os dados obtidos na busca; os quadros associados são retornados através deste parâmetro. </td></tr>
+    <tr><td class="paramname">idProjeto</td><td>Referência para o <a class="el" href="classIdentificador.html" title="Classe que define um código de identificação para entidades do sistema.">Identificador</a> do projeto pai. </td></tr>
+    <tr><td class="paramname">listaRetorno</td><td>Ponteiro para a lista onde os quadros recuperados serão inseridos. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>true Se a busca foi bem sucedida e/ou encontrou quadros. </dd>
+<dl class="section return"><dt>Returns</dt><dd>true Se ao menos um quadro for localizado. </dd>
 <dd>
 false Caso contrário. </dd></dl>
 
@@ -270,17 +255,17 @@ false Caso contrário. </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Procura pela existência de um <a class="el" href="classQuadro.html" title="Representa o quadro Kanban pertencente a um projeto específico. Ele organiza o fluxo de trabalho.">Quadro</a> através de um <a class="el" href="classIdentificador.html" title="Classe que define um código de identificação para entidades do sistema.">Identificador</a> informado e atualiza os dados de um ponteiro de <a class="el" href="classQuadro.html" title="Representa o quadro Kanban pertencente a um projeto específico. Ele organiza o fluxo de trabalho.">Quadro</a> para copiar os dados encontrados. </p>
+<p>Pesquisa as informações de um quadro no container. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">identificador</td><td><a class="el" href="classIdentificador.html" title="Classe que define um código de identificação para entidades do sistema.">Identificador</a> usado para a procura. </td></tr>
-    <tr><td class="paramname">quadroRetorno</td><td>Ponteiro de <a class="el" href="classQuadro.html" title="Representa o quadro Kanban pertencente a um projeto específico. Ele organiza o fluxo de trabalho.">Quadro</a> que retornará os dados encontrados. </td></tr>
+    <tr><td class="paramname">identificador</td><td>Referência para o <a class="el" href="classIdentificador.html" title="Classe que define um código de identificação para entidades do sistema.">Identificador</a> do quadro buscado. </td></tr>
+    <tr><td class="paramname">quadroRetorno</td><td>Ponteiro onde os dados do quadro localizado serão armazenados. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>true Se encontrou aquele <a class="el" href="classIdentificador.html" title="Classe que define um código de identificação para entidades do sistema.">Identificador</a> no Mapa. </dd>
+<dl class="section return"><dt>Returns</dt><dd>true Se o quadro for localizado. </dd>
 <dd>
-false Se não encontrou. </dd></dl>
+false Caso contrário. </dd></dl>
 
 </div>
 </div>
@@ -300,22 +285,22 @@ false Se não encontrou. </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Remove um <a class="el" href="classQuadro.html" title="Representa o quadro Kanban pertencente a um projeto específico. Ele organiza o fluxo de trabalho.">Quadro</a> do mapa a partir de um <a class="el" href="classIdentificador.html" title="Classe que define um código de identificação para entidades do sistema.">Identificador</a> informado. </p>
+<p>Remove um quadro registrado do container. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">identificador</td><td><a class="el" href="classIdentificador.html" title="Classe que define um código de identificação para entidades do sistema.">Identificador</a> que será utilizado para a procura da instância a ser removida. </td></tr>
+    <tr><td class="paramname">identificador</td><td>Referência para o <a class="el" href="classIdentificador.html" title="Classe que define um código de identificação para entidades do sistema.">Identificador</a> do quadro a ser removido. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>true Se houve remoção. </dd>
+<dl class="section return"><dt>Returns</dt><dd>true Se a exclusão for efetuada com sucesso. </dd>
 <dd>
-false Se aquele identificador não está presente no mapa. </dd></dl>
+false Caso contrário. </dd></dl>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="ab1ca456ebc8a636d838abd22033a8c1c" name="ab1ca456ebc8a636d838abd22033a8c1c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab1ca456ebc8a636d838abd22033a8c1c">&#9670;&#160;</a></span>mapaQuadro</h2>
+<a id="aa1a791af7ed12ca632d31cc1324f474f" name="aa1a791af7ed12ca632d31cc1324f474f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1a791af7ed12ca632d31cc1324f474f">&#9670;&#160;</a></span>mapaQuadros</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -324,7 +309,7 @@ false Se aquele identificador não está presente no mapa. </dd></dl>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::unordered_map&lt;std::string, <a class="el" href="classQuadro.html">Quadro</a>&gt; ContainerQuadro::mapaQuadro</td>
+          <td class="memname">std::unordered_map&lt;std::string, <a class="el" href="classQuadro.html">Quadro</a>&gt; ContainerQuadro::mapaQuadros</td>
         </tr>
       </table>
   </td>
@@ -334,37 +319,13 @@ false Se aquele identificador não está presente no mapa. </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p>Instância de Mapa que irá armazenar as instâncias de <a class="el" href="classQuadro.html" title="Representa o quadro Kanban pertencente a um projeto específico. Ele organiza o fluxo de trabalho.">Quadro</a>. </p>
-
-</div>
-</div>
-<a id="a58498e652ec396f587d513eddf321fb0" name="a58498e652ec396f587d513eddf321fb0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a58498e652ec396f587d513eddf321fb0">&#9670;&#160;</a></span>relacaoPessoaQuadro</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::unordered_map&lt;std::string, std::vector&lt;std::string&gt; &gt; ContainerQuadro::relacaoPessoaQuadro</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Instância de mapa que associa o e-mail de um usuário à lista de identificadores (IDs) dos seus quadros. </p>
+<p>Tabela hash de armazenamento dos quadros utilizando o identificador como chave primária. </p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>/home/mateuschrist/Trabalho-TP1_2026_2-UnB/Headers/<a class="el" href="containers_8hpp_source.html">containers.hpp</a></li>
-<li>/home/mateuschrist/Trabalho-TP1_2026_2-UnB/Sources/<a class="el" href="containers_8cpp.html">containers.cpp</a></li>
+<li>/home/italomrnd/UnB/CicloBásicoCIC/TP1_26_2/Trabalho26_2/Headers/<a class="el" href="containers_8hpp_source.html">containers.hpp</a></li>
+<li>/home/italomrnd/UnB/CicloBásicoCIC/TP1_26_2/Trabalho26_2/Sources/<a class="el" href="containers_8cpp.html">containers.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

@@ -1,0 +1,91 @@
+\doxysection{cntr\+Apr\+Autenticacao Class Reference}
+\hypertarget{classcntrAprAutenticacao}{}\label{classcntrAprAutenticacao}\index{cntrAprAutenticacao@{cntrAprAutenticacao}}
+
+
+{\ttfamily \#include $<$controladoras.\+hpp$>$}
+
+
+
+Inheritance diagram for cntr\+Apr\+Autenticacao\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=196pt]{classcntrAprAutenticacao__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for cntr\+Apr\+Autenticacao\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=298pt]{classcntrAprAutenticacao__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classcntrAprAutenticacao_a128bf09528ee3d8789a7507247851c0f}{autenticar}} (\mbox{\hyperlink{classEmail}{Email}} \texorpdfstring{$\ast$}{*}) override
+\begin{DoxyCompactList}\small\item\em Solicita as credenciais ao usuário e registra a identificação autenticada. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcntrAprAutenticacao_acaa5c3cdd4721dd9cc83184a9fff5b10}{set\+Cntr\+Servico}} (\mbox{\hyperlink{classISerAutenticacao}{ISer\+Autenticacao}} \texorpdfstring{$\ast$}{*}cntr)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classIAprAutenticacao}{IApr\+Autenticacao}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classIAprAutenticacao_aa1c771ce77cbe505c7070f1cd16df8b6}{\texorpdfstring{$\sim$}{\string~}\+IApr\+Autenticacao}} ()=default
+\begin{DoxyCompactList}\small\item\em Destrutor virtual padrão. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classISerAutenticacao}{ISer\+Autenticacao}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classcntrAprAutenticacao_afa724ab37267936a2b433fba3ccf2c8d}{cntr\+Servico}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classcntrAprAutenticacao_a128bf09528ee3d8789a7507247851c0f}\label{classcntrAprAutenticacao_a128bf09528ee3d8789a7507247851c0f} 
+\index{cntrAprAutenticacao@{cntrAprAutenticacao}!autenticar@{autenticar}}
+\index{autenticar@{autenticar}!cntrAprAutenticacao@{cntrAprAutenticacao}}
+\doxysubsubsection{\texorpdfstring{autenticar()}{autenticar()}}
+{\footnotesize\ttfamily bool cntr\+Apr\+Autenticacao\+::autenticar (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classEmail}{Email}} \texorpdfstring{$\ast$}{*}}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Solicita as credenciais ao usuário e registra a identificação autenticada. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em email} & Ponteiro para o objeto \doxylink{classEmail}{Email} onde será retornado o e-\/mail do usuário autenticado. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Se a autenticação for bem-\/sucedida. 
+
+false Caso contrário. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classIAprAutenticacao_a0f6b8c9aee5e9609fdb44b9a75fe0d24}{IApr\+Autenticacao}}.
+
+\Hypertarget{classcntrAprAutenticacao_acaa5c3cdd4721dd9cc83184a9fff5b10}\label{classcntrAprAutenticacao_acaa5c3cdd4721dd9cc83184a9fff5b10} 
+\index{cntrAprAutenticacao@{cntrAprAutenticacao}!setCntrServico@{setCntrServico}}
+\index{setCntrServico@{setCntrServico}!cntrAprAutenticacao@{cntrAprAutenticacao}}
+\doxysubsubsection{\texorpdfstring{setCntrServico()}{setCntrServico()}}
+{\footnotesize\ttfamily void cntr\+Apr\+Autenticacao\+::set\+Cntr\+Servico (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classISerAutenticacao}{ISer\+Autenticacao}} \texorpdfstring{$\ast$}{*}}]{cntr }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classcntrAprAutenticacao_afa724ab37267936a2b433fba3ccf2c8d}\label{classcntrAprAutenticacao_afa724ab37267936a2b433fba3ccf2c8d} 
+\index{cntrAprAutenticacao@{cntrAprAutenticacao}!cntrServico@{cntrServico}}
+\index{cntrServico@{cntrServico}!cntrAprAutenticacao@{cntrAprAutenticacao}}
+\doxysubsubsection{\texorpdfstring{cntrServico}{cntrServico}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classISerAutenticacao}{ISer\+Autenticacao}}\texorpdfstring{$\ast$}{*} cntr\+Apr\+Autenticacao\+::cntr\+Servico\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/italomrnd/\+Un\+B/\+Ciclo\+Básico\+CIC/\+TP1\+\_\+26\+\_\+2/\+Trabalho26\+\_\+2/\+Headers/\mbox{\hyperlink{controladoras_8hpp}{controladoras.\+hpp}}\item 
+/home/italomrnd/\+Un\+B/\+Ciclo\+Básico\+CIC/\+TP1\+\_\+26\+\_\+2/\+Trabalho26\+\_\+2/\+Sources/\mbox{\hyperlink{controladoras_8cpp}{controladoras.\+cpp}}\end{DoxyCompactItemize}

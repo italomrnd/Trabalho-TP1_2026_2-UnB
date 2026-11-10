@@ -11,11 +11,12 @@ Representa o quadro Kanban pertencente a um projeto específico. Ele organiza o 
 
 
 
-Collaboration diagram for Quadro\+:\nopagebreak
+Collaboration diagram for Quadro\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=294pt]{classQuadro__coll__graph}
+\includegraphics[width=291pt]{classQuadro__coll__graph}
 \end{center}
 \end{figure}
 \doxysubsubsection*{Public Member Functions}
@@ -27,12 +28,16 @@ Collaboration diagram for Quadro\+:\nopagebreak
 \begin{DoxyCompactList}\small\item\em Obtém o \doxylink{classNome}{Nome} armazenado na variável nome. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classLimite}{Limite}} \mbox{\hyperlink{classQuadro_a7799b0eea6c85113d94d4f231108c354}{get\+Limite}} () const
 \begin{DoxyCompactList}\small\item\em Obtém o \doxylink{classLimite}{Limite} armazenado na variável limite. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classIdentificador}{Identificador}} \mbox{\hyperlink{classQuadro_a28b2665faebc40a66b35c3865788e33e}{get\+Id\+Projeto}} () const
+\begin{DoxyCompactList}\small\item\em Obtém o \doxylink{classIdentificador}{Identificador} do projeto pai. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classQuadro_afa3dfde5df0eefa9953ce815110e4a7c}{set\+Identificador}} (const \mbox{\hyperlink{classIdentificador}{Identificador}} \&)
 \begin{DoxyCompactList}\small\item\em Define o identificador. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classQuadro_ad781ec79c32dc1be1cc34c4e39a9703f}{set\+Nome}} (const \mbox{\hyperlink{classNome}{Nome}} \&)
 \begin{DoxyCompactList}\small\item\em Define o nome. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classQuadro_a6c25743eeae172a21331f2bfbe6a26d3}{set\+Limite}} (const \mbox{\hyperlink{classLimite}{Limite}} \&)
-\begin{DoxyCompactList}\small\item\em Define o limite. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Define o limite. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classQuadro_addd96dc7a839a32d8b2bed526e96c466}{set\+Id\+Projeto}} (const \mbox{\hyperlink{classIdentificador}{Identificador}} \&)
+\begin{DoxyCompactList}\small\item\em Define o projeto pai ao qual o quadro pertence. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -41,7 +46,9 @@ void \mbox{\hyperlink{classQuadro_a6c25743eeae172a21331f2bfbe6a26d3}{set\+Limite
 \mbox{\hyperlink{classNome}{Nome}} \mbox{\hyperlink{classQuadro_a3b0647b078aedfbddecff336f760cebf}{nome}}
 \begin{DoxyCompactList}\small\item\em Título do quadro. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classLimite}{Limite}} \mbox{\hyperlink{classQuadro_a0fdcbc341238341b80a704100e6a6dc8}{limite}}
-\begin{DoxyCompactList}\small\item\em Valor que controla a quantidade máxima de cartões de atividade na coluna "{}\+FAZENDO"{}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Valor que controla a quantidade máxima de cartões de atividade na coluna "{}\+FAZENDO"{}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classIdentificador}{Identificador}} \mbox{\hyperlink{classQuadro_ac2be375ef8b05253ffbc5d7ea25dfdf1}{id\+Projeto}}
+\begin{DoxyCompactList}\small\item\em (FK) \doxylink{classIdentificador}{Identificador} do projeto pai ao qual o quadro pertence. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -59,7 +66,20 @@ Representa o quadro Kanban pertencente a um projeto específico. Ele organiza o 
 Obtém o \doxylink{classIdentificador}{Identificador} armazenado na variável identificador. 
 
 \begin{DoxyReturn}{Returns}
-\doxylink{classIdentificador}{Identificador} armazenado 
+\doxylink{classIdentificador}{Identificador} armazenado. 
+\end{DoxyReturn}
+\Hypertarget{classQuadro_a28b2665faebc40a66b35c3865788e33e}\label{classQuadro_a28b2665faebc40a66b35c3865788e33e} 
+\index{Quadro@{Quadro}!getIdProjeto@{getIdProjeto}}
+\index{getIdProjeto@{getIdProjeto}!Quadro@{Quadro}}
+\doxysubsubsection{\texorpdfstring{getIdProjeto()}{getIdProjeto()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classIdentificador}{Identificador}} Quadro\+::get\+Id\+Projeto (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Obtém o \doxylink{classIdentificador}{Identificador} do projeto pai. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{classIdentificador}{Identificador} do projeto (FK). 
 \end{DoxyReturn}
 \Hypertarget{classQuadro_a7799b0eea6c85113d94d4f231108c354}\label{classQuadro_a7799b0eea6c85113d94d4f231108c354} 
 \index{Quadro@{Quadro}!getLimite@{getLimite}}
@@ -72,7 +92,7 @@ Obtém o \doxylink{classIdentificador}{Identificador} armazenado na variável id
 Obtém o \doxylink{classLimite}{Limite} armazenado na variável limite. 
 
 \begin{DoxyReturn}{Returns}
-\doxylink{classLimite}{Limite} armazenado 
+\doxylink{classLimite}{Limite} armazenado. 
 \end{DoxyReturn}
 \Hypertarget{classQuadro_a260b4f46651e8551028185dc81ca2692}\label{classQuadro_a260b4f46651e8551028185dc81ca2692} 
 \index{Quadro@{Quadro}!getNome@{getNome}}
@@ -85,7 +105,7 @@ Obtém o \doxylink{classLimite}{Limite} armazenado na variável limite.
 Obtém o \doxylink{classNome}{Nome} armazenado na variável nome. 
 
 \begin{DoxyReturn}{Returns}
-\doxylink{classNome}{Nome} armazenado 
+\doxylink{classNome}{Nome} armazenado. 
 \end{DoxyReturn}
 \Hypertarget{classQuadro_afa3dfde5df0eefa9953ce815110e4a7c}\label{classQuadro_afa3dfde5df0eefa9953ce815110e4a7c} 
 \index{Quadro@{Quadro}!setIdentificador@{setIdentificador}}
@@ -99,7 +119,22 @@ Define o identificador.
 
 
 \begin{DoxyParams}{Parameters}
-{\em identificador} & instância da classe \doxylink{classIdentificador}{Identificador} \\
+{\em identificador} & Instância da classe \doxylink{classIdentificador}{Identificador}. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classQuadro_addd96dc7a839a32d8b2bed526e96c466}\label{classQuadro_addd96dc7a839a32d8b2bed526e96c466} 
+\index{Quadro@{Quadro}!setIdProjeto@{setIdProjeto}}
+\index{setIdProjeto@{setIdProjeto}!Quadro@{Quadro}}
+\doxysubsubsection{\texorpdfstring{setIdProjeto()}{setIdProjeto()}}
+{\footnotesize\ttfamily void Quadro\+::set\+Id\+Projeto (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classIdentificador}{Identificador}} \&}]{id\+Projeto }\end{DoxyParamCaption})}
+
+
+
+Define o projeto pai ao qual o quadro pertence. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id\+Projeto} & Instância da classe \doxylink{classIdentificador}{Identificador} (FK). \\
 \hline
 \end{DoxyParams}
 \Hypertarget{classQuadro_a6c25743eeae172a21331f2bfbe6a26d3}\label{classQuadro_a6c25743eeae172a21331f2bfbe6a26d3} 
@@ -114,7 +149,7 @@ Define o limite.
 
 
 \begin{DoxyParams}{Parameters}
-{\em limite} & instância da classe \doxylink{classLimite}{Limite} \\
+{\em limite} & Instância da classe \doxylink{classLimite}{Limite}. \\
 \hline
 \end{DoxyParams}
 \Hypertarget{classQuadro_ad781ec79c32dc1be1cc34c4e39a9703f}\label{classQuadro_ad781ec79c32dc1be1cc34c4e39a9703f} 
@@ -129,7 +164,7 @@ Define o nome.
 
 
 \begin{DoxyParams}{Parameters}
-{\em nome} & instância da classe \doxylink{classNome}{Nome} \\
+{\em nome} & Instância da classe \doxylink{classNome}{Nome}. \\
 \hline
 \end{DoxyParams}
 
@@ -144,6 +179,16 @@ Define o nome.
 
 
 Chave primária (PK) do tipo \doxylink{classIdentificador}{Identificador}, código único do quadro. 
+
+\Hypertarget{classQuadro_ac2be375ef8b05253ffbc5d7ea25dfdf1}\label{classQuadro_ac2be375ef8b05253ffbc5d7ea25dfdf1} 
+\index{Quadro@{Quadro}!idProjeto@{idProjeto}}
+\index{idProjeto@{idProjeto}!Quadro@{Quadro}}
+\doxysubsubsection{\texorpdfstring{idProjeto}{idProjeto}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classIdentificador}{Identificador}} Quadro\+::id\+Projeto\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+(FK) \doxylink{classIdentificador}{Identificador} do projeto pai ao qual o quadro pertence. 
 
 \Hypertarget{classQuadro_a0fdcbc341238341b80a704100e6a6dc8}\label{classQuadro_a0fdcbc341238341b80a704100e6a6dc8} 
 \index{Quadro@{Quadro}!limite@{limite}}
@@ -169,5 +214,5 @@ Título do quadro.
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-/home/mateuschrist/\+Trabalho-\/\+TP1\+\_\+2026\+\_\+2-\/\+Un\+B/\+Headers/\mbox{\hyperlink{entidades_8hpp}{entidades.\+hpp}}\item 
-/home/mateuschrist/\+Trabalho-\/\+TP1\+\_\+2026\+\_\+2-\/\+Un\+B/\+Sources/\mbox{\hyperlink{entidades_8cpp}{entidades.\+cpp}}\end{DoxyCompactItemize}
+/home/italomrnd/\+Un\+B/\+Ciclo\+Básico\+CIC/\+TP1\+\_\+26\+\_\+2/\+Trabalho26\+\_\+2/\+Headers/\mbox{\hyperlink{entidades_8hpp}{entidades.\+hpp}}\item 
+/home/italomrnd/\+Un\+B/\+Ciclo\+Básico\+CIC/\+TP1\+\_\+26\+\_\+2/\+Trabalho26\+\_\+2/\+Sources/\mbox{\hyperlink{entidades_8cpp}{entidades.\+cpp}}\end{DoxyCompactItemize}

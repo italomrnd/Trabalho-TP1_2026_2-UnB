@@ -1,0 +1,11 @@
+<map id="cntrControlePrincipal" name="cntrControlePrincipal">
+<area shape="rect" id="Node000001" title=" " alt="" coords="229,93,387,119"/>
+<area shape="rect" id="Node000002" href="$classIAprAutenticacao.html" title="Interface para a camada de apresentação do fluxo de autenticação." alt="" coords="5,5,139,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="80,43,86,56,95,67,117,78,150,86,229,97,228,102,149,91,115,83,92,71,81,59,75,45"/>
+<area shape="rect" id="Node000003" href="$classIAprPessoas.html" title="Interface para a camada de apresentação da gestão de contas de pessoas." alt="" coords="189,5,291,31"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="238,45,239,57,244,68,256,81,272,91,269,95,253,85,239,71,234,58,233,45"/>
+<area shape="rect" id="Node000004" href="$classIAprProjetos.html" title="Interface para a camada de apresentação da gestão de projetos." alt="" coords="325,5,427,31"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="367,44,349,71,324,95,321,91,345,68,362,41"/>
+<area shape="rect" id="Node000005" href="$classIAprQuadros.html" title="Interface para a camada de apresentação da gestão de quadros e cartões de atividade." alt="" coords="461,5,563,31"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="499,43,485,59,468,72,429,89,388,99,387,94,427,84,465,67,481,55,495,40"/>
+</map>

@@ -11,7 +11,8 @@ Classe que define um projeto de software que será gerenciado utilizando o méto
 
 
 
-Collaboration diagram for Projeto\+:\nopagebreak
+Collaboration diagram for Projeto\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -31,6 +32,8 @@ Collaboration diagram for Projeto\+:\nopagebreak
 \begin{DoxyCompactList}\small\item\em Obtém o \doxylink{classTimestamp}{Timestamp} armazenado na variável inicio. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classTimestamp}{Timestamp}} \mbox{\hyperlink{classProjeto_a3278bde27423f1ab0027acb3e557cfe7}{get\+Termino}} () const
 \begin{DoxyCompactList}\small\item\em Obtém o \doxylink{classTimestamp}{Timestamp} armazenado na variável termino. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classEmail}{Email}} \mbox{\hyperlink{classProjeto_a9996a8fd43aae5af0567f411ca1f65c5}{get\+Gestor}} () const
+\begin{DoxyCompactList}\small\item\em Obtém o Gestor armazenado na variável gestor. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classProjeto_a6065d41e36b36914a6a81928aebf090e}{set\+Identificador}} (const \mbox{\hyperlink{classIdentificador}{Identificador}} \&)
 \begin{DoxyCompactList}\small\item\em Define o identificador. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classProjeto_a83d37c342dd08d8b4b67dcc447b4defc}{set\+Nome}} (const \mbox{\hyperlink{classNome}{Nome}} \&)
@@ -40,7 +43,9 @@ void \mbox{\hyperlink{classProjeto_aa5b9d3c4894850e326b3c3e28a9670d7}{set\+Descr
 void \mbox{\hyperlink{classProjeto_abec4ef1e71afddfd2d7ae0e387831cd5}{set\+Inicio}} (const \mbox{\hyperlink{classTimestamp}{Timestamp}} \&)
 \begin{DoxyCompactList}\small\item\em Define o inicio. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classProjeto_aee07bce6a143a6e9cf619a1f27b3aa89}{set\+Termino}} (const \mbox{\hyperlink{classTimestamp}{Timestamp}} \&)
-\begin{DoxyCompactList}\small\item\em Define o termino. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Define o termino. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classProjeto_a8d672e95e6deef93399a8daf601ccaf2}{set\+Gestor}} (const \mbox{\hyperlink{classEmail}{Email}} \&)
+\begin{DoxyCompactList}\small\item\em Define o gestor responsável pelo projeto. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -53,7 +58,9 @@ void \mbox{\hyperlink{classProjeto_aee07bce6a143a6e9cf619a1f27b3aa89}{set\+Termi
 \mbox{\hyperlink{classTimestamp}{Timestamp}} \mbox{\hyperlink{classProjeto_a8d9bc61290144cc6ad6c641aa1e164b7}{inicio}}
 \begin{DoxyCompactList}\small\item\em Data e hora do início do projeto. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classTimestamp}{Timestamp}} \mbox{\hyperlink{classProjeto_a8fb79c89e2b14d4eb8225f085df5bec8}{termino}}
-\begin{DoxyCompactList}\small\item\em Data e hora do fim do projeto. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Data e hora do fim do projeto. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classEmail}{Email}} \mbox{\hyperlink{classProjeto_a93b5f6fd786dc984aad73a9841585e56}{gestor}}
+\begin{DoxyCompactList}\small\item\em (FK) \doxylink{classEmail}{Email} da pessoa responsável pelo projeto. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -71,7 +78,20 @@ Classe que define um projeto de software que será gerenciado utilizando o méto
 Obtém o \doxylink{classTexto}{Texto} armazenado na variável descricao. 
 
 \begin{DoxyReturn}{Returns}
-\doxylink{classTexto}{Texto} armazenado 
+\doxylink{classTexto}{Texto} armazenado. 
+\end{DoxyReturn}
+\Hypertarget{classProjeto_a9996a8fd43aae5af0567f411ca1f65c5}\label{classProjeto_a9996a8fd43aae5af0567f411ca1f65c5} 
+\index{Projeto@{Projeto}!getGestor@{getGestor}}
+\index{getGestor@{getGestor}!Projeto@{Projeto}}
+\doxysubsubsection{\texorpdfstring{getGestor()}{getGestor()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classEmail}{Email}} Projeto\+::get\+Gestor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Obtém o Gestor armazenado na variável gestor. 
+
+\begin{DoxyReturn}{Returns}
+Gestor do projeto. 
 \end{DoxyReturn}
 \Hypertarget{classProjeto_a73c48a33c8a22c6fea1349184829eaae}\label{classProjeto_a73c48a33c8a22c6fea1349184829eaae} 
 \index{Projeto@{Projeto}!getIdentificador@{getIdentificador}}
@@ -84,7 +104,7 @@ Obtém o \doxylink{classTexto}{Texto} armazenado na variável descricao.
 Obtém o \doxylink{classIdentificador}{Identificador} armazenado na variável identificador. 
 
 \begin{DoxyReturn}{Returns}
-\doxylink{classIdentificador}{Identificador} Armazenado 
+\doxylink{classIdentificador}{Identificador} armazenado. 
 \end{DoxyReturn}
 \Hypertarget{classProjeto_a4644b46ebb4291e2993a6d811df50dd8}\label{classProjeto_a4644b46ebb4291e2993a6d811df50dd8} 
 \index{Projeto@{Projeto}!getInicio@{getInicio}}
@@ -97,7 +117,7 @@ Obtém o \doxylink{classIdentificador}{Identificador} armazenado na variável id
 Obtém o \doxylink{classTimestamp}{Timestamp} armazenado na variável inicio. 
 
 \begin{DoxyReturn}{Returns}
-\doxylink{classTimestamp}{Timestamp} do início do projeto 
+\doxylink{classTimestamp}{Timestamp} do início do projeto. 
 \end{DoxyReturn}
 \Hypertarget{classProjeto_a1eb1c0d356d0f662ac6fda75ff766004}\label{classProjeto_a1eb1c0d356d0f662ac6fda75ff766004} 
 \index{Projeto@{Projeto}!getNome@{getNome}}
@@ -110,7 +130,7 @@ Obtém o \doxylink{classTimestamp}{Timestamp} armazenado na variável inicio.
 Obtém o \doxylink{classNome}{Nome} armazenado na variável nome. 
 
 \begin{DoxyReturn}{Returns}
-\doxylink{classNome}{Nome} armazenado 
+\doxylink{classNome}{Nome} armazenado. 
 \end{DoxyReturn}
 \Hypertarget{classProjeto_a3278bde27423f1ab0027acb3e557cfe7}\label{classProjeto_a3278bde27423f1ab0027acb3e557cfe7} 
 \index{Projeto@{Projeto}!getTermino@{getTermino}}
@@ -123,7 +143,7 @@ Obtém o \doxylink{classNome}{Nome} armazenado na variável nome.
 Obtém o \doxylink{classTimestamp}{Timestamp} armazenado na variável termino. 
 
 \begin{DoxyReturn}{Returns}
-\doxylink{classTimestamp}{Timestamp} do fim do projeto 
+\doxylink{classTimestamp}{Timestamp} do fim do projeto. 
 \end{DoxyReturn}
 \Hypertarget{classProjeto_aa5b9d3c4894850e326b3c3e28a9670d7}\label{classProjeto_aa5b9d3c4894850e326b3c3e28a9670d7} 
 \index{Projeto@{Projeto}!setDescricao@{setDescricao}}
@@ -137,7 +157,22 @@ Define a descricao.
 
 
 \begin{DoxyParams}{Parameters}
-{\em descricao} & Instância da classe \doxylink{classTexto}{Texto} \\
+{\em descricao} & Instância da classe \doxylink{classTexto}{Texto}. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classProjeto_a8d672e95e6deef93399a8daf601ccaf2}\label{classProjeto_a8d672e95e6deef93399a8daf601ccaf2} 
+\index{Projeto@{Projeto}!setGestor@{setGestor}}
+\index{setGestor@{setGestor}!Projeto@{Projeto}}
+\doxysubsubsection{\texorpdfstring{setGestor()}{setGestor()}}
+{\footnotesize\ttfamily void Projeto\+::set\+Gestor (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classEmail}{Email}} \&}]{gestor }\end{DoxyParamCaption})}
+
+
+
+Define o gestor responsável pelo projeto. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em gestor} & Instância da classe \doxylink{classEmail}{Email} (FK). \\
 \hline
 \end{DoxyParams}
 \Hypertarget{classProjeto_a6065d41e36b36914a6a81928aebf090e}\label{classProjeto_a6065d41e36b36914a6a81928aebf090e} 
@@ -152,7 +187,7 @@ Define o identificador.
 
 
 \begin{DoxyParams}{Parameters}
-{\em identificador} & Instância da classe \doxylink{classIdentificador}{Identificador} \\
+{\em identificador} & Instância da classe \doxylink{classIdentificador}{Identificador}. \\
 \hline
 \end{DoxyParams}
 \Hypertarget{classProjeto_abec4ef1e71afddfd2d7ae0e387831cd5}\label{classProjeto_abec4ef1e71afddfd2d7ae0e387831cd5} 
@@ -167,7 +202,7 @@ Define o inicio.
 
 
 \begin{DoxyParams}{Parameters}
-{\em inicio} & Instância da classe \doxylink{classTimestamp}{Timestamp} \\
+{\em inicio} & Instância da classe \doxylink{classTimestamp}{Timestamp}. \\
 \hline
 \end{DoxyParams}
 \Hypertarget{classProjeto_a83d37c342dd08d8b4b67dcc447b4defc}\label{classProjeto_a83d37c342dd08d8b4b67dcc447b4defc} 
@@ -182,7 +217,7 @@ Define o nome.
 
 
 \begin{DoxyParams}{Parameters}
-{\em nome} & Instância da classe \doxylink{classNome}{Nome} \\
+{\em nome} & Instância da classe \doxylink{classNome}{Nome}. \\
 \hline
 \end{DoxyParams}
 \Hypertarget{classProjeto_aee07bce6a143a6e9cf619a1f27b3aa89}\label{classProjeto_aee07bce6a143a6e9cf619a1f27b3aa89} 
@@ -197,7 +232,7 @@ Define o termino.
 
 
 \begin{DoxyParams}{Parameters}
-{\em termino} & Instância da classe \doxylink{classTimestamp}{Timestamp} \\
+{\em termino} & Instância da classe \doxylink{classTimestamp}{Timestamp}. \\
 \hline
 \end{DoxyParams}
 
@@ -212,6 +247,16 @@ Define o termino.
 
 
 Descreve o objetivo e escopo do \doxylink{classProjeto}{Projeto}. 
+
+\Hypertarget{classProjeto_a93b5f6fd786dc984aad73a9841585e56}\label{classProjeto_a93b5f6fd786dc984aad73a9841585e56} 
+\index{Projeto@{Projeto}!gestor@{gestor}}
+\index{gestor@{gestor}!Projeto@{Projeto}}
+\doxysubsubsection{\texorpdfstring{gestor}{gestor}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classEmail}{Email}} Projeto\+::gestor\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+(FK) \doxylink{classEmail}{Email} da pessoa responsável pelo projeto. 
 
 \Hypertarget{classProjeto_a528c0cdbeb450c8f23e4fd0247434add}\label{classProjeto_a528c0cdbeb450c8f23e4fd0247434add} 
 \index{Projeto@{Projeto}!identificador@{identificador}}
@@ -257,5 +302,5 @@ Data e hora do fim do projeto.
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-/home/mateuschrist/\+Trabalho-\/\+TP1\+\_\+2026\+\_\+2-\/\+Un\+B/\+Headers/\mbox{\hyperlink{entidades_8hpp}{entidades.\+hpp}}\item 
-/home/mateuschrist/\+Trabalho-\/\+TP1\+\_\+2026\+\_\+2-\/\+Un\+B/\+Sources/\mbox{\hyperlink{entidades_8cpp}{entidades.\+cpp}}\end{DoxyCompactItemize}
+/home/italomrnd/\+Un\+B/\+Ciclo\+Básico\+CIC/\+TP1\+\_\+26\+\_\+2/\+Trabalho26\+\_\+2/\+Headers/\mbox{\hyperlink{entidades_8hpp}{entidades.\+hpp}}\item 
+/home/italomrnd/\+Un\+B/\+Ciclo\+Básico\+CIC/\+TP1\+\_\+26\+\_\+2/\+Trabalho26\+\_\+2/\+Sources/\mbox{\hyperlink{entidades_8cpp}{entidades.\+cpp}}\end{DoxyCompactItemize}

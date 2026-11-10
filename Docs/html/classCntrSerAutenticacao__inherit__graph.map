@@ -1,0 +1,5 @@
+<map id="CntrSerAutenticacao" name="CntrSerAutenticacao">
+<area shape="rect" id="Node000001" title="Controladora de serviço responsável por gerenciar a autenticação/login de um usuário no sistema." alt="" coords="5,79,160,104"/>
+<area shape="rect" id="Node000002" href="$classISerAutenticacao.html" title="Interface para a camada de serviço de validação de credenciais do usuário." alt="" coords="17,5,149,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="85,44,85,79,80,79,80,44"/>
+</map>
