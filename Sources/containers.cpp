@@ -87,9 +87,9 @@ bool ContainerProjeto::listar(const Email& gestor, std::list<Projeto>* listaReto
     listaRetorno->clear();
     string chaveGestor = gestor.getValor();
 
-    for (const auto& par : mapaProjetos){
-        if (par.second.getGestor().getValor() == chaveGestor){
-            listaRetorno->push_back(par.second);
+    for (auto it = mapaProjetos.begin(); it != mapaProjetos.end(); ++it){
+        if (it->second.getGestor().getValor() == chaveGestor){
+            listaRetorno->push_back(it->second);
         }
     }
     return !listaRetorno->empty();
@@ -140,9 +140,9 @@ bool ContainerQuadro::listar(const Identificador& idProjeto, std::list<Quadro>* 
     listaRetorno->clear();
     string chaveProjeto = idProjeto.getValor();
 
-    for (const auto& par : mapaQuadros){
-        if (par.second.getIdProjeto().getValor() == chaveProjeto){
-            listaRetorno->push_back(par.second);
+    for (auto it = mapaQuadros.begin(); it != mapaQuadros.end(); ++it){
+        if (it->second.getIdProjeto().getValor() == chaveProjeto){
+            listaRetorno->push_back(it->second);
         }
     }
     return !listaRetorno->empty();
@@ -193,9 +193,9 @@ bool ContainerCartao::listar(const Identificador& idQuadro, std::list<CartaodeAt
     listaRetorno->clear();
     string chaveQuadro = idQuadro.getValor();
 
-    for (const auto& par : mapaCartoes){
-        if (par.second.getIdQuadro().getValor() == chaveQuadro){
-            listaRetorno->push_back(par.second);
+    for (auto it = mapaCartoes.begin(); it != mapaCartoes.end(); ++it){
+        if (it->second.getIdQuadro().getValor() == chaveQuadro){
+            listaRetorno->push_back(it->second);
         }
     }
     return !listaRetorno->empty();
@@ -208,9 +208,9 @@ bool ContainerCartao::listarPorDesenvolvedor(const Email& desenvolvedor, std::li
     listaRetorno->clear();
     string chaveDev = desenvolvedor.getValor();
 
-    for (const auto& par : mapaCartoes){
-        if (par.second.getDesenvolvedor().getValor() == chaveDev){
-            listaRetorno->push_back(par.second);
+    for (auto it = mapaCartoes.begin(); it != mapaCartoes.end(); ++it){
+        if (it->second.getDesenvolvedor().getValor() == chaveDev){
+            listaRetorno->push_back(it->second);
         }
     }
     return !listaRetorno->empty();

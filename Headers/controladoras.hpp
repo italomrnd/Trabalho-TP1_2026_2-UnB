@@ -6,11 +6,10 @@
 #include <unordered_map>
 #include <vector>
 
-
 /**
  * @file controladoras.hpp
- * @brief Declaração das controladoras de apresentação e serviço
- * @author Mateus Christ Neves Pereira (apresentação) e Italo Miranda Gomes (serviço)
+ * @brief Declaração das controladoras de apresentação e serviço.
+ * @author Mateus Christ Neves Pereira (apresentação) e Ítalo Miranda Gomes (serviço)
  */
 
 // Declaracao das controladoras da camada de apresentacao
@@ -55,11 +54,11 @@ public:
 
     /**
      * @brief Método responsável por consultar e recuperar os dados de um usuário no sistema de software.
-     * @param pessoa Ponteiro para o objeto Pessoa preenchido com a chave primária e onde serão retornados os dados completos.
+     * @param pessoaRetorno Ponteiro para o objeto Pessoa onde serão preenchidos e retornados os dados completos.
      * @return true Se os dados foram encontrados.
      * @return false Caso contrário.
      */
-    bool ler(Pessoa* pessoa) override;
+    bool ler(Pessoa* pessoaRetorno) override;
 
     /**
      * @brief Método responsável por atualizar os dados registrados de um usuário.
@@ -94,11 +93,11 @@ public:
 
     /**
      * @brief Recupera as informações de um projeto.
-     * @param projeto Ponteiro para o objeto Projeto a ser preenchido com o código de busca.
+     * @param projetoRetorno Ponteiro para o objeto Projeto onde serão armazenados os dados recuperados.
      * @return true Se o projeto foi encontrado.
      * @return false Caso contrário.
      */
-    bool ler(Projeto* projeto) override;
+    bool ler(Projeto* projetoRetorno) override;
 
     /**
      * @brief Atualiza as informações de um projeto existente.
@@ -135,11 +134,11 @@ public:
 
     /**
      * @brief Consulta e carrega as informações de um quadro de atividades.
-     * @param quadro Ponteiro para o objeto Quadro contendo o código de busca e onde os dados recuperados serão armazenados.
+     * @param quadroRetorno Ponteiro para o objeto Quadro onde os dados recuperados serão armazenados.
      * @return true Se o quadro for localizado.
      * @return false Caso contrário.
      */
-    bool ler(Quadro* quadro) override;
+    bool ler(Quadro* quadroRetorno) override;
 
     /**
      * @brief Atualiza as informações de um quadro existente.
@@ -160,11 +159,11 @@ public:
     /**
      * @brief Lista todos os quadros associados a um usuário (gestor) do sistema.
      * @param emailDono O e-mail do usuário utilizado para buscar os quadros associados.
-     * @param listaRetorno Ponteiro para a lista onde serão inseridos os quadros encontrados.
+     * @param listaQuadrosRetorno Ponteiro para a lista onde serão inseridos os quadros encontrados.
      * @return true Se a busca foi bem-sucedida.
      * @return false Caso contrário.
      */
-    bool listar(const Email& emailDono, std::list<Quadro>* listaRetorno) override;
+    bool listar(const Email& emailDono, std::list<Quadro>* listaQuadrosRetorno) override;
 
     /**
      * @brief Registra um novo cartão de atividade no sistema associando-o a um quadro.
@@ -177,11 +176,11 @@ public:
 
     /**
      * @brief Consulta e carrega as informações de um cartão de atividade.
-     * @param cartao Ponteiro para o objeto CartaodeAtividade contendo o código de busca e onde os dados serão armazenados.
+     * @param cartaoRetorno Ponteiro para o objeto CartaodeAtividade onde os dados serão armazenados.
      * @return true Se o cartão for localizado.
      * @return false Caso contrário.
      */
-    bool lerCartao(CartaodeAtividade* cartao) override;
+    bool lerCartao(CartaodeAtividade* cartaoRetorno) override;
 
     /**
      * @brief Atualiza as informações de um cartão de atividade existente, validando o limite de WIP do quadro.
@@ -202,11 +201,11 @@ public:
     /**
      * @brief Lista todos os cartões de atividades associados a um quadro específico.
      * @param idQuadro O identificador do quadro do qual se deseja listar os cartões.
-     * @param listaRetorno Ponteiro para a lista onde serão armazenados os cartões obtidos.
+     * @param listaCartoesRetorno Ponteiro para a lista onde serão armazenados os cartões obtidos.
      * @return true Se a busca foi bem-sucedida.
      * @return false Caso contrário.
      */
-    bool listarCartoes(const Identificador& idQuadro, std::list<CartaodeAtividade>* listaRetorno) override;
+    bool listarCartoes(const Identificador& idQuadro, std::list<CartaodeAtividade>* listaCartoesRetorno) override;
 
     /**
      * @brief Promove a transição de estado de um cartão no fluxo Kanban.
@@ -226,55 +225,55 @@ public:
      * @details Calcula o tempo de execução ativa medindo a diferença temporal a partir do momento em que o cartão
      * entra na coluna FAZENDO até o instante em que chega à coluna FEITO (Término - Início).
      * @param idCartao Identificador do cartão consultado.
-     * @param tempoSegundos Ponteiro onde será armazenado o valor do tempo obtido em segundos.
+     * @param tempoSegundosRetorno Ponteiro onde será armazenado o valor do tempo obtido em segundos.
      * @return true Se a medição for realizada com sucesso.
      * @return false Caso o cartão não exista ou ainda não esteja no estado FEITO.
      */
-    bool lerTempoCiclo(const Identificador& idCartao, double* tempoSegundos) override;
+    bool lerTempoCiclo(const Identificador& idCartao, double* tempoSegundosRetorno) override;
 
     /**
      * @brief Consulta o Tempo de Ciclo médio dos cartões concluídos de um quadro.
      * @details Realiza a média aritmética do Tempo de Ciclo (Cycle Time) de todas as atividades que se encontram
      * na coluna FEITO pertencentes a um determinado quadro.
      * @param idQuadro Identificador do quadro alvo.
-     * @param mediaSegundos Ponteiro onde será armazenada a média calculada em segundos.
+     * @param mediaSegundosRetorno Ponteiro onde será armazenada a média calculada em segundos.
      * @return true Se a média for calculada com sucesso.
      * @return false Caso não existam cartões concluídos no quadro.
      */
-    bool lerTempoCicloMedio(const Identificador& idQuadro, double* mediaSegundos) override;
+    bool lerTempoCicloMedio(const Identificador& idQuadro, double* mediaSegundosRetorno) override;
 
     /**
      * @brief Consulta o Lead Time de uma atividade concluída.
      * @details Calcula o tempo total de permanência da tarefa no sistema medindo a diferença temporal a partir do momento
      * em que o cartão entra na coluna A FAZER até o instante em que chega à coluna FEITO (Término - Entrada).
      * @param idCartao Identificador do cartão consultado.
-     * @param tempoSegundos Ponteiro onde será armazenado o valor do tempo obtido em segundos.
+     * @param tempoSegundosRetorno Ponteiro onde será armazenado o valor do tempo obtido em segundos.
      * @return true Se a medição for realizada com sucesso.
      * @return false Caso o cartão não exista ou ainda não esteja no estado FEITO.
      */
-    bool lerLeadTime(const Identificador& idCartao, double* tempoSegundos) override;
+    bool lerLeadTime(const Identificador& idCartao, double* tempoSegundosRetorno) override;
 
     /**
      * @brief Consulta o Lead Time médio dos cartões concluídos de um quadro.
      * @details Realiza a média aritmética do Lead Time de todas as atividades que se encontram na coluna FEITO
      * pertencentes a um determinado quadro.
      * @param idQuadro Identificador do quadro alvo.
-     * @param mediaSegundos Ponteiro onde será armazenada a média calculada em segundos.
+     * @param mediaSegundosRetorno Ponteiro onde será armazenada a média calculada em segundos.
      * @return true Se a média for calculada com sucesso.
      * @return false Caso não existam cartões concluídos no quadro.
      */
-    bool lerLeadTimeMedio(const Identificador& idQuadro, double* mediaSegundos) override;
+    bool lerLeadTimeMedio(const Identificador& idQuadro, double* mediaSegundosRetorno) override;
 
     /**
      * @brief Consulta a métrica de Work in Progress (WIP) de um quadro.
      * @details Contabiliza o número total de cartões de atividade que estão sendo executados simultaneamente,
      * identificando quantos cartões estão alocados na coluna FAZENDO do quadro especificado.
      * @param idQuadro Identificador do quadro alvo.
-     * @param quantidadeWIP Ponteiro onde será armazenado o valor inteiro com a contagem de tarefas em andamento.
+     * @param quantidadeWIPRetorno Ponteiro onde será armazenado o valor inteiro com a contagem de tarefas em andamento.
      * @return true Se a contagem for realizada com sucesso.
      * @return false Caso contrário.
      */
-    bool lerWIP(const Identificador& idQuadro, int* quantidadeWIP) override;
+    bool lerWIP(const Identificador& idQuadro, int* quantidadeWIPRetorno) override;
 };
 
 #endif // CONTROLADORAS_HPP
